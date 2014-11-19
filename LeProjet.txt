@@ -9,5 +9,6 @@ Analyse du sujet
 
 
 Analyse :
+--------
 Plateau[N][N] : une matrice de taille N représentant le plateau (carré)
 struct{char Nom[20] ; int positionX ; int positionY ; int PvMax ; int Pv ;} t_perso ;
