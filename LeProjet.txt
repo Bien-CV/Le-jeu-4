@@ -9,7 +9,14 @@ Analyse du sujet
 
 
 Analyse :
---------
-struct{char Nom[20] ; int positionX ; int positionY ; int PvMax ; int Pv ;} t_perso ;
-t_perso Plateau[N][N] : une matrice de taille N représentant le plateau (carré)
+=========
+Variables:
+----------
+Plateau[N][N] : une matrice de taille N représentant le plateau (carré)
+struct{char Nom[20] ; int positionX ; int positionY ; int PvMax ; int Pv ;} t_perso ; : 
 
+
+fonctions:
+----------
+void SelectPerso(int *positionX, int *positionY): 
+int SelectAction(): selectionne l'action à effectuer (exple: SelectPerso / PasserTour();
