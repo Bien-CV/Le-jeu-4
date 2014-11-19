@@ -1,0 +1,13 @@
+Projet
+======
+Analyse du sujet
+----------------
+1/ Analyse
+2/ Bornes du projet
+	-lister les grandes étapes
+	-ordonner / prioriser / attribuer
+
+
+Analyse :
+Plateau[N][N] : une matrice de taille N représentant le plateau (carré)
+struct{char Nom[20] ; int positionX ; int positionY ; int PvMax ; int Pv ;} t_perso ;
