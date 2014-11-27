@@ -8,11 +8,15 @@
 #define bloc1 178;
 #define bloc2 219;
 #define bloc3 254;
+//struct Default //VALEURS PAR DEFAULT
+#define skill_attack {"Coup",1,ATK,1}
+#define skill_empty {"",0,EMPTY,0}
 
-typedef enum {obstacle =-1,terrain=0, player=1, opponent=2}t_camp:
+
+typedef enum {obstacle =-1,terrain=0, player=1, opponent=2}t_camp;
 typedef enum {EMPTY,ATK,MATK}t_type;
-typedef enum {up,right,down,left}t_orientation:
-typedef enum {front, side, back}t_targetOrientation:
+typedef enum {up,right,down,left}t_orientation;
+typedef enum {front, side, back}t_targetOrientation;
 typedef struct { int HP ; int Max_HP ; int MP ; int Max_MP ;} t_status ; 
 typedef struct { int ATK ; int MATK ; int DEF ; int MDEF ; int MVT ;} t_stats;
 typedef struct {  int X ; int Y ;}t_coord; 
@@ -21,10 +25,8 @@ typedef struct { t_skill a; t_skill b; t_skill c; t_skill d; t_skill e; t_skill 
 
 typedef struct{char name[20] ; t_coord position; t_orientation orientation ; t_status status ; t_stats stats ; t_skill_list skill; t_camp camp; int nbActionTour} t_character ;
 
-//VALEURS PAR DEFAULT
-t_skill skill_attack= {"Coup",1,ATK,1};
 
-t_skill skill_empty= {"",0,EMPTY,0};
+
 
 t_skill skill_skip= {"Passer le tour",0,EMPTY,0};
 
