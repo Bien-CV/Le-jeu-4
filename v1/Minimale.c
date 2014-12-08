@@ -442,6 +442,62 @@ t_skill SelectSkill(){//selectionne le skill que le personange courant effectuer
         return skill_empty;
 }
 
+/**
+* \fn t_targetOrientation GetTargetOrientation (t_character perso, t_coord cible )
+* \brief Fonction déterminant quelle est l'orientation de la cible par rapport au joueur.
+* 
+*/
+t_targetOrientation GetTargetOrientation (t_character perso, t_coord cible ){
+    int xperso,yperso,xenemy,yenemy,oenemy;
+
+    xperso=perso.position.X;
+    yperso=perso.position.Y;
+    xenemy=cible.X;
+    yenemy=cible.Y;
+    oenemy=Plateau[xenemy][yenemy].orientation;
+
+    if((xenemy-yenemy>=xperso-yperso)&&(xenemy+yenemy<xperso+yperso))//Vérifie si l'énemi est au Nord
+    {
+        switch(oenemy)
+        {
+            case up: return back ; break;
+            case right: if(xenemy-yenemy==xperso-yperso){return front;}else return side ; break;
+            case down: return front ;break;
+            case left: if(xenemy-yenemy==xperso-yperso){return back;}else return side ; break;
+        }
+    }
+    else if((xenemy-yenemy>xperso-yperso)&&(xenemy+yenemy>=xperso+yperso))//Vérifie si l'énemi est à l'Est
+    {
+        switch(oenemy)
+        {
+            case up: if(xenemy+yenemy==xperso+yperso){return back;}else return side ; break;
+            case right: return back ; break;
+            case down: if(xenemy+yenemy==xperso+yperso){return front;}else return side ;break;
+            case left: return front ; break;
+        }
+    }
+    else if((xenemy-yenemy<=xperso-yperso)&&(xenemy+yenemy>xperso+yperso))//Vérifie si l'énemi est au Sud
+    {
+        switch(oenemy)
+        {
+            case up: return front ; break;
+            case right: if(xenemy+yenemy==xperso+yperso){return back;}else return side ; break;
+            case down: return back ;break;
+            case left: if(xenemy+yenemy==xperso+yperso){return front;}else return side ; break;
+        }
+    }
+    else if((xenemy-yenemy<xperso-yperso)&&(xenemy+yenemy<=xperso+yperso))//Vérifie si l'énemi est à l'Ouest
+    {
+        switch(oenemy)
+        {
+            case up: if(xenemy+yenemy==xperso+yperso){return front;}else return side ; break;
+            case right: return front ; break;
+            case down: if(xenemy+yenemy==xperso+yperso){return back;}else return side ;break;
+            case left: return back ; break;
+        }
+    }
+    return EXIT_FAILURE;
+}
 
 /**
 * \fn void Action(t_character lanceur, t_coord cible, t_skill action)
