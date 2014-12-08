@@ -451,18 +451,24 @@ t_skill SelectSkill(){//selectionne le skill que le personange courant effectuer
 */
 void Action(t_character lanceur, t_coord cible, t_skill action){
     int total_dmg;
+    t_targetOrientation targetOrientation= GetTargetOrientation(lanceur,cible);
+    int coefOrientation;
     //typedef struct { char name[20] ; int range ; t_type type ; int damage_coeff ;} t_skill;
     //typedef struct { int HP ; int Max_HP ; int MP ; int Max_MP ;} t_status ;
     //typedef struct { int ATK ; int MATK ; int DEF ; int MDEF ; int MVT ;} t_stats;
     //typedef enum {EMPTY,ATK,MATK}t_type;
+    if(targetOrientation==0) coefOrientation=1;
+    if(targetOrientation==1) coefOrientation=1.5;
+    if(targetOrientation==2) coefOrientation=2;
+    
     if (action.type == MATK){
         total_dmg=action.damage_coeff*lanceur.stats.MATK; //degats avant réduction
-        if(total_dmg<0) total_dmg*=abs(Plateau[cible.X][cible.Y].stats.MDEF-100)/100; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+        if(total_dmg>0) total_dmg*=(abs(Plateau[cible.X][cible.Y].stats.MDEF-100)/100)*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
     }
     if (action.type == ATK){
         total_dmg=action.damage_coeff*lanceur.stats.ATK; //degats avant réduction
-        if(total_dmg<0) total_dmg*=abs(Plateau[cible.X][cible.Y].stats.DEF-100)/100; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+        if(total_dmg>0) total_dmg*=(abs(Plateau[cible.X][cible.Y].stats.DEF-100)/100)*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
     }
     if (action.type == EMPTY){
