@@ -51,11 +51,21 @@ t_player player[MaxTab];
 
 int indiceTabDepValid;
 
-
+/**
+ * \fn int NombreAleatoire(int max)
+ * \brief Fonction qui renvoi un nombre aléatoire en 0 et 'max'
+ * 
+*/
 int NombreAleatoire(int max)
 {
 		return (rand()%max+1);
 }
+
+/**
+ * \fn void DeplacerPerso(t_coord case_perso)
+ * \brief Déplace le personnage sur le terrain
+ * 
+ */
 void DeplacerPerso(t_coord case_perso)
 {
     Plateau[selected_character.position.X][selected_character.position.Y]= case_terrain ;
@@ -65,7 +75,11 @@ void DeplacerPerso(t_coord case_perso)
 
 }
 
-
+/**
+ * \fn int CasesVoisines(t_coord coordonnees)
+ * \brief Renvoi le nombre de case voisine vide
+ * 
+ */
 int CasesVoisines(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
@@ -115,6 +129,11 @@ int CasesVoisines(t_coord coordonnees){
     return(nbVois);
 }
 
+/**
+ * \fn void DeplacementsValides()
+ * \brief Calcule les positions de déplacement valide
+ * 
+ */
 void DeplacementsValides(){// permet de retourner /* Commentaire de Baptiste : Calculer plutôt non ? */ au joueur les positions valides pour son perso.
     int mvtEffectue = 0;
     int nbVoisins=1;
@@ -144,7 +163,11 @@ void DeplacementsValides(){// permet de retourner /* Commentaire de Baptiste : C
     nbDepValid = calculerElemListe();
 }
 
-
+/**
+ * \fn t_coord ChoixDeplacement()
+ * \brief Permet au joueur de choisir la destination
+ * 
+ */
 t_coord ChoixDeplacement(){//Reprendre le code de choix de SelecPerso
     int i = 0, j, choix = 1;
     viderBuffer();
