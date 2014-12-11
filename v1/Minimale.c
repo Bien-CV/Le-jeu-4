@@ -16,6 +16,7 @@ void viderBuffer(void);
 int are_my_mates_alive();
 void generation_nom(char * nom);
 
+
 char PartieNom[][20] = 
 	{
 		"ogre",
@@ -50,6 +51,9 @@ t_player player[MaxTab];
 
 
 int indiceTabDepValid;
+
+
+
 
 /**
  * \fn int NombreAleatoire(int max)
@@ -262,7 +266,11 @@ int CasesVoisinesATK(t_coord coordonnees){
     return(nbVois);
 }
 
-
+/**
+ * \fn void viserCaseValid(t_skill skill)
+ * \brief Calcule les cases valides ciblables
+ * 
+ */
 void viserCaseValid(t_skill skill)
 {
     int mvtEffectue = 0;
@@ -293,6 +301,11 @@ void viserCaseValid(t_skill skill)
     nbAtkValid = calculerElemListe();
 }
 
+/**
+ * \fn t_coord choixCible(t_skill skill)
+ * \brief Permet au joueur de choisir une cible
+ * 
+ */
 t_coord choixCible(t_skill skill)
 {
     int i =0;
@@ -341,9 +354,6 @@ t_coord choixCible(t_skill skill)
     }
     return (coordonnees);
 }
-
-
-
 
 /**
 * \fn void init_char_table(t_char chars[])
@@ -421,7 +431,6 @@ void Suicide(){// Permet au joueur de quitter la partie.
         }
     }
 }
-
 
 /**
 * \fn void init_char_table(t_char chars[])
