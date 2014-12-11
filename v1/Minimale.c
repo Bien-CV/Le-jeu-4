@@ -198,7 +198,11 @@ t_coord ChoixDeplacement(){//Reprendre le code de choix de SelecPerso
     return (coordonnees);
 }
 
-
+/**
+ * \fn void init_Plateau()
+ * \brief Initialise le plateau
+ * 
+ */
 void init_Plateau()
 {
     int i, j;
@@ -211,6 +215,11 @@ void init_Plateau()
     }
 }
 
+/**
+ * \fn int CasesVoisinesATK(t_coord coordonnees)
+ * \brief 
+ * 
+ */
 int CasesVoisinesATK(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
@@ -252,6 +261,7 @@ int CasesVoisinesATK(t_coord coordonnees){
 
     return(nbVois);
 }
+
 
 void viserCaseValid(t_skill skill)
 {
