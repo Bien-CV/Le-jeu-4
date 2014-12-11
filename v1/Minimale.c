@@ -52,7 +52,11 @@ t_player player[MaxTab];
 
 int indiceTabDepValid;
 
-
+/**
+ * \fn void Sauvegarder()
+ * \brief Sauvegarde la partie dans un fichier
+ * 
+ */
 void Sauvegarder(){
 	char NomFichier[20]="";
 
@@ -78,6 +82,12 @@ void Sauvegarder(){
     fclose(fichierIndex);
     fclose(sauvegarde);
 }
+
+/**
+ * \fn void Charger()
+ * \brief Permet de charger une partie depuis un fichier
+ * 
+ */
 void Charger(){
 	char NomFichier[20]="";
 
