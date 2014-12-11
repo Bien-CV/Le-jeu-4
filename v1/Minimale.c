@@ -53,7 +53,52 @@ t_player player[MaxTab];
 int indiceTabDepValid;
 
 
+void Sauvegarder(){
+	char NomFichier[20]="";
 
+	FILE*fichierIndex;
+	FILE*sauvegarde;
+	fichierIndex=fopen("IndexSauvegarde.txt","rb+");
+
+	if(!feof(fichierIndex)){
+        while(!feof(fichierIndex))
+        printf("Sauvegarde déjà existante :\n");
+        {
+            fscanf("%s",fichierIndex);
+            printf("%s\n",NomFichier);
+        }
+	}else {printf("Pas de sauvegarde disponible\n");
+	}
+
+    printf("Entrez un nom de sauvegarde :");
+    scanf("%s",NomFichier);
+    fprintf(fichierIndex,"%s",NomFichier);
+    sauvegarde=fopen(NomFichier,"wb");
+    fwrite(Plateau,sizeof(Plateau),sizeof(Plateau)/sizeof(Plateau[0][0]),sauvegarde);
+    fclose(fichierIndex);
+    fclose(sauvegarde);
+}
+void Charger(){
+	char NomFichier[20]="";
+
+	FILE*fichierIndex;
+	FILE*sauvegarde;
+	fichierIndex=fopen("IndexSauvegarde.txt","rb+");
+
+	if(!feof(fichierIndex)){
+        while(!feof(fichierIndex))
+        printf("Sauvegarde déjà existante :\n");
+        {
+            fscanf("%s",fichierIndex);
+            printf("%s\n",NomFichier);
+        }
+	}else {printf("Pas de sauvegarde disponible\n");
+	}
+    printf("Choisir un fichier : ");
+    scanf("%s",NomFichier);
+    sauvegarde=fopen(NomFichier,"rb");
+    fread(Plateau,sizeof(Plateau),sizeof(Plateau)/sizeof(Plateau[0][0]),sauvegarde);
+}
 
 /**
  * \fn int NombreAleatoire(int max)
