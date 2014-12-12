@@ -611,21 +611,37 @@ void Action(t_character lanceur, t_coord cible, t_skill action){
     //typedef struct { int ATK ; int MATK ; int DEF ; int MDEF ; int MVT ;} t_stats;
     //typedef enum {EMPTY,ATK,MATK}t_type;
     if(targetOrientation==0) coefOrientation=1;
-    if(targetOrientation==1) coefOrientation=1.5;
+    if(targetOrientation==1) coefOrientation=1;
     if(targetOrientation==2) coefOrientation=2;
-    
+
     if (action.type == MATK){
         total_dmg=action.damage_coeff*lanceur.stats.MATK; //degats avant réduction
-        if(total_dmg>0) total_dmg*=(abs(Plateau[cible.X][cible.Y].stats.MDEF-100)/100)*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+        if(total_dmg>0) {
+                total_dmg-=Plateau[cible.X][cible.Y].stats.MDEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg*=coefOrientation;
+        }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
     }
     if (action.type == ATK){
         total_dmg=action.damage_coeff*lanceur.stats.ATK; //degats avant réduction
-        if(total_dmg>0) total_dmg*=(abs(Plateau[cible.X][cible.Y].stats.DEF-100)/100)*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+        if(total_dmg>0) {
+                total_dmg-=Plateau[cible.X][cible.Y].stats.DEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg*=coefOrientation;
+        }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
     }
     if (action.type == EMPTY){
     }
+
+    if(action.type == LAND)
+    {
+        Plateau[cible.X][cible.Y] = default_trap;
+        Plateau[cible.X][cible.Y].camp = lanceur.camp;
+        Plateau[cible.X][cible.Y].position.X = cible.X;
+        Plateau[cible.X][cible.Y].position.Y = cible.Y;
+        //printf("%s, %i",Plateau[cible.X][cible.Y].name, Plateau[cible.X][cible.Y].camp);
+    }
+
     if (Plateau[cible.X][cible.Y].status.HP< 0) Plateau[cible.X][cible.Y].status.HP=0;
     if (Plateau[cible.X][cible.Y].status.HP>Plateau[cible.X][cible.Y].status.Max_HP) Plateau[cible.X][cible.Y].status.HP=Plateau[cible.X][cible.Y].status.Max_HP;
     if (Plateau[cible.X][cible.Y].status.HP<= 0) Plateau[cible.X][cible.Y]=case_terrain;
