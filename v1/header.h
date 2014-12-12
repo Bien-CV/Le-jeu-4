@@ -26,7 +26,7 @@
 		#define case_terrain ((t_character){"",coord_default ,orientation_default ,status__terrain_default ,stats_terrain_default ,empty_skill_list, 0 , 0 })
 		#define case_obstacle ((t_character){"",coord_default ,orientation_default ,status_default ,stats_default ,empty_skill_list, -1 , 0 })
 
-		typedef enum {obstacle =-1,terrain=0, player1=1, player2=2, player3=3}t_camp;
+		typedef enum {obstacle =-1,terrain=0, sauvage=1 }t_camp;
 		typedef enum {EMPTY,ATK,MATK}t_type;
 		typedef enum {up,right,down,left}t_orientation;
 		typedef enum {front, side, back}t_targetOrientation;
