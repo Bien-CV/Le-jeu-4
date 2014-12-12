@@ -16,6 +16,8 @@ void viderBuffer(void);
 int are_my_mates_alive();
 void generation_nom(char * nom);
 
+t_skill tampon_skill;
+
 
 char PartieNom[][20] = 
 	{
@@ -766,6 +768,7 @@ void tour()
                 deplacement_fait = 1;
             }
             skill_selected = SelectSkill();//selectionne l’action que le joueur souhaite effectuer (exple: SelectPerso / PasserTour…) retourne le n° de l’action à effectuer
+            tampon_skill = skill_selected;
             if(skill_selected.type != EMPTY)
             {
                 viserCaseValid(skill_selected);
