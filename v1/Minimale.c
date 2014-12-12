@@ -229,7 +229,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.X += 1;
 
-        if(coord.X >= 0 && coord.X <= N-1)
+        if(coord.X >= 0 && coord.X <= N-1 && ((tampon_skill.type == ATK && Plateau[coord.X][coord.Y].camp >= sauvage) || (tampon_skill.type == LAND && Plateau[coord.X][coord.Y].camp == terrain)))
         {
             ajouterFile(coord);
             nbVois++;
@@ -238,7 +238,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.X -= 1;
 
-        if(coord.X >= 0 && coord.X <= N-1)
+        if(coord.X >= 0 && coord.X <= N-1 && ((tampon_skill.type == ATK && Plateau[coord.X][coord.Y].camp >= sauvage) || (tampon_skill.type == LAND && Plateau[coord.X][coord.Y].camp == terrain)))
         {
             ajouterFile(coord);
             nbVois++;
@@ -247,7 +247,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.Y += 1;
 
-        if(coord.Y >= 0 && coord.Y <= N-1)
+        if(coord.Y >= 0 && coord.Y <= N-1 && ((tampon_skill.type == ATK && Plateau[coord.X][coord.Y].camp >= sauvage) || (tampon_skill.type == LAND && Plateau[coord.X][coord.Y].camp == terrain)))
         {
             ajouterFile(coord);
             nbVois++;
@@ -256,7 +256,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.Y -= 1;
 
-        if(coord.Y >= 0 && coord.Y <= N-1)
+        if(coord.Y >= 0 && coord.Y <= N-1 && ((tampon_skill.type == ATK && Plateau[coord.X][coord.Y].camp >= sauvage) || (tampon_skill.type == LAND && Plateau[coord.X][coord.Y].camp == terrain)))
         {
             ajouterFile(coord);
             nbVois++;
