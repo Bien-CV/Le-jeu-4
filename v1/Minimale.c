@@ -937,9 +937,10 @@ int main(){
 	joueur=player1;
 	
 	
-	creer_perso_rapide(player1,0,2);
-	creer_perso_rapide(player2,0,1);
-	creer_perso_rapide(player3,7,4);
+	creer_perso_rapide(sauvage,0,2);
+	creer_perso_rapide(2,0,1);
+	creer_perso_rapide(3,7,4);
+	creer_perso_rapide(4,6,6);
 	creer_terrain_rapide(obstacle,3,4);
 
     while(!all_dead_but_one(nb_joueurs)){
