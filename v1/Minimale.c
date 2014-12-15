@@ -54,7 +54,88 @@ t_player player[MaxTab];
 
 int indiceTabDepValid;
 
+/**
+ * \fn void Sauvegarder()
+ * \brief Sauvegarde la partie dans un fichier
+ *
+ */
+void Sauvegarder(){
+	char NomFichier[20]="",FichierSauvegarde[20]="";
+    int present=1;
 
+	FILE * fichierIndex;
+	FILE * sauvegarde;
+	fichierIndex=fopen("IndexSauvegarde.txt","r");
+	fscanf(fichierIndex,"%s",FichierSauvegarde);
+	if(fichierIndex != NULL){
+        printf("Sauvegarde deja existante :\n");
+
+        while(!feof(fichierIndex))
+        {
+            printf("%s\n",FichierSauvegarde);
+            fscanf(fichierIndex,"%s",FichierSauvegarde);
+        }
+	}else {printf("Pas de sauvegarde disponible\n");
+	}
+	printf("\n");
+    fclose(fichierIndex);
+    fichierIndex=fopen("IndexSauvegarde.txt","r+");
+    printf("Entrez un nom de sauvegarde :");
+    scanf("%s",NomFichier);
+    while(!feof(fichierIndex))
+    {
+        fscanf(fichierIndex,"%s",FichierSauvegarde);
+        if(!strcmp(NomFichier,FichierSauvegarde))
+        {
+            present=0;
+        }
+    }
+    if(present) fprintf(fichierIndex,"%s ",NomFichier);
+    sauvegarde=fopen(NomFichier,"wb");
+    fwrite(Plateau,N*N,sizeof(t_character),sauvegarde);
+    fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
+    fwrite(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+    fclose(fichierIndex);
+    fclose(sauvegarde);
+}
+
+/**
+ * \fn void Charger()
+ * \brief Permet de charger une partie depuis un fichier
+ *
+ */
+void Charger(){
+	char NomFichier[20]="",FichierSauvegarde[20]="";
+
+	FILE * fichierIndex;
+	FILE * sauvegarde;
+	fichierIndex=fopen("IndexSauvegarde.txt","r");
+	fscanf(fichierIndex,"%s",FichierSauvegarde);
+	if(fichierIndex != NULL){
+        printf("Sauvegarde deja existante :\n");
+
+        while(!feof(fichierIndex))
+        {
+            printf("%s\n",FichierSauvegarde);
+            fscanf(fichierIndex,"%s",FichierSauvegarde);
+        }
+        printf("\n");
+        do{
+            printf("Choisir un fichier : ");
+            scanf("%s",NomFichier);
+            sauvegarde=fopen(NomFichier,"rb");
+            if(sauvegarde!=NULL){
+                fread(Plateau,N*N,sizeof(t_character),sauvegarde);
+                fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
+                fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+            }else {printf("Fichier incorrect\n");}
+        }while(sauvegarde==NULL);
+	}else {printf("Pas de sauvegarde disponible\n");
+	}
+	afficher_plateau_orientation();
+	fclose(fichierIndex);
+    fclose(sauvegarde);
+}
 
 /**
  * \fn int NombreAleatoire(int max)
