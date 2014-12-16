@@ -78,7 +78,7 @@ void Sauvegarder(){
             printf("%s\n",FichierSauvegarde);
             fscanf(fichierIndex,"%s",FichierSauvegarde);
         }
-	}else {printf("Pas de sauvegarde disponible\n");
+	}else {printf("Pas de sauvegarde disponible.\n");
 	}
 	printf("\n");
     fclose(fichierIndex);
@@ -135,7 +135,7 @@ void Charger(){
         }while(!feof(sauvegarde));
         fclose(sauvegarde);
         afficher_plateau_orientation();
-	}else {printf("Pas de sauvegarde disponible\n");
+	}else {printf("Pas de sauvegarde disponible.\n");
 	}
 	fclose(fichierIndex);
     
