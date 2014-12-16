@@ -250,21 +250,31 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
     ajouterFile(coordonnees);
     ajout_droit(coordonnees);
     valeur_elt(&coordonnees);
+
     while(mvtEffectue <= selected_character.stats.MVT)
     {
         nbBoucle = nbVoisins;
         nbVoisins = 0;
+        
         for(indice = 0; indice < nbBoucle; indice++)
         {
-            retirerFile(&coordonnees);
-            ajout_droit(coordonnees);
-            if(mvtEffectue < selected_character.stats.MVT)
-                nbVoisins += cases_voisines_calcul(coordonnees);
+			
+			
+//printf("CHECKPOINT BLABBERSTRONG %i\n",indice);
+//afficher_plateau_orientation();
+
+
+            retirerFile(&coordonnees);  //Problème soit là
+            ajout_droit(coordonnees);	//Soit là
+            if(mvtEffectue < selected_character.stats.MVT)//Soit là
+                nbVoisins += cases_voisines_calcul(coordonnees);//Soit là
         }
         mvtEffectue++;
     }
     suppr_doublon();
     nbDepValid = calculerElemListe();
+    //printf("CHECKPOINT 3");
+    afficher_plateau_orientation();
 }
 
 /**
@@ -1173,9 +1183,10 @@ void spawn_sauvage()
 	player[1].alive=1;
 	int x_buffer,y_buffer;
 	do{
-		x_buffer=generation_nombre_aleatoire(TAILLE_MATRICE);
-		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE);
+		x_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
+		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
 	}while(Plateau[x_buffer][y_buffer].camp !=0);
+	printf("Coordonnées de creation du personnage chaotique : %i , %i. Camp case : %i",x_buffer,y_buffer,Plateau[x_buffer][y_buffer].camp);
 	creer_perso_rapide(sauvage,x_buffer,y_buffer);
 	edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
 	
@@ -1184,24 +1195,27 @@ void tour_IA()
 {
     int nb_actions_faites, i;
     int nb_perso_vivants=calcul_persos_IA();
+    //printf("nb_persos_vivants:%i\n",nb_perso_vivants);
     t_skill skill_selected;
     for (i=0; i<nb_perso_vivants ; i++ )
     {	
-		
 		selected_character=Plateau[Valid_chars_IA[i].position.X][Valid_chars_IA[i].position.Y];
-		
         if (selected_character.camp==joueur) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
-        {
+        {		
                 for(nb_actions_faites=0;nb_actions_faites < selected_character.nbActionTour;nb_actions_faites++)
             {
-
-                deplacements_valides();
+				//printf("Plateau Checkpoint 4");
+				afficher_plateau_orientation();
+                deplacements_valides(); //Lololol, il y a un probleme ici !
+                //printf("Plateau Checkpoint 5");
+				afficher_plateau_orientation();
                 deplacer_perso(choix_deplacement_IA());
                 skill_selected = selected_character.skill.a;
                 
                 if(skill_selected.type != EMPTY)
                 {
 					//printf("Skill not EMPTY type.\n");
+					
                     viser_case_valide(skill_selected);
                     appliquer_action(selected_character, choix_cible_IA(skill_selected), skill_selected);
                 }else 
@@ -1292,7 +1306,7 @@ int main(){
 			
 			
             compteur_tour++;
-            //if (generation_nombre_aleatoire(1)==1) spawn_sauvage();
+            //if (generation_nombre_aleatoire(2)==1) spawn_sauvage();
             
             afficher_plateau_orientation();
             
@@ -1311,11 +1325,25 @@ int main(){
     }
         
         
-        
+    /*    
     for (i=1;i<=nb_joueurs;i++)
 	{
 		if (player[i].alive==1) printf("Victoire de %s !\n",player[i].name);
 	}
-
+	int statistiques_generation_random[5];
+	for (i=0;i<5;i++)
+	{
+		statistiques_generation_random[i]=0;
+	}
+	for (i=0;i<2000;i++)
+	{
+		statistiques_generation_random[generation_nombre_aleatoire(4)]++;
+	}
+	for (i=0;i<5;i++)
+	{
+		printf("occurences de %i : %i\n",i,statistiques_generation_random[i]);
+	}
+	*/
+	
     return 1;
 }
