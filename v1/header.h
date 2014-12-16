@@ -21,6 +21,7 @@
 		#define skill_list_default ((t_skill_list){ skill_attack,skill_empty,skill_empty,skill_empty,skill_empty,skill_skip})
 		#define empty_skill_list ((t_skill_list){skill_empty,skill_empty,skill_empty,skill_empty,skill_empty,skill_empty})
 		#define character_default ((t_character){"Default name", coord_default, orientation_default, status_default, stats_default, skill_list_default, 1, 1})
+		#define default_trap ((t_character){"Trap", coord_default, orientation_default, status_default, stats_default, skill_list_default, 1, 1})
 		#define default_targetOrientation ((t_targetOrientation)front)
 
 		#define case_terrain ((t_character){"",coord_default ,orientation_default ,status__terrain_default ,stats_terrain_default ,empty_skill_list, 0 , 0 })
