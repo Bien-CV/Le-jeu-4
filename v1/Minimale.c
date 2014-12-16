@@ -824,12 +824,16 @@ void tour()
             printf("   1 - Selectionner Perso\n");
             printf("   2 - Passer tour\n");
             printf("   3 - Suicide\n");
+            printf("   4 - Sauvegarder\n");
+            printf("   5 - Charger\n");
             scanf("%d",&choix);
 
             switch(choix)
             {   case 1: printf("\n");SelectPerso(); break;
                 case 2: printf("\n");PasserTour(); break;
                 case 3: printf("\n");Suicide();life_check(); break;//Abandon
+                case 4: printf("\n");Sauvegarder();break;
+                case 5: printf("\n");Charger();break;
                 default: printf("Erreur: votre choix doit être compris entre 1 et 3\n");
             }
         }
