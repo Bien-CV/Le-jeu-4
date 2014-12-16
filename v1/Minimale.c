@@ -57,8 +57,6 @@ int indiceTabDepValid;
 
 
 
-
-
 /**
  * \fn void Sauvegarder()
  * \brief Sauvegarde la partie dans un fichier
@@ -72,7 +70,7 @@ void Sauvegarder(){
 	FILE * sauvegarde;
 	fichierIndex=fopen("IndexSauvegarde.txt","r");
 	fscanf(fichierIndex,"%s",FichierSauvegarde);
-	if(fichierIndex != NULL){
+	if(!feof(fichierIndex)){
         printf("Sauvegarde deja existante :\n");
 
         while(!feof(fichierIndex))
@@ -116,7 +114,7 @@ void Charger(){
 	FILE * sauvegarde;
 	fichierIndex=fopen("IndexSauvegarde.txt","r");
 	fscanf(fichierIndex,"%s",FichierSauvegarde);
-	if(fichierIndex != NULL){
+	if(!feof(fichierIndex)){
         printf("Sauvegarde deja existante :\n");
 
         while(!feof(fichierIndex))
@@ -134,12 +132,13 @@ void Charger(){
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
                 fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
             }else {printf("Fichier incorrect\n");}
-        }while(sauvegarde==NULL);
+        }while(!feof(sauvegarde));
+        fclose(sauvegarde);
+        afficher_plateau_orientation();
 	}else {printf("Pas de sauvegarde disponible\n");
 	}
-	afficher_plateau_orientation();
 	fclose(fichierIndex);
-    fclose(sauvegarde);
+    
 }
 
 /**
