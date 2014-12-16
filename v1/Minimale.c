@@ -1004,9 +1004,6 @@ int main(){
 
 	srand((long)time(NULL));
 	
-
-	
-	
 	
 	strcpy(player[1].name,"Baptiste");
 	strcpy(player[2].name,"Arthur");
@@ -1022,7 +1019,7 @@ int main(){
 		player[i].alive=1;
 	}
 	
-	joueur=player1;
+	joueur=2;
 	
 	
 	creer_perso_rapide(sauvage,0,2);
