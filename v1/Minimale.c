@@ -54,6 +54,43 @@ t_player player[MaxTab];
 
 int indiceTabDepValid;
 
+
+/**
+* \fn void afficher_plateau_orientation(void)
+* \brief Affiche le plateau avec les caractères correspondants à l'orientation
+*
+*/
+void afficher_plateau_orientation(void){
+    int i,j;
+    for(j=-1;j<N;j++)
+    {
+        for(i=0;i<N;i++)
+        {
+			if (j==-1)
+			{
+				 printf("%i",i);
+			}else if ( Plateau[i][j].camp == joueur )
+            {
+                printf("%c",'O');
+            }else if(Plateau[i][j].camp>0)
+            {
+                if ( Plateau[i][j].orientation == up ) printf("^");
+                if ( Plateau[i][j].orientation == left ) printf("<");
+                if ( Plateau[i][j].orientation == right ) printf(">");
+                if ( Plateau[i][j].orientation == down ) printf("v");
+            }else if ( Plateau[i][j].camp == -1 )
+            {
+                printf("%c",'#');
+            }else if ( Plateau[i][j].camp == 0 )
+            {
+                printf(" ");
+            }
+        }if (j!=-1) {printf("  %i\n",j);} else printf("\n");
+    }
+
+}
+
+
 /**
  * \fn void Sauvegarder()
  * \brief Sauvegarde la partie dans un fichier
@@ -890,40 +927,6 @@ int all_dead_but_one(int nb_joueurs){
 
 
 
-/**
-* \fn void afficher_plateau_orientation(void)
-* \brief Affiche le plateau avec les caractères correspondants à l'orientation
-*
-*/
-void afficher_plateau_orientation(void){
-    int i,j;
-    for(j=-1;j<N;j++)
-    {
-        for(i=0;i<N;i++)
-        {
-			if (j==-1)
-			{
-				 printf("%i",i);
-			}else if ( Plateau[i][j].camp == joueur )
-            {
-                printf("%c",'O');
-            }else if(Plateau[i][j].camp>0)
-            {
-                if ( Plateau[i][j].orientation == up ) printf("^");
-                if ( Plateau[i][j].orientation == left ) printf("<");
-                if ( Plateau[i][j].orientation == right ) printf(">");
-                if ( Plateau[i][j].orientation == down ) printf("v");
-            }else if ( Plateau[i][j].camp == -1 )
-            {
-                printf("%c",'#');
-            }else if ( Plateau[i][j].camp == 0 )
-            {
-                printf(" ");
-            }
-        }if (j!=-1) {printf("  %i\n",j);} else printf("\n");
-    }
-
-}
 
 /**
 * \fn void creer_perso_rapide(char nom[MaxTab], t_camp camp,int x, int y)
