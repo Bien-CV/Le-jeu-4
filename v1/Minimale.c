@@ -834,7 +834,7 @@ void tour()
                 case 3: printf("\n");Suicide();life_check(); break;//Abandon
                 case 4: printf("\n");Sauvegarder();break;
                 case 5: printf("\n");Charger();break;
-                default: printf("Erreur: votre choix doit être compris entre 1 et 3\n");
+                default: printf("Erreur: votre choix doit être compris entre 1 et 5\n");
             }
         }
         while ((choix<1) ||(choix>3) );
