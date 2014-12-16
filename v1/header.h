@@ -27,7 +27,7 @@
 		#define case_obstacle ((t_character){"",coord_default ,orientation_default ,status_default ,stats_default ,empty_skill_list, -1 , 0 })
 
 		typedef enum {obstacle =-1,terrain=0, sauvage=1 }t_camp;
-		typedef enum {EMPTY,ATK,MATK}t_type;
+		typedef enum {EMPTY,ATK,MATK,LAND}t_type;
 		typedef enum {up,right,down,left}t_orientation;
 		typedef enum {front, side, back}t_targetOrientation;
 		typedef struct { int HP ; int Max_HP ; int MP ; int Max_MP ;} t_status ;
