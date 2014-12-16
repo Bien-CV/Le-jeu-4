@@ -5,22 +5,35 @@
 #include <time.h>
 #include <ctype.h>
 #include "header.h"
+#include "liste.c"
+#include "file.c"
 #include "liste.h"
 #include "file.h"
 
+
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
+
 //Prototypes fonctions, à inclure dans un futur Minimale.h !
 int life_check();
-void JoueurSuivant(int nb_joueur);
+void joueur_suivant(int nb_joueur);
 void creer_terrain_rapide(t_camp camp,int x, int y);
-void viderBuffer(void);
+void vider_buffer(void);
 int are_my_mates_alive();
-void generation_nom(char * nom);
+int calcul_persos_IA();
 void afficher_plateau_orientation(void);
+void generation_nom(char * nom);
+int compteur_tour=0;
+int compteur_joueurs_vivants=0;
+t_character Valid_chars_IA[MaxTab];
 
-t_skill tampon_skill;
-
-
-char PartieNom[][20] = 
+char particule_generateur_nom[][20] = 
 	{
 		"ogre",
 		"etoileux",
@@ -41,11 +54,11 @@ char PartieNom[][20] =
 		"saint"
 	};
 	
-	
+int nb_joueurs=4;
 t_character selected_character;
-int player1_alive,player2_alive,player3_alive;
-t_character Plateau[N][N];
-t_coord depValid[N*N][3];
+void players_life_check();
+t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
+t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 int nbDepValid;
 int nbAtkValid;
 t_camp joueur;
@@ -55,22 +68,20 @@ t_player player[MaxTab];
 
 int indiceTabDepValid;
 
-
-
 /**
  * \fn void Sauvegarder()
  * \brief Sauvegarde la partie dans un fichier
  *
  */
 void Sauvegarder(){
-	char NomFichier[20]="",FichierSauvegarde[20]="";
+    char NomFichier[20]="",FichierSauvegarde[20]="";
     int present=1;
 
-	FILE * fichierIndex;
-	FILE * sauvegarde;
-	fichierIndex=fopen("IndexSauvegarde.txt","r");
-	fscanf(fichierIndex,"%s",FichierSauvegarde);
-	if(!feof(fichierIndex)){
+    FILE * fichierIndex;
+    FILE * sauvegarde;
+    fichierIndex=fopen("IndexSauvegarde.txt","r");
+    fscanf(fichierIndex,"%s",FichierSauvegarde);
+    if(!feof(fichierIndex)){
         printf("Sauvegarde deja existante :\n");
 
         while(!feof(fichierIndex))
@@ -78,9 +89,9 @@ void Sauvegarder(){
             printf("%s\n",FichierSauvegarde);
             fscanf(fichierIndex,"%s",FichierSauvegarde);
         }
-	}else {printf("Pas de sauvegarde disponible.\n");
-	}
-	printf("\n");
+    }else {printf("Pas de sauvegarde disponible.\n");
+    }
+    printf("\n");
     fclose(fichierIndex);
     fichierIndex=fopen("IndexSauvegarde.txt","r+");
     printf("Entrez un nom de sauvegarde :");
@@ -95,7 +106,7 @@ void Sauvegarder(){
     }
     if(present) fprintf(fichierIndex,"%s ",NomFichier);
     sauvegarde=fopen(NomFichier,"wb");
-    fwrite(Plateau,N*N,sizeof(t_character),sauvegarde);
+    fwrite(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
     fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
     fwrite(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
     fclose(fichierIndex);
@@ -108,55 +119,57 @@ void Sauvegarder(){
  *
  */
 void Charger(){
-	char NomFichier[20]="",FichierSauvegarde[20]="";
+    char NomFichier[20]="",FichierSauvegarde[20]="";
 
-	FILE * fichierIndex;
-	FILE * sauvegarde;
-	fichierIndex=fopen("IndexSauvegarde.txt","r");
-	fscanf(fichierIndex,"%s",FichierSauvegarde);
-	if(!feof(fichierIndex)){
+    FILE * fichierIndex;
+    FILE * sauvegarde;
+    fichierIndex=fopen("IndexSauvegarde.txt","r");
+    fscanf(fichierIndex,"%s",FichierSauvegarde);
+    if(!feof(fichierIndex)){
         printf("Sauvegarde deja existante :\n");
 
         while(!feof(fichierIndex))
         {
-            printf("%s\n",FichierSauvegarde);
-            fscanf(fichierIndex,"%s",FichierSauvegarde);
+                printf("%s\n",FichierSauvegarde);
+                fscanf(fichierIndex,"%s",FichierSauvegarde);
         }
         printf("\n");
         do{
-            printf("Choisir un fichier : ");
-            scanf("%s",NomFichier);
-            sauvegarde=fopen(NomFichier,"rb");
+                printf("Choisir un fichier : ");
+                scanf("%s",NomFichier);
+                sauvegarde=fopen(NomFichier,"rb");
             if(sauvegarde!=NULL){
-                fread(Plateau,N*N,sizeof(t_character),sauvegarde);
+                fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
                 fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
             }else {printf("Fichier incorrect\n");}
-        }while(sauvegarde==NULL);
-        fclose(sauvegarde);
-        afficher_plateau_orientation();
-	}else {printf("Pas de sauvegarde disponible.\n");
-	}
-	fclose(fichierIndex);
-    
+        }while(!feof(sauvegarde));
+            fclose(sauvegarde);
+            afficher_plateau_orientation();
+        }else {
+printf("Pas de sauvegarde disponible.\n");
+        }
+        fclose(fichierIndex);
 }
 
+
+
 /**
- * \fn int NombreAleatoire(int max)
+ * \fn int generation_nombre_aleatoire(int max)
  * \brief Fonction qui renvoi un nombre aléatoire en 0 et 'max'
- * 
+ *
 */
-int NombreAleatoire(int max)
+int generation_nombre_aleatoire(int max)
 {
 		return (rand()%max+1);
 }
 
 /**
- * \fn void DeplacerPerso(t_coord case_perso)
+ * \fn void deplacer_perso(t_coord case_perso)
  * \brief Déplace le personnage sur le terrain
- * 
+ *
  */
-void DeplacerPerso(t_coord case_perso)
+void deplacer_perso(t_coord case_perso)
 {
     Plateau[selected_character.position.X][selected_character.position.Y]= case_terrain ;
     selected_character.position.X=case_perso.X;
@@ -166,18 +179,18 @@ void DeplacerPerso(t_coord case_perso)
 }
 
 /**
- * \fn int CasesVoisines(t_coord coordonnees)
+ * \fn int cases_voisines_calcul(t_coord coordonnees)
  * \brief Renvoi le nombre de case voisine vide
- * 
+ *
  */
-int CasesVoisines(t_coord coordonnees){
+int cases_voisines_calcul(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
     if(Plateau[coordonnees.X+1][coordonnees.Y].camp == 0)
     {
         coord = coordonnees;
         coord.X += 1;
-        if(coord.X >= 0 && coord.X <= N-1)
+        if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -188,7 +201,7 @@ int CasesVoisines(t_coord coordonnees){
         coord = coordonnees;
         coord.X -= 1;
 
-        if(coord.X >= 0 && coord.X <= N-1)
+        if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -199,7 +212,7 @@ int CasesVoisines(t_coord coordonnees){
         coord = coordonnees;
         coord.Y += 1;
 
-        if(coord.Y >= 0 && coord.Y <= N-1)
+        if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -210,7 +223,7 @@ int CasesVoisines(t_coord coordonnees){
         coord = coordonnees;
         coord.Y -= 1;
 
-        if(coord.Y >= 0 && coord.Y <= N-1)
+        if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -219,12 +232,13 @@ int CasesVoisines(t_coord coordonnees){
     return(nbVois);
 }
 
+
 /**
- * \fn void DeplacementsValides()
+ * \fn void deplacements_valides()
  * \brief Calcule les positions de déplacement valide
- * 
+ *
  */
-void DeplacementsValides(){// permet de retourner /* Commentaire de Baptiste : Calculer plutôt non ? */ au joueur les positions valides pour son perso.
+void deplacements_valides(){// permet de calculer les positions valides pour son perso.
     int mvtEffectue = 0;
     int nbVoisins=1;
     nbDepValid = 0;
@@ -245,7 +259,7 @@ void DeplacementsValides(){// permet de retourner /* Commentaire de Baptiste : C
             retirerFile(&coordonnees);
             ajout_droit(coordonnees);
             if(mvtEffectue < selected_character.stats.MVT)
-                nbVoisins += CasesVoisines(coordonnees);
+                nbVoisins += cases_voisines_calcul(coordonnees);
         }
         mvtEffectue++;
     }
@@ -254,13 +268,13 @@ void DeplacementsValides(){// permet de retourner /* Commentaire de Baptiste : C
 }
 
 /**
- * \fn t_coord ChoixDeplacement()
+ * \fn t_coord choix_deplacement_humain()
  * \brief Permet au joueur de choisir la destination
- * 
+ *
  */
-t_coord ChoixDeplacement(){//Reprendre le code de choix de SelecPerso
+t_coord choix_deplacement_humain(){
     int i = 0, j, choix = 1;
-    viderBuffer();
+    vider_buffer();
     t_coord coordonnees, choisi;
     en_tete();
     printf("Quel Deplacement voulez-vous effectuer ? \n");
@@ -288,35 +302,61 @@ t_coord ChoixDeplacement(){//Reprendre le code de choix de SelecPerso
     return (coordonnees);
 }
 
+t_coord choix_deplacement_IA(){
+	
+    int i = 0, choix;
+    t_coord coordonnees, choisi;
+    en_tete();
+       while(!hors_liste()){
+        valeur_elt(&coordonnees);
+        suivant();
+        //printf("   %i - (%i,%i)\n",i+1, coordonnees.X, coordonnees.Y);
+        i++;
+    }
+    
+    //printf("nbDepValid: %i\n",nbDepValid);
+	
+	do 
+	{
+		choix=generation_nombre_aleatoire(nbDepValid);
+	}while (choix>nbDepValid && choix < 0);
+	
+       // printf("Choix: %i\n",choix);
+        en_tete();
+        for(i = 0; i < choix-1; i++)
+			suivant();
+        valeur_elt(&choisi);
+        coordonnees.X=choisi.X;
+        coordonnees.Y=choisi.Y;
+        //printf("Déplacement IA %s en %i,%i\n",selected_character.name,coordonnees.X,coordonnees.Y);
+    return (coordonnees);
+}
+
+
 /**
- * \fn void init_Plateau()
- * \brief Initialise le plateau
- * 
+ * \fn void init_plateau()
+ * \brief Initialise le plateau en le remplissant de terrain par défaut
+ *
  */
-void init_Plateau()
+void init_plateau()
 {
     int i, j;
-    for(j = 0; j < N; j++)
+    for(j = 0; j < TAILLE_MATRICE; j++)
     {
-        for(i = 0; i < N; i++)
+        for(i = 0; i < TAILLE_MATRICE; i++)
         {
 			creer_terrain_rapide(terrain,i,j);
         }
     }
 }
 
-/**
- * \fn int CasesVoisinesATK(t_coord coordonnees)
- * \brief 
- * 
- */
-int CasesVoisinesATK(t_coord coordonnees){
+int cases_voisines_ATK(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
         coord = coordonnees;
         coord.X += 1;
 
-        if(coord.X >= 0 && coord.X <= N-1 && (((tampon_skill.type == ATK || tampon_skill.type == MATK) && Plateau[coord.X][coord.Y].camp >= sauvage)))
+        if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -325,7 +365,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.X -= 1;
 
-        if(coord.X >= 0 && coord.X <= N-1 && (((tampon_skill.type == ATK || tampon_skill.type == MATK) && Plateau[coord.X][coord.Y].camp >= sauvage)))
+        if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -334,7 +374,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.Y += 1;
 
-        if(coord.Y >= 0 && coord.Y <= N-1 && (((tampon_skill.type == ATK || tampon_skill.type == MATK) && Plateau[coord.X][coord.Y].camp >= sauvage)))
+        if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -343,7 +383,7 @@ int CasesVoisinesATK(t_coord coordonnees){
         coord = coordonnees;
         coord.Y -= 1;
 
-        if(coord.Y >= 0 && coord.Y <= N-1 && (((tampon_skill.type == ATK || tampon_skill.type == MATK) && Plateau[coord.X][coord.Y].camp >= sauvage)))
+        if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
             nbVois++;
@@ -352,12 +392,7 @@ int CasesVoisinesATK(t_coord coordonnees){
     return(nbVois);
 }
 
-/**
- * \fn void viserCaseValid(t_skill skill)
- * \brief Calcule les cases valides ciblables
- * 
- */
-void viserCaseValid(t_skill skill)
+void viser_case_valide(t_skill skill)
 {
     int mvtEffectue = 0;
     int nbVoisins=1;
@@ -379,7 +414,7 @@ void viserCaseValid(t_skill skill)
             retirerFile(&coordonnees);
             ajout_droit(coordonnees);
             if(mvtEffectue < skill.range)
-                nbVoisins += CasesVoisinesATK(coordonnees);
+                nbVoisins += cases_voisines_ATK(coordonnees);
         }
         mvtEffectue++;
     }
@@ -387,18 +422,12 @@ void viserCaseValid(t_skill skill)
     nbAtkValid = calculerElemListe();
 }
 
-/**
- * \fn t_coord choixCible(t_skill skill)
- * \brief Permet au joueur de choisir une cible
- * 
- */
-t_coord choixCible(t_skill skill)
+t_coord choix_cible_humain(t_skill skill)
 {
-    int i =0;
-    int choix, choix_fait =1;
+    int i =0,choix;
     t_camp tampon_camp_cible;
-    viderBuffer();
-    t_coord coordonnees, choisi;
+    vider_buffer();
+    t_coord coordonnees;
     en_tete();
     printf("Choisissez votre cible. \n\n");
     while(!hors_liste()){
@@ -411,7 +440,7 @@ t_coord choixCible(t_skill skill)
 			printf(" - Ami");
 		} else if (tampon_camp_cible>0)
 		{
-			printf(" - %s, joueur%i.",player[tampon_camp_cible].name,tampon_camp_cible);
+			printf(" - %s, joueur%i",player[tampon_camp_cible].name,tampon_camp_cible);
 		}else if (tampon_camp_cible==0)
 		{
 			printf(" - Terrain");
@@ -423,23 +452,45 @@ t_coord choixCible(t_skill skill)
         printf("\n");
         i++;
     }
-
-    while(choix_fait){
+    
+    do{
         
         scanf("%i",&choix);
-        if(choix<=nbAtkValid && choix > 0)
-        {
-            en_tete();
-            for(i = 0; i < choix-1; i++)
-                suivant();
-            valeur_elt(&choisi);
-            coordonnees.X=choisi.X;
-            coordonnees.Y=choisi.Y;
-            choix_fait=0;
-        }else{printf("Numero incorrect");}
-    }
+        en_tete();
+        for(i = 0; i < choix-1; i++)
+			suivant();
+        valeur_elt(&coordonnees);
+    }while (!(choix<=nbAtkValid && choix > 0));
     return (coordonnees);
 }
+
+t_coord choix_cible_IA(t_skill skill)
+{
+    int i =0,choix;
+   // t_camp tampon_camp_cible;
+  // printf("Before ViderBuffer\n");
+   // printf("After ViderBuffer.\n");
+    t_coord coordonnees;
+    en_tete();
+
+do{
+   //     printf("Debut do\n");
+        choix=generation_nombre_aleatoire(nbAtkValid);
+        en_tete();
+        for(i = 0; i < choix-1; i++)
+			suivant();
+        valeur_elt(&coordonnees);
+    //    printf("Fin do\n");
+    }while (!(choix<=nbAtkValid && choix > 0));
+   // printf("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
+    //printf("ChoixCible:%i\n",choix);
+
+    
+    return (coordonnees);
+}
+
+
+
 
 /**
 * \fn void init_char_table(t_char chars[])
@@ -454,22 +505,22 @@ void init_char_table(t_character chars[])
 }
 
 /**
-* \fn void SelectPerso()
+* \fn void selection_perso()
 * \brief Fonction qui propose la liste des personnages pouvant être sélectionnés.
 *
 */
-void SelectPerso(){
+void selection_perso(){
     int i,j,nb_perso=0,choix,choix_fait=1;
     t_character Valid_chars[MaxTab];
     init_char_table(Valid_chars);
     t_character perso_selectionne;
-    viderBuffer();
+    vider_buffer();
     printf("Quel personnage voulez-vous selectionner ? \n");
-    for(i=0;i<N;i++)
+    for(i=0;i<TAILLE_MATRICE;i++)
     {
-        for(j=0;j<N;j++)
+        for(j=0;j<TAILLE_MATRICE;j++)
         {
-            if(Plateau[i][j].camp==joueur)
+            if(Plateau[i][j].camp==joueur && strcmp(Plateau[i][j].name, "Trap") != 0)
             {
                 Valid_chars[nb_perso]=Plateau[i][j];
                 nb_perso++;
@@ -503,20 +554,21 @@ void PasserTour(){//Permet au joueur de passer son tour
 }
 
 /**
-* \fn void Suicide()
+* \fn void suicide()
 * \brief Fonction permetant au joueur courant d'abandonner la partie
 *
 */
-void Suicide(){// Permet au joueur de quitter la partie.
+void suicide(){// Permet au joueur de quitter la partie.
     int i,j;
-    for(i=0;i<N;i++){
-        for(j=0;j<N;j++){
+    for(i=0;i<TAILLE_MATRICE;i++){
+        for(j=0;j<TAILLE_MATRICE;j++){
             if(Plateau[i][j].camp==joueur){
             Plateau[i][j]=case_terrain;
             }
         }
     }
 }
+
 
 /**
 * \fn void init_char_table(t_char chars[])
@@ -531,8 +583,31 @@ void afficher_skill(int skill_nb, t_skill skill){
     if(skill.range>1) printf("range=%i ",skill.range);
     if(skill.type==ATK) printf("power=%i",selected_character.stats.ATK*skill.damage_coeff);
     if(skill.type==MATK) printf("power=%i",selected_character.stats.MATK*skill.damage_coeff);
-    if(skill.type==EMPTY) ;
+    if(skill.type==EMPTY) printf(" ");;
     printf("\n");
+}
+
+t_skill select_skill_IA(){
+	 int choix=1;
+        vider_buffer();
+
+        afficher_skill(1,selected_character.skill.a);
+        afficher_skill(2,selected_character.skill.b);
+        afficher_skill(3,selected_character.skill.c);
+        afficher_skill(4,selected_character.skill.d);
+		afficher_skill(5,selected_character.skill.e);
+        afficher_skill(6,selected_character.skill.wait);
+
+        switch(choix)
+        {   case 1:  printf("\n");return selected_character.skill.a;break;
+            case 2:  printf("\n");return selected_character.skill.b;break;
+            case 3:  printf("\n");return selected_character.skill.c;break;
+            case 4:  printf("\n");return selected_character.skill.d;break;
+            case 5:  printf("\n");return selected_character.skill.e;break;
+            case 6:  printf("\n");return selected_character.skill.wait;break;
+        }
+
+        return skill_empty;
 }
 
 /**
@@ -541,9 +616,9 @@ void afficher_skill(int skill_nb, t_skill skill){
 * Remplit le tableau de personnages entré en paramètre de cases de terrain.
 *
 */
-t_skill SelectSkill(){//selectionne le skill que le personange courant effectuera, l'execution du skill est la fonction Skill.
+t_skill select_skill(){//selectionne le skill que le personange courant effectuera, l'execution du skill est la fonction Skill.
         int choix;
-        viderBuffer();
+        vider_buffer();
         printf("Quel compétence voulez-vous utiliser ? \n\n");
         do
         {
@@ -570,12 +645,13 @@ t_skill SelectSkill(){//selectionne le skill que le personange courant effectuer
         return skill_empty;
 }
 
+
 /**
-* \fn t_targetOrientation GetTargetOrientation (t_character perso, t_coord cible )
+* \fn t_targetOrientation get_target_orientation (t_character perso, t_coord cible )
 * \brief Fonction déterminant quelle est l'orientation de la cible par rapport au joueur.
-* 
+*
 */
-t_targetOrientation GetTargetOrientation (t_character perso, t_coord cible ){
+t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
     int xperso,yperso,xenemy,yenemy,oenemy;
 
     xperso=perso.position.X;
@@ -627,15 +703,17 @@ t_targetOrientation GetTargetOrientation (t_character perso, t_coord cible ){
     return EXIT_FAILURE;
 }
 
+
+
 /**
-* \fn void Action(t_character lanceur, t_coord cible, t_skill action)
+* \fn void appliquer_action(t_character lanceur, t_coord cible, t_skill action)
 * \brief Fonction appliquant le skill du personnage lanceur à la case cible.
 * Remplit le tableau de personnages entré en paramètre de cases de terrain.
 *
 */
-void Action(t_character lanceur, t_coord cible, t_skill action){
+void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
     int total_dmg;
-    t_targetOrientation targetOrientation= GetTargetOrientation(lanceur,cible);
+    t_targetOrientation targetOrientation= get_target_orientation(lanceur,cible);
     int coefOrientation;
     //typedef struct { char name[20] ; int range ; t_type type ; int damage_coeff ;} t_skill;
     //typedef struct { int HP ; int Max_HP ; int MP ; int Max_MP ;} t_status ;
@@ -678,13 +756,15 @@ void Action(t_character lanceur, t_coord cible, t_skill action){
     if (Plateau[cible.X][cible.Y].status.HP<= 0) Plateau[cible.X][cible.Y]=case_terrain;
 }
 
+
+
 /**
-* \fn void viderBuffer(void)
+* \fn void vider_buffer(void)
 * \brief Vide le tampon de saisie clavier.
 * 
 *
 */
-void viderBuffer(void)
+void vider_buffer(void)
 {
   int c;
   while((c=getchar()) != EOF && c != '\n');
@@ -692,17 +772,17 @@ void viderBuffer(void)
 }
 
 /**
-* \fn void OrienterPersoNumpad(t_character perso)
+* \fn void orienter_perso_numpad(t_character perso)
 * \brief Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation.
 * 
 *
 */
-void OrienterPersoNumpad(){
+void orienter_perso_numpad(){
     int choix=1;
     char input;
     t_orientation tampon_orientation;
     printf("Choisissez l'orientation : \n");
-    viderBuffer();
+    vider_buffer();
     while(choix)
     {
         
@@ -726,17 +806,17 @@ void OrienterPersoNumpad(){
 
 
 /**
-* \fn void OrienterPerso(t_character perso)
+* \fn void orienter_perso(t_character perso)
 * \brief Propose une liste des orientations du perso indiqué en paramètre d'entrée et change son orientation.
 * 
 *
 */
-void OrienterPerso(){
+void orienter_perso(){
     int choix=1;
     char input;
     t_orientation buffer;
     printf("Choisissez l'orientation : \n");
-    viderBuffer();
+    vider_buffer();
     while(choix)
     {
         
@@ -760,11 +840,11 @@ void OrienterPerso(){
 
 
 /**
-* \fn void JoueurSuivant(int nb_joueur)
+* \fn void joueur_suivant(int nb_joueur)
 * \brief Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs.
 *
 */
-void JoueurSuivant(int nb_joueur)
+void joueur_suivant(int nb_joueur)
 {
     if (joueur==nb_joueur) joueur=1;
         else joueur++;
@@ -780,9 +860,9 @@ void JoueurSuivant(int nb_joueur)
 */
 int are_my_mates_alive(){
     int nb_perso=0,i,j;
-    for(i=0;i<N;i++)
+    for(i=0;i<TAILLE_MATRICE;i++)
     {
-        for(j=0;j<N;j++)
+        for(j=0;j<TAILLE_MATRICE;j++)
         {
             if(Plateau[i][j].camp==joueur)
             {
@@ -800,15 +880,46 @@ int are_my_mates_alive(){
 *    Renvoie 1 si le joueur a encore des personnages en vie, sinon 0.
 */
 int life_check(){
-    if (player[joueur].alive==0 || are_my_mates_alive()<1 ){
+          
+    if (player[joueur].alive==0 || are_my_mates_alive()<1 ) 
+    {
 		player[joueur].alive=0;
-        printf("%s est mort.\n",player[joueur].name);
+        //if (joueur!=sauvage) printf("%s est mort.\n",player[joueur].name);
         return 0;
     }else {
         return 1;
     }
 }
 
+
+/**
+* \fn void players_life_check()
+* \brief Actualise le fait que les joueurs soient vivants ou non.
+*    
+*    
+*/
+void players_life_check()
+{	
+	int i_joueur,i,j;
+	for (i_joueur=1;i_joueur<=MaxTab;i_joueur++)
+	{ 
+		player[i_joueur].alive=0;
+
+	}
+					
+	for(i=0;i<TAILLE_MATRICE;i++)
+	{
+		for(j=0;j<TAILLE_MATRICE;j++)
+		{
+			if(Plateau[i][j].camp>=1)
+			{
+				player[Plateau[i][j].camp].alive=1;
+			}
+		}
+	}
+
+    
+}
 
 /**
 * \fn void tour(t_camp joueur)
@@ -818,8 +929,8 @@ int life_check(){
 */
 void tour()
 {
-    viderBuffer();
-    int choix, nb_actions_faites = 0, deplacement_fait;
+    vider_buffer();
+    int choix, nb_actions_faites = 0, deplacement_fait=0;
     t_skill skill_selected;
     
         do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
@@ -827,18 +938,14 @@ void tour()
 			printf("\nTour de %s : \n",player[joueur].name);
             printf("   1 - Selectionner Perso\n");
             printf("   2 - Passer tour\n");
-            printf("   3 - Suicide\n");
-            printf("   4 - Sauvegarder\n");
-            printf("   5 - Charger\n");
+            printf("   3 - suicide\n");
             scanf("%d",&choix);
 
             switch(choix)
-            {   case 1: printf("\n");SelectPerso(); break;
+            {   case 1: printf("\n");selection_perso(); break;
                 case 2: printf("\n");PasserTour(); break;
-                case 3: printf("\n");Suicide();life_check(); break;//Abandon
-                case 4: printf("\n");Sauvegarder();break;
-                case 5: printf("\n");Charger();break;
-                default: printf("Erreur: votre choix doit être compris entre 1 et 5\n");
+                case 3: printf("\n");suicide();players_life_check(); break;//Abandon
+                default: printf("Erreur: votre choix doit être compris entre 1 et 3\n");
             }
         }
         while ((choix<1) ||(choix>3) );
@@ -849,26 +956,26 @@ void tour()
 		
         //skill_selected.type = ATK;	WTF Nigga ?
         while(nb_actions_faites < selected_character.nbActionTour /* && skill_selected.type != EMPTY*/)
-        {
-            if(deplacement_fait != 1)
+        {   
+            if(deplacement_fait != 1)//GRos problème dans le déplacement, ptet à cause de moi.
             {
-                DeplacementsValides();
-                DeplacerPerso(ChoixDeplacement());
+                //printf("selected_character.nbActionTour = %i nb_actions_faites =%i MVT=%i\n",selected_character.nbActionTour,nb_actions_faites,selected_character.stats.MVT);
+                deplacements_valides();
+                deplacer_perso(choix_deplacement_humain());
                 deplacement_fait = 1;
             }
-            skill_selected = SelectSkill();//selectionne l’action que le joueur souhaite effectuer (exple: SelectPerso / PasserTour…) retourne le n° de l’action à effectuer
-            tampon_skill = skill_selected;
+            skill_selected = select_skill();//selectionne l’action que le joueur souhaite effectuer (exple: selection_perso / PasserTour…) retourne le n° de l’action à effectuer
             if(skill_selected.type != EMPTY)
             {
-                viserCaseValid(skill_selected);
-                Action(selected_character, choixCible(skill_selected), skill_selected);
+                viser_case_valide(skill_selected);
+                appliquer_action(selected_character, choix_cible_humain(skill_selected), skill_selected);
             }else 
             {
-				Action(selected_character, selected_character.position, skill_selected);
+				appliquer_action(selected_character, selected_character.position, skill_selected);
 			}
             nb_actions_faites++;
-            OrienterPersoNumpad();
-            //OrienterPerso();
+            orienter_perso_numpad();
+            //orienter_perso();
         }
 
        
@@ -876,6 +983,10 @@ void tour()
     }
 
 }
+
+
+
+
 /**
 * \fn int all_dead_but_one(void)
 * \brief Fonction déterminant si un seul joueur est vivant.
@@ -883,14 +994,17 @@ void tour()
 *    Renvoie 0 si plus d'un joueur survit, sinon renvoie 1.
 */
 int all_dead_but_one(int nb_joueurs){
-    int compteur_joueurs_vivants=0,i;
-    for (i=1;i<=nb_joueurs;i++)
+    compteur_joueurs_vivants=0;
+    int i;
+    for (i=2;i<=nb_joueurs;i++)
 	{
-		compteur_joueurs_vivants+=player[i].alive;
+		if (player[i].alive) compteur_joueurs_vivants++;
 	}
-	if (compteur_joueurs_vivants> 1)return 0;
+	if (compteur_joueurs_vivants != 1)return 0;
     return 1;
 }
+
+
 
 /**
 * \fn void afficher_plateau_orientation(void)
@@ -899,22 +1013,54 @@ int all_dead_but_one(int nb_joueurs){
 */
 void afficher_plateau_orientation(void){
     int i,j;
-    for(j=-1;j<N;j++)
+    for(j=-1;j<TAILLE_MATRICE;j++)
     {
-        for(i=0;i<N;i++)
+        for(i=0;i<TAILLE_MATRICE;i++)
         {
+			printf("\x1B[1;47m");
+			//printf("\x1B[1m");
+			//printf("\x1B[5m");
+			
 			if (j==-1)
 			{
-				 printf("%i",i);
+			//	 printf("%i",i);
 			}else if ( Plateau[i][j].camp == joueur )
-            {
-                printf("%c",'O');
+            {   
+				if(strcmp(Plateau[i][j].name, "Trap") == 0)
+                {
+					if(Plateau[i][j].camp==1) printf("%s",KRED);
+					if(Plateau[i][j].camp==3) printf("%s",KBLU);
+					if(Plateau[i][j].camp==4) printf("%s",KMAG);
+                    printf("X");
+                    printf("%s",KNRM);
+                }else
+                {
+					printf("\x1B[5m");
+					if(Plateau[i][j].camp==1) printf("%s",KRED);
+					if(Plateau[i][j].camp==3) printf("%s",KBLU);
+					if(Plateau[i][j].camp==4) printf("%s",KMAG);
+					if ( Plateau[i][j].orientation == up ) printf("^");
+					if ( Plateau[i][j].orientation == left ) printf("<");
+					if ( Plateau[i][j].orientation == right ) printf(">");
+					if ( Plateau[i][j].orientation == down ) printf("v");
+					printf("%s",KNRM);
+				}
             }else if(Plateau[i][j].camp>0)
-            {
-                if ( Plateau[i][j].orientation == up ) printf("^");
-                if ( Plateau[i][j].orientation == left ) printf("<");
-                if ( Plateau[i][j].orientation == right ) printf(">");
-                if ( Plateau[i][j].orientation == down ) printf("v");
+            {	
+				if(strcmp(Plateau[i][j].name, "Trap") == 0)
+                {
+					printf(" ");
+				}else
+				{
+					if(Plateau[i][j].camp==1) printf("%s",KRED);
+					if(Plateau[i][j].camp==3) printf("%s",KBLU);
+					if(Plateau[i][j].camp==4) printf("%s",KMAG);
+					if ( Plateau[i][j].orientation == up ) printf("^");
+					if ( Plateau[i][j].orientation == left ) printf("<");
+					if ( Plateau[i][j].orientation == right ) printf(">");
+					if ( Plateau[i][j].orientation == down ) printf("v");
+					printf("%s",KNRM);
+				}
             }else if ( Plateau[i][j].camp == -1 )
             {
                 printf("%c",'#');
@@ -922,11 +1068,15 @@ void afficher_plateau_orientation(void){
             {
                 printf(" ");
             }
-        }if (j!=-1) {printf("  %i\n",j);} else printf("\n");
+        printf("%s",KNRM);
+        }if (j!=-1) 
+        {
+			//printf("  %i",j);
+			printf("\n");
+		}else printf("\n");
     }
 
 }
-
 
 /**
 * \fn void creer_perso_rapide(char nom[MaxTab], t_camp camp,int x, int y)
@@ -944,6 +1094,8 @@ void creer_perso_rapide(t_camp camp,int x, int y)
     Plateau[x][y].camp=camp;
     Plateau[x][y].position.X=x;
     Plateau[x][y].position.Y=y;
+    
+    Plateau[x][y].skill.b = (t_skill){"Placer Piege", 3, LAND, 10};
 }
 
 /**
@@ -961,14 +1113,14 @@ void creer_terrain_rapide(t_camp camp,int x, int y)
     if (camp==obstacle)
     { 
 		Plateau[x][y]=case_obstacle;
-		strcat(chaine_tampon, "obstacle");
-		strcat(chaine_tampon, PartieNom[NombreAleatoire(17)]);
+		strcat(chaine_tampon, "Obstacle ");
+		strcat(chaine_tampon, particule_generateur_nom[generation_nombre_aleatoire(17)]);
 		strcpy(Plateau[x][y].name, chaine_tampon);
 	} else if (camp==terrain) 
 	{
 		Plateau[x][y]=case_terrain;
 		strcat(chaine_tampon, "terrain");
-		strcat(chaine_tampon, PartieNom[NombreAleatoire(17)]);
+		strcat(chaine_tampon, particule_generateur_nom[generation_nombre_aleatoire(17)]);
 		strcpy(Plateau[x][y].name, chaine_tampon);
 	}else
 	{
@@ -987,9 +1139,9 @@ void generation_nom(char * nom)
 	random_name=malloc(sizeof(char) * (100));
 	
 	random_name[0]=0;
-	for(i=NombreAleatoire(1)+1;i>0;i--)
+	for(i=generation_nombre_aleatoire(1)+1;i>0;i--)
 	{
-	strcat(random_name, PartieNom[NombreAleatoire(17)]);
+	strcat(random_name, particule_generateur_nom[generation_nombre_aleatoire(17)]);
 	strcat(random_name, " ");
 	}
 	random_name[0]=toupper(random_name[0]);
@@ -997,6 +1149,94 @@ void generation_nom(char * nom)
 	strcpy(nom,random_name);
 	free(random_name);
 }
+void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int ATK , int MATK , int DEF , int MDEF , int MVT)
+{
+	int x_buffer=perso.position.X,y_buffer=perso.position.Y;
+	
+	Plateau[x_buffer][y_buffer].status.HP=HP;//Default=100
+	Plateau[x_buffer][y_buffer].status.Max_HP=Max_HP;//Default=100
+	Plateau[x_buffer][y_buffer].status.MP=MP;//Default=10
+	Plateau[x_buffer][y_buffer].status.Max_MP=Max_MP;//Default=10
+	
+	Plateau[x_buffer][y_buffer].stats.ATK=ATK;//Default=10
+	Plateau[x_buffer][y_buffer].stats.MATK=MATK;//Default=10
+	Plateau[x_buffer][y_buffer].stats.DEF=DEF;//Default=10
+	Plateau[x_buffer][y_buffer].stats.MDEF=MDEF;//Default=10
+	Plateau[x_buffer][y_buffer].stats.MVT=MVT;//Default=2
+
+}		
+		//Pour déclarer facilement : int HP=000,Max_HP=000,MP=000,Max_MP=000,ATK=000,MATK=000,DEF=000,MDEF=000,MVT=000;
+		//edit_stats(HP,Max_HP,MP,Max_MP,ATK,MATK,DEF,MDEF,MVT);
+		
+void spawn_sauvage()
+{
+	player[1].alive=1;
+	int x_buffer,y_buffer;
+	do{
+		x_buffer=generation_nombre_aleatoire(TAILLE_MATRICE);
+		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE);
+	}while(Plateau[x_buffer][y_buffer].camp !=0);
+	creer_perso_rapide(sauvage,x_buffer,y_buffer);
+	edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
+	
+}
+void tour_IA()
+{
+    int nb_actions_faites, i;
+    int nb_perso_vivants=calcul_persos_IA();
+    t_skill skill_selected;
+    for (i=0; i<nb_perso_vivants ; i++ )
+    {	
+		
+		selected_character=Plateau[Valid_chars_IA[i].position.X][Valid_chars_IA[i].position.Y];
+		
+        if (selected_character.camp==joueur) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
+        {
+                for(nb_actions_faites=0;nb_actions_faites < selected_character.nbActionTour;nb_actions_faites++)
+            {
+
+                deplacements_valides();
+                deplacer_perso(choix_deplacement_IA());
+                skill_selected = selected_character.skill.a;
+                
+                if(skill_selected.type != EMPTY)
+                {
+					//printf("Skill not EMPTY type.\n");
+                    viser_case_valide(skill_selected);
+                    appliquer_action(selected_character, choix_cible_IA(skill_selected), skill_selected);
+                }else 
+                {
+					//printf("Skill EMPTY type.\n");
+                    appliquer_action(selected_character, selected_character.position, skill_selected);
+                }
+
+            }
+        }
+    }
+
+
+       
+
+
+}
+
+int calcul_persos_IA(){
+    int i,j,nb_perso=0;
+    init_char_table(Valid_chars_IA);
+    for(i=0;i<TAILLE_MATRICE;i++)
+    {
+        for(j=0;j<TAILLE_MATRICE;j++)
+        {
+            if(Plateau[i][j].camp==joueur)
+            {
+                Valid_chars_IA[nb_perso]=Plateau[i][j];
+                nb_perso++;
+            }
+        }
+    }
+    return nb_perso;
+}
+
 /**
 * \fn int main()
 * \brief Fonction principale
@@ -1004,40 +1244,74 @@ void generation_nom(char * nom)
 *
 */
 int main(){
-
+	nb_joueurs++;
 	srand((long)time(NULL));
 	
-	
-	strcpy(player[1].name,"Baptiste");
-	strcpy(player[2].name,"Arthur");
-	strcpy(player[3].name,"Yann");
 
 	
-	generation_nom(player[1].name);
-	generation_nom(player[1].name);
 	
-	int nb_joueurs=3,i;
+	
+	strcpy(player[1].name,"la nature");
+	strcpy(player[2].name,"Arthur");
+	strcpy(player[3].name,"Yann");
+	strcpy(player[4].name,"Baptiste");
+	
+	int i;
 	for (i=1;i<=nb_joueurs;i++)
 	{
 		player[i].alive=1;
 	}
+	player[1].alive=0;
 	
-	joueur=2;
+	joueur=1;
 	
 	
-	creer_perso_rapide(sauvage,0,2);
+	
 	creer_perso_rapide(2,0,1);
-	creer_perso_rapide(3,7,4);
-	creer_perso_rapide(4,6,6);
+	creer_perso_rapide(3,2,4);
+	creer_perso_rapide(4,0,2);
 	creer_terrain_rapide(obstacle,3,4);
-
+        
+    spawn_sauvage();
+    
+	players_life_check();
+	for (i=1;i<=MaxTab;i++)
+		{
+			if(i==1)printf("%s",KRED);
+			if(i==3)printf("%s",KBLU);
+			if(i==4)printf("%s",KMAG);
+			if(player[i].alive==1) printf("\nJoueur %i %s.\n",i,player[i].name);
+			printf("%s",KNRM);
+		}
+		
+    
     while(!all_dead_but_one(nb_joueurs)){
-        if(life_check()!=0)
-        {   afficher_plateau_orientation();
-            tour();
+		
+        if(player[joueur].alive != 0 )
+        {   
+			
+			
+            compteur_tour++;
+            //if (generation_nombre_aleatoire(1)==1) spawn_sauvage();
+            
+            afficher_plateau_orientation();
+            
+            if (joueur==sauvage) 
+            {
+                tour_IA();
+                
+            }else tour_IA();
+            
+            
         }
-        JoueurSuivant(nb_joueurs);
+        
+        
+        players_life_check();
+        joueur_suivant(nb_joueurs);
     }
+        
+        
+        
     for (i=1;i<=nb_joueurs;i++)
 	{
 		if (player[i].alive==1) printf("Victoire de %s !\n",player[i].name);
