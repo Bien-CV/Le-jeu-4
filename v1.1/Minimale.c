@@ -139,31 +139,18 @@ void Charger(){
                 scanf("%s",NomFichier);
                 sauvegarde=fopen(NomFichier,"rb");
             if(sauvegarde!=NULL){
-<<<<<<< HEAD
-				fread(Plateau,N*N,sizeof(t_character),sauvegarde);
-				fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-				fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
-			}else {printf("Fichier incorrect\n");}
-        }while(sauvegarde==NULL);
-        fclose(sauvegarde);
-        afficher_plateau_orientation();
-	}else {printf("Pas de sauvegarde disponible.\n");
-	}
-	fclose(fichierIndex);
-    
-=======
                 fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
                 fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
             }else {printf("Fichier incorrect\n");}
         }while(!feof(sauvegarde));
-            fclose(sauvegarde);
-            afficher_plateau_orientation();
+        fclose(sauvegarde);
+        afficher_plateau_orientation();
         }else {
-printf("Pas de sauvegarde disponible.\n");
+		printf("Pas de sauvegarde disponible.\n");
         }
         fclose(fichierIndex);
->>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
+
 }
 
 
