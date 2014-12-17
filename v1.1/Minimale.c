@@ -5,8 +5,8 @@
 #include <time.h>
 #include <ctype.h>
 #include "header.h"
-#include "liste.c"
-#include "file.c"
+//#include "liste.c"
+//#include "file.c"
 #include "liste.h"
 #include "file.h"
 
