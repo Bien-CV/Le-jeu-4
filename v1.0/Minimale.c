@@ -901,8 +901,8 @@ void afficher_plateau_orientation(void){
     int i,j;
     for(j=-1;j<N;j++)
     {
-		if (j!=-1) {printf("\n%i ",j);} else printf(" ");
-		printf(" ");
+	if (j!=-1) {printf("\n%i ",j);} else printf("  ");
+	printf(" ");
         for(i=0;i<N;i++)
         {
 			if (j==-1)
