@@ -165,13 +165,9 @@ int generation_nombre_aleatoire(int max)
 		return (rand()%max+1);
 }
 
-<<<<<<< HEAD
-/**.
- * \fn void DeplacerPerso(t_coord case_perso)
-=======
+
 /**
  * \fn void deplacer_perso(t_coord case_perso)
->>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
  * \brief Déplace le personnage sur le terrain
  *
  */
@@ -1031,13 +1027,8 @@ void afficher_plateau_orientation(void){
     int i,j;
     for(j=-1;j<TAILLE_MATRICE;j++)
     {
-<<<<<<< HEAD
-		if (j!=-1) {printf("\n%i ",j);} else printf(" ");
-		printf(" ");
-        for(i=0;i<N;i++)
-=======
+
         for(i=0;i<TAILLE_MATRICE;i++)
->>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
         {
 			printf("\x1B[1;47m");
 			//printf("\x1B[1m");
@@ -1090,18 +1081,13 @@ void afficher_plateau_orientation(void){
             {
                 printf(" ");
             }
-<<<<<<< HEAD
-        }
-        if (j!=-1) printf("|");
-=======
         printf("%s",KNRM);
         }if (j!=-1) 
         {
-			//printf("  %i",j);
-			printf("\n");
-		}else printf("\n");
->>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
-    }
+		//printf("  %i",j);
+		printf("\n");
+	}else printf("\n");
+    	}
 	printf("\n");
 }
 
