@@ -748,7 +748,7 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         printf("MATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.MATK; //degats avant réduction
         if(total_dmg>0) {
-                total_dmg-=Plateau[cible.X][cible.Y].stats.MDEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg=total_dmg*(100-(Plateau[cible.X][cible.Y].stats.MDEF))/100;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
                 total_dmg*=coefOrientation;
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
@@ -757,7 +757,7 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         printf("ATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.ATK; //degats avant réduction
         if(total_dmg>0) {
-                total_dmg-=Plateau[cible.X][cible.Y].stats.DEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg=total_dmg*(100-(Plateau[cible.X][cible.Y].stats.DEF))/100;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
                 total_dmg*=coefOrientation;
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
