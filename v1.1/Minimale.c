@@ -5,8 +5,8 @@
 #include <time.h>
 #include <ctype.h>
 #include "header.h"
-//#include "liste.c"
-//#include "file.c"
+#include "liste.c"
+#include "file.c"
 #include "liste.h"
 #include "file.h"
 
@@ -94,7 +94,7 @@ void Sauvegarder(){
     printf("\n");
     fclose(fichierIndex);
     fichierIndex=fopen("IndexSauvegarde.txt","r+");
-    printf("Entrez un nom de sauvegarde : ");
+    printf("Entrez un nom de sauvegarde :");
     scanf("%s",NomFichier);
     while(!feof(fichierIndex))
     {
@@ -144,13 +144,12 @@ void Charger(){
                 fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
             }else {printf("Fichier incorrect\n");}
         }while(!feof(sauvegarde));
-        fclose(sauvegarde);
-        afficher_plateau_orientation();
+            fclose(sauvegarde);
+            afficher_plateau_orientation();
         }else {
-		printf("Pas de sauvegarde disponible.\n");
+printf("Pas de sauvegarde disponible.\n");
         }
         fclose(fichierIndex);
-
 }
 
 
@@ -164,7 +163,6 @@ int generation_nombre_aleatoire(int max)
 {
 		return (rand()%max+1);
 }
-
 
 /**
  * \fn void deplacer_perso(t_coord case_perso)
@@ -247,6 +245,7 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
     int nbBoucle;
     init_liste();
     initFile();
+
     int indice;
     t_coord coordonnees = selected_character.position;
     ajouterFile(coordonnees);
@@ -260,14 +259,18 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
         
         for(indice = 0; indice < nbBoucle; indice++)
         {
-			
-			
-//printf("CHECKPOINT BLABBERSTRONG %i\n",indice);
-//afficher_plateau_orientation();
-
-
+/*
+ * 		int bug_detected;
+		if (bug_detected==0) if (perso_oriente_a_droite()) bug_detected=1;
+if (bug_detected==1) 
+{
+	printf("CHECKPOINT BLABBERSTRONG %i\n",indice);
+	afficher_plateau_orientation();
+}
+*/
             retirerFile(&coordonnees);  //Problème soit là
             ajout_droit(coordonnees);	//Soit là
+
             if(mvtEffectue < selected_character.stats.MVT)//Soit là
                 nbVoisins += cases_voisines_calcul(coordonnees);//Soit là
         }
@@ -277,6 +280,7 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
     nbDepValid = calculerElemListe();
     //printf("CHECKPOINT 3");
     afficher_plateau_orientation();
+                   //afficher_liste();
 }
 
 /**
@@ -885,6 +889,22 @@ int are_my_mates_alive(){
     return nb_perso;
 }
 
+int perso_oriente_a_droite()
+{
+	int i,j;
+    for(i=0;i<TAILLE_MATRICE;i++)
+    {
+        for(j=0;j<TAILLE_MATRICE;j++)
+        {
+            if(Plateau[i][j].orientation==right)
+            {
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 /**
 * \fn int life_check(t_camp joueur)
 * \brief Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain.
@@ -1027,7 +1047,6 @@ void afficher_plateau_orientation(void){
     int i,j;
     for(j=-1;j<TAILLE_MATRICE;j++)
     {
-
         for(i=0;i<TAILLE_MATRICE;i++)
         {
 			printf("\x1B[1;47m");
@@ -1084,11 +1103,11 @@ void afficher_plateau_orientation(void){
         printf("%s",KNRM);
         }if (j!=-1) 
         {
-		//printf("  %i",j);
-		printf("\n");
-	}else printf("\n");
-    	}
-	printf("\n");
+			//printf("  %i",j);
+			printf("\n");
+		}else printf("\n");
+    }
+
 }
 
 /**
@@ -1285,9 +1304,9 @@ int main(){
 	
 	
 	creer_perso_rapide(2,0,1);
-	creer_perso_rapide(3,2,4);
+	creer_perso_rapide(3,2,1);
 	creer_perso_rapide(4,0,2);
-	creer_terrain_rapide(obstacle,3,4);
+	creer_terrain_rapide(obstacle,3,1);
         
     spawn_sauvage();
     
