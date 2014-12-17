@@ -94,7 +94,7 @@ void Sauvegarder(){
     printf("\n");
     fclose(fichierIndex);
     fichierIndex=fopen("IndexSauvegarde.txt","r+");
-    printf("Entrez un nom de sauvegarde :");
+    printf("Entrez un nom de sauvegarde : ");
     scanf("%s",NomFichier);
     while(!feof(fichierIndex))
     {
@@ -139,6 +139,19 @@ void Charger(){
                 scanf("%s",NomFichier);
                 sauvegarde=fopen(NomFichier,"rb");
             if(sauvegarde!=NULL){
+<<<<<<< HEAD
+				fread(Plateau,N*N,sizeof(t_character),sauvegarde);
+				fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
+				fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+			}else {printf("Fichier incorrect\n");}
+        }while(sauvegarde==NULL);
+        fclose(sauvegarde);
+        afficher_plateau_orientation();
+	}else {printf("Pas de sauvegarde disponible.\n");
+	}
+	fclose(fichierIndex);
+    
+=======
                 fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
                 fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
@@ -150,6 +163,7 @@ void Charger(){
 printf("Pas de sauvegarde disponible.\n");
         }
         fclose(fichierIndex);
+>>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
 }
 
 
@@ -164,8 +178,13 @@ int generation_nombre_aleatoire(int max)
 		return (rand()%max+1);
 }
 
+<<<<<<< HEAD
+/**.
+ * \fn void DeplacerPerso(t_coord case_perso)
+=======
 /**
  * \fn void deplacer_perso(t_coord case_perso)
+>>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
  * \brief Déplace le personnage sur le terrain
  *
  */
@@ -1025,7 +1044,13 @@ void afficher_plateau_orientation(void){
     int i,j;
     for(j=-1;j<TAILLE_MATRICE;j++)
     {
+<<<<<<< HEAD
+		if (j!=-1) {printf("\n%i ",j);} else printf(" ");
+		printf(" ");
+        for(i=0;i<N;i++)
+=======
         for(i=0;i<TAILLE_MATRICE;i++)
+>>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
         {
 			printf("\x1B[1;47m");
 			//printf("\x1B[1m");
@@ -1078,14 +1103,19 @@ void afficher_plateau_orientation(void){
             {
                 printf(" ");
             }
+<<<<<<< HEAD
+        }
+        if (j!=-1) printf("|");
+=======
         printf("%s",KNRM);
         }if (j!=-1) 
         {
 			//printf("  %i",j);
 			printf("\n");
 		}else printf("\n");
+>>>>>>> 4b738995df21af82995817b5cd7690cc8346b405
     }
-
+	printf("\n");
 }
 
 /**
