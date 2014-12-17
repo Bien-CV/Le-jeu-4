@@ -1,7 +1,7 @@
 #ifndef H_HEADER
 #define H_HEADER
  
-		#define N 10
+		#define TAILLE_MATRICE 10
 		#define MaxTab 40
 		#define MaxString 40
 		//CODES ASCII
