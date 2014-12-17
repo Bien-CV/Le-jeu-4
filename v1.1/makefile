@@ -1,16 +1,19 @@
-all : Minimale
 
-Minimale : Minimale.o liste.o file.o
-	gcc -o Minimale Minimale.o liste.o file.o
+
+PROG=Minimale
+OBJS=liste.o file.o
+OPTS=-Wall
+
+all : ${PROG}
+
+${PROG} : ${OBJS}
+	${CC} -o ${PROG} ${PROG}.c ${OBJS} ${OPTS}
 	
-Minimale.o : Minimale.c 
-	gcc -c Minimale.c
-
 liste.o : liste.c 
-	gcc -c liste.c liste.h
+	${CC} -c liste.c liste.h ${OPTS}
 
 file.o : file.c 
-	gcc -c file.c file.h
+	${CC} -c file.c file.h ${OPTS}
 
 clean :
-	rm Minimale.o Minimale core
+	rm *.o ${PROG}
