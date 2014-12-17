@@ -5,11 +5,8 @@
 #include <time.h>
 #include <ctype.h>
 #include "header.h"
-#include "liste.c"
-#include "file.c"
 #include "liste.h"
 #include "file.h"
-
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -180,13 +177,13 @@ void deplacer_perso(t_coord case_perso)
 
 /**
  * \fn int cases_voisines_calcul(t_coord coordonnees)
- * \brief Renvoi le nombre de case voisine vide
+ * \brief Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles
  *
  */
 int cases_voisines_calcul(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
-    if(Plateau[coordonnees.X+1][coordonnees.Y].camp == 0)
+    if(0 == Plateau[coordonnees.X+1][coordonnees.Y].camp)
     {
         coord = coordonnees;
         coord.X += 1;
@@ -235,7 +232,7 @@ int cases_voisines_calcul(t_coord coordonnees){
 
 /**
  * \fn void deplacements_valides()
- * \brief Calcule les positions de déplacement valide
+ * \brief Calcule les positions de déplacement valide, les met dans la liste
  *
  */
 void deplacements_valides(){// permet de calculer les positions valides pour son perso.
@@ -248,9 +245,10 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
 
     int indice;
     t_coord coordonnees = selected_character.position;
+    
     ajouterFile(coordonnees);
-    ajout_droit(coordonnees);
-    valeur_elt(&coordonnees);
+    ajout_droit(coordonnees); 
+    //valeur_elt(&coordonnees);
 
     while(mvtEffectue <= selected_character.stats.MVT)
     {
@@ -259,15 +257,12 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
         
         for(indice = 0; indice < nbBoucle; indice++)
         {
-/*
- * 		int bug_detected;
-		if (bug_detected==0) if (perso_oriente_a_droite()) bug_detected=1;
-if (bug_detected==1) 
-{
-	printf("CHECKPOINT BLABBERSTRONG %i\n",indice);
-	afficher_plateau_orientation();
-}
-*/
+
+
+	//printf("CHECKPOINT BLABBERSTRONG %i\n",indice);
+	//afficher_plateau_orientation();
+
+
             retirerFile(&coordonnees);  //Problème soit là
             ajout_droit(coordonnees);	//Soit là
 
@@ -279,7 +274,7 @@ if (bug_detected==1)
     suppr_doublon();
     nbDepValid = calculerElemListe();
     //printf("CHECKPOINT 3");
-    afficher_plateau_orientation();
+    //afficher_plateau_orientation();
                    //afficher_liste();
 }
 
@@ -344,7 +339,7 @@ t_coord choix_deplacement_IA(){
         valeur_elt(&choisi);
         coordonnees.X=choisi.X;
         coordonnees.Y=choisi.Y;
-        //printf("Déplacement IA %s en %i,%i\n",selected_character.name,coordonnees.X,coordonnees.Y);
+        printf("Déplacement IA %s en %i,%i\n",selected_character.name,coordonnees.X,coordonnees.Y);
     return (coordonnees);
 }
 
@@ -498,7 +493,7 @@ do{
         valeur_elt(&coordonnees);
     //    printf("Fin do\n");
     }while (!(choix<=nbAtkValid && choix > 0));
-   // printf("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
+   printf("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
     //printf("ChoixCible:%i\n",choix);
 
     
@@ -601,6 +596,15 @@ void afficher_skill(int skill_nb, t_skill skill){
     if(skill.type==MATK) printf("power=%i",selected_character.stats.MATK*skill.damage_coeff);
     if(skill.type==EMPTY) printf(" ");;
     printf("\n");
+}
+
+void afficher_skill_list(t_character perso){
+		afficher_skill(1,perso.skill.a);
+        afficher_skill(2,perso.skill.b);
+        afficher_skill(3,perso.skill.c);
+        afficher_skill(4,perso.skill.d);
+		afficher_skill(5,perso.skill.e);
+        afficher_skill(6,perso.skill.wait);
 }
 
 t_skill select_skill_IA(){
@@ -740,6 +744,8 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
     if(targetOrientation==2) coefOrientation=2;
 
     if (action.type == MATK){
+        
+        printf("MATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.MATK; //degats avant réduction
         if(total_dmg>0) {
                 total_dmg-=Plateau[cible.X][cible.Y].stats.MDEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
@@ -747,7 +753,8 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
     }
-    if (action.type == ATK){
+    else if (action.type == ATK){
+        printf("ATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.ATK; //degats avant réduction
         if(total_dmg>0) {
                 total_dmg-=Plateau[cible.X][cible.Y].stats.DEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
@@ -755,11 +762,13 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
     }
-    if (action.type == EMPTY){
+    else if (action.type == EMPTY){
+		printf("NOTHING : %d,%d\n", cible.X, cible.Y);
     }
 
-    if(action.type == LAND)
+    else if(action.type == LAND)
     {
+		printf("PIEGE : %d,%d\n", cible.X, cible.Y);
         Plateau[cible.X][cible.Y] = default_trap;
         Plateau[cible.X][cible.Y].camp = lanceur.camp;
         Plateau[cible.X][cible.Y].position.X = cible.X;
@@ -952,6 +961,60 @@ void players_life_check()
 
     
 }
+void afficher_infos_persos( t_character perso)
+{
+
+	printf("Nom : %s ",perso.name);
+	printf("Position : %i,%i ",perso.position.X,perso.position.Y);
+	if ( perso.orientation == up )
+	{
+		printf("Orientation: Haut ");
+	}else if ( perso.orientation == down )
+	{
+		printf("Orientation: Bas ");
+	}else if ( perso.orientation == left )
+	{
+		printf("Orientation: Gauche ");
+	}else if ( perso.orientation == right )
+	{
+		printf("Orientation: Droite ");
+	}else
+	{
+		printf("Orientation incorrecte ");
+	}
+	printf("( %i )",perso.orientation);
+	printf("Camp : %i ",perso.camp);
+	printf("NbActionstour : %i ",perso.nbActionTour);
+	printf("%i/%i HP %i/%i MP ATK:%i MATK:%i DEF:%i MDEF:%i MVT:%i ",perso.status.HP,perso.status.Max_HP,perso.status.MP,perso.status.Max_MP,perso.stats.ATK,perso.stats.MATK,perso.stats.DEF,perso.stats.MDEF,perso.stats.MVT);
+	
+	afficher_skill_list(perso);
+}	
+/**
+* \fn void character_hp_list()
+* \brief affiche une liste avec les persos et leurs points de vie.
+*    
+*    
+*/
+void character_hp_list()
+{	
+	int i,j;
+					
+	for(i=0;i<TAILLE_MATRICE;i++)
+	{
+		for(j=0;j<TAILLE_MATRICE;j++)
+		{
+			if(Plateau[i][j].orientation!=up)
+			{
+				afficher_infos_persos(Plateau[i][j]);
+			}else if(Plateau[i][j].camp>=1)
+			{
+				printf("Joueur %i %s %i/%i HP\n",Plateau[i][j].camp,Plateau[i][j].name,Plateau[i][j].status.HP,Plateau[i][j].status.Max_HP);
+			}
+		}
+	}
+
+    
+}
 
 /**
 * \fn void tour(t_camp joueur)
@@ -1055,7 +1118,7 @@ void afficher_plateau_orientation(void){
 			
 			if (j==-1)
 			{
-			//	 printf("%i",i);
+				 printf("%i",i);
 			}else if ( Plateau[i][j].camp == joueur )
             {   
 				if(strcmp(Plateau[i][j].name, "Trap") == 0)
@@ -1103,7 +1166,7 @@ void afficher_plateau_orientation(void){
         printf("%s",KNRM);
         }if (j!=-1) 
         {
-			//printf("  %i",j);
+			printf("  %i",j);
 			printf("\n");
 		}else printf("\n");
     }
@@ -1226,12 +1289,15 @@ void tour_IA()
         {		
                 for(nb_actions_faites=0;nb_actions_faites < selected_character.nbActionTour;nb_actions_faites++)
             {
-				//printf("Plateau Checkpoint 4");
-				afficher_plateau_orientation();
+				//printf("Plateau Checkpoint 4\n");
+				//afficher_plateau_orientation();
                 deplacements_valides(); //Lololol, il y a un probleme ici !
-                //printf("Plateau Checkpoint 5");
-				afficher_plateau_orientation();
+                //printf("Plateau Checkpoint 5\n");
+				//afficher_plateau_orientation();
+				
                 deplacer_perso(choix_deplacement_IA());
+                //printf("Plateau Checkpoint 6\n");
+				//afficher_plateau_orientation();
                 skill_selected = selected_character.skill.a;
                 
                 if(skill_selected.type != EMPTY)
@@ -1250,6 +1316,7 @@ void tour_IA()
         }
     }
 
+	//scanf("%d", &i);
 
        
 
@@ -1328,10 +1395,10 @@ int main(){
 			
 			
             compteur_tour++;
-            //if (generation_nombre_aleatoire(2)==1) spawn_sauvage();
+            //if (generation_nombre_aleatoire(3)==1) spawn_sauvage();
             
             afficher_plateau_orientation();
-            
+            character_hp_list();
             if (joueur==sauvage) 
             {
                 tour_IA();
@@ -1345,7 +1412,14 @@ int main(){
         players_life_check();
         joueur_suivant(nb_joueurs);
     }
-        
+    
+	afficher_plateau_orientation();
+
+
+	for (i=1;i<=nb_joueurs;i++)
+	{
+		if (player[i].alive==1) printf("Victoire de %s !\n",player[i].name);
+	}
         
     /*    
     for (i=1;i<=nb_joueurs;i++)
