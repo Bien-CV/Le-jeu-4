@@ -1,0 +1,7 @@
+<map id="t_character" name="t_character">
+<area shape="rect" id="node2" href="$structt__skill__list.html" title="t_skill_list" alt="" coords="5,168,85,195"/>
+<area shape="rect" id="node4" href="$structt__skill.html" title="t_skill" alt="" coords="17,5,73,32"/>
+<area shape="rect" id="node6" href="$structt__stats.html" title="t_stats" alt="" coords="110,168,172,195"/>
+<area shape="rect" id="node8" href="$structt__coord.html" title="t_coord" alt="" coords="197,168,261,195"/>
+<area shape="rect" id="node10" href="$structt__status.html" title="t_status" alt="" coords="287,168,356,195"/>
+</map>
