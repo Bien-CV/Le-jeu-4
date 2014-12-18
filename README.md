@@ -1,5 +1,7 @@
 Le-jeu-4
 ========
+A voir en Raw.
+
 
 /***
  *    ██╗     ███████╗         ██╗███████╗██╗   ██╗    ██╗  ██╗
@@ -122,3 +124,17 @@ Ogre
 
 Rectangles
 
+/***
+ *    ooooo                           o8o                                  .o   
+ *    `888'                           `"'                                .d88   
+ *     888          .ooooo.          oooo  .ooooo.  oooo  oooo         .d'888   
+ *     888         d88' `88b         `888 d88' `88b `888  `888       .d'  888   
+ *     888         888ooo888          888 888ooo888  888   888       88ooo888oo 
+ *     888       o 888    .o          888 888    .o  888   888            888   
+ *    o888ooooood8 `Y8bod8P'          888 `Y8bod8P'  `V88V"V8P'          o888o  
+ *                                    888                                       
+ *                                .o. 88P                                       
+ *                                `Y888P                                        
+ */
+
+Roman
