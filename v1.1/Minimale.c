@@ -26,7 +26,7 @@ void vider_buffer(void);
 int are_my_mates_alive();
 int calcul_persos_IA();
 void afficher_plateau_orientation(void);
-void generation_nom(char * nom);
+void generation_nom_personnage(char * nom);
 int compteur_tour=0;
 int compteur_joueurs_vivants=0;
 t_character Valid_chars_IA[MaxTab];
@@ -1184,7 +1184,7 @@ void creer_perso_rapide(t_camp camp,int x, int y)
 {
 	char chaine_tampon[MaxString];
 	chaine_tampon[0]=0;
-	generation_nom(chaine_tampon);
+	generation_nom_personnage(chaine_tampon);
     Plateau[x][y]=character_default;
     if (camp>terrain) strcpy(Plateau[x][y].name, chaine_tampon);else strcpy(Plateau[x][y].name, "Mauvaise fonction de creation");
     Plateau[x][y].camp=camp;
@@ -1228,7 +1228,7 @@ void creer_terrain_rapide(t_camp camp,int x, int y)
 }
 
 
-void generation_nom(char * nom)
+void generation_nom_personnage(char * nom)
 {
 	int i;
 	char *random_name = NULL;
