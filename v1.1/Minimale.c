@@ -20,7 +20,7 @@
 
 //Prototypes fonctions, à inclure dans un futur Minimale.h !
 int life_check();
-void joueur_suivant(int nb_joueur);
+void joueur_liste_suivant(int nb_joueur);
 void creer_terrain_rapide(t_camp camp,int x, int y);
 void vider_buffer(void);
 int are_my_mates_alive();
@@ -190,7 +190,7 @@ int cases_voisines_calcul(t_coord coordonnees){
         coord.X += 1;
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
     }
@@ -201,7 +201,7 @@ int cases_voisines_calcul(t_coord coordonnees){
 
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
     }
@@ -212,7 +212,7 @@ int cases_voisines_calcul(t_coord coordonnees){
 
         if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
     }
@@ -223,7 +223,7 @@ int cases_voisines_calcul(t_coord coordonnees){
 
         if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
     }
@@ -241,15 +241,15 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
     int nbVoisins=1;
     nbDepValid = 0;
     int nbBoucle;
-    init_liste();
-    initFile();
+    liste_init();
+    file_init();
 
     int indice;
     t_coord coordonnees = selected_character.position;
     
-    ajouterFile(coordonnees);
-    ajout_droit(coordonnees); 
-    //valeur_elt(&coordonnees);
+    file_ajouter(coordonnees);
+    liste_ajout_droit(coordonnees); 
+    //liste_valeur_elt(&coordonnees);
 
     while(mvtEffectue <= selected_character.stats.MVT)
     {
@@ -261,18 +261,18 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
 
 
 
-            retirerFile(&coordonnees);  
-            ajout_droit(coordonnees);	
+            file_retirer(&coordonnees);  
+            liste_ajout_droit(coordonnees);	
 
             if(mvtEffectue < selected_character.stats.MVT)
                 nbVoisins += cases_voisines_calcul(coordonnees);
         }
         mvtEffectue++;
     }
-    suppr_doublon();
-    nbDepValid = calculerElemListe();
+    liste_suppr_doublon();
+    nbDepValid = liste_calculer_nombre_elements();
 
-    //afficher_liste();
+    //liste_afficher_contenu();
 }
 
 /**
@@ -284,11 +284,11 @@ t_coord choix_deplacement_humain(){
     int i = 0, j, choix = 1;
     vider_buffer();
     t_coord coordonnees, choisi;
-    en_tete();
+    liste_en_tete();
     printf("Quel Deplacement voulez-vous effectuer ? \n");
-    while(!hors_liste()){
-        valeur_elt(&coordonnees);
-        suivant();
+    while(!liste_est_hors_liste()){
+        liste_valeur_elt(&coordonnees);
+        liste_suivant();
         printf("   %i - (%i,%i)\n",i+1, coordonnees.X, coordonnees.Y);
         i++;
     }
@@ -297,10 +297,10 @@ t_coord choix_deplacement_humain(){
         scanf("%i",&j);
         if(j<=nbDepValid && j > 0)
         {
-            en_tete();
+            liste_en_tete();
             for(i = 0; i < j-1; i++)
-                suivant();
-            valeur_elt(&choisi);
+                liste_suivant();
+            liste_valeur_elt(&choisi);
             coordonnees.X=choisi.X;
             coordonnees.Y=choisi.Y;
             choix=0;
@@ -314,10 +314,10 @@ t_coord choix_deplacement_IA(){
 	
     int i = 0, choix;
     t_coord coordonnees, choisi;
-    en_tete();
-       while(!hors_liste()){
-        valeur_elt(&coordonnees);
-        suivant();
+    liste_en_tete();
+       while(!liste_est_hors_liste()){
+        liste_valeur_elt(&coordonnees);
+        liste_suivant();
         //printf("   %i - (%i,%i)\n",i+1, coordonnees.X, coordonnees.Y);
         i++;
     }
@@ -330,10 +330,10 @@ t_coord choix_deplacement_IA(){
 	}while (choix>nbDepValid && choix < 0);
 	
        // printf("Choix: %i\n",choix);
-        en_tete();
+        liste_en_tete();
         for(i = 0; i < choix-1; i++)
-			suivant();
-        valeur_elt(&choisi);
+			liste_suivant();
+        liste_valeur_elt(&choisi);
         coordonnees.X=choisi.X;
         coordonnees.Y=choisi.Y;
         printf("Déplacement IA %s en %i,%i\n",selected_character.name,coordonnees.X,coordonnees.Y);
@@ -366,7 +366,7 @@ int cases_voisines_ATK(t_coord coordonnees){
 		
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
 
@@ -375,7 +375,7 @@ int cases_voisines_ATK(t_coord coordonnees){
 
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
 
@@ -384,7 +384,7 @@ int cases_voisines_ATK(t_coord coordonnees){
 
         if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
 
@@ -393,7 +393,7 @@ int cases_voisines_ATK(t_coord coordonnees){
 
         if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
-            ajouterFile(coord);
+            file_ajouter(coord);
             nbVois++;
         }
 
@@ -406,34 +406,34 @@ void viser_case_valide(t_skill skill)
     int nbVoisins=1;
     int nbBoucle;
     nbAtkValid = 0;
-    init_liste();
-    initFile();
+    liste_init();
+    file_init();
     int nb_iteration;
     t_coord coordonnees = selected_character.position;
-    ajouterFile(coordonnees); //dans la file, on met les coordonnées des case opour explorer le terrain sur la portée du coup
-    ajout_droit(coordonnees); // dans la liste, on a toutes les cases attaquables !!
-    //valeur_elt(&coordonnees);
+    file_ajouter(coordonnees); //dans la file, on met les coordonnées des case opour explorer le terrain sur la portée du coup
+    liste_ajout_droit(coordonnees); // dans la liste, on a toutes les cases attaquables !!
+    //liste_valeur_elt(&coordonnees);
     while(mvtEffectue <= skill.range)
     {
         nbBoucle = nbVoisins;
         nbVoisins = 0;
         for(nb_iteration = 0; nb_iteration < nbBoucle; nb_iteration++)
         {
-            retirerFile(&coordonnees);
+            file_retirer(&coordonnees);
             if(skill.type == TRAP )
             {
 				if (Plateau[coordonnees.X][coordonnees.Y].camp == terrain)
-					ajout_droit(coordonnees);
+					liste_ajout_droit(coordonnees);
 			}else
-			ajout_droit(coordonnees); //ATTENTION il ne faut ajouter la case que s'il est elle compatible avec le type d'attaque
+			liste_ajout_droit(coordonnees); //ATTENTION il ne faut ajouter la case que s'il est elle compatible avec le type d'attaque
 				
             if(mvtEffectue < skill.range)
                 nbVoisins += cases_voisines_ATK(coordonnees);
         }
         mvtEffectue++;
     }
-    suppr_doublon();
-    nbAtkValid = calculerElemListe();
+    liste_suppr_doublon();
+    nbAtkValid = liste_calculer_nombre_elements();
 }
 
 t_coord choix_cible_humain(t_skill skill)
@@ -442,12 +442,12 @@ t_coord choix_cible_humain(t_skill skill)
     t_camp tampon_camp_cible;
     vider_buffer();
     t_coord coordonnees;
-    en_tete();
+    liste_en_tete();
     printf("Choisissez votre cible. \n\n");
-    while(!hors_liste()){
-        valeur_elt(&coordonnees);
+    while(!liste_est_hors_liste()){
+        liste_valeur_elt(&coordonnees);
         tampon_camp_cible=Plateau[coordonnees.X][coordonnees.Y].camp;
-        suivant();
+        liste_suivant();
         printf("   %i - ",i+1);
         printf("%s %iHP", Plateau[coordonnees.X][coordonnees.Y].name,Plateau[coordonnees.X][coordonnees.Y].status.HP);
         if (( tampon_camp_cible>0) && (joueur==tampon_camp_cible) ){
@@ -470,10 +470,10 @@ t_coord choix_cible_humain(t_skill skill)
     do{
         
         scanf("%i",&choix);
-        en_tete();
+        liste_en_tete();
         for(i = 0; i < choix-1; i++)
-			suivant();
-        valeur_elt(&coordonnees);
+			liste_suivant();
+        liste_valeur_elt(&coordonnees);
     }while (!(choix<=nbAtkValid && choix > 0));
     return (coordonnees);
 }
@@ -485,15 +485,15 @@ t_coord choix_cible_IA(t_skill skill)
   // printf("Before ViderBuffer\n");
    // printf("After ViderBuffer.\n");
     t_coord coordonnees;
-    en_tete();
+    liste_en_tete();
 
 do{
    //     printf("Debut do\n");
         choix=generation_nombre_aleatoire(nbAtkValid);
-        en_tete();
+        liste_en_tete();
         for(i = 0; i < choix-1; i++)
-			suivant();
-        valeur_elt(&coordonnees);
+			liste_suivant();
+        liste_valeur_elt(&coordonnees);
     //    printf("Fin do\n");
     }while (!(choix<=nbAtkValid && choix > 0));
    printf("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
@@ -869,11 +869,11 @@ void orienter_perso(){
 
 
 /**
-* \fn void joueur_suivant(int nb_joueur)
+* \fn void joueur_liste_suivant(int nb_joueur)
 * \brief Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs.
 *
 */
-void joueur_suivant(int nb_joueur)
+void joueur_liste_suivant(int nb_joueur)
 {
     if (joueur==nb_joueur) joueur=1;
         else joueur++;
@@ -1423,7 +1423,7 @@ int main(){
         
         
         players_life_check();
-        joueur_suivant(nb_joueurs);
+        joueur_liste_suivant(nb_joueurs);
     }
     
 	afficher_plateau_orientation();
