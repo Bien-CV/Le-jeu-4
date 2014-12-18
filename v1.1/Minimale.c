@@ -17,6 +17,7 @@
 #define KCYN  "\x1B[36m"
 #define KWHT  "\x1B[37m"
 
+
 //Prototypes fonctions, à inclure dans un futur Minimale.h !
 int life_check();
 void joueur_suivant(int nb_joueur);
@@ -51,7 +52,7 @@ char particule_generateur_nom[][20] =
 		"saint"
 	};
 	
-int nb_joueurs=4;
+int nb_joueurs=3; //inclus la nature
 t_character selected_character;
 void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
@@ -183,7 +184,7 @@ void deplacer_perso(t_coord case_perso)
 int cases_voisines_calcul(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
-    if(0 == Plateau[coordonnees.X+1][coordonnees.Y].camp)
+    if(0 == Plateau[coordonnees.X+1][coordonnees.Y].camp || Plateau[coordonnees.X+1][coordonnees.Y].type == TRAP_UNIT )
     {
         coord = coordonnees;
         coord.X += 1;
@@ -193,7 +194,7 @@ int cases_voisines_calcul(t_coord coordonnees){
             nbVois++;
         }
     }
-    if(Plateau[coordonnees.X-1][coordonnees.Y].camp == 0)
+    if(0 == Plateau[coordonnees.X-1][coordonnees.Y].camp || Plateau[coordonnees.X+1][coordonnees.Y].type == TRAP_UNIT )
     {
         coord = coordonnees;
         coord.X -= 1;
@@ -204,7 +205,7 @@ int cases_voisines_calcul(t_coord coordonnees){
             nbVois++;
         }
     }
-    if(Plateau[coordonnees.X][coordonnees.Y+1].camp == 0)
+    if(0 == Plateau[coordonnees.X][coordonnees.Y+1].camp || Plateau[coordonnees.X+1][coordonnees.Y].type == TRAP_UNIT )
     {
         coord = coordonnees;
         coord.Y += 1;
@@ -215,7 +216,7 @@ int cases_voisines_calcul(t_coord coordonnees){
             nbVois++;
         }
     }
-    if(Plateau[coordonnees.X][coordonnees.Y-1].camp == 0)
+    if(0 ==Plateau[coordonnees.X][coordonnees.Y-1].camp || Plateau[coordonnees.X+1][coordonnees.Y].type == TRAP_UNIT )
     {
         coord = coordonnees;
         coord.Y -= 1;
@@ -259,23 +260,19 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
         {
 
 
-	//printf("CHECKPOINT BLABBERSTRONG %i\n",indice);
-	//afficher_plateau_orientation();
 
+            retirerFile(&coordonnees);  
+            ajout_droit(coordonnees);	
 
-            retirerFile(&coordonnees);  //Problème soit là
-            ajout_droit(coordonnees);	//Soit là
-
-            if(mvtEffectue < selected_character.stats.MVT)//Soit là
-                nbVoisins += cases_voisines_calcul(coordonnees);//Soit là
+            if(mvtEffectue < selected_character.stats.MVT)
+                nbVoisins += cases_voisines_calcul(coordonnees);
         }
         mvtEffectue++;
     }
     suppr_doublon();
     nbDepValid = calculerElemListe();
-    //printf("CHECKPOINT 3");
-    //afficher_plateau_orientation();
-                   //afficher_liste();
+
+    //afficher_liste();
 }
 
 /**
@@ -366,7 +363,7 @@ int cases_voisines_ATK(t_coord coordonnees){
     t_coord coord;
         coord = coordonnees;
         coord.X += 1;
-
+		
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
             ajouterFile(coord);
@@ -413,9 +410,9 @@ void viser_case_valide(t_skill skill)
     initFile();
     int nb_iteration;
     t_coord coordonnees = selected_character.position;
-    ajouterFile(coordonnees);
-    ajout_droit(coordonnees);
-    valeur_elt(&coordonnees);
+    ajouterFile(coordonnees); //dans la file, on met les coordonnées des case opour explorer le terrain sur la portée du coup
+    ajout_droit(coordonnees); // dans la liste, on a toutes les cases attaquables !!
+    //valeur_elt(&coordonnees);
     while(mvtEffectue <= skill.range)
     {
         nbBoucle = nbVoisins;
@@ -423,7 +420,13 @@ void viser_case_valide(t_skill skill)
         for(nb_iteration = 0; nb_iteration < nbBoucle; nb_iteration++)
         {
             retirerFile(&coordonnees);
-            ajout_droit(coordonnees);
+            if(skill.type == TRAP )
+            {
+				if (Plateau[coordonnees.X][coordonnees.Y].camp == terrain)
+					ajout_droit(coordonnees);
+			}else
+			ajout_droit(coordonnees); //ATTENTION il ne faut ajouter la case que s'il est elle compatible avec le type d'attaque
+				
             if(mvtEffectue < skill.range)
                 nbVoisins += cases_voisines_ATK(coordonnees);
         }
@@ -735,10 +738,10 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
     int total_dmg;
     t_targetOrientation targetOrientation= get_target_orientation(lanceur,cible);
     int coefOrientation;
-    //typedef struct { char name[20] ; int range ; t_type type ; int damage_coeff ;} t_skill;
+    //typedef struct { char name[20] ; int range ; t_skilltype type ; int damage_coeff ;} t_skill;
     //typedef struct { int HP ; int Max_HP ; int MP ; int Max_MP ;} t_status ;
     //typedef struct { int ATK ; int MATK ; int DEF ; int MDEF ; int MVT ;} t_stats;
-    //typedef enum {EMPTY,ATK,MATK}t_type;
+    //typedef enum {EMPTY,ATK,MATK}t_skilltype;
     if(targetOrientation==0) coefOrientation=1;
     if(targetOrientation==1) coefOrientation=1;
     if(targetOrientation==2) coefOrientation=2;
@@ -748,7 +751,7 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         printf("MATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.MATK; //degats avant réduction
         if(total_dmg>0) {
-                total_dmg=total_dmg*(100-(Plateau[cible.X][cible.Y].stats.MDEF))/100;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg-=Plateau[cible.X][cible.Y].stats.MDEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
                 total_dmg*=coefOrientation;
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
@@ -757,7 +760,7 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         printf("ATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.ATK; //degats avant réduction
         if(total_dmg>0) {
-                total_dmg=total_dmg*(100-(Plateau[cible.X][cible.Y].stats.DEF))/100;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg-=Plateau[cible.X][cible.Y].stats.DEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
                 total_dmg*=coefOrientation;
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
@@ -766,10 +769,11 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
 		printf("NOTHING : %d,%d\n", cible.X, cible.Y);
     }
 
-    else if(action.type == LAND)
+    else if(action.type == TRAP )
     {
-		printf("PIEGE : %d,%d\n", cible.X, cible.Y);
+		printf("TRAP : %d,%d\n", cible.X, cible.Y);
         Plateau[cible.X][cible.Y] = default_trap;
+        Plateau[cible.X][cible.Y].type=TRAP_UNIT;
         Plateau[cible.X][cible.Y].camp = lanceur.camp;
         Plateau[cible.X][cible.Y].position.X = cible.X;
         Plateau[cible.X][cible.Y].position.Y = cible.Y;
@@ -889,7 +893,7 @@ int are_my_mates_alive(){
     {
         for(j=0;j<TAILLE_MATRICE;j++)
         {
-            if(Plateau[i][j].camp==joueur)
+            if(Plateau[i][j].camp==joueur && Plateau[i][j].type!=TRAP_UNIT)
             {
                 nb_perso++;
             }
@@ -952,7 +956,7 @@ void players_life_check()
 	{
 		for(j=0;j<TAILLE_MATRICE;j++)
 		{
-			if(Plateau[i][j].camp>=1)
+			if( ( Plateau[i][j].camp>=1 ) && ( Plateau[i][j].type != TRAP_UNIT ) )
 			{
 				player[Plateau[i][j].camp].alive=1;
 			}
@@ -984,7 +988,7 @@ void afficher_infos_persos( t_character perso)
 	}
 	printf("( %i )",perso.orientation);
 	printf("Camp : %i ",perso.camp);
-	printf("NbActionstour : %i ",perso.nbActionTour);
+	printf("NbActionstour : %i ",perso.nb_action_tour);
 	printf("%i/%i HP %i/%i MP ATK:%i MATK:%i DEF:%i MDEF:%i MVT:%i ",perso.status.HP,perso.status.Max_HP,perso.status.MP,perso.status.Max_MP,perso.stats.ATK,perso.stats.MATK,perso.stats.DEF,perso.stats.MDEF,perso.stats.MVT);
 	
 	afficher_skill_list(perso);
@@ -1003,12 +1007,9 @@ void character_hp_list()
 	{
 		for(j=0;j<TAILLE_MATRICE;j++)
 		{
-			if(Plateau[i][j].orientation!=up)
+			if(Plateau[i][j].camp>=1)
 			{
-				afficher_infos_persos(Plateau[i][j]);
-			}else if(Plateau[i][j].camp>=1)
-			{
-				printf("Joueur %i %s %i/%i HP\n",Plateau[i][j].camp,Plateau[i][j].name,Plateau[i][j].status.HP,Plateau[i][j].status.Max_HP);
+				printf("Joueur %i (%i,%i) %s %i/%i HP\n",Plateau[i][j].camp,Plateau[i][j].position.X,Plateau[i][j].position.Y,Plateau[i][j].name,Plateau[i][j].status.HP,Plateau[i][j].status.Max_HP);
 			}
 		}
 	}
@@ -1050,11 +1051,11 @@ void tour()
     if (choix==1){   // Se déclenche après sélection d'un personnage, c'est la suite d'actions liées au personnage sélectionné
 		
         //skill_selected.type = ATK;	WTF Nigga ?
-        while(nb_actions_faites < selected_character.nbActionTour /* && skill_selected.type != EMPTY*/)
+        while(nb_actions_faites < selected_character.nb_action_tour /* && skill_selected.type != EMPTY*/)
         {   
             if(deplacement_fait != 1)//GRos problème dans le déplacement, ptet à cause de moi.
             {
-                //printf("selected_character.nbActionTour = %i nb_actions_faites =%i MVT=%i\n",selected_character.nbActionTour,nb_actions_faites,selected_character.stats.MVT);
+                //printf("selected_character.nb_action_tour = %i nb_actions_faites =%i MVT=%i\n",selected_character.nb_action_tour,nb_actions_faites,selected_character.stats.MVT);
                 deplacements_valides();
                 deplacer_perso(choix_deplacement_humain());
                 deplacement_fait = 1;
@@ -1190,7 +1191,7 @@ void creer_perso_rapide(t_camp camp,int x, int y)
     Plateau[x][y].position.X=x;
     Plateau[x][y].position.Y=y;
     
-    Plateau[x][y].skill.b = (t_skill){"Placer Piege", 3, LAND, 10};
+    Plateau[x][y].skill.b = (t_skill){"Placer Piege", 3, TRAP, 10};
 }
 
 /**
@@ -1276,6 +1277,21 @@ void spawn_sauvage()
 	edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
 	
 }
+
+void spawn_character(t_camp camp_nouveau_perso)
+{
+	player[camp_nouveau_perso].alive=1;
+	int x_buffer,y_buffer;
+	do{
+		x_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
+		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
+	}while(Plateau[x_buffer][y_buffer].camp !=0);
+	printf("Coordonnées de creation du personnage de %s : %i , %i.",player[camp_nouveau_perso].name,x_buffer,y_buffer);
+	creer_perso_rapide(camp_nouveau_perso,x_buffer,y_buffer);
+	//edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
+	
+}
+
 void tour_IA()
 {
     int nb_actions_faites, i;
@@ -1287,7 +1303,7 @@ void tour_IA()
 		selected_character=Plateau[Valid_chars_IA[i].position.X][Valid_chars_IA[i].position.Y];
         if (selected_character.camp==joueur) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
         {		
-                for(nb_actions_faites=0;nb_actions_faites < selected_character.nbActionTour;nb_actions_faites++)
+                for(nb_actions_faites=0;nb_actions_faites < selected_character.nb_action_tour;nb_actions_faites++)
             {
 				//printf("Plateau Checkpoint 4\n");
 				//afficher_plateau_orientation();
@@ -1347,6 +1363,7 @@ int calcul_persos_IA(){
 *
 */
 int main(){
+	int i;
 	nb_joueurs++;
 	srand((long)time(NULL));
 	
@@ -1355,27 +1372,23 @@ int main(){
 	
 	
 	strcpy(player[1].name,"la nature");
-	strcpy(player[2].name,"Arthur");
+	strcpy(player[2].name,"Baptiste");
 	strcpy(player[3].name,"Yann");
-	strcpy(player[4].name,"Baptiste");
+	strcpy(player[4].name,"Arthur");
 	
-	int i;
-	for (i=1;i<=nb_joueurs;i++)
-	{
-		player[i].alive=1;
-	}
-	player[1].alive=0;
-	
-	joueur=1;
-	
-	
-	
-	creer_perso_rapide(2,0,1);
-	creer_perso_rapide(3,2,1);
-	creer_perso_rapide(4,0,2);
 	creer_terrain_rapide(obstacle,3,1);
+	
+	for (i=2;i<nb_joueurs;i++)
+	{
+		spawn_character(i);
+		spawn_character(i);
+	}
+	
+	joueur=2;
+	
+	
         
-    spawn_sauvage();
+    //spawn_sauvage();
     
 	players_life_check();
 	for (i=1;i<=MaxTab;i++)
@@ -1395,7 +1408,7 @@ int main(){
 			
 			
             compteur_tour++;
-            //if (generation_nombre_aleatoire(3)==1) spawn_sauvage();
+            //if (generation_nombre_aleatoire(4)==1) spawn_sauvage();
             
             afficher_plateau_orientation();
             character_hp_list();
@@ -1403,7 +1416,7 @@ int main(){
             {
                 tour_IA();
                 
-            }else tour_IA();
+            }else tour();
             
             
         }
