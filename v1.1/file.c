@@ -5,7 +5,7 @@
 static t_coord file[TMAX];	//tableau contenant les valeurs de la file
 static int tete, queueFile, nbVal;	//indice de tete, queueFile et nombre de valeurs dans la file
 
-void initFile() //initialisation la file à vide
+void file_init() //initialisation la file à vide
 {
 	nbVal = 0;
 	tete = 0;
@@ -13,7 +13,7 @@ void initFile() //initialisation la file à vide
 	//queueFile = TMAX - 1;
 }
 
-void ajouterFile(t_coord a)	//ajoute la valeur en queueFile de file
+void file_ajouter(t_coord a)	//ajoute la valeur en queueFile de file
 {
 	if(nbVal < TMAX)
 	{
@@ -26,7 +26,7 @@ void ajouterFile(t_coord a)	//ajoute la valeur en queueFile de file
 	}
 }
 
-void retirerFile(t_coord * val)	//retire la valeur en tête de file et l'affecte à val
+void file_retirer(t_coord * val)	//retire la valeur en tête de file et l'affecte à val
 {
 	if(nbVal>0)
 	{
@@ -39,18 +39,18 @@ void retirerFile(t_coord * val)	//retire la valeur en tête de file et l'affecte
 	}
 }
 
-int fileVide()	//délivre vrai si la file est vide, faux sinon
+int file_vide()	//délivre vrai si la file est vide, faux sinon
 {
 	return(nbVal==0);
 }
 
-void afficher_queueFile()
+void file_liste_afficher_queue()
 {
     printf("%i\n", queueFile);
 }
 
 
-void afficher_elt(t_coord val)
+void file_afficher_elt(t_coord val)
 {
     int indice = tete;
     while(indice < nbVal)
