@@ -308,7 +308,7 @@ t_coord choix_deplacement_humain(){
 		mvaddch(y+2,x+3,curseur);
 		//refresh();
 		choix = getch();
-		if(choix == 127)
+		if(choix == 127 && mvt_effectue > 0)
 		{
 			mvt_effectue--;
 			pile_depiler(&val, 0);
@@ -736,7 +736,7 @@ t_coord choix_cible_humain(t_skill skill)
 			y++;
 			val = (t_coord){x,y};
 		}
-		valid = liste_element_est_present(val);
+		valid = liste_element_est_present(val, 0);
 		
 	}while(choix != '\n' || valid == 0);
 	return (val);
@@ -826,8 +826,11 @@ void selection_perso(){
 			if(y >= TAILLE_MATRICE-1) y = -1;
 			y++;
 		}
+		/*move(50,10);
+		printw("perso: %i\njoueur: %i", Plateau[x][y].camp, joueur);
+		getch();*/
 		
-	}while(choix != '\n' || (Plateau[x][y].camp != joueur && Plateau[x][y].type == TRAP_UNIT));
+	}while(choix != '\n' || (Plateau[x][y].camp != joueur || Plateau[x][y].type == TRAP_UNIT));
 	selected_character = Plateau[x][y];
 	Plateau[x][y]= case_terrain;
 	//***************/V1.2/*****************/Fin
