@@ -800,17 +800,17 @@ void selection_perso(){
 	{
 		clear();
 		printw("Select Perso: ");
-				if(joueur==1)attron(COLOR_PAIR(8));//Gestion de couleurs
-				if(joueur==2)attron(COLOR_PAIR(9));
-				if(joueur==3)attron(COLOR_PAIR(10));
-				if(joueur==4)attron(COLOR_PAIR(11));
-				if(joueur==5)attron(COLOR_PAIR(12));	
+				if(joueur==1)attron(COLOR_PAIR(2));//Gestion de couleurs
+				if(joueur==2)attron(COLOR_PAIR(3));
+				if(joueur==3)attron(COLOR_PAIR(4));
+				if(joueur==4)attron(COLOR_PAIR(5));
+				if(joueur==5)attron(COLOR_PAIR(6));	
 		printw("%s\n",player[joueur].name);	
-				if(joueur==1)attroff(COLOR_PAIR(8));//gestion de couleurs
-				if(joueur==2)attroff(COLOR_PAIR(9));
-				if(joueur==3)attroff(COLOR_PAIR(10));
-				if(joueur==4)attroff(COLOR_PAIR(11));
-				if(joueur==5)attroff(COLOR_PAIR(12));
+				if(joueur==1)attroff(COLOR_PAIR(2));//gestion de couleurs
+				if(joueur==2)attroff(COLOR_PAIR(3));
+				if(joueur==3)attroff(COLOR_PAIR(4));
+				if(joueur==4)attroff(COLOR_PAIR(5));
+				if(joueur==5)attroff(COLOR_PAIR(6));
 	afficher_plateau_orientation();
 		//printw("\n\n%i - %i",x, y);
 		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur)){afficher_infos_persos(Plateau[x][y]);}
