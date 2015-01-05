@@ -799,7 +799,18 @@ void selection_perso(){
 	do
 	{
 		clear();
-		printw("Select Perso:\n");
+		printw("Select Perso: ");
+				if(joueur==1)attron(COLOR_PAIR(8));//Gestion de couleurs
+				if(joueur==2)attron(COLOR_PAIR(9));
+				if(joueur==3)attron(COLOR_PAIR(10));
+				if(joueur==4)attron(COLOR_PAIR(11));
+				if(joueur==5)attron(COLOR_PAIR(12));	
+		printw("%s\n",player[joueur].name);	
+				if(joueur==1)attroff(COLOR_PAIR(8));//gestion de couleurs
+				if(joueur==2)attroff(COLOR_PAIR(9));
+				if(joueur==3)attroff(COLOR_PAIR(10));
+				if(joueur==4)attroff(COLOR_PAIR(11));
+				if(joueur==5)attroff(COLOR_PAIR(12));
 	afficher_plateau_orientation();
 		//printw("\n\n%i - %i",x, y);
 		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur)){afficher_infos_persos(Plateau[x][y]);}
@@ -1388,7 +1399,18 @@ void tour()
         {   
 			clear();
 			afficher_plateau_orientation();
-			printw("\nTour de %s : \n",player[joueur].name);
+			printw("\nTour de ");
+				if(joueur==1)attron(COLOR_PAIR(2));//Gestion de couleurs
+				if(joueur==2)attron(COLOR_PAIR(3));
+				if(joueur==3)attron(COLOR_PAIR(4));
+				if(joueur==4)attron(COLOR_PAIR(5));
+				if(joueur==5)attron(COLOR_PAIR(6));	
+		printw("%s\n",player[joueur].name);	
+				if(joueur==1)attroff(COLOR_PAIR(2));//gestion de couleurs
+				if(joueur==2)attroff(COLOR_PAIR(3));
+				if(joueur==3)attroff(COLOR_PAIR(4));
+				if(joueur==4)attroff(COLOR_PAIR(5));
+				if(joueur==5)attroff(COLOR_PAIR(6));
             printw("    Selectionner Perso\n");
             printw("    Passer tour\n");
             printw("    suicide\n");
@@ -1515,6 +1537,7 @@ void afficher_plateau_orientation(void){
     for(j=-1;j<TAILLE_MATRICE;j++)
     {
 			attron(COLOR_PAIR(1));//gestion de couleur de fond du plateau
+			attron(A_BOLD);
 	if (j!=-1) {printw("\n%i ",j);} else printw("  ");
 	printw(" ");
         for(i=0;i<TAILLE_MATRICE;i++)
@@ -1840,12 +1863,12 @@ int main(){
 	
 	
     start_color();
-	init_pair(1, COLOR_BLACK, COLOR_WHITE);
-	init_pair(2, COLOR_RED, COLOR_WHITE);
-	init_pair(3, COLOR_GREEN, COLOR_WHITE);
-	init_pair(4, COLOR_BLUE, COLOR_WHITE);
-	init_pair(5, COLOR_YELLOW, COLOR_WHITE);
-	init_pair(6, COLOR_MAGENTA, COLOR_WHITE);
+	init_pair(1, COLOR_WHITE, COLOR_BLACK);
+	init_pair(2, COLOR_RED, COLOR_BLACK);
+	init_pair(3, COLOR_GREEN, COLOR_BLACK);
+	init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
+	init_pair(5, COLOR_YELLOW, COLOR_BLACK);
+	init_pair(6, COLOR_BLUE, COLOR_BLACK);
 
 		/*if(has_colors() == FALSE)
 	{	endwin();
@@ -1870,6 +1893,7 @@ int main(){
 	
 	creer_terrain_rapide(obstacle,3,1);
 	
+	spawn_sauvage();
 	for (i=2;i<nb_joueurs;i++)
 	{
 		spawn_character(i);
