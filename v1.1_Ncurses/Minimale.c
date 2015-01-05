@@ -1941,7 +1941,7 @@ int main(){
         players_life_check();
         joueur_liste_suivant(nb_joueurs);
     }
-    
+    clear();
 	afficher_plateau_orientation();
 
 
