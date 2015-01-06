@@ -1793,6 +1793,20 @@ void saisie_nombre_joueurs(int* nb_joueurs )
 {
 	*nb_joueurs=4;
 }
+
+
+void menu_principale
+{
+	char choix;
+	do
+	{
+		clear();
+		printw("");
+	}while(choix != '\n');
+}
+
+
+
 /**
 * \fn int main()
 * \brief Fonction principale
@@ -1833,7 +1847,7 @@ int main(){
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	attron(COLOR_PAIR(1));*/
 	
-
+	menu_principale();
 	
 	
 	
