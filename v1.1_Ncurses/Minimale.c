@@ -32,9 +32,7 @@ int are_my_mates_alive(int joueur_courant);
 int calcul_persos_IA(int joueur_courant);
 void afficher_plateau_orientation(int joueur_courant);
 void generation_nom_personnage(char * nom);
-int compteur_tour=0;
-int compteur_joueurs_vivants=0;
-t_character Valid_chars_IA[MaxTab];
+void players_life_check();
 
 char particule_generateur_nom[][20] = 
 	{
@@ -58,7 +56,10 @@ char particule_generateur_nom[][20] =
 	};
 	
 
-void players_life_check();
+int compteur_tour=0;
+int compteur_joueurs_vivants=0;
+
+t_character Valid_chars_IA[MaxTab];
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 
