@@ -62,7 +62,9 @@ t_character selected_character;
 void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
-int nbDepValid;
+
+
+
 t_player player[MaxTab];
 
 
@@ -240,14 +242,14 @@ int cases_voisines_calcul(t_coord coordonnees){
 
 
 /**
- * \fn void deplacements_valides()
+ * \fn void deplacements_valides(int* nbDepValid)
  * \brief Calcule les positions de déplacement valide, les met dans la liste
  *
  */
-void deplacements_valides(){// permet de calculer les positions valides pour son perso.
+void deplacements_valides(int* nbDepValid){// permet de calculer les positions valides pour son perso.
     int mvtEffectue = 0;
     int nbVoisins=1;
-    nbDepValid = 0;
+    *nbDepValid = 0;
     int nbBoucle;
     liste_init();
     file_init();
@@ -278,7 +280,7 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
         mvtEffectue++;
     }
     liste_suppr_doublon();
-    nbDepValid = liste_calculer_nombre_elements();
+    *nbDepValid = liste_calculer_nombre_elements();
 
     //liste_afficher_contenu();
 }
@@ -288,7 +290,7 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
  * \brief Permet au joueur de choisir la destination
  *
  */
-t_coord choix_deplacement_humain(int joueur_courant){
+t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 	//***************/V1.2/*****************/
 		int mvt_effectue = 0, x, y;
 		char choix;
@@ -459,7 +461,7 @@ t_coord choix_deplacement_humain(int joueur_courant){
     return (coordonnees);*/
 }
 
-t_coord choix_deplacement_IA(){
+t_coord choix_deplacement_IA(int* nbDepValid){
 	
     int i = 0, choix;
     t_coord coordonnees, choisi;
@@ -475,8 +477,8 @@ t_coord choix_deplacement_IA(){
 	
 	do 
 	{
-		choix=generation_nombre_aleatoire(nbDepValid);
-	}while (choix>nbDepValid && choix < 0);
+		choix=generation_nombre_aleatoire(*nbDepValid);
+	}while (choix>*nbDepValid && choix < 0);
 	
        // printw("Choix: %i\n",choix);
         liste_en_tete();
@@ -1408,7 +1410,7 @@ void character_hp_list()
 *
 *
 */
-void tour(int joueur_courant, int* nbAtkValid)
+void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
 {
 	
     int choix, nb_actions_faites = 0, deplacement_fait, indice_curseur =1, nb_choix_max = 5, coord_curs, est_vivant = 1;
@@ -1468,38 +1470,6 @@ void tour(int joueur_courant, int* nbAtkValid)
                 case 5: printw("\n");Charger(joueur_courant);break;
                 default: printw("Erreur: votre choix doit être compris entre 1 et 5\n");
 			}
-	/*
-    vider_buffer();
-    int choix, nb_actions_faites = 0, deplacement_fait=0;
-    t_skill skill_selected;
-    
-        do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
-        {   
-<<<<<<< HEAD
-			printw("\nTour de %s : \n",player[joueur].name);
-=======
-			printw("\nTour de %s : \n",player[joueur_courant].name);
->>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
-            printw("   1 - Selectionner Perso\n");
-            printw("   2 - Passer tour\n");
-            printw("   3 - suicide\n");
-            scanf("%d",&choix);
-
-            switch(choix)
-<<<<<<< HEAD
-            {   case 1: printw("\n");selection_perso(); break;
-                case 2: printw("\n");passer_tour(); break;
-                case 3: printw("\n");suicide();players_life_check(); break;//Abandon
-=======
-            {   case 1: printw("\n");selection_perso(joueur_courant); break;
-                case 2: printw("\n");passer_tour(); break;
-                case 3: printw("\n");suicide(joueur_courant);players_life_check(); break;//Abandon
->>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
-                default: printw("Erreur: votre choix doit être compris entre 1 et 3\n");
-            }
-        }
-        while ((choix<1) ||(choix>3) );*/
-
 	
 		
     if (indice_curseur==1){   // Se déclenche après sélection d'un personnage, c'est la suite d'actions liées au personnage sélectionné
@@ -1509,8 +1479,8 @@ void tour(int joueur_courant, int* nbAtkValid)
         {
             if(deplacement_fait != 1)
             {
-                deplacements_valides();
-                coordonnees_perso = choix_deplacement_humain(joueur_courant);
+                deplacements_valides(nbDepValid);
+                coordonnees_perso = choix_deplacement_humain(joueur_courant, nbDepValid);
                 deplacer_perso(coordonnees_perso);
                 //deplacer_perso(choix_deplacement_humain());
                 deplacement_fait = 1;
@@ -1531,14 +1501,14 @@ void tour(int joueur_courant, int* nbAtkValid)
 				//tampon_skill = skill_selected;
 				if(skill_selected.type != EMPTY)
 				{
-					viser_case_valide(skill_selected);
-					appliquer_action(selected_character, choix_cible_humain(skill_selected), skill_selected);
+					viser_case_valide(skill_selected, nbAtkValid);
+					appliquer_action(selected_character, choix_cible_humain(skill_selected, joueur_courant), skill_selected);
 				}else 
 				{
 					appliquer_action(selected_character, selected_character.position, skill_selected);
 				}
 				nb_actions_faites++;
-				orienter_perso_numpad();
+				orienter_perso_numpad(joueur_courant);
 				//OrienterPerso();
 			}
         }
@@ -1638,76 +1608,6 @@ void afficher_plateau_orientation(int joueur_courant){
     }
 	printw("\n");
 	refresh();
-	//***************/V1.2/*****************/Fin
-	
-	/*
-    int i,j;
-    for(j=-1;j<TAILLE_MATRICE;j++)
-    {
-        for(i=0;i<TAILLE_MATRICE;i++)
-        {
-			//printf("\x1B[1;47m");
-			//printw("\x1B[1m");
-			//printw("\x1B[5m");
-			
-			if (j==-1)
-			{
-				 printw("%i",i);
-<<<<<<< HEAD
-			}else if ( Plateau[i][j].camp == joueur )
-=======
-			}else if ( Plateau[i][j].camp == joueur_courant )
->>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
-            {   
-				if(strcmp(Plateau[i][j].name, "Trap") == 0)
-                {
-					//if(Plateau[i][j].camp==1) printf("%s",KRED);
-					//if(Plateau[i][j].camp==3) printf("%s",KBLU);
-					//if(Plateau[i][j].camp==4) printf("%s",KMAG);
-                    printw("X");
-                    //printf("%s",KNRM);
-                }else
-                {
-					//printf("\x1B[5m");
-					//if(Plateau[i][j].camp==1) printf("%s",KRED);
-					//if(Plateau[i][j].camp==3) printf("%s",KBLU);
-					//if(Plateau[i][j].camp==4) printf("%s",KMAG);
-					if ( Plateau[i][j].orientation == up ) printw("^");
-					if ( Plateau[i][j].orientation == left ) printw("<");
-					if ( Plateau[i][j].orientation == right ) printw(">");
-					if ( Plateau[i][j].orientation == down ) printw("v");
-					//printf("%s",KNRM);
-				}
-            }else if(Plateau[i][j].camp>0)
-            {	
-				if(strcmp(Plateau[i][j].name, "Trap") == 0)
-                {
-					printw(" ");
-				}else
-				{
-					//if(Plateau[i][j].camp==1) printf("%s",KRED);
-					//if(Plateau[i][j].camp==3) printw("%s",KBLU);
-					//if(Plateau[i][j].camp==4) printf("%s",KMAG);
-					if ( Plateau[i][j].orientation == up ) printw("^");
-					if ( Plateau[i][j].orientation == left ) printw("<");
-					if ( Plateau[i][j].orientation == right ) printw(">");
-					if ( Plateau[i][j].orientation == down ) printw("v");
-					//printf("%s",KNRM);
-				}
-            }else if ( Plateau[i][j].camp == -1 )
-            {
-                printw("%c",'#');
-            }else if ( Plateau[i][j].camp == 0 )
-            {
-                printw(" ");
-            }
-        //printf("%s",KNRM);
-        }if (j!=-1) 
-        {
-			printw("  %i",j);
-			printw("\n");
-		}else printw("\n");
-    }*/
 
 }
 
@@ -1829,7 +1729,7 @@ void spawn_character(t_camp camp_nouveau_perso)
 	
 }
 
-void tour_IA(int joueur_courant, int* nbAtkValid)
+void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid)
 {
     int nb_actions_faites, i;
     int nb_perso_vivants=calcul_persos_IA(joueur_courant);
@@ -1843,11 +1743,10 @@ void tour_IA(int joueur_courant, int* nbAtkValid)
                 for(nb_actions_faites=0;nb_actions_faites < selected_character.nb_action_tour;nb_actions_faites++)
             {
 
-                deplacements_valides();
+                deplacements_valides(nbDepValid);
 
 				
-                deplacer_perso(choix_deplacement_IA());
-                
+                deplacer_perso(choix_deplacement_IA(nbDepValid));
                 skill_selected = selected_character.skill.a;
                 
                 if(skill_selected.type != EMPTY)
@@ -1904,6 +1803,7 @@ int main(){
 	int i;
 	int nb_joueurs, joueur_courant;
 	int nbAtkValid;
+	int nbDepValid;
 	saisie_nombre_joueurs(&nb_joueurs);
 	srand((long)time(NULL));
 	
@@ -1981,9 +1881,9 @@ int main(){
             character_hp_list();
             if (joueur_courant==sauvage) 
             {
-                tour_IA(joueur_courant,&nbAtkValid);
+                tour_IA(joueur_courant,&nbAtkValid,&nbDepValid);
                 
-            }else tour(joueur_courant,&nbAtkValid);
+            }else tour(joueur_courant,&nbAtkValid,&nbDepValid);
             
             
         }
