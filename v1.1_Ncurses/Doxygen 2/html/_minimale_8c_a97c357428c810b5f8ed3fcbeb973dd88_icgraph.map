@@ -1,0 +1,6 @@
+<map id="generation_nom_personnage" name="generation_nom_personnage">
+<area shape="rect" id="node3" href="$_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e" title="creer_perso_rapide" alt="" coords="243,31,375,57"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="427,5,543,32"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="spawn_character" alt="" coords="425,56,546,83"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="595,31,645,57"/>
+</map>

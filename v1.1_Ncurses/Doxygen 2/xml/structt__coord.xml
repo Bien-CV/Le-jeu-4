@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="structt__coord" kind="struct" prot="public">
+    <compoundname>t_coord</compoundname>
+    <includes refid="header_8h" local="no">header.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="38" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="file_8h_1a96c6e33606180f008c28906ff16f873a" compoundref="file_8c" startline="53" endline="68">file_afficher_elt</referencedby>
+        <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
+        <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+        <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
+        <referencedby refid="_minimale_8c_1a3f74d85bb951bc6b755696903c848531" compoundref="_minimale_8c" startline="179" endline="187">deplacer_perso</referencedby>
+        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="194" endline="241">cases_voisines_calcul</referencedby>
+        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="512" endline="552">cases_voisines_ATK</referencedby>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" compoundref="_minimale_8c" startline="692" endline="749">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a32d1e9030c1705ad183484acce8a4b2c" compoundref="_minimale_8c" startline="1033" endline="1083">get_target_orientation</referencedby>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
+        <referencedby refid="_minimale_8c_1a2ee0cc6d76b7e497988562a817c096a1" compoundref="_minimale_8c" startline="1165" endline="1249">orienter_perso_numpad</referencedby>
+        <referencedby refid="_minimale_8c_1ae628b0fb007cb8d89fe76de11151934e" compoundref="_minimale_8c" startline="1258" endline="1283">orienter_perso</referencedby>
+        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
+        <referencedby refid="_minimale_8c_1afbbdb6480cb3ab0ba8f8ac1615d4e22e" compoundref="_minimale_8c" startline="1620" endline="1632">creer_perso_rapide</referencedby>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1640" endline="1665">creer_terrain_rapide</referencedby>
+        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1685" endline="1700">edit_stats</referencedby>
+        <referencedby refid="_minimale_8c_1aee3a984cc380669ef226b08039d592da" compoundref="_minimale_8c" startline="1732" endline="1773">tour_IA</referencedby>
+        <referencedby refid="pile_8h_1a153b92d8383b4d328bcd9f20d77b8d0c" compoundref="pile_8c" startline="26" endline="33">pile_empiler</referencedby>
+        <referencedby refid="pile_8h_1a243aa7fe5bd1ff307d4c7aa5f76739c1" compoundref="pile_8c" startline="35" endline="41">pile_depiler</referencedby>
+        <referencedby refid="pile_8h_1ae0e56a57ce8bf929fe621fa05304642c" compoundref="pile_8c" startline="43" endline="50">pile_sommet</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="38" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="file_8h_1a96c6e33606180f008c28906ff16f873a" compoundref="file_8c" startline="53" endline="68">file_afficher_elt</referencedby>
+        <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
+        <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+        <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
+        <referencedby refid="_minimale_8c_1a3f74d85bb951bc6b755696903c848531" compoundref="_minimale_8c" startline="179" endline="187">deplacer_perso</referencedby>
+        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="194" endline="241">cases_voisines_calcul</referencedby>
+        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="512" endline="552">cases_voisines_ATK</referencedby>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" compoundref="_minimale_8c" startline="692" endline="749">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a32d1e9030c1705ad183484acce8a4b2c" compoundref="_minimale_8c" startline="1033" endline="1083">get_target_orientation</referencedby>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
+        <referencedby refid="_minimale_8c_1a2ee0cc6d76b7e497988562a817c096a1" compoundref="_minimale_8c" startline="1165" endline="1249">orienter_perso_numpad</referencedby>
+        <referencedby refid="_minimale_8c_1ae628b0fb007cb8d89fe76de11151934e" compoundref="_minimale_8c" startline="1258" endline="1283">orienter_perso</referencedby>
+        <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1389" endline="1405">character_hp_list</referencedby>
+        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
+        <referencedby refid="_minimale_8c_1afbbdb6480cb3ab0ba8f8ac1615d4e22e" compoundref="_minimale_8c" startline="1620" endline="1632">creer_perso_rapide</referencedby>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1640" endline="1665">creer_terrain_rapide</referencedby>
+        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1685" endline="1700">edit_stats</referencedby>
+        <referencedby refid="_minimale_8c_1aee3a984cc380669ef226b08039d592da" compoundref="_minimale_8c" startline="1732" endline="1773">tour_IA</referencedby>
+        <referencedby refid="pile_8h_1a153b92d8383b4d328bcd9f20d77b8d0c" compoundref="pile_8c" startline="26" endline="33">pile_empiler</referencedby>
+        <referencedby refid="pile_8h_1a243aa7fe5bd1ff307d4c7aa5f76739c1" compoundref="pile_8c" startline="35" endline="41">pile_depiler</referencedby>
+        <referencedby refid="pile_8h_1ae0e56a57ce8bf929fe621fa05304642c" compoundref="pile_8c" startline="43" endline="50">pile_sommet</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="38" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="38" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" prot="public" virt="non-virtual"><scope>t_coord</scope><name>X</name></member>
+      <member refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" prot="public" virt="non-virtual"><scope>t_coord</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

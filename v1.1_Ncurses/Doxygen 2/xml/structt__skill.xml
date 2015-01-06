@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="structt__skill" kind="struct" prot="public">
+    <compoundname>t_skill</compoundname>
+    <includes refid="header_8h" local="no">header.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structt__skill_1ab27f28c5ead39031421706ddbbd1edea" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char name[MaxString]</definition>
+        <argsstring>[MaxString]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1af5c4cbfb002da8b8595316d87548ab93" compoundref="_minimale_8c" startline="630" endline="640">afficher_skill</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structt__skill_1a037e8e370380046bec287bdc96942091" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int range</definition>
+        <argsstring></argsstring>
+        <name>range</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1af5c4cbfb002da8b8595316d87548ab93" compoundref="_minimale_8c" startline="630" endline="640">afficher_skill</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structt__skill_1ac00edc3c188c78c47878a357ecff2954" prot="public" static="no" mutable="no">
+        <type><ref refid="header_8h_1a440f669d36bc2028077af38574051204" kindref="member">t_skilltype</ref></type>
+        <definition>t_skilltype type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1af5c4cbfb002da8b8595316d87548ab93" compoundref="_minimale_8c" startline="630" endline="640">afficher_skill</referencedby>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
+        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
+        <referencedby refid="_minimale_8c_1aee3a984cc380669ef226b08039d592da" compoundref="_minimale_8c" startline="1732" endline="1773">tour_IA</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structt__skill_1a9518a5f7d916a01def3588da5dc0c8fa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int damage_coeff</definition>
+        <argsstring></argsstring>
+        <name>damage_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1af5c4cbfb002da8b8595316d87548ab93" compoundref="_minimale_8c" startline="630" endline="640">afficher_skill</referencedby>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structt__skill_1a9518a5f7d916a01def3588da5dc0c8fa" prot="public" virt="non-virtual"><scope>t_skill</scope><name>damage_coeff</name></member>
+      <member refid="structt__skill_1ab27f28c5ead39031421706ddbbd1edea" prot="public" virt="non-virtual"><scope>t_skill</scope><name>name</name></member>
+      <member refid="structt__skill_1a037e8e370380046bec287bdc96942091" prot="public" virt="non-virtual"><scope>t_skill</scope><name>range</name></member>
+      <member refid="structt__skill_1ac00edc3c188c78c47878a357ecff2954" prot="public" virt="non-virtual"><scope>t_skill</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

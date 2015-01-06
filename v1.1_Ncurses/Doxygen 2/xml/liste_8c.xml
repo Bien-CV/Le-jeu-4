@@ -1,0 +1,683 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="liste_8c" kind="file">
+    <compoundname>liste.c</compoundname>
+    <includes refid="liste_8h" local="yes">liste.h</includes>
+    <includes refid="header_8h" local="yes">header.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="76">
+        <label>header.h</label>
+        <link refid="header_8h"/>
+      </node>
+      <node id="74">
+        <label>liste.c</label>
+        <link refid="liste.c"/>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>liste.h</label>
+        <link refid="liste_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="liste_8c_1a31f3788284a4b6e361baa5bb3142c852" prot="public" static="no">
+        <name>N_LISTE</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="2" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="liste_8c_1a2d81e4bfb1b218a3e54b070304646b7c" prot="public" static="no" mutable="no">
+        <type><ref refid="structt__coord" kindref="compound">t_coord</ref></type>
+        <definition>t_coord T[N_LISTE]</definition>
+        <argsstring>[N_LISTE]</argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="8" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="liste_8c_1a404442353660d7effc914ba8220ebf7f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int queue</definition>
+        <argsstring></argsstring>
+        <name>queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="10" bodyend="-1"/>
+        <referencedby refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" compoundref="liste_8c" startline="12" endline="17">liste_init</referencedby>
+        <referencedby refid="liste_8h_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</referencedby>
+        <referencedby refid="liste_8h_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</referencedby>
+        <referencedby refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" compoundref="liste_8c" startline="38" endline="43">liste_en_queue</referencedby>
+        <referencedby refid="liste_8h_1ac46b950926c8191e47c3822c624d2e1d" compoundref="liste_8c" startline="73" endline="83">liste_oter_elt</referencedby>
+        <referencedby refid="liste_8h_1ae9c711baf0f41d27a5002c3e249687d8" compoundref="liste_8c" startline="85" endline="101">liste_ajout_droit</referencedby>
+        <referencedby refid="liste_8h_1ac7289b3f288aec0c22e5272c4851e0ee" compoundref="liste_8c" startline="103" endline="118">liste_ajout_gauche</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ec</definition>
+        <argsstring></argsstring>
+        <name>ec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="10" bodyend="-1"/>
+        <referencedby refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" compoundref="liste_8c" startline="12" endline="17">liste_init</referencedby>
+        <referencedby refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</referencedby>
+        <referencedby refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" compoundref="liste_8c" startline="38" endline="43">liste_en_queue</referencedby>
+        <referencedby refid="liste_8h_1ae62f982aac8059018f004e3a7e2e7f21" compoundref="liste_8c" startline="45" endline="50">liste_precedent</referencedby>
+        <referencedby refid="liste_8h_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</referencedby>
+        <referencedby refid="liste_8h_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</referencedby>
+        <referencedby refid="liste_8h_1a0282305b4b91dc5376333ac820bdf995" compoundref="liste_8c" startline="66" endline="71">liste_modif_elt</referencedby>
+        <referencedby refid="liste_8h_1ac46b950926c8191e47c3822c624d2e1d" compoundref="liste_8c" startline="73" endline="83">liste_oter_elt</referencedby>
+        <referencedby refid="liste_8h_1ae9c711baf0f41d27a5002c3e249687d8" compoundref="liste_8c" startline="85" endline="101">liste_ajout_droit</referencedby>
+        <referencedby refid="liste_8h_1ac7289b3f288aec0c22e5272c4851e0ee" compoundref="liste_8c" startline="103" endline="118">liste_ajout_gauche</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="liste_8c_1aa325493a520928cd959f5cf829747b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="14" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="12" bodyend="17"/>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int liste_est_vide</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_est_vide</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="21" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="19" bodyend="23"/>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+        <referencedby refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</referencedby>
+        <referencedby refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" compoundref="liste_8c" startline="38" endline="43">liste_en_queue</referencedby>
+        <referencedby refid="liste_8h_1ae9c711baf0f41d27a5002c3e249687d8" compoundref="liste_8c" startline="85" endline="101">liste_ajout_droit</referencedby>
+        <referencedby refid="liste_8h_1ac7289b3f288aec0c22e5272c4851e0ee" compoundref="liste_8c" startline="103" endline="118">liste_ajout_gauche</referencedby>
+        <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1ad4a1a49d8756b972708e0870f9420776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int liste_est_hors_liste</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_est_hors_liste</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="27" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="25" bodyend="29"/>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+        <referencedby refid="liste_8h_1ae62f982aac8059018f004e3a7e2e7f21" compoundref="liste_8c" startline="45" endline="50">liste_precedent</referencedby>
+        <referencedby refid="liste_8h_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</referencedby>
+        <referencedby refid="liste_8h_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</referencedby>
+        <referencedby refid="liste_8h_1a0282305b4b91dc5376333ac820bdf995" compoundref="liste_8c" startline="66" endline="71">liste_modif_elt</referencedby>
+        <referencedby refid="liste_8h_1ac46b950926c8191e47c3822c624d2e1d" compoundref="liste_8c" startline="73" endline="83">liste_oter_elt</referencedby>
+        <referencedby refid="liste_8h_1ae9c711baf0f41d27a5002c3e249687d8" compoundref="liste_8c" startline="85" endline="101">liste_ajout_droit</referencedby>
+        <referencedby refid="liste_8h_1ac7289b3f288aec0c22e5272c4851e0ee" compoundref="liste_8c" startline="103" endline="118">liste_ajout_gauche</referencedby>
+        <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+        <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
+        <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
+        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_en_tete</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_en_tete</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="33" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="31" bodyend="36"/>
+        <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
+        <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+        <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
+        <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
+        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1aaf16c3ff04ebc19da036b0332d82ccee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_en_queue</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_en_queue</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="40" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="38" bodyend="43"/>
+        <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1ae62f982aac8059018f004e3a7e2e7f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_precedent</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_precedent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="47" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="45" bodyend="50"/>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_suivant</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_suivant</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="54" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="52" bodyend="57"/>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+        <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
+        <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
+        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_valeur_elt</definition>
+        <argsstring>(t_coord *e)</argsstring>
+        <name>liste_valeur_elt</name>
+        <param>
+          <type><ref refid="structt__coord" kindref="compound">t_coord</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="61" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="59" bodyend="64"/>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
+        <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+        <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
+        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a0282305b4b91dc5376333ac820bdf995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_modif_elt</definition>
+        <argsstring>(t_coord v)</argsstring>
+        <name>liste_modif_elt</name>
+        <param>
+          <type><ref refid="structt__coord" kindref="compound">t_coord</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="68" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="66" bodyend="71"/>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_oter_elt</definition>
+        <argsstring>(void)</argsstring>
+        <name>liste_oter_elt</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="75" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="73" bodyend="83"/>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+        <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1ae9c711baf0f41d27a5002c3e249687d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_ajout_droit</definition>
+        <argsstring>(t_coord e)</argsstring>
+        <name>liste_ajout_droit</name>
+        <param>
+          <type><ref refid="structt__coord" kindref="compound">t_coord</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="87" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="85" bodyend="101"/>
+        <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1ac7289b3f288aec0c22e5272c4851e0ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_ajout_gauche</definition>
+        <argsstring>(t_coord e)</argsstring>
+        <name>liste_ajout_gauche</name>
+        <param>
+          <type><ref refid="structt__coord" kindref="compound">t_coord</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="105" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="103" bodyend="118"/>
+        <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
+        <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a207cdf13008fdfbf84b897ca499e3b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_afficher_contenu</definition>
+        <argsstring>()</argsstring>
+        <name>liste_afficher_contenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="121" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="120" bodyend="133"/>
+        <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1aeca8ab6b8935bc5fd81fa7a74e64879a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_afficher_queue</definition>
+        <argsstring>()</argsstring>
+        <name>liste_afficher_queue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="135" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="134" bodyend="141"/>
+        <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
+        <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a48218f7c1bafab1e92490a0963ee7451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void liste_suppr_doublon</definition>
+        <argsstring>()</argsstring>
+        <name>liste_suppr_doublon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="144" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="143" bodyend="165"/>
+        <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
+        <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
+        <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
+        <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" compoundref="liste_8c" startline="73" endline="83">liste_oter_elt</references>
+        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1a78de7382315436cf196cf30aac14257c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int liste_calculer_nombre_elements</definition>
+        <argsstring>()</argsstring>
+        <name>liste_calculer_nombre_elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="168" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="167" bodyend="180"/>
+        <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
+        <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
+        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="liste_8c_1ae6bf3307184d2f80167abcb9c2ad5b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int liste_element_est_present</definition>
+        <argsstring>(t_coord e, int numPile)</argsstring>
+        <name>liste_element_est_present</name>
+        <param>
+          <type><ref refid="structt__coord" kindref="compound">t_coord</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numPile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="183" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="182" bodyend="197"/>
+        <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
+        <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
+        <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
+        <referencedby refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" compoundref="_minimale_8c" startline="692" endline="749">choix_cible_humain</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Mise<sp/>en<sp/>oeuvre<sp/>contigue<sp/>d&apos;une<sp/>liste<sp/>d&apos;entiers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="liste_8c_1a31f3788284a4b6e361baa5bb3142c852" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N_LISTE<sp/>100</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="liste_8h" kindref="compound">liste.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Déclaration<sp/>du<sp/>tableau<sp/>contenant<sp/>les<sp/>éléments<sp/>de<sp/>liste<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="liste_8c_1a2d81e4bfb1b218a3e54b070304646b7c" refkind="member"><highlight class="normal"><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/><ref refid="liste_8c_1a2d81e4bfb1b218a3e54b070304646b7c" kindref="member">T</ref>[<ref refid="liste_8c_1a31f3788284a4b6e361baa5bb3142c852" kindref="member">N_LISTE</ref>];</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Déclaration<sp/>des<sp/>indices<sp/>de<sp/>queue<sp/>et<sp/>d&apos;élément<sp/>courant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>,<sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1aa325493a520928cd959f5cf829747b1c" kindref="member">liste_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Initialise<sp/>la<sp/>liste<sp/>à<sp/>vide<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="liste_8h_1a1e4d1c45ace210278d08fd886268a0e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Rend<sp/>vrai<sp/>si<sp/>la<sp/>liste<sp/>est<sp/>vide,<sp/>faux<sp/>sinon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>==<sp/>-1);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="liste_8h_1ad4a1a49d8756b972708e0870f9420776" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Rend<sp/>vrai<sp/>si<sp/>l&apos;elt<sp/>courant<sp/>est<sp/>hors<sp/>de<sp/>la<sp/>liste,<sp/>faux<sp/>sinon<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(ec<sp/>&lt;<sp/>0<sp/>||<sp/>ec<sp/>&gt;<sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Positionne<sp/>en<sp/>tete<sp/>de<sp/>la<sp/>liste<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>())</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1aaf16c3ff04ebc19da036b0332d82ccee" kindref="member">liste_en_queue</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Positionne<sp/>en<sp/>queue<sp/>de<sp/>la<sp/>liste<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>())</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref><sp/>=<sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="liste_8h_1ae62f982aac8059018f004e3a7e2e7f21" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ae62f982aac8059018f004e3a7e2e7f21" kindref="member">liste_precedent</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Positionne<sp/>sur<sp/>l&apos;elt<sp/>liste_precedent*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>--;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="liste_8h_1a801cf7ec08fb2c6b1dceb32af4a46111" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Positionne<sp/>sur<sp/>l&apos;elt<sp/>liste_suivant*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>++;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="liste_8h_1a1ad09d74d2d4f3b298db6b834933d744" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref>*<sp/>e)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Renvoie<sp/>dans<sp/>e<sp/>la<sp/>veleur<sp/>de<sp/>l&apos;elt<sp/>courant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*e=<sp/>T[<ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="liste_8h_1a0282305b4b91dc5376333ac820bdf995" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a0282305b4b91dc5376333ac820bdf995" kindref="member">liste_modif_elt</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>v)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Affecte<sp/>v<sp/>à<sp/>l&apos;elt<sp/>courant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[<ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>]=v;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="liste_8h_1ac46b950926c8191e47c3822c624d2e1d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" kindref="member">liste_oter_elt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Supprime<sp/>l&apos;elt<sp/>courant<sp/>et<sp/>positionne<sp/>sur<sp/>le<sp/>liste_precedent<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=<ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>;i&lt;<ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>;i++)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[i]=T[i+1];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>--;<sp/>queue--;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="liste_8h_1ae9c711baf0f41d27a5002c3e249687d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ae9c711baf0f41d27a5002c3e249687d8" kindref="member">liste_ajout_droit</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Ajoute<sp/>e<sp/>a<sp/>droite<sp/>de<sp/>l&apos;elt<sp/>courant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>())</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[0]=e;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>++;<sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>++;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=<ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>;i&gt;<ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>;i--)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[i+1]=T[i];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[ec+1]=e;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ec=<sp/>ec+1;<sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="liste_8h_1ac7289b3f288aec0c22e5272c4851e0ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ac7289b3f288aec0c22e5272c4851e0ee" kindref="member">liste_ajout_gauche</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Ajoute<sp/>e<sp/>a<sp/>gauche<sp/>de<sp/>l&apos;elt<sp/>courant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>())</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>++;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>()||!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=<ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>;i&gt;=<ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>;i--)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[i+1]=T[i];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T[<ref refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" kindref="member">ec</ref>]=e;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>++;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a207cdf13008fdfbf84b897ca499e3b17" kindref="member">liste_afficher_contenu</ref>()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>coord;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//liste_suivant();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;debut<sp/>liste<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(&amp;coord);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%i<sp/>*<sp/>%i\n\n&quot;</highlight><highlight class="normal">,<sp/>coord.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref>,<sp/>coord.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;fin<sp/>liste<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134" refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1aeca8ab6b8935bc5fd81fa7a74e64879a" kindref="member">liste_afficher_queue</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>val;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(&amp;val);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%i<sp/>%i\n&quot;</highlight><highlight class="normal">,<sp/>val.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref>,<sp/>val.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//printf(&quot;\n%i<sp/>%i\n&quot;,queue,ec);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a48218f7c1bafab1e92490a0963ee7451" kindref="member">liste_suppr_doublon</ref>()</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indice,<sp/>indice1,<sp/>indice2<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>valcour;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>verif;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(indice1<sp/>=<sp/>0;<sp/>indice1<sp/>&lt;=<sp/><ref refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" kindref="member">queue</ref>;<sp/>indice1++)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(indice<sp/>=<sp/>0;<sp/>indice<sp/>&lt;<sp/>indice1;<sp/>indice++)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(&amp;valcour);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(&amp;verif);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(valcour.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref><sp/>==<sp/>verif.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref><sp/>&amp;&amp;<sp/>valcour.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref><sp/>==<sp/>verif.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" kindref="member">liste_oter_elt</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indice2++;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="liste_8h_1a78de7382315436cf196cf30aac14257c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a78de7382315436cf196cf30aac14257c" kindref="member">liste_calculer_nombre_elements</ref>()</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb=0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>())</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>())</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb++;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nb;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ae6bf3307184d2f80167abcb9c2ad5b2b" kindref="member">liste_element_est_present</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPile)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>element;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(&amp;element);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>()<sp/>&amp;&amp;<sp/>(e.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref><sp/>!=<sp/>element.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref><sp/>||<sp/>e.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref><sp/>!=<sp/>element.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref>))</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(&amp;element);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>()<sp/>&amp;&amp;<sp/>(e.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref><sp/>==<sp/>element.<ref refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kindref="member">X</ref><sp/>&amp;&amp;<sp/>e.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref><sp/>==<sp/>element.<ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref>))</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c"/>
+  </compounddef>
+</doxygen>

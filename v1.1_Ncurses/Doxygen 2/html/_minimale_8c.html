@@ -1,0 +1,2223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Le jeu 4: Référence du fichier Minimale.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-univ.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Le jeu 4
+   &#160;<span id="projectnumber">v1.1 Ncurses</span>
+   </div>
+   <div id="projectbrief">Moteur de jeu T-RPG réalisé par Baptiste Canovas-Virly, Arthur Lemée et Yann Guenver.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Minimale.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;ctype.h&gt;</code><br/>
+<code>#include &lt;ncurses.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="header_8h_source.html">header.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="liste_8h_source.html">liste.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="file_8h_source.html">file.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="pile_8h_source.html">pile.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Minimale.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c__incl.png" border="0" usemap="#_minimale_8c" alt=""/></div>
+<map name="_minimale_8c" id="_minimale_8c">
+<area shape="rect" id="node17" href="header_8h.html" title="header.h" alt="" coords="721,155,793,181"/><area shape="rect" id="node19" href="liste_8h.html" title="liste.h" alt="" coords="690,80,747,107"/><area shape="rect" id="node22" href="file_8h.html" title="file.h" alt="" coords="772,80,823,107"/><area shape="rect" id="node25" href="pile_8h.html" title="pile.h" alt="" coords="847,80,900,107"/></map>
+</div>
+</div>
+<p><a href="_minimale_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a137aa83ec74421d226a90c92ec032ac9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a137aa83ec74421d226a90c92ec032ac9">KNRM</a>&#160;&#160;&#160;&quot;\x1B[0m&quot;</td></tr>
+<tr class="separator:a137aa83ec74421d226a90c92ec032ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66290957baed5df3930ada4cb8caccf1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a66290957baed5df3930ada4cb8caccf1">KRED</a>&#160;&#160;&#160;&quot;\x1B[31m&quot;</td></tr>
+<tr class="separator:a66290957baed5df3930ada4cb8caccf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac081c83b067273757f7a2e54a5957d41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ac081c83b067273757f7a2e54a5957d41">KGRN</a>&#160;&#160;&#160;&quot;\x1B[32m&quot;</td></tr>
+<tr class="separator:ac081c83b067273757f7a2e54a5957d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897b10d246533c95ba86cb79f92e465a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a897b10d246533c95ba86cb79f92e465a">KYEL</a>&#160;&#160;&#160;&quot;\x1B[33m&quot;</td></tr>
+<tr class="separator:a897b10d246533c95ba86cb79f92e465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f838f2fc3a9a3b434be606fc908964b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a3f838f2fc3a9a3b434be606fc908964b">KBLU</a>&#160;&#160;&#160;&quot;\x1B[34m&quot;</td></tr>
+<tr class="separator:a3f838f2fc3a9a3b434be606fc908964b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6825f05d3b9d619d91d79d0ef18bb8b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a6825f05d3b9d619d91d79d0ef18bb8b2">KMAG</a>&#160;&#160;&#160;&quot;\x1B[35m&quot;</td></tr>
+<tr class="separator:a6825f05d3b9d619d91d79d0ef18bb8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32036c94dbb166a3f874b7efc169841f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a32036c94dbb166a3f874b7efc169841f">KCYN</a>&#160;&#160;&#160;&quot;\x1B[36m&quot;</td></tr>
+<tr class="separator:a32036c94dbb166a3f874b7efc169841f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0036c8022c9980079ab17e5c87fd478"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#af0036c8022c9980079ab17e5c87fd478">KWHT</a>&#160;&#160;&#160;&quot;\x1B[37m&quot;</td></tr>
+<tr class="separator:af0036c8022c9980079ab17e5c87fd478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a704aac80f0e314dab07203a35f05aef2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a704aac80f0e314dab07203a35f05aef2">life_check</a> (int joueur_courant)</td></tr>
+<tr class="memdesc:a704aac80f0e314dab07203a35f05aef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle <a class="el" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780">are_my_mates_alive(int joueur_courant)</a> pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0.  <a href="#a704aac80f0e314dab07203a35f05aef2">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a704aac80f0e314dab07203a35f05aef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f36ed2102ea6a97801ef419173a730b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a1f36ed2102ea6a97801ef419173a730b">joueur_liste_suivant</a> (int nb_joueur, int *joueur_courant)</td></tr>
+<tr class="memdesc:a1f36ed2102ea6a97801ef419173a730b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs.  <a href="#a1f36ed2102ea6a97801ef419173a730b">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a1f36ed2102ea6a97801ef419173a730b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cec99ca1b112fc0553d0f09c19fcd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a88cec99ca1b112fc0553d0f09c19fcd7">creer_terrain_rapide</a> (<a class="el" href="header_8h.html#a4bb25c9352f7bb2ea2eb663ccf579528">t_camp</a> camp, int x, int y)</td></tr>
+<tr class="memdesc:a88cec99ca1b112fc0553d0f09c19fcd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle.  <a href="#a88cec99ca1b112fc0553d0f09c19fcd7">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a88cec99ca1b112fc0553d0f09c19fcd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183c5f911befa83432ff61674e326603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a183c5f911befa83432ff61674e326603">vider_buffer</a> (void)</td></tr>
+<tr class="memdesc:a183c5f911befa83432ff61674e326603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vide le tampon de saisie clavier.  <a href="#a183c5f911befa83432ff61674e326603">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a183c5f911befa83432ff61674e326603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d5aa28a687b31b055f49ea44866780"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780">are_my_mates_alive</a> (int joueur_courant)</td></tr>
+<tr class="separator:ae1d5aa28a687b31b055f49ea44866780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0255b1b3f70d1d35a858e9e512c8f988"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a0255b1b3f70d1d35a858e9e512c8f988">calcul_persos_IA</a> (int joueur_courant)</td></tr>
+<tr class="separator:a0255b1b3f70d1d35a858e9e512c8f988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdf262e6e18d594322ddcfdde4e4b3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e">afficher_plateau_orientation</a> (int joueur_courant)</td></tr>
+<tr class="memdesc:a1fdf262e6e18d594322ddcfdde4e4b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le plateau avec les caractères correspondants à l'orientation.  <a href="#a1fdf262e6e18d594322ddcfdde4e4b3e">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a1fdf262e6e18d594322ddcfdde4e4b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c357428c810b5f8ed3fcbeb973dd88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88">generation_nom_personnage</a> (char *nom)</td></tr>
+<tr class="separator:a97c357428c810b5f8ed3fcbeb973dd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e6e73a74f481fc32b060f3e52b8a5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a01e6e73a74f481fc32b060f3e52b8a5f">players_life_check</a> ()</td></tr>
+<tr class="memdesc:a01e6e73a74f481fc32b060f3e52b8a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualise le fait que les joueurs soient vivants ou non.  <a href="#a01e6e73a74f481fc32b060f3e52b8a5f">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a01e6e73a74f481fc32b060f3e52b8a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebdcead4bd058408b30ee5924910d1f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aebdcead4bd058408b30ee5924910d1f6">Sauvegarder</a> (int joueur_courant)</td></tr>
+<tr class="separator:aebdcead4bd058408b30ee5924910d1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49285114d9ea55b17aaaf5b5e21432a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a49285114d9ea55b17aaaf5b5e21432a5">Charger</a> (int joueur_courant)</td></tr>
+<tr class="separator:a49285114d9ea55b17aaaf5b5e21432a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693e68e5f8ca09f46ad6b746c07d0332"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332">generation_nombre_aleatoire</a> (int max)</td></tr>
+<tr class="memdesc:a693e68e5f8ca09f46ad6b746c07d0332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui renvoi un nombre aléatoire en 0 et 'max'.  <a href="#a693e68e5f8ca09f46ad6b746c07d0332">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a693e68e5f8ca09f46ad6b746c07d0332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f74d85bb951bc6b755696903c848531"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a3f74d85bb951bc6b755696903c848531">deplacer_perso</a> (<a class="el" href="structt__coord.html">t_coord</a> case_perso)</td></tr>
+<tr class="memdesc:a3f74d85bb951bc6b755696903c848531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace le personnage sur le terrain.  <a href="#a3f74d85bb951bc6b755696903c848531">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a3f74d85bb951bc6b755696903c848531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07dd1dbd17abd8de085e601421c8103"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103">cases_voisines_calcul</a> (<a class="el" href="structt__coord.html">t_coord</a> coordonnees)</td></tr>
+<tr class="memdesc:ac07dd1dbd17abd8de085e601421c8103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles.  <a href="#ac07dd1dbd17abd8de085e601421c8103">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ac07dd1dbd17abd8de085e601421c8103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaadb3730c96b5ae1d0fc498c3432f6a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5">deplacements_valides</a> (int *nbDepValid)</td></tr>
+<tr class="memdesc:aaadb3730c96b5ae1d0fc498c3432f6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule les positions de déplacement valide, les met dans la liste.  <a href="#aaadb3730c96b5ae1d0fc498c3432f6a5">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aaadb3730c96b5ae1d0fc498c3432f6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22abc2bad1fd63372797a0e3fe103f07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07">choix_deplacement_humain</a> (int joueur_courant, int *nbDepValid)</td></tr>
+<tr class="separator:a22abc2bad1fd63372797a0e3fe103f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c28f345f10a0f18458c5aa14e73c79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aa1c28f345f10a0f18458c5aa14e73c79">choix_deplacement_IA</a> (int *nbDepValid)</td></tr>
+<tr class="separator:aa1c28f345f10a0f18458c5aa14e73c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17c4e2a8512aa83516a20e0df29a123"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aa17c4e2a8512aa83516a20e0df29a123">init_plateau</a> ()</td></tr>
+<tr class="memdesc:aa17c4e2a8512aa83516a20e0df29a123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le plateau en le remplissant de terrain par défaut.  <a href="#aa17c4e2a8512aa83516a20e0df29a123">Plus de détails...</a><br/></td></tr>
+<tr class="separator:aa17c4e2a8512aa83516a20e0df29a123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b417d8f6547affac1cc287a6762113"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113">cases_voisines_ATK</a> (<a class="el" href="structt__coord.html">t_coord</a> coordonnees)</td></tr>
+<tr class="separator:ad6b417d8f6547affac1cc287a6762113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93abf905224d72b20101bb2a6e0ab417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417">viser_case_valide</a> (<a class="el" href="structt__skill.html">t_skill</a> skill, int *nbAtkValid)</td></tr>
+<tr class="separator:a93abf905224d72b20101bb2a6e0ab417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29cde2a1505f65c5b2b190588516f6d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6">choix_cible_IA</a> (<a class="el" href="structt__skill.html">t_skill</a> skill, int *nbAtkValid)</td></tr>
+<tr class="separator:a29cde2a1505f65c5b2b190588516f6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7419c3036235a80b59bc983660be2ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ad7419c3036235a80b59bc983660be2ee">init_char_table</a> (<a class="el" href="structt__character.html">t_character</a> chars[])</td></tr>
+<tr class="separator:ad7419c3036235a80b59bc983660be2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c4cbfb002da8b8595316d87548ab93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93">afficher_skill</a> (int skill_nb, <a class="el" href="structt__skill.html">t_skill</a> skill)</td></tr>
+<tr class="separator:af5c4cbfb002da8b8595316d87548ab93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7015d7153fc65e628d81cdd3b68ab7ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec">afficher_skill_list</a> (<a class="el" href="structt__character.html">t_character</a> perso)</td></tr>
+<tr class="separator:a7015d7153fc65e628d81cdd3b68ab7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad312ec60fc8d45f956471549de9ab21c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c">afficher_infos_persos</a> (<a class="el" href="structt__character.html">t_character</a> perso)</td></tr>
+<tr class="separator:ad312ec60fc8d45f956471549de9ab21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9c98d472a87c9f8a877ceb74dea5ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac">choix_cible_humain</a> (<a class="el" href="structt__skill.html">t_skill</a> skill, int joueur_courant)</td></tr>
+<tr class="separator:a7c9c98d472a87c9f8a877ceb74dea5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7570939d9a77836280496452e995a49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49">selection_perso</a> (int joueur_courant)</td></tr>
+<tr class="memdesc:ae7570939d9a77836280496452e995a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui propose la liste des personnages pouvant être sélectionnés.  <a href="#ae7570939d9a77836280496452e995a49">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ae7570939d9a77836280496452e995a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add579b3bffa443553769bdacdd18a9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#add579b3bffa443553769bdacdd18a9e0">passer_tour</a> ()</td></tr>
+<tr class="memdesc:add579b3bffa443553769bdacdd18a9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui passe le tour du joueur actif.  <a href="#add579b3bffa443553769bdacdd18a9e0">Plus de détails...</a><br/></td></tr>
+<tr class="separator:add579b3bffa443553769bdacdd18a9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96504b67683769d99d267ab8244cdc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#af96504b67683769d99d267ab8244cdc8">suicide</a> (int joueur_courant)</td></tr>
+<tr class="memdesc:af96504b67683769d99d267ab8244cdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permetant au joueur courant d'abandonner la partie.  <a href="#af96504b67683769d99d267ab8244cdc8">Plus de détails...</a><br/></td></tr>
+<tr class="separator:af96504b67683769d99d267ab8244cdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f645fb2dcd1253cf4b728d7020b727"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a10f645fb2dcd1253cf4b728d7020b727">select_skill_IA</a> ()</td></tr>
+<tr class="separator:a10f645fb2dcd1253cf4b728d7020b727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b8579a2cf79307a0ce11d29597d2f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a54b8579a2cf79307a0ce11d29597d2f1">select_skill</a> ()</td></tr>
+<tr class="separator:a54b8579a2cf79307a0ce11d29597d2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d1e9030c1705ad183484acce8a4b2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="header_8h.html#a05b909310980a637d41bd67fc4d5c389">t_targetOrientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a32d1e9030c1705ad183484acce8a4b2c">get_target_orientation</a> (<a class="el" href="structt__character.html">t_character</a> perso, <a class="el" href="structt__coord.html">t_coord</a> cible)</td></tr>
+<tr class="memdesc:a32d1e9030c1705ad183484acce8a4b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction déterminant quelle est l'orientation de la cible par rapport au joueur.  <a href="#a32d1e9030c1705ad183484acce8a4b2c">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a32d1e9030c1705ad183484acce8a4b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d9c8c6a5abddd6a89ddb258b5114bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc">appliquer_action</a> (<a class="el" href="structt__character.html">t_character</a> lanceur, <a class="el" href="structt__coord.html">t_coord</a> cible, <a class="el" href="structt__skill.html">t_skill</a> action)</td></tr>
+<tr class="memdesc:a28d9c8c6a5abddd6a89ddb258b5114bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages entré en paramètre de cases de terrain.  <a href="#a28d9c8c6a5abddd6a89ddb258b5114bc">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a28d9c8c6a5abddd6a89ddb258b5114bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee0cc6d76b7e497988562a817c096a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a2ee0cc6d76b7e497988562a817c096a1">orienter_perso_numpad</a> (int joueur_courant)</td></tr>
+<tr class="memdesc:a2ee0cc6d76b7e497988562a817c096a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation.  <a href="#a2ee0cc6d76b7e497988562a817c096a1">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a2ee0cc6d76b7e497988562a817c096a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae628b0fb007cb8d89fe76de11151934e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ae628b0fb007cb8d89fe76de11151934e">orienter_perso</a> ()</td></tr>
+<tr class="separator:ae628b0fb007cb8d89fe76de11151934e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0529503b2d07980eab95dcd282587007"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a0529503b2d07980eab95dcd282587007">perso_oriente_a_droite</a> ()</td></tr>
+<tr class="separator:a0529503b2d07980eab95dcd282587007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21af16606028cc5f140a51a2314c2668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a21af16606028cc5f140a51a2314c2668">character_hp_list</a> ()</td></tr>
+<tr class="memdesc:a21af16606028cc5f140a51a2314c2668"><td class="mdescLeft">&#160;</td><td class="mdescRight">affiche une liste avec les persos et leurs points de vie.  <a href="#a21af16606028cc5f140a51a2314c2668">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a21af16606028cc5f140a51a2314c2668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779ee1563d913e90d9ad93b9adf6867e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e">tour</a> (int joueur_courant, int *nbAtkValid, int *nbDepValid)</td></tr>
+<tr class="separator:a779ee1563d913e90d9ad93b9adf6867e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bc2b819d20d08ea1c98f09c15f2c47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aa6bc2b819d20d08ea1c98f09c15f2c47">all_dead_but_one</a> (int nb_joueurs)</td></tr>
+<tr class="separator:aa6bc2b819d20d08ea1c98f09c15f2c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbdb6480cb3ab0ba8f8ac1615d4e22e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e">creer_perso_rapide</a> (<a class="el" href="header_8h.html#a4bb25c9352f7bb2ea2eb663ccf579528">t_camp</a> camp, int x, int y)</td></tr>
+<tr class="separator:afbbdb6480cb3ab0ba8f8ac1615d4e22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63ad36c60d60f979a15f7bf3a24c5a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#af63ad36c60d60f979a15f7bf3a24c5a3">edit_stats</a> (<a class="el" href="structt__character.html">t_character</a> perso, int HP, int Max_HP, int MP, int Max_MP, int <a class="el" href="header_8h.html#a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9">ATK</a>, int <a class="el" href="header_8h.html#a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8">MATK</a>, int DEF, int MDEF, int MVT)</td></tr>
+<tr class="separator:af63ad36c60d60f979a15f7bf3a24c5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5778c7cb58f5d0dc868b2c3f632574e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e">spawn_sauvage</a> ()</td></tr>
+<tr class="separator:ae5778c7cb58f5d0dc868b2c3f632574e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670d6c4a5f077fec01afb7b253ddc320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320">spawn_character</a> (<a class="el" href="header_8h.html#a4bb25c9352f7bb2ea2eb663ccf579528">t_camp</a> camp_nouveau_perso)</td></tr>
+<tr class="separator:a670d6c4a5f077fec01afb7b253ddc320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3a984cc380669ef226b08039d592da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da">tour_IA</a> (int joueur_courant, int *nbAtkValid, int *nbDepValid)</td></tr>
+<tr class="separator:aee3a984cc380669ef226b08039d592da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7596f8f2c018a80e51c70268d338fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a0b7596f8f2c018a80e51c70268d338fd">saisie_nombre_joueurs</a> (int *nb_joueurs)</td></tr>
+<tr class="separator:a0b7596f8f2c018a80e51c70268d338fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale Fonction principale qui permet de jouer en mode Kill'em'all.  <a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">Plus de détails...</a><br/></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a66ecc67604b45591ca621e1c1936d009"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a66ecc67604b45591ca621e1c1936d009">compteur_tour</a> =0</td></tr>
+<tr class="separator:a66ecc67604b45591ca621e1c1936d009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb67ecf1ba206af9765bba7ecd7cd929"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#aeb67ecf1ba206af9765bba7ecd7cd929">compteur_joueurs_vivants</a> =0</td></tr>
+<tr class="separator:aeb67ecf1ba206af9765bba7ecd7cd929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d10b4d51713595a0aecf92594403ca3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__character.html">t_character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a0d10b4d51713595a0aecf92594403ca3">Valid_chars_IA</a> [<a class="el" href="header_8h.html#a220380eaa4bfe0ffeab9859c6f3d2076">MaxTab</a>]</td></tr>
+<tr class="separator:a0d10b4d51713595a0aecf92594403ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b1b223d56118ff55a1caf616e22186"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a08b1b223d56118ff55a1caf616e22186">particule_generateur_nom</a> [][20]</td></tr>
+<tr class="separator:a08b1b223d56118ff55a1caf616e22186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd49c2feefa9ee6ce4af9beea5b8a88c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__character.html">t_character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#afd49c2feefa9ee6ce4af9beea5b8a88c">selected_character</a></td></tr>
+<tr class="separator:afd49c2feefa9ee6ce4af9beea5b8a88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816e050bd234e1024a41068177f1ac49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__character.html">t_character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a816e050bd234e1024a41068177f1ac49">Plateau</a> [<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a>][<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a>]</td></tr>
+<tr class="separator:a816e050bd234e1024a41068177f1ac49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6e59130d22bce1f5ec9490b20d7fb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a5a6e59130d22bce1f5ec9490b20d7fb3">depValid</a> [<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a> *<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a>][3]</td></tr>
+<tr class="separator:a5a6e59130d22bce1f5ec9490b20d7fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb6f8f74ea8aeb8c5a3f0d838ca80999"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structt__player.html">t_player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#adb6f8f74ea8aeb8c5a3f0d838ca80999">player</a> [<a class="el" href="header_8h.html#a220380eaa4bfe0ffeab9859c6f3d2076">MaxTab</a>]</td></tr>
+<tr class="separator:adb6f8f74ea8aeb8c5a3f0d838ca80999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfe6e5ba882446145a8c3f5508e2ea6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale_8c.html#a6cfe6e5ba882446145a8c3f5508e2ea6">indiceTabDepValid</a></td></tr>
+<tr class="separator:a6cfe6e5ba882446145a8c3f5508e2ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="a3f838f2fc3a9a3b434be606fc908964b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KBLU&#160;&#160;&#160;&quot;\x1B[34m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00020">20</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32036c94dbb166a3f874b7efc169841f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KCYN&#160;&#160;&#160;&quot;\x1B[36m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00022">22</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac081c83b067273757f7a2e54a5957d41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KGRN&#160;&#160;&#160;&quot;\x1B[32m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00018">18</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6825f05d3b9d619d91d79d0ef18bb8b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KMAG&#160;&#160;&#160;&quot;\x1B[35m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00021">21</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a137aa83ec74421d226a90c92ec032ac9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KNRM&#160;&#160;&#160;&quot;\x1B[0m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00016">16</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66290957baed5df3930ada4cb8caccf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KRED&#160;&#160;&#160;&quot;\x1B[31m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00017">17</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0036c8022c9980079ab17e5c87fd478"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KWHT&#160;&#160;&#160;&quot;\x1B[37m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00023">23</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a897b10d246533c95ba86cb79f92e465a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KYEL&#160;&#160;&#160;&quot;\x1B[33m&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00019">19</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ad312ec60fc8d45f956471549de9ab21c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_infos_persos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>perso</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00651">651</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_cgraph.png" border="0" usemap="#_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_cgraph" alt=""/></div>
+<map name="_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_cgraph" id="_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="afficher_skill_list" alt="" coords="201,5,319,32"/><area shape="rect" id="node5" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="369,5,463,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_icgraph.png" border="0" usemap="#_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_icgraph" alt=""/></div>
+<map name="_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_icgraph" id="_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="200,5,336,32"/><area shape="rect" id="node9" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="211,56,325,83"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="385,31,429,57"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="477,31,528,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1fdf262e6e18d594322ddcfdde4e4b3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_plateau_orientation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le plateau avec les caractères correspondants à l'orientation. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01548">1548</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e_icgraph.png" border="0" usemap="#_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e_icgraph" alt=""/></div>
+<map name="_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e_icgraph" id="_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a49285114d9ea55b17aaaf5b5e21432a5" title="Charger" alt="" coords="293,5,361,32"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="467,157,511,184"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="560,233,611,260"/><area shape="rect" id="node9" href="_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07" title="choix_deplacement_humain" alt="" coords="235,107,418,133"/><area shape="rect" id="node12" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="259,157,395,184"/><area shape="rect" id="node15" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="270,208,383,235"/><area shape="rect" id="node18" href="_minimale_8c.html#a2ee0cc6d76b7e497988562a817c096a1" title="Propose une liste numérique des orientations du perso indiqué en paramètre d&#39;entrée et change son ori..." alt="" coords="248,259,405,285"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af5c4cbfb002da8b8595316d87548ab93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_skill </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skill_nb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td>
+          <td class="paramname"><em>skill</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00630">630</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_af5c4cbfb002da8b8595316d87548ab93_icgraph.png" border="0" usemap="#_minimale_8c_af5c4cbfb002da8b8595316d87548ab93_icgraph" alt=""/></div>
+<map name="_minimale_8c_af5c4cbfb002da8b8595316d87548ab93_icgraph" id="_minimale_8c_af5c4cbfb002da8b8595316d87548ab93_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="afficher_skill_list" alt="" coords="150,5,269,32"/><area shape="rect" id="node16" href="_minimale_8c.html#a10f645fb2dcd1253cf4b728d7020b727" title="select_skill_IA" alt="" coords="156,56,263,83"/><area shape="rect" id="node18" href="_minimale_8c.html#a54b8579a2cf79307a0ce11d29597d2f1" title="select_skill" alt="" coords="347,107,434,133"/><area shape="rect" id="node5" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="317,5,464,32"/><area shape="rect" id="node7" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="512,5,648,32"/><area shape="rect" id="node13" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="523,56,637,83"/><area shape="rect" id="node9" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="697,56,741,83"/><area shape="rect" id="node11" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="789,56,840,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7015d7153fc65e628d81cdd3b68ab7ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_skill_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>perso</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00642">642</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_cgraph.png" border="0" usemap="#_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_cgraph" alt=""/></div>
+<map name="_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_cgraph" id="_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="174,5,269,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_icgraph.png" border="0" usemap="#_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_icgraph" alt=""/></div>
+<map name="_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_icgraph" id="_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="173,31,320,57"/><area shape="rect" id="node5" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="368,5,504,32"/><area shape="rect" id="node11" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="379,56,493,83"/><area shape="rect" id="node7" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="553,31,597,57"/><area shape="rect" id="node9" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="645,31,696,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6bc2b819d20d08ea1c98f09c15f2c47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int all_dead_but_one </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_joueurs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01530">1530</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47_icgraph.png" border="0" usemap="#_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47_icgraph" alt=""/></div>
+<map name="_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47_icgraph" id="_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="176,5,227,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a28d9c8c6a5abddd6a89ddb258b5114bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void appliquer_action </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>lanceur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td>
+          <td class="paramname"><em>cible</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages entré en paramètre de cases de terrain. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01093">1093</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_cgraph.png" border="0" usemap="#_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_cgraph" alt=""/></div>
+<map name="_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_cgraph" id="_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a32d1e9030c1705ad183484acce8a4b2c" title="Fonction déterminant quelle est l&#39;orientation de la cible par rapport au joueur." alt="" coords="171,5,317,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_icgraph.png" border="0" usemap="#_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_icgraph" alt=""/></div>
+<map name="_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_icgraph" id="_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="181,5,225,32"/><area shape="rect" id="node7" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="171,56,235,83"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="283,31,333,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1d5aa28a687b31b055f49ea44866780"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int are_my_mates_alive </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01305">1305</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae1d5aa28a687b31b055f49ea44866780_icgraph.png" border="0" usemap="#_minimale_8c_ae1d5aa28a687b31b055f49ea44866780_icgraph" alt=""/></div>
+<map name="_minimale_8c_ae1d5aa28a687b31b055f49ea44866780_icgraph" id="_minimale_8c_ae1d5aa28a687b31b055f49ea44866780_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a704aac80f0e314dab07203a35f05aef2" title="Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0." alt="" coords="198,5,279,32"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="329,5,373,32"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="421,5,472,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0255b1b3f70d1d35a858e9e512c8f988"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calcul_persos_IA </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01775">1775</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_cgraph.png" border="0" usemap="#_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_cgraph" alt=""/></div>
+<map name="_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_cgraph" id="_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ad7419c3036235a80b59bc983660be2ee" title="init_char_table" alt="" coords="176,5,283,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_icgraph.png" border="0" usemap="#_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_icgraph" alt=""/></div>
+<map name="_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_icgraph" id="_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="176,5,240,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="288,5,339,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6b417d8f6547affac1cc287a6762113"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cases_voisines_ATK </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td>
+          <td class="paramname"><em>coordonnees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00512">512</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ad6b417d8f6547affac1cc287a6762113_cgraph.png" border="0" usemap="#_minimale_8c_ad6b417d8f6547affac1cc287a6762113_cgraph" alt=""/></div>
+<map name="_minimale_8c_ad6b417d8f6547affac1cc287a6762113_cgraph" id="_minimale_8c_ad6b417d8f6547affac1cc287a6762113_cgraph">
+<area shape="rect" id="node3" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="200,5,285,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ad6b417d8f6547affac1cc287a6762113_icgraph.png" border="0" usemap="#_minimale_8c_ad6b417d8f6547affac1cc287a6762113_icgraph" alt=""/></div>
+<map name="_minimale_8c_ad6b417d8f6547affac1cc287a6762113_icgraph" id="_minimale_8c_ad6b417d8f6547affac1cc287a6762113_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="201,31,327,57"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="386,5,430,32"/><area shape="rect" id="node9" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="376,56,440,83"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="488,31,539,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac07dd1dbd17abd8de085e601421c8103"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cases_voisines_calcul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td>
+          <td class="paramname"><em>coordonnees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00194">194</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_cgraph.png" border="0" usemap="#_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_cgraph" alt=""/></div>
+<map name="_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_cgraph" id="_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_cgraph">
+<area shape="rect" id="node3" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="208,5,293,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_icgraph.png" border="0" usemap="#_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_icgraph" alt=""/></div>
+<map name="_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_icgraph" id="_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="209,31,359,57"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="418,5,462,32"/><area shape="rect" id="node9" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="408,56,472,83"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="520,31,571,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a21af16606028cc5f140a51a2314c2668"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void character_hp_list </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>affiche une liste avec les persos et leurs points de vie. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01389">1389</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a21af16606028cc5f140a51a2314c2668_icgraph.png" border="0" usemap="#_minimale_8c_a21af16606028cc5f140a51a2314c2668_icgraph" alt=""/></div>
+<map name="_minimale_8c_a21af16606028cc5f140a51a2314c2668_icgraph" id="_minimale_8c_a21af16606028cc5f140a51a2314c2668_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="176,5,227,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a49285114d9ea55b17aaaf5b5e21432a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Charger </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00128">128</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_cgraph.png" border="0" usemap="#_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_cgraph" alt=""/></div>
+<map name="_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_cgraph" id="_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="123,5,304,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_icgraph.png" border="0" usemap="#_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_icgraph" alt=""/></div>
+<map name="_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_icgraph" id="_minimale_8c_a49285114d9ea55b17aaaf5b5e21432a5_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="123,5,167,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="216,5,267,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7c9c98d472a87c9f8a877ceb74dea5ac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__coord.html">t_coord</a> choix_cible_humain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td>
+          <td class="paramname"><em>skill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00692">692</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_cgraph.png" border="0" usemap="#_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_cgraph" alt=""/></div>
+<map name="_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_cgraph" id="_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="189,5,371,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="207,56,353,83"/><area shape="rect" id="node11" href="liste_8c.html#ae6bf3307184d2f80167abcb9c2ad5b2b" title="liste_element_est_present" alt="" coords="193,132,367,159"/><area shape="rect" id="node7" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="afficher_skill_list" alt="" coords="419,31,538,57"/><area shape="rect" id="node9" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="607,31,702,57"/><area shape="rect" id="node13" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="431,81,527,108"/><area shape="rect" id="node17" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="424,132,533,159"/><area shape="rect" id="node19" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="587,183,722,209"/><area shape="rect" id="node22" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="431,233,526,260"/><area shape="rect" id="node15" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="603,81,706,108"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_icgraph.png" border="0" usemap="#_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_icgraph" alt=""/></div>
+<map name="_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_icgraph" id="_minimale_8c_a7c9c98d472a87c9f8a877ceb74dea5ac_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="190,5,234,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="283,5,333,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a29cde2a1505f65c5b2b190588516f6d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__coord.html">t_coord</a> choix_cible_IA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td>
+          <td class="paramname"><em>skill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbAtkValid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00590">590</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_cgraph.png" border="0" usemap="#_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_cgraph" alt=""/></div>
+<map name="_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_cgraph" id="_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="207,5,303,32"/><area shape="rect" id="node7" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="161,56,349,83"/><area shape="rect" id="node9" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="207,107,302,133"/><area shape="rect" id="node13" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="200,157,309,184"/><area shape="rect" id="node5" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="414,5,517,32"/><area shape="rect" id="node11" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="398,132,533,159"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_icgraph.png" border="0" usemap="#_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_icgraph" alt=""/></div>
+<map name="_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_icgraph" id="_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="160,5,224,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="272,5,323,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a22abc2bad1fd63372797a0e3fe103f07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__coord.html">t_coord</a> choix_deplacement_humain </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbDepValid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00293">293</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_cgraph.png" border="0" usemap="#_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_cgraph" alt=""/></div>
+<map name="_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_cgraph" id="_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_cgraph">
+<area shape="rect" id="node3" href="pile_8c.html#ac2513cb21eb42f39b02122fa30fd21ca" title="pile_init" alt="" coords="295,5,361,32"/><area shape="rect" id="node5" href="pile_8c.html#a153b92d8383b4d328bcd9f20d77b8d0c" title="pile_empiler" alt="" coords="283,56,373,83"/><area shape="rect" id="node7" href="pile_8c.html#ae0e56a57ce8bf929fe621fa05304642c" title="pile_sommet" alt="" coords="280,107,376,133"/><area shape="rect" id="node9" href="_minimale_8c.html#a3f74d85bb951bc6b755696903c848531" title="Déplace le personnage sur le terrain." alt="" coords="273,157,383,184"/><area shape="rect" id="node11" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="237,208,419,235"/><area shape="rect" id="node13" href="pile_8c.html#a243aa7fe5bd1ff307d4c7aa5f76739c1" title="pile_depiler" alt="" coords="285,259,371,285"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_icgraph.png" border="0" usemap="#_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_icgraph" alt=""/></div>
+<map name="_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_icgraph" id="_minimale_8c_a22abc2bad1fd63372797a0e3fe103f07_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="238,5,282,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="331,5,381,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa1c28f345f10a0f18458c5aa14e73c79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__coord.html">t_coord</a> choix_deplacement_IA </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbDepValid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00464">464</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_cgraph.png" border="0" usemap="#_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_cgraph" alt=""/></div>
+<map name="_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_cgraph" id="_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="255,5,351,32"/><area shape="rect" id="node7" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="446,107,581,133"/><area shape="rect" id="node9" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="248,107,357,133"/><area shape="rect" id="node12" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="255,157,350,184"/><area shape="rect" id="node15" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="209,208,397,235"/><area shape="rect" id="node5" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="462,5,565,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_icgraph.png" border="0" usemap="#_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_icgraph" alt=""/></div>
+<map name="_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_icgraph" id="_minimale_8c_aa1c28f345f10a0f18458c5aa14e73c79_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="208,5,272,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="320,5,371,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afbbdb6480cb3ab0ba8f8ac1615d4e22e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creer_perso_rapide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="header_8h.html#a4bb25c9352f7bb2ea2eb663ccf579528">t_camp</a>&#160;</td>
+          <td class="paramname"><em>camp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01620">1620</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_cgraph.png" border="0" usemap="#_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_cgraph" alt=""/></div>
+<map name="_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_cgraph" id="_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="generation_nom_personnage" alt="" coords="187,5,375,32"/><area shape="rect" id="node5" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="425,5,613,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_icgraph.png" border="0" usemap="#_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_icgraph" alt=""/></div>
+<map name="_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_icgraph" id="_minimale_8c_afbbdb6480cb3ab0ba8f8ac1615d4e22e_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="190,5,306,32"/><area shape="rect" id="node7" href="_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="spawn_character" alt="" coords="187,56,309,83"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="357,31,408,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a88cec99ca1b112fc0553d0f09c19fcd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void creer_terrain_rapide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="header_8h.html#a4bb25c9352f7bb2ea2eb663ccf579528">t_camp</a>&#160;</td>
+          <td class="paramname"><em>camp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01640">1640</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_cgraph.png" border="0" usemap="#_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_cgraph" alt=""/></div>
+<map name="_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_cgraph" id="_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="190,5,378,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_icgraph.png" border="0" usemap="#_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_icgraph" alt=""/></div>
+<map name="_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_icgraph" id="_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#aa17c4e2a8512aa83516a20e0df29a123" title="Initialise le plateau en le remplissant de terrain par défaut." alt="" coords="189,5,277,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="208,56,259,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaadb3730c96b5ae1d0fc498c3432f6a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deplacements_valides </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbDepValid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule les positions de déplacement valide, les met dans la liste. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00249">249</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_cgraph.png" border="0" usemap="#_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_cgraph" alt=""/></div>
+<map name="_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_cgraph" id="_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#aa325493a520928cd959f5cf829747b1c" title="liste_init" alt="" coords="247,5,318,32"/><area shape="rect" id="node5" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a" title="file_init" alt="" coords="251,56,314,83"/><area shape="rect" id="node7" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="423,107,508,133"/><area shape="rect" id="node9" href="liste_8c.html#ae9c711baf0f41d27a5002c3e249687d8" title="liste_ajout_droit" alt="" coords="409,208,522,235"/><area shape="rect" id="node15" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e" title="file_retirer" alt="" coords="243,411,322,437"/><area shape="rect" id="node17" href="_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103" title="Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles..." alt="" coords="206,157,359,184"/><area shape="rect" id="node20" href="liste_8c.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="214,360,351,387"/><area shape="rect" id="node35" href="liste_8c.html#a78de7382315436cf196cf30aac14257c" title="liste_calculer_nombre\l_elements" alt="" coords="209,259,357,301"/><area shape="rect" id="node11" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="587,208,690,235"/><area shape="rect" id="node13" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="571,385,706,412"/><area shape="rect" id="node22" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="417,309,513,336"/><area shape="rect" id="node25" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="418,360,513,387"/><area shape="rect" id="node28" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="411,461,520,488"/><area shape="rect" id="node32" href="liste_8c.html#ac46b950926c8191e47c3822c624d2e1d" title="liste_oter_elt" alt="" coords="417,512,513,539"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_icgraph.png" border="0" usemap="#_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_icgraph" alt=""/></div>
+<map name="_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_icgraph" id="_minimale_8c_aaadb3730c96b5ae1d0fc498c3432f6a5_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="215,5,259,32"/><area shape="rect" id="node7" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="205,56,269,83"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="317,31,368,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f74d85bb951bc6b755696903c848531"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deplacer_perso </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td>
+          <td class="paramname"><em>case_perso</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Déplace le personnage sur le terrain. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00179">179</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a3f74d85bb951bc6b755696903c848531_icgraph.png" border="0" usemap="#_minimale_8c_a3f74d85bb951bc6b755696903c848531_icgraph" alt=""/></div>
+<map name="_minimale_8c_a3f74d85bb951bc6b755696903c848531_icgraph" id="_minimale_8c_a3f74d85bb951bc6b755696903c848531_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07" title="choix_deplacement_humain" alt="" coords="166,5,349,32"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="407,56,451,83"/><area shape="rect" id="node10" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="397,107,461,133"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="509,81,560,108"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af63ad36c60d60f979a15f7bf3a24c5a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edit_stats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>perso</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>HP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Max_HP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Max_MP</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ATK</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MATK</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>DEF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MDEF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MVT</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01685">1685</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3_icgraph.png" border="0" usemap="#_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3_icgraph" alt=""/></div>
+<map name="_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3_icgraph" id="_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="134,5,250,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="299,5,349,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a97c357428c810b5f8ed3fcbeb973dd88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generation_nom_personnage </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01668">1668</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_cgraph.png" border="0" usemap="#_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_cgraph" alt=""/></div>
+<map name="_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_cgraph" id="_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="243,5,431,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_icgraph.png" border="0" usemap="#_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_icgraph" alt=""/></div>
+<map name="_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_icgraph" id="_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e" title="creer_perso_rapide" alt="" coords="243,31,375,57"/><area shape="rect" id="node5" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="427,5,543,32"/><area shape="rect" id="node9" href="_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="spawn_character" alt="" coords="425,56,546,83"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="595,31,645,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a693e68e5f8ca09f46ad6b746c07d0332"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int generation_nombre_aleatoire </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui renvoi un nombre aléatoire en 0 et 'max'. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00169">169</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332_icgraph.png" border="0" usemap="#_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332_icgraph" alt=""/></div>
+<map name="_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332_icgraph" id="_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#aa1c28f345f10a0f18458c5aa14e73c79" title="choix_deplacement_IA" alt="" coords="260,5,415,32"/><area shape="rect" id="node9" href="_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6" title="choix_cible_IA" alt="" coords="284,56,391,83"/><area shape="rect" id="node12" href="_minimale_8c.html#a88cec99ca1b112fc0553d0f09c19fcd7" title="Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d&#39;obsta..." alt="" coords="269,107,405,133"/><area shape="rect" id="node17" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="generation_nom_personnage" alt="" coords="243,208,431,235"/><area shape="rect" id="node21" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="665,157,781,184"/><area shape="rect" id="node24" href="_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="spawn_character" alt="" coords="662,208,783,235"/><area shape="rect" id="node5" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="515,5,579,32"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="832,107,883,133"/><area shape="rect" id="node14" href="_minimale_8c.html#aa17c4e2a8512aa83516a20e0df29a123" title="Initialise le plateau en le remplissant de terrain par défaut." alt="" coords="503,107,591,133"/><area shape="rect" id="node19" href="_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e" title="creer_perso_rapide" alt="" coords="481,208,613,235"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a32d1e9030c1705ad183484acce8a4b2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="header_8h.html#a05b909310980a637d41bd67fc4d5c389">t_targetOrientation</a> get_target_orientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>perso</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structt__coord.html">t_coord</a>&#160;</td>
+          <td class="paramname"><em>cible</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction déterminant quelle est l'orientation de la cible par rapport au joueur. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01033">1033</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c_icgraph.png" border="0" usemap="#_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c_icgraph" alt=""/></div>
+<map name="_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c_icgraph" id="_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc" title="Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages..." alt="" coords="201,31,317,57"/><area shape="rect" id="node5" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="375,5,419,32"/><area shape="rect" id="node9" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="365,56,429,83"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="477,31,528,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad7419c3036235a80b59bc983660be2ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_char_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>chars</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00624">624</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ad7419c3036235a80b59bc983660be2ee_icgraph.png" border="0" usemap="#_minimale_8c_ad7419c3036235a80b59bc983660be2ee_icgraph" alt=""/></div>
+<map name="_minimale_8c_ad7419c3036235a80b59bc983660be2ee_icgraph" id="_minimale_8c_ad7419c3036235a80b59bc983660be2ee_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a0255b1b3f70d1d35a858e9e512c8f988" title="calcul_persos_IA" alt="" coords="160,5,283,32"/><area shape="rect" id="node5" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="331,5,395,32"/><area shape="rect" id="node7" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="443,5,493,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa17c4e2a8512aa83516a20e0df29a123"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_plateau </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise le plateau en le remplissant de terrain par défaut. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00500">500</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123_cgraph.png" border="0" usemap="#_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123_cgraph" alt=""/></div>
+<map name="_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123_cgraph" id="_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a88cec99ca1b112fc0553d0f09c19fcd7" title="Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d&#39;obsta..." alt="" coords="141,5,277,32"/><area shape="rect" id="node5" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="326,5,514,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f36ed2102ea6a97801ef419173a730b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void joueur_liste_suivant </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb_joueur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>joueur_courant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01291">1291</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a1f36ed2102ea6a97801ef419173a730b_icgraph.png" border="0" usemap="#_minimale_8c_a1f36ed2102ea6a97801ef419173a730b_icgraph" alt=""/></div>
+<map name="_minimale_8c_a1f36ed2102ea6a97801ef419173a730b_icgraph" id="_minimale_8c_a1f36ed2102ea6a97801ef419173a730b_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="192,5,243,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a704aac80f0e314dab07203a35f05aef2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int life_check </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle <a class="el" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780">are_my_mates_alive(int joueur_courant)</a> pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01342">1342</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a704aac80f0e314dab07203a35f05aef2_cgraph.png" border="0" usemap="#_minimale_8c_a704aac80f0e314dab07203a35f05aef2_cgraph" alt=""/></div>
+<map name="_minimale_8c_a704aac80f0e314dab07203a35f05aef2_cgraph" id="_minimale_8c_a704aac80f0e314dab07203a35f05aef2_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780" title="are_my_mates_alive" alt="" coords="137,5,279,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a704aac80f0e314dab07203a35f05aef2_icgraph.png" border="0" usemap="#_minimale_8c_a704aac80f0e314dab07203a35f05aef2_icgraph" alt=""/></div>
+<map name="_minimale_8c_a704aac80f0e314dab07203a35f05aef2_icgraph" id="_minimale_8c_a704aac80f0e314dab07203a35f05aef2_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="137,5,181,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="229,5,280,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale Fonction principale qui permet de jouer en mode Kill'em'all. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01802">1802</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a0b7596f8f2c018a80e51c70268d338fd" title="saisie_nombre_joueurs" alt="" coords="104,15,259,41"/><area shape="rect" id="node5" href="_minimale_8c.html#a88cec99ca1b112fc0553d0f09c19fcd7" title="Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d&#39;obsta..." alt="" coords="113,65,249,92"/><area shape="rect" id="node9" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="123,180,239,207"/><area shape="rect" id="node19" href="_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="spawn_character" alt="" coords="121,116,242,143"/><area shape="rect" id="node23" href="_minimale_8c.html#a01e6e73a74f481fc32b060f3e52b8a5f" title="Actualise le fait que les joueurs soient vivants ou non." alt="" coords="116,1095,247,1121"/><area shape="rect" id="node25" href="_minimale_8c.html#aa6bc2b819d20d08ea1c98f09c15f2c47" title="all_dead_but_one" alt="" coords="120,1145,243,1172"/><area shape="rect" id="node27" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="543,1171,724,1197"/><area shape="rect" id="node29" href="_minimale_8c.html#a21af16606028cc5f140a51a2314c2668" title="affiche une liste avec les persos et leurs points de vie." alt="" coords="121,1196,242,1223"/><area shape="rect" id="node31" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="149,639,213,665"/><area shape="rect" id="node108" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="159,993,203,1020"/><area shape="rect" id="node165" href="_minimale_8c.html#a1f36ed2102ea6a97801ef419173a730b" title="Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser ..." alt="" coords="113,1247,250,1273"/><area shape="rect" id="node7" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="777,91,965,117"/><area shape="rect" id="node12" href="_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e" title="creer_perso_rapide" alt="" coords="333,91,465,117"/><area shape="rect" id="node17" href="_minimale_8c.html#af63ad36c60d60f979a15f7bf3a24c5a3" title="edit_stats" alt="" coords="359,141,438,168"/><area shape="rect" id="node14" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="generation_nom_personnage" alt="" coords="539,91,727,117"/><area shape="rect" id="node33" href="_minimale_8c.html#a0255b1b3f70d1d35a858e9e512c8f988" title="calcul_persos_IA" alt="" coords="337,535,460,561"/><area shape="rect" id="node37" href="_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="323,664,474,691"/><area shape="rect" id="node77" href="_minimale_8c.html#a3f74d85bb951bc6b755696903c848531" title="Déplace le personnage sur le terrain." alt="" coords="578,1069,689,1096"/><area shape="rect" id="node79" href="_minimale_8c.html#aa1c28f345f10a0f18458c5aa14e73c79" title="choix_deplacement_IA" alt="" coords="556,192,711,219"/><area shape="rect" id="node86" href="_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="335,613,462,640"/><area shape="rect" id="node98" href="_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc" title="Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages..." alt="" coords="341,765,457,792"/><area shape="rect" id="node102" href="_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6" title="choix_cible_IA" alt="" coords="580,243,687,269"/><area shape="rect" id="node35" href="_minimale_8c.html#ad7419c3036235a80b59bc983660be2ee" title="init_char_table" alt="" coords="580,293,687,320"/><area shape="rect" id="node39" href="liste_8c.html#aa325493a520928cd959f5cf829747b1c" title="liste_init" alt="" coords="598,765,669,792"/><area shape="rect" id="node41" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a" title="file_init" alt="" coords="602,664,665,691"/><area shape="rect" id="node43" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="828,757,913,784"/><area shape="rect" id="node45" href="liste_8c.html#ae9c711baf0f41d27a5002c3e249687d8" title="liste_ajout_droit" alt="" coords="814,597,927,624"/><area shape="rect" id="node51" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e" title="file_retirer" alt="" coords="594,715,673,741"/><area shape="rect" id="node53" href="_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103" title="Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles..." alt="" coords="557,867,710,893"/><area shape="rect" id="node56" href="liste_8c.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="565,344,702,371"/><area shape="rect" id="node71" href="liste_8c.html#a78de7382315436cf196cf30aac14257c" title="liste_calculer_nombre\l_elements" alt="" coords="559,446,707,487"/><area shape="rect" id="node47" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="1030,547,1133,573"/><area shape="rect" id="node49" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="1014,319,1149,345"/><area shape="rect" id="node58" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="823,395,919,421"/><area shape="rect" id="node61" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="823,293,918,320"/><area shape="rect" id="node64" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="816,192,925,219"/><area shape="rect" id="node68" href="liste_8c.html#ac46b950926c8191e47c3822c624d2e1d" title="liste_oter_elt" alt="" coords="823,243,919,269"/><area shape="rect" id="node93" href="_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113" title="cases_voisines_ATK" alt="" coords="561,563,706,589"/><area shape="rect" id="node100" href="_minimale_8c.html#a32d1e9030c1705ad183484acce8a4b2c" title="Fonction déterminant quelle est l&#39;orientation de la cible par rapport au joueur." alt="" coords="560,968,707,995"/><area shape="rect" id="node111" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="342,968,455,995"/><area shape="rect" id="node120" href="_minimale_8c.html#add579b3bffa443553769bdacdd18a9e0" title="Fonction qui passe le tour du joueur actif." alt="" coords="353,1221,444,1248"/><area shape="rect" id="node122" href="_minimale_8c.html#af96504b67683769d99d267ab8244cdc8" title="Fonction permetant au joueur courant d&#39;abandonner la partie." alt="" coords="367,1272,430,1299"/><area shape="rect" id="node124" href="_minimale_8c.html#a704aac80f0e314dab07203a35f05aef2" title="Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0." alt="" coords="358,816,439,843"/><area shape="rect" id="node128" href="_minimale_8c.html#aebdcead4bd058408b30ee5924910d1f6" title="Sauvegarder" alt="" coords="351,1171,446,1197"/><area shape="rect" id="node130" href="_minimale_8c.html#a49285114d9ea55b17aaaf5b5e21432a5" title="Charger" alt="" coords="365,1019,433,1045"/><area shape="rect" id="node134" href="_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07" title="choix_deplacement_humain" alt="" coords="307,1373,490,1400"/><area shape="rect" id="node147" href="_minimale_8c.html#a54b8579a2cf79307a0ce11d29597d2f1" title="select_skill" alt="" coords="827,1360,914,1387"/><area shape="rect" id="node152" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="331,917,467,944"/><area shape="rect" id="node162" href="_minimale_8c.html#a2ee0cc6d76b7e497988562a817c096a1" title="Propose une liste numérique des orientations du perso indiqué en paramètre d&#39;entrée et change son ori..." alt="" coords="320,1069,477,1096"/><area shape="rect" id="node114" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="560,1120,707,1147"/><area shape="rect" id="node116" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="afficher_skill_list" alt="" coords="811,1183,930,1209"/><area shape="rect" id="node118" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="1034,1335,1129,1361"/><area shape="rect" id="node126" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780" title="are_my_mates_alive" alt="" coords="562,1019,705,1045"/><area shape="rect" id="node136" href="pile_8c.html#ac2513cb21eb42f39b02122fa30fd21ca" title="pile_init" alt="" coords="600,1348,667,1375"/><area shape="rect" id="node138" href="pile_8c.html#a153b92d8383b4d328bcd9f20d77b8d0c" title="pile_empiler" alt="" coords="588,1399,679,1425"/><area shape="rect" id="node140" href="pile_8c.html#ae0e56a57ce8bf929fe621fa05304642c" title="pile_sommet" alt="" coords="585,1247,681,1273"/><area shape="rect" id="node144" href="pile_8c.html#a243aa7fe5bd1ff307d4c7aa5f76739c1" title="pile_depiler" alt="" coords="590,1297,677,1324"/><area shape="rect" id="node156" href="liste_8c.html#ae6bf3307184d2f80167abcb9c2ad5b2b" title="liste_element_est_present" alt="" coords="546,395,721,421"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae628b0fb007cb8d89fe76de11151934e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void orienter_perso </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01258">1258</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae628b0fb007cb8d89fe76de11151934e_cgraph.png" border="0" usemap="#_minimale_8c_ae628b0fb007cb8d89fe76de11151934e_cgraph" alt=""/></div>
+<map name="_minimale_8c_ae628b0fb007cb8d89fe76de11151934e_cgraph" id="_minimale_8c_ae628b0fb007cb8d89fe76de11151934e_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a183c5f911befa83432ff61674e326603" title="Vide le tampon de saisie clavier." alt="" coords="157,5,248,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ee0cc6d76b7e497988562a817c096a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void orienter_perso_numpad </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01165">1165</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_cgraph.png" border="0" usemap="#_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_cgraph" alt=""/></div>
+<map name="_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_cgraph" id="_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="211,5,392,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_icgraph.png" border="0" usemap="#_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_icgraph" alt=""/></div>
+<map name="_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_icgraph" id="_minimale_8c_a2ee0cc6d76b7e497988562a817c096a1_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="211,5,255,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="304,5,355,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="add579b3bffa443553769bdacdd18a9e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void passer_tour </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui passe le tour du joueur actif. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00897">897</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_add579b3bffa443553769bdacdd18a9e0_icgraph.png" border="0" usemap="#_minimale_8c_add579b3bffa443553769bdacdd18a9e0_icgraph" alt=""/></div>
+<map name="_minimale_8c_add579b3bffa443553769bdacdd18a9e0_icgraph" id="_minimale_8c_add579b3bffa443553769bdacdd18a9e0_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="145,5,189,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="237,5,288,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0529503b2d07980eab95dcd282587007"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int perso_oriente_a_droite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01320">1320</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01e6e73a74f481fc32b060f3e52b8a5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void players_life_check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualise le fait que les joueurs soient vivants ou non. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01361">1361</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f_icgraph.png" border="0" usemap="#_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f_icgraph" alt=""/></div>
+<map name="_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f_icgraph" id="_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="184,5,235,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b7596f8f2c018a80e51c70268d338fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saisie_nombre_joueurs </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nb_joueurs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01792">1792</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd_icgraph.png" border="0" usemap="#_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd_icgraph" alt=""/></div>
+<map name="_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd_icgraph" id="_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="208,5,259,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aebdcead4bd058408b30ee5924910d1f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Sauvegarder </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00080">80</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aebdcead4bd058408b30ee5924910d1f6_icgraph.png" border="0" usemap="#_minimale_8c_aebdcead4bd058408b30ee5924910d1f6_icgraph" alt=""/></div>
+<map name="_minimale_8c_aebdcead4bd058408b30ee5924910d1f6_icgraph" id="_minimale_8c_aebdcead4bd058408b30ee5924910d1f6_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="150,5,194,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="243,5,293,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a54b8579a2cf79307a0ce11d29597d2f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__skill.html">t_skill</a> select_skill </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00954">954</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_cgraph.png" border="0" usemap="#_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_cgraph" alt=""/></div>
+<map name="_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_cgraph" id="_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="142,5,237,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_icgraph.png" border="0" usemap="#_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_icgraph" alt=""/></div>
+<map name="_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_icgraph" id="_minimale_8c_a54b8579a2cf79307a0ce11d29597d2f1_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="142,5,186,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="235,5,285,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a10f645fb2dcd1253cf4b728d7020b727"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__skill.html">t_skill</a> select_skill_IA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00925">925</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a10f645fb2dcd1253cf4b728d7020b727_cgraph.png" border="0" usemap="#_minimale_8c_a10f645fb2dcd1253cf4b728d7020b727_cgraph" alt=""/></div>
+<map name="_minimale_8c_a10f645fb2dcd1253cf4b728d7020b727_cgraph" id="_minimale_8c_a10f645fb2dcd1253cf4b728d7020b727_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a183c5f911befa83432ff61674e326603" title="Vide le tampon de saisie clavier." alt="" coords="163,5,253,32"/><area shape="rect" id="node5" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="161,56,255,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7570939d9a77836280496452e995a49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void selection_perso </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui propose la liste des personnages pouvant être sélectionnés. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00798">798</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae7570939d9a77836280496452e995a49_cgraph.png" border="0" usemap="#_minimale_8c_ae7570939d9a77836280496452e995a49_cgraph" alt=""/></div>
+<map name="_minimale_8c_ae7570939d9a77836280496452e995a49_cgraph" id="_minimale_8c_ae7570939d9a77836280496452e995a49_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="168,5,349,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="185,56,332,83"/><area shape="rect" id="node7" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="afficher_skill_list" alt="" coords="398,56,517,83"/><area shape="rect" id="node9" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="566,56,661,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae7570939d9a77836280496452e995a49_icgraph.png" border="0" usemap="#_minimale_8c_ae7570939d9a77836280496452e995a49_icgraph" alt=""/></div>
+<map name="_minimale_8c_ae7570939d9a77836280496452e995a49_icgraph" id="_minimale_8c_ae7570939d9a77836280496452e995a49_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="169,5,213,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="261,5,312,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a670d6c4a5f077fec01afb7b253ddc320"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spawn_character </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="header_8h.html#a4bb25c9352f7bb2ea2eb663ccf579528">t_camp</a>&#160;</td>
+          <td class="paramname"><em>camp_nouveau_perso</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01718">1718</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_cgraph.png" border="0" usemap="#_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_cgraph" alt=""/></div>
+<map name="_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_cgraph" id="_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="595,5,783,32"/><area shape="rect" id="node5" href="_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e" title="creer_perso_rapide" alt="" coords="177,31,309,57"/><area shape="rect" id="node7" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="generation_nom_personnage" alt="" coords="358,31,546,57"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_icgraph.png" border="0" usemap="#_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_icgraph" alt=""/></div>
+<map name="_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_icgraph" id="_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="176,5,227,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae5778c7cb58f5d0dc868b2c3f632574e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void spawn_sauvage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01704">1704</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_cgraph.png" border="0" usemap="#_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_cgraph" alt=""/></div>
+<map name="_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_cgraph" id="_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="590,5,778,32"/><area shape="rect" id="node5" href="_minimale_8c.html#afbbdb6480cb3ab0ba8f8ac1615d4e22e" title="creer_perso_rapide" alt="" coords="171,31,303,57"/><area shape="rect" id="node10" href="_minimale_8c.html#af63ad36c60d60f979a15f7bf3a24c5a3" title="edit_stats" alt="" coords="198,81,277,108"/><area shape="rect" id="node7" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="generation_nom_personnage" alt="" coords="353,31,541,57"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_icgraph.png" border="0" usemap="#_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_icgraph" alt=""/></div>
+<map name="_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_icgraph" id="_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="171,5,221,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af96504b67683769d99d267ab8244cdc8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void suicide </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permetant au joueur courant d'abandonner la partie. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00906">906</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_af96504b67683769d99d267ab8244cdc8_icgraph.png" border="0" usemap="#_minimale_8c_af96504b67683769d99d267ab8244cdc8_icgraph" alt=""/></div>
+<map name="_minimale_8c_af96504b67683769d99d267ab8244cdc8_icgraph" id="_minimale_8c_af96504b67683769d99d267ab8244cdc8_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="118,5,162,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="211,5,261,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a779ee1563d913e90d9ad93b9adf6867e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbAtkValid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbDepValid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01413">1413</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_cgraph.png" border="0" usemap="#_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_cgraph" alt=""/></div>
+<map name="_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_cgraph" id="_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="331,75,512,102"/><area shape="rect" id="node5" href="_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="134,151,247,178"/><area shape="rect" id="node14" href="_minimale_8c.html#add579b3bffa443553769bdacdd18a9e0" title="Fonction qui passe le tour du joueur actif." alt="" coords="145,826,236,852"/><area shape="rect" id="node16" href="_minimale_8c.html#af96504b67683769d99d267ab8244cdc8" title="Fonction permetant au joueur courant d&#39;abandonner la partie." alt="" coords="159,876,222,903"/><area shape="rect" id="node18" href="_minimale_8c.html#a704aac80f0e314dab07203a35f05aef2" title="Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0." alt="" coords="150,927,231,954"/><area shape="rect" id="node22" href="_minimale_8c.html#aebdcead4bd058408b30ee5924910d1f6" title="Sauvegarder" alt="" coords="143,978,238,1004"/><area shape="rect" id="node24" href="_minimale_8c.html#a49285114d9ea55b17aaaf5b5e21432a5" title="Charger" alt="" coords="157,50,225,76"/><area shape="rect" id="node27" href="_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="115,775,266,802"/><area shape="rect" id="node67" href="_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07" title="choix_deplacement_humain" alt="" coords="99,379,282,406"/><area shape="rect" id="node75" href="_minimale_8c.html#a3f74d85bb951bc6b755696903c848531" title="Déplace le personnage sur le terrain." alt="" coords="366,480,477,507"/><area shape="rect" id="node81" href="_minimale_8c.html#a54b8579a2cf79307a0ce11d29597d2f1" title="select_skill" alt="" coords="577,176,663,203"/><area shape="rect" id="node84" href="_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="127,699,254,726"/><area shape="rect" id="node96" href="_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc" title="Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages..." alt="" coords="133,1104,249,1131"/><area shape="rect" id="node100" href="_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="123,202,259,228"/><area shape="rect" id="node110" href="_minimale_8c.html#a2ee0cc6d76b7e497988562a817c096a1" title="Propose une liste numérique des orientations du perso indiqué en paramètre d&#39;entrée et change son ori..." alt="" coords="112,100,269,127"/><area shape="rect" id="node8" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="348,126,495,152"/><area shape="rect" id="node10" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="afficher_skill_list" alt="" coords="561,126,679,152"/><area shape="rect" id="node12" href="_minimale_8c.html#af5c4cbfb002da8b8595316d87548ab93" title="afficher_skill" alt="" coords="749,151,843,178"/><area shape="rect" id="node20" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780" title="are_my_mates_alive" alt="" coords="350,1104,493,1131"/><area shape="rect" id="node29" href="liste_8c.html#aa325493a520928cd959f5cf829747b1c" title="liste_init" alt="" coords="386,800,457,827"/><area shape="rect" id="node31" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a" title="file_init" alt="" coords="390,851,453,878"/><area shape="rect" id="node33" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="577,876,663,903"/><area shape="rect" id="node35" href="liste_8c.html#ae9c711baf0f41d27a5002c3e249687d8" title="liste_ajout_droit" alt="" coords="563,691,677,718"/><area shape="rect" id="node41" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e" title="file_retirer" alt="" coords="382,902,461,928"/><area shape="rect" id="node43" href="_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103" title="Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles..." alt="" coords="345,1003,498,1030"/><area shape="rect" id="node46" href="liste_8c.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="353,531,490,558"/><area shape="rect" id="node61" href="liste_8c.html#a78de7382315436cf196cf30aac14257c" title="liste_calculer_nombre\l_elements" alt="" coords="347,582,495,624"/><area shape="rect" id="node37" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="745,640,847,667"/><area shape="rect" id="node39" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="729,438,863,464"/><area shape="rect" id="node48" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="572,539,668,566"/><area shape="rect" id="node51" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="573,387,667,414"/><area shape="rect" id="node54" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="565,336,675,363"/><area shape="rect" id="node58" href="liste_8c.html#ac46b950926c8191e47c3822c624d2e1d" title="liste_oter_elt" alt="" coords="572,488,668,515"/><area shape="rect" id="node69" href="pile_8c.html#ac2513cb21eb42f39b02122fa30fd21ca" title="pile_init" alt="" coords="388,278,455,304"/><area shape="rect" id="node71" href="pile_8c.html#a153b92d8383b4d328bcd9f20d77b8d0c" title="pile_empiler" alt="" coords="376,379,467,406"/><area shape="rect" id="node73" href="pile_8c.html#ae0e56a57ce8bf929fe621fa05304642c" title="pile_sommet" alt="" coords="373,430,469,456"/><area shape="rect" id="node78" href="pile_8c.html#a243aa7fe5bd1ff307d4c7aa5f76739c1" title="pile_depiler" alt="" coords="378,328,465,355"/><area shape="rect" id="node91" href="_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113" title="cases_voisines_ATK" alt="" coords="349,750,494,776"/><area shape="rect" id="node98" href="_minimale_8c.html#a32d1e9030c1705ad183484acce8a4b2c" title="Fonction déterminant quelle est l&#39;orientation de la cible par rapport au joueur." alt="" coords="348,1155,495,1182"/><area shape="rect" id="node104" href="liste_8c.html#ae6bf3307184d2f80167abcb9c2ad5b2b" title="liste_element_est_present" alt="" coords="334,227,509,254"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_icgraph.png" border="0" usemap="#_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_icgraph" alt=""/></div>
+<map name="_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_icgraph" id="_minimale_8c_a779ee1563d913e90d9ad93b9adf6867e_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="99,5,149,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aee3a984cc380669ef226b08039d592da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tour_IA </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur_courant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbAtkValid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbDepValid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01732">1732</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aee3a984cc380669ef226b08039d592da_cgraph.png" border="0" usemap="#_minimale_8c_aee3a984cc380669ef226b08039d592da_cgraph" alt=""/></div>
+<map name="_minimale_8c_aee3a984cc380669ef226b08039d592da_cgraph" id="_minimale_8c_aee3a984cc380669ef226b08039d592da_cgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a0255b1b3f70d1d35a858e9e512c8f988" title="calcul_persos_IA" alt="" coords="132,107,255,133"/><area shape="rect" id="node7" href="_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="118,411,269,437"/><area shape="rect" id="node47" href="_minimale_8c.html#a3f74d85bb951bc6b755696903c848531" title="Déplace le personnage sur le terrain." alt="" coords="138,592,249,619"/><area shape="rect" id="node49" href="_minimale_8c.html#aa1c28f345f10a0f18458c5aa14e73c79" title="choix_deplacement_IA" alt="" coords="317,680,472,707"/><area shape="rect" id="node57" href="_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="130,259,257,285"/><area shape="rect" id="node69" href="_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc" title="Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages..." alt="" coords="135,701,251,728"/><area shape="rect" id="node73" href="_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6" title="choix_cible_IA" alt="" coords="341,629,448,656"/><area shape="rect" id="node5" href="_minimale_8c.html#ad7419c3036235a80b59bc983660be2ee" title="init_char_table" alt="" coords="341,5,448,32"/><area shape="rect" id="node9" href="liste_8c.html#aa325493a520928cd959f5cf829747b1c" title="liste_init" alt="" coords="359,309,430,336"/><area shape="rect" id="node11" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a" title="file_init" alt="" coords="363,208,426,235"/><area shape="rect" id="node13" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="572,191,657,217"/><area shape="rect" id="node15" href="liste_8c.html#ae9c711baf0f41d27a5002c3e249687d8" title="liste_ajout_droit" alt="" coords="558,325,671,352"/><area shape="rect" id="node21" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e" title="file_retirer" alt="" coords="355,259,434,285"/><area shape="rect" id="node23" href="_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103" title="Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles..." alt="" coords="318,411,471,437"/><area shape="rect" id="node26" href="liste_8c.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="326,579,463,605"/><area shape="rect" id="node41" href="liste_8c.html#a78de7382315436cf196cf30aac14257c" title="liste_calculer_nombre\l_elements" alt="" coords="321,513,469,554"/><area shape="rect" id="node17" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="774,376,877,403"/><area shape="rect" id="node19" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="758,579,893,605"/><area shape="rect" id="node28" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="567,477,663,504"/><area shape="rect" id="node31" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="567,629,662,656"/><area shape="rect" id="node34" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="560,680,669,707"/><area shape="rect" id="node38" href="liste_8c.html#ac46b950926c8191e47c3822c624d2e1d" title="liste_oter_elt" alt="" coords="567,579,663,605"/><area shape="rect" id="node55" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="521,731,709,757"/><area shape="rect" id="node64" href="_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113" title="cases_voisines_ATK" alt="" coords="322,107,467,133"/><area shape="rect" id="node71" href="_minimale_8c.html#a32d1e9030c1705ad183484acce8a4b2c" title="Fonction déterminant quelle est l&#39;orientation de la cible par rapport au joueur." alt="" coords="321,731,468,757"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_aee3a984cc380669ef226b08039d592da_icgraph.png" border="0" usemap="#_minimale_8c_aee3a984cc380669ef226b08039d592da_icgraph" alt=""/></div>
+<map name="_minimale_8c_aee3a984cc380669ef226b08039d592da_icgraph" id="_minimale_8c_aee3a984cc380669ef226b08039d592da_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="117,5,168,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a183c5f911befa83432ff61674e326603"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vider_buffer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vide le tampon de saisie clavier. </p>
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l01152">1152</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a183c5f911befa83432ff61674e326603_icgraph.png" border="0" usemap="#_minimale_8c_a183c5f911befa83432ff61674e326603_icgraph" alt=""/></div>
+<map name="_minimale_8c_a183c5f911befa83432ff61674e326603_icgraph" id="_minimale_8c_a183c5f911befa83432ff61674e326603_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a10f645fb2dcd1253cf4b728d7020b727" title="select_skill_IA" alt="" coords="144,5,251,32"/><area shape="rect" id="node5" href="_minimale_8c.html#ae628b0fb007cb8d89fe76de11151934e" title="orienter_perso" alt="" coords="145,56,249,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a93abf905224d72b20101bb2a6e0ab417"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void viser_case_valide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__skill.html">t_skill</a>&#160;</td>
+          <td class="paramname"><em>skill</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nbAtkValid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00554">554</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_cgraph.png" border="0" usemap="#_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_cgraph" alt=""/></div>
+<map name="_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_cgraph" id="_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_cgraph">
+<area shape="rect" id="node3" href="liste_8c.html#aa325493a520928cd959f5cf829747b1c" title="liste_init" alt="" coords="221,5,291,32"/><area shape="rect" id="node5" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a" title="file_init" alt="" coords="225,56,287,83"/><area shape="rect" id="node7" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62" title="file_ajouter" alt="" coords="393,107,479,133"/><area shape="rect" id="node9" href="liste_8c.html#ae9c711baf0f41d27a5002c3e249687d8" title="liste_ajout_droit" alt="" coords="379,208,493,235"/><area shape="rect" id="node15" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e" title="file_retirer" alt="" coords="217,411,295,437"/><area shape="rect" id="node17" href="_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113" title="cases_voisines_ATK" alt="" coords="183,157,329,184"/><area shape="rect" id="node20" href="liste_8c.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="187,360,325,387"/><area shape="rect" id="node35" href="liste_8c.html#a78de7382315436cf196cf30aac14257c" title="liste_calculer_nombre\l_elements" alt="" coords="182,259,330,301"/><area shape="rect" id="node11" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="558,208,661,235"/><area shape="rect" id="node13" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="542,385,677,412"/><area shape="rect" id="node22" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="388,309,484,336"/><area shape="rect" id="node25" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="389,360,483,387"/><area shape="rect" id="node28" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="381,461,491,488"/><area shape="rect" id="node32" href="liste_8c.html#ac46b950926c8191e47c3822c624d2e1d" title="liste_oter_elt" alt="" coords="388,512,484,539"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_icgraph.png" border="0" usemap="#_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_icgraph" alt=""/></div>
+<map name="_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_icgraph" id="_minimale_8c_a93abf905224d72b20101bb2a6e0ab417_icgraph">
+<area shape="rect" id="node3" href="_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="191,5,235,32"/><area shape="rect" id="node7" href="_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="181,56,245,83"/><area shape="rect" id="node5" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="293,31,344,57"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="aeb67ecf1ba206af9765bba7ecd7cd929"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compteur_joueurs_vivants =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00036">36</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66ecc67604b45591ca621e1c1936d009"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compteur_tour =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00035">35</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a6e59130d22bce1f5ec9490b20d7fb3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__coord.html">t_coord</a> depValid[<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a> *<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a>][3]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00064">64</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cfe6e5ba882446145a8c3f5508e2ea6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int indiceTabDepValid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00072">72</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08b1b223d56118ff55a1caf616e22186"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char particule_generateur_nom[][20]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= </div>
+<div class="line">    {</div>
+<div class="line">        <span class="stringliteral">&quot;ogre&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;etoileux&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;mur&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;elfe&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;borgne&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;attendrissant&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;enfant&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;planetaire&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;rayon&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;magique&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;terrible&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;sorcier&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;guerrier&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;sauvage&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;perverti&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;bienveillant&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;saint&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00039">39</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a816e050bd234e1024a41068177f1ac49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__character.html">t_character</a> Plateau[<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a>][<a class="el" href="header_8h.html#a523c276fa2df3dd24764b5bb500dbde6">TAILLE_MATRICE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00063">63</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb6f8f74ea8aeb8c5a3f0d838ca80999"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__player.html">t_player</a> player[<a class="el" href="header_8h.html#a220380eaa4bfe0ffeab9859c6f3d2076">MaxTab</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00068">68</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afd49c2feefa9ee6ce4af9beea5b8a88c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__character.html">t_character</a> selected_character</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00061">61</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0d10b4d51713595a0aecf92594403ca3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structt__character.html">t_character</a> Valid_chars_IA[<a class="el" href="header_8h.html#a220380eaa4bfe0ffeab9859c6f3d2076">MaxTab</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale_8c_source.html#l00037">37</a> du fichier <a class="el" href="_minimale_8c_source.html">Minimale.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mardi Janvier 6 2015 14:59:31 pour Le jeu 4 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>
