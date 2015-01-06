@@ -160,11 +160,12 @@ return joueur_courant;
 
 /**
  * \fn int generation_nombre_aleatoire(int max)
- * \brief Fonction qui renvoi un nombre aléatoire en 0 et 'max'
+ * \brief Fonction qui renvoi un nombre aléatoire entre 0 et 'max'
  *
 */
 int generation_nombre_aleatoire(int max)
 {
+		//entre 0 et 'max' !
 		return (rand()%max+1);
 }
 
@@ -1561,18 +1562,27 @@ void afficher_plateau_orientation(int joueur_courant){
 * 
 *
 */
-void creer_perso_rapide(t_camp camp,int x, int y)
+void creer_perso_rapide(t_camp camp,int x, int y,t_classe classe )
 {
+	
+	
+	
 	char chaine_tampon[MaxString];
 	chaine_tampon[0]=0;
 	generation_nom_personnage(chaine_tampon);
     Plateau[x][y]=character_default;
+    if (classe==0) Plateau[x][y]=character_default;
+    if (classe==1) Plateau[x][y]=character_berseker;
+    if (classe==2) Plateau[x][y]=character_mage;
+    if (classe==3) Plateau[x][y]=character_tank;
+    if (classe==4) Plateau[x][y]=character_soigneur;
     if (camp>terrain) strcpy(Plateau[x][y].name, chaine_tampon);else strcpy(Plateau[x][y].name, "Mauvaise fonction de creation");
     Plateau[x][y].camp=camp;
     Plateau[x][y].position.X=x;
     Plateau[x][y].position.Y=y;
+    if (camp==2) Plateau[x][y].orientation=down;
+    if (camp==3) Plateau[x][y].orientation=up;
     
-    Plateau[x][y].skill.b = (t_skill){"Placer Piege", 3, TRAP, 10};
 }
 
 /**
@@ -1642,6 +1652,7 @@ void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int
 	Plateau[x_buffer][y_buffer].stats.MVT=MVT;//Default=2
 
 }		
+
 		//Pour déclarer facilement : int HP=000,Max_HP=000,MP=000,Max_MP=000,ATK=000,MATK=000,DEF=000,MDEF=000,MVT=000;
 		//edit_stats(HP,Max_HP,MP,Max_MP,ATK,MATK,DEF,MDEF,MVT);
 		
@@ -1654,7 +1665,7 @@ void spawn_sauvage()
 		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
 	}while(Plateau[x_buffer][y_buffer].camp !=0);
 	printw("Coordonnées de creation du personnage chaotique : %i , %i. Camp case : %i",x_buffer,y_buffer,Plateau[x_buffer][y_buffer].camp);
-	creer_perso_rapide(sauvage,x_buffer,y_buffer);
+	creer_perso_rapide(sauvage,x_buffer,y_buffer,berseker);
 	edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
 	
 }
@@ -1668,7 +1679,7 @@ void spawn_character(t_camp camp_nouveau_perso)
 		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
 	}while(Plateau[x_buffer][y_buffer].camp !=0);
 	printw("Coordonnées de creation du personnage de %s : %i , %i.",player[camp_nouveau_perso].name,x_buffer,y_buffer);
-	creer_perso_rapide(camp_nouveau_perso,x_buffer,y_buffer);
+	creer_perso_rapide(camp_nouveau_perso,x_buffer,y_buffer,generation_nombre_aleatoire(3)+1);
 	//edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
 	
 }
@@ -1788,13 +1799,25 @@ int main(){
 	strcpy(player[4].name,"Arthur");
 	
 	creer_terrain_rapide(obstacle,3,1);
-	
+	/*
 	spawn_sauvage();
 	for (i=2;i<nb_joueurs;i++)
 	{
 		spawn_character(i);
 		spawn_character(i);
 	}
+	*/
+	
+	
+	creer_perso_rapide(2,4,0,berseker);
+	creer_perso_rapide(2,3,0,mage);
+	creer_perso_rapide(2,2,0,soigneur);
+	creer_perso_rapide(2,1,0,tank);
+	
+	creer_perso_rapide(3,1,5,berseker);
+	creer_perso_rapide(3,2,5,mage);
+	creer_perso_rapide(3,3,5,soigneur);
+	creer_perso_rapide(3,4,5,tank);
 	
 	joueur_courant=2;
 	
@@ -1820,7 +1843,7 @@ int main(){
 			
 			
             compteur_tour++;
-            //if (generation_nombre_aleatoire(4)==1) spawn_sauvage();
+            if (generation_nombre_aleatoire(4)==1) spawn_sauvage();
             
             afficher_plateau_orientation(joueur_courant);
             character_hp_list();
@@ -1841,7 +1864,7 @@ int main(){
 	afficher_plateau_orientation(joueur_courant);
 
 
-	for (i=1;i<=nb_joueurs;i++)
+	for (i=2;i<=nb_joueurs;i++)
 	{
 		if (player[i].alive==1) printw("Victoire de %s !\n",player[i].name);
 	}
