@@ -24,13 +24,13 @@
 
 
 //Prototypes fonctions, à inclure dans un futur Minimale.h !
-int life_check();
-void joueur_liste_suivant(int nb_joueur);
+int life_check(int joueur_courant);
+void joueur_liste_suivant(int nb_joueur,int* joueur_courant);
 void creer_terrain_rapide(t_camp camp,int x, int y);
 void vider_buffer(void);
-int are_my_mates_alive();
-int calcul_persos_IA();
-void afficher_plateau_orientation(void);
+int are_my_mates_alive(int joueur_courant);
+int calcul_persos_IA(int joueur_courant);
+void afficher_plateau_orientation(int joueur_courant);
 void generation_nom_personnage(char * nom);
 int compteur_tour=0;
 int compteur_joueurs_vivants=0;
@@ -57,14 +57,12 @@ char particule_generateur_nom[][20] =
 		"saint"
 	};
 	
-int nb_joueurs=3; //inclus la nature
+	
 t_character selected_character;
 void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 int nbDepValid;
-int nbAtkValid;
-t_camp joueur;
 t_player player[MaxTab];
 
 
@@ -76,7 +74,9 @@ int indiceTabDepValid;
  * \brief Sauvegarde la partie dans un fichier
  *
  */
-void Sauvegarder(){
+ 
+void Sauvegarder(int joueur_courant){
+	
     char NomFichier[20]="",FichierSauvegarde[20]="";
     int present=1;
 
@@ -111,7 +111,8 @@ void Sauvegarder(){
     sauvegarde=fopen(NomFichier,"wb");
     fwrite(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
     fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-    fwrite(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+    
+    fwrite(&joueur_courant,sizeof(int),sizeof(int),sauvegarde); //Que faire avec &joueur_courant ?
     fclose(fichierIndex);
     fclose(sauvegarde);
 }
@@ -121,7 +122,8 @@ void Sauvegarder(){
  * \brief Permet de charger une partie depuis un fichier
  *
  */
-void Charger(){
+ 
+void Charger(int joueur_courant){
     char NomFichier[20]="",FichierSauvegarde[20]="";
 
     FILE * fichierIndex;
@@ -144,11 +146,11 @@ void Charger(){
             if(sauvegarde!=NULL){
                 fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-                fread(&joueur,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+                fread(&joueur_courant,sizeof(t_camp),sizeof(t_camp),sauvegarde);
             }else {printw("Fichier incorrect\n");}
         }while(!feof(sauvegarde));
             fclose(sauvegarde);
-            afficher_plateau_orientation();
+            afficher_plateau_orientation(joueur_courant);
         }else {
 printw("Pas de sauvegarde disponible.\n");
         }
@@ -282,11 +284,11 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
 }
 
 /**
- * \fn t_coord choix_deplacement_humain()
+ * \fn t_coord choix_deplacement_humain(int joueur_courant)
  * \brief Permet au joueur de choisir la destination
  *
  */
-t_coord choix_deplacement_humain(){
+t_coord choix_deplacement_humain(int joueur_courant){
 	//***************/V1.2/*****************/
 		int mvt_effectue = 0, x, y;
 		char choix;
@@ -303,11 +305,9 @@ t_coord choix_deplacement_humain(){
 		deplacer_perso(val);
 		move(0,0);
 		printw("Deplacement: %i/%i\n", mvt_effectue, selected_character.stats.MVT);
-		afficher_plateau_orientation();
+		afficher_plateau_orientation(joueur_courant);
 		printw("\n\nValider =\"Entrée\"\nAnnuler =\"BackSpace\"");
-		attron(COLOR_PAIR(1));
 		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(1));
 		//refresh();
 		choix = getch();
 		if(choix == 127 && mvt_effectue > 0)
@@ -549,12 +549,12 @@ int cases_voisines_ATK(t_coord coordonnees){
     return(nbVois);
 }
 
-void viser_case_valide(t_skill skill)
+void viser_case_valide(t_skill skill, int* nbAtkValid)
 {
     int mvtEffectue = 0;
     int nbVoisins=1;
     int nbBoucle;
-    nbAtkValid = 0;
+    *nbAtkValid = 0;
     liste_init();
     file_init();
     int nb_iteration;
@@ -582,10 +582,10 @@ void viser_case_valide(t_skill skill)
         mvtEffectue++;
     }
     liste_suppr_doublon();
-    nbAtkValid = liste_calculer_nombre_elements();
+    *nbAtkValid = liste_calculer_nombre_elements();
 }
 
-t_coord choix_cible_IA(t_skill skill)
+t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 {
     int i =0,choix;
    // t_camp tampon_camp_cible;
@@ -596,13 +596,13 @@ t_coord choix_cible_IA(t_skill skill)
 
 do{
    //     printw("Debut do\n");
-        choix=generation_nombre_aleatoire(nbAtkValid);
+        choix=generation_nombre_aleatoire(*nbAtkValid);
         liste_en_tete();
         for(i = 0; i < choix-1; i++)
 			liste_suivant();
         liste_valeur_elt(&coordonnees);
     //    printw("Fin do\n");
-    }while (!(choix<=nbAtkValid && choix > 0));
+    }while (!(choix<=*nbAtkValid && choix > 0));
    printw("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
     //printw("ChoixCible:%i\n",choix);
 
@@ -687,7 +687,7 @@ void afficher_infos_persos( t_character perso)
 
 
 
-t_coord choix_cible_humain(t_skill skill)
+t_coord choix_cible_humain(t_skill skill, int joueur_courant)
 {
 	//***************/V1.2/*****************/
     int valid = 0;
@@ -700,7 +700,7 @@ t_coord choix_cible_humain(t_skill skill)
 	{
 		clear();
 		printw("Choisissez votre cible: \n", valid);
-		afficher_plateau_orientation();
+		afficher_plateau_orientation(joueur_courant);
 		printw("\nCible ");
 		if(valid == 0)printw("non ");
 		printw("valide");
@@ -789,11 +789,11 @@ t_coord choix_cible_humain(t_skill skill)
 
 
 /**
-* \fn void selection_perso()
+* \fn void selection_perso(int joueur_courant)
 * \brief Fonction qui propose la liste des personnages pouvant être sélectionnés.
 *
 */
-void selection_perso(){
+void selection_perso(int joueur_courant){
 	
 	
 	//***************/V1.2/*****************/
@@ -847,7 +847,7 @@ void selection_perso(){
 		printw("perso: %i\njoueur: %i", Plateau[x][y].camp, joueur);
 		getch();*/
 		
-	}while(choix != '\n' || (Plateau[x][y].camp != joueur || Plateau[x][y].type == TRAP_UNIT));
+	}while(choix != '\n' || (Plateau[x][y].camp != joueur_courant || Plateau[x][y].type == TRAP_UNIT));
 	selected_character = Plateau[x][y];
 	Plateau[x][y]= case_terrain;
 	//***************/V1.2/*****************/Fin
@@ -897,15 +897,15 @@ void passer_tour(){//Permet au joueur de passer son tour
 }
 
 /**
-* \fn void suicide()
+* \fn void suicide(int joueur_courant)
 * \brief Fonction permetant au joueur courant d'abandonner la partie
 *
 */
-void suicide(){// Permet au joueur de quitter la partie.
+void suicide(int joueur_courant){// Permet au joueur de quitter la partie.
     int i,j;
     for(i=0;i<TAILLE_MATRICE;i++){
         for(j=0;j<TAILLE_MATRICE;j++){
-            if(Plateau[i][j].camp==joueur){
+            if(Plateau[i][j].camp==joueur_courant){
             Plateau[i][j]=case_terrain;
             }
         }
@@ -1155,12 +1155,12 @@ void vider_buffer(void)
 }
 
 /**
-* \fn void orienter_perso_numpad(t_character perso)
+* \fn void orienter_perso_numpad(int joueur_courant)
 * \brief Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation.
 * 
 *
 */
-void orienter_perso_numpad(){
+void orienter_perso_numpad(int joueur_courant){
     char input, curs;
 
 	switch(selected_character.orientation)
@@ -1177,7 +1177,6 @@ void orienter_perso_numpad(){
 		case 3:
 			curs = '<';break;
 	}
-    //char curs = 'O';
     t_orientation tampon_orientation;
     //viderBuffer();
     
@@ -1185,7 +1184,7 @@ void orienter_perso_numpad(){
     {
         clear();
 		printw("Choisissez l'orientation : \n");
-		afficher_plateau_orientation();
+		afficher_plateau_orientation(joueur_courant);
 		printw("Valider =\"Entrée\"");
 		mvaddch(selected_character.position.Y+2, selected_character.position.X+3, curs);
             refresh();
@@ -1283,31 +1282,31 @@ void orienter_perso(){
 
 
 /**
-* \fn void joueur_liste_suivant(int nb_joueur)
+* \fn void joueur_liste_suivant(int nb_joueurs, int* joueur_courant)
 * \brief Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs.
 *
 */
-void joueur_liste_suivant(int nb_joueur)
+void joueur_liste_suivant(int nb_joueurs, int* joueur_courant)
 {
-    if (joueur==nb_joueur) joueur=1;
-        else joueur++;
+    if (*joueur_courant==nb_joueurs) *joueur_courant=1;
+        else (*joueur_courant)++;
 
 }
 
 
 /**
-* \fn int are_my_mates_alive()
+* \fn int are_my_mates_alive(joueur_courant)
 * \brief Fonction d'initialisation d'un tableau de personnages
 * Remplit le tableau de personnages entré en paramètre de cases de terrain.
 *
 */
-int are_my_mates_alive(){
+int are_my_mates_alive(int joueur_courant){
     int nb_perso=0,i,j;
     for(i=0;i<TAILLE_MATRICE;i++)
     {
         for(j=0;j<TAILLE_MATRICE;j++)
         {
-            if(Plateau[i][j].camp==joueur && Plateau[i][j].type!=TRAP_UNIT)
+            if(Plateau[i][j].camp==joueur_courant && Plateau[i][j].type!=TRAP_UNIT)
             {
                 nb_perso++;
             }
@@ -1333,17 +1332,17 @@ int perso_oriente_a_droite()
 }
 
 /**
-* \fn int life_check(t_camp joueur)
+* \fn int life_check(int joueur_courant)
 * \brief Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain.
-*    Appelle are_my_mates_alive() pour déterminer le joueur est encore en jeu.
+*    Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu.
 *    Renvoie 1 si le joueur a encore des personnages en vie, sinon 0.
 */
-int life_check(){
+int life_check(int joueur){
           
-    if (player[joueur].alive==0 || are_my_mates_alive()<1 ) 
+    if (player[joueur].alive==0 || are_my_mates_alive(joueur_courant)<1 ) 
     {
 		player[joueur].alive=0;
-        //if (joueur!=sauvage) printw("%s est mort.\n",player[joueur].name);
+        //if (joueur!=sauvage) printw("%s est mort.\n",player[joueur_courant].name);
         return 0;
     }else {
         return 1;
@@ -1404,12 +1403,12 @@ void character_hp_list()
 }
 
 /**
-* \fn void tour(t_camp joueur)
+* \fn void tour(int joueur_courant)
 * \brief Fonction de déroulement d'un tour pour le joueur entré en paramètre.
 *
 *
 */
-void tour()
+void tour(int joueur_courant, int* nbAtkValid)
 {
 	
     int choix, nb_actions_faites = 0, deplacement_fait, indice_curseur =1, nb_choix_max = 5, coord_curs, est_vivant = 1;
@@ -1419,19 +1418,19 @@ void tour()
         do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
         {   
 			clear();
-			afficher_plateau_orientation();
+			afficher_plateau_orientation(joueur_courant);
 			printw("\nTour de ");
-				if(joueur==1)attron(COLOR_PAIR(2));//Gestion de couleurs
-				if(joueur==2)attron(COLOR_PAIR(3));
-				if(joueur==3)attron(COLOR_PAIR(4));
-				if(joueur==4)attron(COLOR_PAIR(5));
-				if(joueur==5)attron(COLOR_PAIR(6));	
-		printw("%s\n",player[joueur].name);	
-				if(joueur==1)attroff(COLOR_PAIR(2));//gestion de couleurs
-				if(joueur==2)attroff(COLOR_PAIR(3));
-				if(joueur==3)attroff(COLOR_PAIR(4));
-				if(joueur==4)attroff(COLOR_PAIR(5));
-				if(joueur==5)attroff(COLOR_PAIR(6));
+				if(joueur_courant==1)attron(COLOR_PAIR(2));//Gestion de couleurs
+				if(joueur_courant==2)attron(COLOR_PAIR(3));
+				if(joueur_courant==3)attron(COLOR_PAIR(4));
+				if(joueur_courant==4)attron(COLOR_PAIR(5));
+				if(joueur_courant==5)attron(COLOR_PAIR(6));	
+		printw("%s\n",player[joueur_courant].name);	
+				if(joueur_courant==1)attroff(COLOR_PAIR(2));//gestion de couleurs
+				if(joueur_courant==2)attroff(COLOR_PAIR(3));
+				if(joueur_courant==3)attroff(COLOR_PAIR(4));
+				if(joueur_courant==4)attroff(COLOR_PAIR(5));
+				if(joueur_courant==5)attroff(COLOR_PAIR(6));
             printw("    Selectionner Perso\n");
             printw("    Passer tour\n");
             printw("    suicide\n");
@@ -1462,11 +1461,11 @@ void tour()
         }
         while ((choix != '\n') );
             switch(indice_curseur)
-            {   case 1: printw("\n");selection_perso(); break;
+            {   case 1: printw("\n");selection_perso(joueur_courant); break;
                 case 2: printw("\n");passer_tour(); break;
-                case 3: printw("\n");suicide();life_check(); break;//Abandon
-                case 4: printw("\n");Sauvegarder();break;
-                case 5: printw("\n");Charger();break;
+                case 3: printw("\n");suicide(joueur_courant);life_check(joueur_courant); break;//Abandon
+                case 4: printw("\n");Sauvegarder(joueur_courant);break;
+                case 5: printw("\n");Charger(joueur_courant);break;
                 default: printw("Erreur: votre choix doit être compris entre 1 et 5\n");
 			}
 	/*
@@ -1476,16 +1475,26 @@ void tour()
     
         do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
         {   
+<<<<<<< HEAD
 			printw("\nTour de %s : \n",player[joueur].name);
+=======
+			printw("\nTour de %s : \n",player[joueur_courant].name);
+>>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
             printw("   1 - Selectionner Perso\n");
             printw("   2 - Passer tour\n");
             printw("   3 - suicide\n");
             scanf("%d",&choix);
 
             switch(choix)
+<<<<<<< HEAD
             {   case 1: printw("\n");selection_perso(); break;
                 case 2: printw("\n");passer_tour(); break;
                 case 3: printw("\n");suicide();players_life_check(); break;//Abandon
+=======
+            {   case 1: printw("\n");selection_perso(joueur_courant); break;
+                case 2: printw("\n");passer_tour(); break;
+                case 3: printw("\n");suicide(joueur_courant);players_life_check(); break;//Abandon
+>>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
                 default: printw("Erreur: votre choix doit être compris entre 1 et 3\n");
             }
         }
@@ -1562,11 +1571,11 @@ int all_dead_but_one(int nb_joueurs){
 
 
 /**
-* \fn void afficher_plateau_orientation(void)
+* \fn void afficher_plateau_orientation(int joueur_courant)
 * \brief Affiche le plateau avec les caractères correspondants à l'orientation
 *
 */
-void afficher_plateau_orientation(void){
+void afficher_plateau_orientation(int joueur_courant){
 	//***************/V1.2/*****************/
 	int i,j;
     for(j=-1;j<TAILLE_MATRICE;j++)
@@ -1588,14 +1597,14 @@ void afficher_plateau_orientation(void){
 					printw("%c",'X');
 				else
 					printw("%c",'O');*/
-            }else if((Plateau[i][j].camp>0 && Plateau[i][j].type != TRAP_UNIT) || Plateau[i][j].camp == joueur)
+            }else if((Plateau[i][j].camp>0 && Plateau[i][j].type != TRAP_UNIT) || Plateau[i][j].camp == joueur_courant)
             {
 				if(Plateau[i][j].camp==1)attron(COLOR_PAIR(2));//Gestion de couleurs
 				if(Plateau[i][j].camp==2)attron(COLOR_PAIR(3));
 				if(Plateau[i][j].camp==3)attron(COLOR_PAIR(4));
 				if(Plateau[i][j].camp==4)attron(COLOR_PAIR(5));
 				if(Plateau[i][j].camp==5)attron(COLOR_PAIR(6));
-				if(Plateau[i][j].camp==joueur) attron(A_BLINK);
+				if(Plateau[i][j].camp==joueur_courant) attron(A_BLINK);
 				
 				if(Plateau[i][j].type == TRAP_UNIT)
 				{
@@ -1609,7 +1618,7 @@ void afficher_plateau_orientation(void){
 				}
 				
 				
-				if(Plateau[i][j].camp == joueur) attroff(A_BLINK);
+				if(Plateau[i][j].camp == joueur_courant) attroff(A_BLINK);
 				if(Plateau[i][j].camp==1)attroff(COLOR_PAIR(2));//gestion de couleurs
 				if(Plateau[i][j].camp==2)attroff(COLOR_PAIR(3));
 				if(Plateau[i][j].camp==3)attroff(COLOR_PAIR(4));
@@ -1644,7 +1653,11 @@ void afficher_plateau_orientation(void){
 			if (j==-1)
 			{
 				 printw("%i",i);
+<<<<<<< HEAD
 			}else if ( Plateau[i][j].camp == joueur )
+=======
+			}else if ( Plateau[i][j].camp == joueur_courant )
+>>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
             {   
 				if(strcmp(Plateau[i][j].name, "Trap") == 0)
                 {
@@ -1816,36 +1829,33 @@ void spawn_character(t_camp camp_nouveau_perso)
 	
 }
 
-void tour_IA()
+void tour_IA(int joueur_courant, int* nbAtkValid)
 {
     int nb_actions_faites, i;
-    int nb_perso_vivants=calcul_persos_IA();
+    int nb_perso_vivants=calcul_persos_IA(joueur_courant);
     //printw("nb_persos_vivants:%i\n",nb_perso_vivants);
     t_skill skill_selected;
     for (i=0; i<nb_perso_vivants ; i++ )
     {	
 		selected_character=Plateau[Valid_chars_IA[i].position.X][Valid_chars_IA[i].position.Y];
-        if (selected_character.camp==joueur) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
+        if (selected_character.camp==joueur_courant) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
         {		
                 for(nb_actions_faites=0;nb_actions_faites < selected_character.nb_action_tour;nb_actions_faites++)
             {
-				//printw("Plateau Checkpoint 4\n");
-				//afficher_plateau_orientation();
-                deplacements_valides(); //Lololol, il y a un probleme ici !
-                //printw("Plateau Checkpoint 5\n");
-				//afficher_plateau_orientation();
+
+                deplacements_valides();
+
 				
                 deplacer_perso(choix_deplacement_IA());
-                //printw("Plateau Checkpoint 6\n");
-				//afficher_plateau_orientation();
+                
                 skill_selected = selected_character.skill.a;
                 
                 if(skill_selected.type != EMPTY)
                 {
-					//printw("Skill not EMPTY type.\n");
+
 					
-                    viser_case_valide(skill_selected);
-                    appliquer_action(selected_character, choix_cible_IA(skill_selected), skill_selected);
+                    viser_case_valide(skill_selected, nbAtkValid);
+                    appliquer_action(selected_character, choix_cible_IA(skill_selected,nbAtkValid), skill_selected);
                 }else 
                 {
 					//printw("Skill EMPTY type.\n");
@@ -1863,14 +1873,14 @@ void tour_IA()
 
 }
 
-int calcul_persos_IA(){
+int calcul_persos_IA(int joueur_courant){
     int i,j,nb_perso=0;
     init_char_table(Valid_chars_IA);
     for(i=0;i<TAILLE_MATRICE;i++)
     {
         for(j=0;j<TAILLE_MATRICE;j++)
         {
-            if(Plateau[i][j].camp==joueur)
+            if(Plateau[i][j].camp==joueur_courant)
             {
                 Valid_chars_IA[nb_perso]=Plateau[i][j];
                 nb_perso++;
@@ -1880,6 +1890,10 @@ int calcul_persos_IA(){
     return nb_perso;
 }
 
+void saisie_nombre_joueurs(int* nb_joueurs )
+{
+	*nb_joueurs=4;
+}
 /**
 * \fn int main()
 * \brief Fonction principale
@@ -1888,7 +1902,9 @@ int calcul_persos_IA(){
 */
 int main(){
 	int i;
-	nb_joueurs++;
+	int nb_joueurs, joueur_courant;
+	int nbAtkValid;
+	saisie_nombre_joueurs(&nb_joueurs);
 	srand((long)time(NULL));
 	
 	
@@ -1935,7 +1951,7 @@ int main(){
 		spawn_character(i);
 	}
 	
-	joueur=2;
+	joueur_courant=2;
 	
 	
         
@@ -1954,30 +1970,30 @@ int main(){
     
     while(!all_dead_but_one(nb_joueurs)){
 		
-        if(player[joueur].alive != 0 )
+        if(player[joueur_courant].alive != 0 )
         {   
 			
 			
             compteur_tour++;
             //if (generation_nombre_aleatoire(4)==1) spawn_sauvage();
             
-            afficher_plateau_orientation();
+            afficher_plateau_orientation(joueur_courant);
             character_hp_list();
-            if (joueur==sauvage) 
+            if (joueur_courant==sauvage) 
             {
-                tour_IA();
+                tour_IA(joueur_courant,&nbAtkValid);
                 
-            }else tour();
+            }else tour(joueur_courant,&nbAtkValid);
             
             
         }
         
         
         players_life_check();
-        joueur_liste_suivant(nb_joueurs);
+        joueur_liste_suivant(nb_joueurs, &joueur_courant);
     }
     clear();
-	afficher_plateau_orientation();
+	afficher_plateau_orientation(joueur_courant);
 
 
 	for (i=1;i<=nb_joueurs;i++)

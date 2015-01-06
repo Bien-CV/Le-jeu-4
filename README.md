@@ -1,4 +1,24 @@
 Le-jeu-4
+
+Choses à faire par ordre de priorité :
+
+-Virer toutes les variables globales du programme
+-Commentaires et descriptions des fonctions
+-Mode de jeu Classique : Deux camps, pas d'IA, chaque joueur dirige une équipe variée.
+-Mode de jeu Survie : Autant de camps que nécessaire, un perso par joueur, des monstres puissants mais peu résistants apparaissent aléatoirement sur la carte et frappent aléatoirement autour d'eux, y compris leurs alliés.
+-Mode de jeu Mort Subite : Deux camps, pas d'IA, comme un jeu d'échec.
+
+Yann : 
+
+Vers ligne 114 : fwrite(&joueur_courant,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+joueur_courant est désormais passé en paramètre de fonction, à toi d'update ta fonction.
+
+
+
+
+
+
+
 ========
 A voir en Raw.
 

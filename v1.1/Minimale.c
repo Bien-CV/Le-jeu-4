@@ -52,7 +52,7 @@ char particule_generateur_nom[][20] =
 		"saint"
 	};
 	
-int nb_joueurs=3; //inclus la nature
+int nb_joueurs=4; //inclus la nature
 t_character selected_character;
 void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
