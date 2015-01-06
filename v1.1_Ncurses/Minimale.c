@@ -124,7 +124,7 @@ void Sauvegarder(int joueur_courant){
  *
  */
  
-void Charger(int joueur_courant){
+int Charger(int joueur_courant){
     char NomFichier[20]="",FichierSauvegarde[20]="";
 
     FILE * fichierIndex;
@@ -156,6 +156,7 @@ void Charger(int joueur_courant){
 printw("Pas de sauvegarde disponible.\n");
         }
         fclose(fichierIndex);
+        return joueur_courant;
 }
 
 
