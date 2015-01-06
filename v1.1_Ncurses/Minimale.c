@@ -62,7 +62,7 @@ t_character selected_character;
 void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
-int nbDepValid;
+
 
 t_player player[MaxTab];
 
@@ -237,14 +237,14 @@ int cases_voisines_calcul(t_coord coordonnees){
 
 
 /**
- * \fn void deplacements_valides()
+ * \fn void deplacements_valides(int* nbDepValid)
  * \brief Calcule les positions de déplacement valide, les met dans la liste
  *
  */
-void deplacements_valides(){// permet de calculer les positions valides pour son perso.
+void deplacements_valides(int* nbDepValid){// permet de calculer les positions valides pour son perso.
     int mvtEffectue = 0;
     int nbVoisins=1;
-    nbDepValid = 0;
+    *nbDepValid = 0;
     int nbBoucle;
     liste_init();
     file_init();
@@ -275,7 +275,7 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
         mvtEffectue++;
     }
     liste_suppr_doublon();
-    nbDepValid = liste_calculer_nombre_elements();
+    *nbDepValid = liste_calculer_nombre_elements();
 
     //liste_afficher_contenu();
 }
@@ -285,7 +285,7 @@ void deplacements_valides(){// permet de calculer les positions valides pour son
  * \brief Permet au joueur de choisir la destination
  *
  */
-t_coord choix_deplacement_humain(int joueur_courant){
+t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 	//***************/V1.2/*****************/
 		int mvt_effectue = 0, x, y;
 		char choix;
@@ -456,7 +456,7 @@ t_coord choix_deplacement_humain(int joueur_courant){
     return (coordonnees);*/
 }
 
-t_coord choix_deplacement_IA(){
+t_coord choix_deplacement_IA(int* nbDepValid){
 	
     int i = 0, choix;
     t_coord coordonnees, choisi;
@@ -472,8 +472,8 @@ t_coord choix_deplacement_IA(){
 	
 	do 
 	{
-		choix=generation_nombre_aleatoire(nbDepValid);
-	}while (choix>nbDepValid && choix < 0);
+		choix=generation_nombre_aleatoire(*nbDepValid);
+	}while (choix>*nbDepValid && choix < 0);
 	
        // printw("Choix: %i\n",choix);
         liste_en_tete();
@@ -1388,7 +1388,7 @@ void character_hp_list()
 *
 *
 */
-void tour(int joueur_courant, int* nbAtkValid)
+void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
 {
 	
     int choix, nb_actions_faites = 0, deplacement_fait, indice_curseur =1, nb_choix_max = 5, coord_curs;
@@ -1478,9 +1478,9 @@ void tour(int joueur_courant, int* nbAtkValid)
         {
             if(deplacement_fait != 1)
             {
-                deplacements_valides();
+                deplacements_valides(nbDepValid);
                 //choix_deplacement_humain(joueur_courant);
-                deplacer_perso(choix_deplacement_humain(joueur_courant));
+                deplacer_perso(choix_deplacement_humain(joueur_courant,nbDepValid));
                 deplacement_fait = 1;
             }
             skill_selected = select_skill();//selectionne l’action que le joueur souhaite effectuer (exple: selection_perso / passer_tour…) retourne le n° de l’action à effectuer
@@ -1780,7 +1780,7 @@ void spawn_character(t_camp camp_nouveau_perso)
 	
 }
 
-void tour_IA(int joueur_courant, int* nbAtkValid)
+void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid)
 {
     int nb_actions_faites, i;
     int nb_perso_vivants=calcul_persos_IA(joueur_courant);
@@ -1794,10 +1794,10 @@ void tour_IA(int joueur_courant, int* nbAtkValid)
                 for(nb_actions_faites=0;nb_actions_faites < selected_character.nb_action_tour;nb_actions_faites++)
             {
 
-                deplacements_valides();
+                deplacements_valides(nbDepValid);
 
 				
-                deplacer_perso(choix_deplacement_IA());
+                deplacer_perso(choix_deplacement_IA(nbDepValid));
 
                 skill_selected = selected_character.skill.a;
                 
@@ -1856,6 +1856,7 @@ int main(){
 	int i;
 	int nb_joueurs, joueur_courant;
 	int nbAtkValid;
+	int nbDepValid;
 	saisie_nombre_joueurs(&nb_joueurs);
 	srand((long)time(NULL));
 	
@@ -1933,9 +1934,9 @@ int main(){
             character_hp_list();
             if (joueur_courant==sauvage) 
             {
-                tour_IA(joueur_courant,&nbAtkValid);
+                tour_IA(joueur_courant,&nbAtkValid,&nbDepValid);
                 
-            }else tour(joueur_courant,&nbAtkValid);
+            }else tour(joueur_courant,&nbAtkValid,&nbDepValid);
             
             
         }
