@@ -1617,7 +1617,7 @@ void afficher_plateau_orientation(int joueur_courant){
 * 
 *
 */
-void creer_perso_rapide(t_camp camp,int x, int y)
+void creer_perso_rapide(t_camp camp,int x, int y,t_orientation orientation, t_classe classe)
 {
 	char chaine_tampon[MaxString];
 	chaine_tampon[0]=0;
@@ -1627,8 +1627,6 @@ void creer_perso_rapide(t_camp camp,int x, int y)
     Plateau[x][y].camp=camp;
     Plateau[x][y].position.X=x;
     Plateau[x][y].position.Y=y;
-    
-    Plateau[x][y].skill.b = (t_skill){"Placer Piege", 3, TRAP, 10};
 }
 
 /**
@@ -1710,12 +1708,12 @@ void spawn_sauvage()
 		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
 	}while(Plateau[x_buffer][y_buffer].camp !=0);
 	printw("Coordonnées de creation du personnage chaotique : %i , %i. Camp case : %i",x_buffer,y_buffer,Plateau[x_buffer][y_buffer].camp);
-	creer_perso_rapide(sauvage,x_buffer,y_buffer);
+	creer_perso_rapide(sauvage,x_buffer,y_buffer, generation_nombre_aleatoire(3) , berseker);
 	edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
 	
 }
 
-void spawn_character(t_camp camp_nouveau_perso)
+void spawn_character(t_camp camp_nouveau_perso, t_orientation orientation, t_classe classe)
 {
 	player[camp_nouveau_perso].alive=1;
 	int x_buffer,y_buffer;
@@ -1724,7 +1722,7 @@ void spawn_character(t_camp camp_nouveau_perso)
 		y_buffer=generation_nombre_aleatoire(TAILLE_MATRICE)-1;
 	}while(Plateau[x_buffer][y_buffer].camp !=0);
 	printw("Coordonnées de creation du personnage de %s : %i , %i.",player[camp_nouveau_perso].name,x_buffer,y_buffer);
-	creer_perso_rapide(camp_nouveau_perso,x_buffer,y_buffer);
+	creer_perso_rapide(camp_nouveau_perso,x_buffer,y_buffer, orientation, classe);
 	//edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
 	
 }
@@ -1791,18 +1789,142 @@ int calcul_persos_IA(int joueur_courant){
 
 void saisie_nombre_joueurs(int* nb_joueurs )
 {
-	*nb_joueurs=4;
+	clear();
+	printw("Entrez le nombre de joueur:\n");
+	scanw("%i", *nb_joueurs); //*nb_joueurs =
+	
 }
 
 
-void menu_principale
+
+void partie_classique(int nb_joueurs, int joueur_courant, int nbAtkValid, int nbDepValid)
 {
+	int i;
+		
+	strcpy(player[1].name,"la nature");
+	strcpy(player[2].name,"Baptiste");
+	strcpy(player[3].name,"Yann");
+	
+	creer_terrain_rapide(obstacle,3,1);
+	
+	spawn_sauvage();
+	for (i=2;i<=nb_joueurs+2;i++)
+	{
+		spawn_character(i, i, berseker);
+		spawn_character(i, i, mage);
+	}
+		
+	players_life_check();
+	for (i=1;i<=MaxTab;i++)
+		{
+			if(i==1)printw("%s",KRED);
+			if(i==3)printw("%s",KBLU);
+			if(i==4)printw("%s",KMAG);
+			if(player[i].alive==1) printw("\nJoueur %i %s.\n",i,player[i].name);
+			printw("%s",KNRM);
+		}
+	
+	
+	    while(!all_dead_but_one(nb_joueurs)){
+			clear();
+			players_life_check();
+			for (i=1;i<=MaxTab;i++)
+				{
+					if(i==1)printw("%s",KRED);
+					if(i==3)printw("%s",KBLU);
+					if(i==4)printw("%s",KMAG);
+					if(player[i].alive==1) printw("\nJoueur %i %s.\n",i,player[i].name);
+					printw("%s",KNRM);
+				}
+				getch();
+        if(player[joueur_courant].alive != 0 )
+        {   
+			
+			
+            compteur_tour++;
+            if (generation_nombre_aleatoire(200)==1) spawn_sauvage();
+            
+            afficher_plateau_orientation(joueur_courant);
+            character_hp_list();
+            if (joueur_courant==sauvage) 
+            {
+                tour_IA(joueur_courant,&nbAtkValid,&nbDepValid);
+                
+            }else tour(joueur_courant,&nbAtkValid,&nbDepValid);
+            
+            
+        }
+        
+        
+        players_life_check();
+        joueur_liste_suivant(nb_joueurs, &joueur_courant);
+    }
+    clear();
+	afficher_plateau_orientation(joueur_courant);
+
+
+	for (i=1;i<=nb_joueurs;i++)
+	{
+		if (player[i].alive==1) printw("Victoire de %s !\n",player[i].name);
+	}
+}
+
+
+/**
+ * \fn menu_principal()
+ * \brief affichage du menu principale avec choix du jeu
+ */
+int menu_principal()
+{
+	int coord_curs_1 = 20, coord_curs_2 = 50, indice_curseur = 1, nb_choix_max = 5;
+	
 	char choix;
 	do
 	{
 		clear();
-		printw("");
+		printw("                                                                                                                                   \n\
+			 __             _            ___\n\
+			|  |   ___     |_|___ _ _   | | |\n\
+			|  |__| -_|    | | -_| | |  |_  |\n\
+			|_____|___|   _| |___|___|    |_|\n\
+			             |___|\n\
+\n\
+\n\
+\n\
+					Classique\n\
+					 Survie\n\
+					 Rapide\n\
+				    Charger une Partie\n\
+					 Quitter");
+				
+				
+            switch(indice_curseur)
+            {   case 1: coord_curs_2 = 50; coord_curs_1 = 38; break;
+                case 2: coord_curs_2 = 48; coord_curs_1 = 39; break;
+                case 3: coord_curs_2 = 48; coord_curs_1 = 39; break;
+                case 4: coord_curs_2 = 55; coord_curs_1 = 34; break;
+                case 5: coord_curs_2 = 48; coord_curs_1 = 39; break;
+            }
+            mvaddch((indice_curseur+8),coord_curs_1, '*');
+            mvaddch((indice_curseur+8),coord_curs_2, '*');
+            refresh();
+            
+            
+	choix = getch();
+	
+			if(choix == 65)
+			{
+				if(indice_curseur <= 1) indice_curseur = nb_choix_max+1; //nb_choix_max = 5 = le choix max
+				indice_curseur--;
+			}
+			if(choix == 66)
+			{
+				if(indice_curseur >= nb_choix_max) indice_curseur = 0;
+				indice_curseur++;
+			}
+	
 	}while(choix != '\n');
+	return indice_curseur;
 }
 
 
@@ -1815,10 +1937,10 @@ void menu_principale
 */
 int main(){
 	int i;
-	int nb_joueurs, joueur_courant;
+	int nb_joueurs = 2, joueur_courant = 2;
 	int nbAtkValid;
-	int nbDepValid;
-	saisie_nombre_joueurs(&nb_joueurs);
+	int nbDepValid, choix_menu = 0;
+	//saisie_nombre_joueurs(&nb_joueurs);
 	srand((long)time(NULL));
 	
 	
@@ -1847,9 +1969,19 @@ int main(){
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	attron(COLOR_PAIR(1));*/
 	
-	menu_principale();
-	
-	
+	/*do
+	{
+		choix_menu = menu_principal();
+		
+		switch(choix_menu)
+		{
+			case 1: partie_classique(nb_joueurs, joueur_courant, nbAtkValid, nbDepValid); break;
+			case 2: break;
+			case 3: break;
+			case 4: Charger(joueur_courant); break;
+			case 5: endwin(); return 0; break;
+		}
+	}while(choix_menu != 5);*/
 	
 	strcpy(player[1].name,"la nature");
 	strcpy(player[2].name,"Baptiste");
@@ -1858,14 +1990,13 @@ int main(){
 	
 	creer_terrain_rapide(obstacle,3,1);
 	
-	spawn_sauvage();
-	for (i=2;i<nb_joueurs;i++)
+	//spawn_sauvage();
+	for (i=2;i<nb_joueurs+2;i++)
 	{
-		spawn_character(i);
-		spawn_character(i);
+		spawn_character(i, generation_nombre_aleatoire(3), generation_nombre_aleatoire(3));
+		spawn_character(i, generation_nombre_aleatoire(3), generation_nombre_aleatoire(3));
 	}
 	
-	joueur_courant=2;
 	
 	
         
