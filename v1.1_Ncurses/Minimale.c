@@ -112,8 +112,7 @@ void Sauvegarder(int joueur_courant){
     sauvegarde=fopen(NomFichier,"wb");
     fwrite(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
     fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-    
-    fwrite(&joueur_courant,sizeof(int),sizeof(int),sauvegarde); //Que faire avec &joueur_courant ?
+    fwrite(&joueur_courant,sizeof(int),1,sauvegarde); //Que faire avec &joueur_courant ?
     fclose(fichierIndex);
     fclose(sauvegarde);
 }
@@ -147,9 +146,9 @@ void Charger(int joueur_courant){
             if(sauvegarde!=NULL){
                 fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-                fread(&joueur_courant,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+                fread(&joueur_courant,sizeof(t_camp),1,sauvegarde);
             }else {printw("Fichier incorrect\n");}
-        }while(!feof(sauvegarde));
+        }while(sauvegarde==NULL);
             fclose(sauvegarde);
             afficher_plateau_orientation(joueur_courant);
         }else {
@@ -1360,6 +1359,8 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
     t_skill skill_selected;
     t_coord coordonnees_perso;
     
+    do
+    {
         do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
         {   
 			clear();
@@ -1405,15 +1406,16 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
 			}
         }
         while ((choix != '\n') );
+        
             switch(indice_curseur)
             {   case 1: printw("\n");selection_perso(joueur_courant,selected_character); break;
                 case 2: printw("\n");passer_tour(); break;
                 case 3: printw("\n");suicide(joueur_courant);life_check(joueur_courant); break;//Abandon
                 case 4: printw("\n");Sauvegarder(joueur_courant);break;
-                case 5: printw("\n");Charger(joueur_courant);break;
+                case 5: printw("\n");joueur_courant=Charger(joueur_courant);break;
                 default: printw("Erreur: votre choix doit être compris entre 1 et 5\n");
-			}
-	
+		}
+}while(indice_curseur>=4);
 		
     if (indice_curseur==1){   // Se déclenche après sélection d'un personnage, c'est la suite d'actions liées au personnage sélectionné
 		
