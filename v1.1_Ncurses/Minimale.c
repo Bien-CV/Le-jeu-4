@@ -349,7 +349,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 		}
 		if(choix == 67)
 		{
-			if(x < TAILLE_MATRICE)
+			if(x < TAILLE_MATRICE-1)
 			{
 				x++;
 				if(Plateau[x][y].camp == terrain || Plateau[x][y].type == TRAP_UNIT)
@@ -401,7 +401,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 		}
 		if(choix == 66)
 		{
-			if(y < TAILLE_MATRICE)
+			if(y < TAILLE_MATRICE-1)
 			{
 				y++;
 				if(Plateau[x][y].camp == terrain || Plateau[x][y].type == TRAP_UNIT)
