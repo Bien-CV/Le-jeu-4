@@ -1417,6 +1417,8 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
     t_skill skill_selected;
     t_coord coordonnees_perso;
     
+    do
+    {
         do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
         {   
 			clear();
@@ -1462,6 +1464,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
 			}
         }
         while ((choix != '\n') );
+        
             switch(indice_curseur)
             {   case 1: printw("\n");selection_perso(joueur_courant); break;
                 case 2: printw("\n");passer_tour(); break;
@@ -1469,8 +1472,8 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
                 case 4: printw("\n");Sauvegarder(joueur_courant);break;
                 case 5: printw("\n");Charger(joueur_courant);break;
                 default: printw("Erreur: votre choix doit être compris entre 1 et 5\n");
-			}
-	
+		}
+}while(indice_curseur>=4);
 		
     if (indice_curseur==1){   // Se déclenche après sélection d'un personnage, c'est la suite d'actions liées au personnage sélectionné
 		
