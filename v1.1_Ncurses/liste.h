@@ -1,10 +1,6 @@
 
 #include "header.h"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d
 void liste_init(void);
 int liste_est_vide(void);
 int liste_est_hors_liste(void);
@@ -21,8 +17,4 @@ void liste_afficher_contenu();
 void liste_afficher_queue();
 void liste_suppr_doublon();
 int liste_calculer_nombre_elements();
-<<<<<<< HEAD
 int liste_element_est_present(t_coord e, int numPile);
-=======
-int liste_element_est_present(t_coord e, int numPile);
->>>>>>> 895dfc0c880b2a01564b976068bc831322e6f36d

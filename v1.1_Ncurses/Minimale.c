@@ -349,7 +349,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 		}
 		if(choix == 67)
 		{
-			if(x < TAILLE_MATRICE)
+			if(x < TAILLE_MATRICE-1)
 			{
 				x++;
 				if(Plateau[x][y].camp == terrain || Plateau[x][y].type == TRAP_UNIT)
@@ -401,7 +401,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 		}
 		if(choix == 66)
 		{
-			if(y < TAILLE_MATRICE)
+			if(y < TAILLE_MATRICE-1)
 			{
 				y++;
 				if(Plateau[x][y].camp == terrain || Plateau[x][y].type == TRAP_UNIT)
@@ -806,20 +806,20 @@ void selection_perso(int joueur_courant){
 	{
 		clear();
 		printw("Select Perso: ");
-				if(joueur==1)attron(COLOR_PAIR(2));//Gestion de couleurs
-				if(joueur==2)attron(COLOR_PAIR(3));
-				if(joueur==3)attron(COLOR_PAIR(4));
-				if(joueur==4)attron(COLOR_PAIR(5));
-				if(joueur==5)attron(COLOR_PAIR(6));	
-		printw("%s\n",player[joueur].name);	
-				if(joueur==1)attroff(COLOR_PAIR(2));//gestion de couleurs
-				if(joueur==2)attroff(COLOR_PAIR(3));
-				if(joueur==3)attroff(COLOR_PAIR(4));
-				if(joueur==4)attroff(COLOR_PAIR(5));
-				if(joueur==5)attroff(COLOR_PAIR(6));
-	afficher_plateau_orientation();
+				if(joueur_courant==1)attron(COLOR_PAIR(2));//Gestion de couleurs
+				if(joueur_courant==2)attron(COLOR_PAIR(3));
+				if(joueur_courant==3)attron(COLOR_PAIR(4));
+				if(joueur_courant==4)attron(COLOR_PAIR(5));
+				if(joueur_courant==5)attron(COLOR_PAIR(6));	
+		printw("%s\n",player[joueur_courant].name);	
+				if(joueur_courant==1)attroff(COLOR_PAIR(2));//gestion de couleurs
+				if(joueur_courant==2)attroff(COLOR_PAIR(3));
+				if(joueur_courant==3)attroff(COLOR_PAIR(4));
+				if(joueur_courant==4)attroff(COLOR_PAIR(5));
+				if(joueur_courant==5)attroff(COLOR_PAIR(6));
+	afficher_plateau_orientation(joueur_courant);
 		//printw("\n\n%i - %i",x, y);
-		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur)){afficher_infos_persos(Plateau[x][y]);}
+		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur_courant)){afficher_infos_persos(Plateau[x][y]);}
 		attron(COLOR_PAIR(1));
 		mvaddch(y+2,x+3,curseur);
 		attroff(COLOR_PAIR(1));
@@ -1339,11 +1339,11 @@ int perso_oriente_a_droite()
 *    Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu.
 *    Renvoie 1 si le joueur a encore des personnages en vie, sinon 0.
 */
-int life_check(int joueur){
+int life_check(int joueur_courant){
           
-    if (player[joueur].alive==0 || are_my_mates_alive(joueur_courant)<1 ) 
+    if (player[joueur_courant].alive==0 || are_my_mates_alive(joueur_courant)<1 ) 
     {
-		player[joueur].alive=0;
+		player[joueur_courant].alive=0;
         //if (joueur!=sauvage) printw("%s est mort.\n",player[joueur_courant].name);
         return 0;
     }else {
@@ -1480,8 +1480,9 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
             if(deplacement_fait != 1)
             {
                 deplacements_valides(nbDepValid);
-                deplacer_perso(choix_deplacement_humain(joueur_courant,nbDepValid));
-				coordonnees_perso = choix_deplacement_humain(joueur_courant,nbDepValid);
+                coordonnees_perso = choix_deplacement_humain(joueur_courant, nbDepValid);
+                deplacer_perso(coordonnees_perso);
+                //deplacer_perso(choix_deplacement_humain());
                 deplacement_fait = 1;
             }
             if (Plateau[coordonnees_perso.X][coordonnees_perso.Y].status.HP< 0) {Plateau[coordonnees_perso.X][coordonnees_perso.Y].status.HP=0; est_vivant = 0;}
@@ -1501,13 +1502,13 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
 				if(skill_selected.type != EMPTY)
 				{
 					viser_case_valide(skill_selected, nbAtkValid);
-					appliquer_action(selected_character, choix_cible_humain(skill_selected), skill_selected);
+					appliquer_action(selected_character, choix_cible_humain(skill_selected, joueur_courant), skill_selected);
 				}else 
 				{
 					appliquer_action(selected_character, selected_character.position, skill_selected);
 				}
 				nb_actions_faites++;
-				orienter_perso_numpad();
+				orienter_perso_numpad(joueur_courant);
 				//OrienterPerso();
 			}
         }
