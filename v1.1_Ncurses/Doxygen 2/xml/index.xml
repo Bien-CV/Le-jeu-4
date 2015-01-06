@@ -139,7 +139,7 @@
     <member refid="liste_8c_1ae6bf3307184d2f80167abcb9c2ad5b2b" kind="function"><name>liste_element_est_present</name></member>
   </compound>
   <compound refid="liste_8h" kind="file"><name>liste.h</name>
-    <member refid="liste_8h_1a522697519e93e19d07943667b472a5c1" kind="function"><name>liste_init</name></member>
+    <member refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" kind="function"><name>liste_init</name></member>
     <member refid="liste_8h_1a1e4d1c45ace210278d08fd886268a0e3" kind="function"><name>liste_est_vide</name></member>
     <member refid="liste_8h_1ad4a1a49d8756b972708e0870f9420776" kind="function"><name>liste_est_hors_liste</name></member>
     <member refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" kind="function"><name>liste_en_tete</name></member>
@@ -155,6 +155,7 @@
     <member refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" kind="function"><name>liste_afficher_queue</name></member>
     <member refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" kind="function"><name>liste_suppr_doublon</name></member>
     <member refid="liste_8h_1a78de7382315436cf196cf30aac14257c" kind="function"><name>liste_calculer_nombre_elements</name></member>
+    <member refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" kind="function"><name>liste_element_est_present</name></member>
   </compound>
   <compound refid="_minimale_8c" kind="file"><name>Minimale.c</name>
     <member refid="_minimale_8c_1a137aa83ec74421d226a90c92ec032ac9" kind="define"><name>KNRM</name></member>
@@ -223,14 +224,20 @@
   </compound>
   <compound refid="pile_8c" kind="file"><name>pile.c</name>
     <member refid="pile_8c_1a52037c938e3c1b126c6277da5ca689d0" kind="define"><name>M</name></member>
-    <member refid="pile_8c_1a52037c938e3c1b126c6277da5ca689d0" kind="define"><name>M</name></member>
-    <member refid="pile_8c_1a19bbaed68a9043f106cfe723cba4c81f" kind="variable"><name>X</name></member>
-    <member refid="pile_8c_1a5e492df9dff4f3d39bb211ce005d191d" kind="variable"><name>Y</name></member>
-    <member refid="pile_8c_1aa147cc6eb9a96dce9a8a3c7e8861c1c9" kind="variable"><name>sommet</name></member>
+    <member refid="pile_8c_1ad55e726de63d85a9b2ee6d956002b46d" kind="variable"><name>pile</name></member>
+    <member refid="pile_8c_1afafbfbe859c144bbb70059c990063e7e" kind="variable"><name>sommet</name></member>
+    <member refid="pile_8c_1ac2513cb21eb42f39b02122fa30fd21ca" kind="function"><name>pile_init</name></member>
+    <member refid="pile_8c_1a153b92d8383b4d328bcd9f20d77b8d0c" kind="function"><name>pile_empiler</name></member>
+    <member refid="pile_8c_1a243aa7fe5bd1ff307d4c7aa5f76739c1" kind="function"><name>pile_depiler</name></member>
     <member refid="pile_8c_1ae0e56a57ce8bf929fe621fa05304642c" kind="function"><name>pile_sommet</name></member>
     <member refid="pile_8c_1af155f0089e66cfa04a1239462b72b2df" kind="function"><name>pilevide</name></member>
   </compound>
   <compound refid="pile_8h" kind="file"><name>pile.h</name>
+    <member refid="pile_8h_1ac2513cb21eb42f39b02122fa30fd21ca" kind="function"><name>pile_init</name></member>
+    <member refid="pile_8h_1a153b92d8383b4d328bcd9f20d77b8d0c" kind="function"><name>pile_empiler</name></member>
+    <member refid="pile_8h_1a243aa7fe5bd1ff307d4c7aa5f76739c1" kind="function"><name>pile_depiler</name></member>
+    <member refid="pile_8h_1af155f0089e66cfa04a1239462b72b2df" kind="function"><name>pilevide</name></member>
+    <member refid="pile_8h_1ae0e56a57ce8bf929fe621fa05304642c" kind="function"><name>pile_sommet</name></member>
   </compound>
   <compound refid="_readme_8md" kind="file"><name>Readme.md</name>
   </compound>

@@ -48,8 +48,8 @@
         <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
         <referencedby refid="_minimale_8c_1af5c4cbfb002da8b8595316d87548ab93" compoundref="_minimale_8c" startline="630" endline="640">afficher_skill</referencedby>
         <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
-        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1519">tour</referencedby>
-        <referencedby refid="_minimale_8c_1aee3a984cc380669ef226b08039d592da" compoundref="_minimale_8c" startline="1731" endline="1772">tour_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
+        <referencedby refid="_minimale_8c_1aee3a984cc380669ef226b08039d592da" compoundref="_minimale_8c" startline="1732" endline="1773">tour_IA</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__skill_1a9518a5f7d916a01def3588da5dc0c8fa" prot="public" static="no" mutable="no">
         <type>int</type>

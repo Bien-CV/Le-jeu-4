@@ -18,8 +18,8 @@
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="44" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="44" bodyend="-1"/>
         <referencedby refid="_minimale_8c_1a704aac80f0e314dab07203a35f05aef2" compoundref="_minimale_8c" startline="1342" endline="1352">life_check</referencedby>
         <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1361" endline="1382">players_life_check</referencedby>
-        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1703" endline="1715">spawn_sauvage</referencedby>
-        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1717" endline="1729">spawn_character</referencedby>
+        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1704" endline="1716">spawn_sauvage</referencedby>
+        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1718" endline="1730">spawn_character</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__player_1ab27f28c5ead39031421706ddbbd1edea" prot="public" static="no" mutable="no">
         <type>char</type>

@@ -20,8 +20,8 @@
         <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="651" endline="688">afficher_infos_persos</referencedby>
         <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
         <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1389" endline="1405">character_hp_list</referencedby>
-        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1519">tour</referencedby>
-        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1684" endline="1699">edit_stats</referencedby>
+        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
+        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1685" endline="1700">edit_stats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__status_1a3ae8966f5c827b3c74072acda8de72af" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -38,8 +38,8 @@
         <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="651" endline="688">afficher_infos_persos</referencedby>
         <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
         <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1389" endline="1405">character_hp_list</referencedby>
-        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1519">tour</referencedby>
-        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1684" endline="1699">edit_stats</referencedby>
+        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
+        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1685" endline="1700">edit_stats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__status_1a30fc75b90111fc791752dd1add6ed991" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -54,7 +54,7 @@
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="36" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="36" bodyend="-1"/>
         <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="651" endline="688">afficher_infos_persos</referencedby>
-        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1684" endline="1699">edit_stats</referencedby>
+        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1685" endline="1700">edit_stats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__status_1a5e48a681ff3d92aaa0e643fbc32ab2f7" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -69,7 +69,7 @@
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="36" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="36" bodyend="-1"/>
         <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="651" endline="688">afficher_infos_persos</referencedby>
-        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1684" endline="1699">edit_stats</referencedby>
+        <referencedby refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" compoundref="_minimale_8c" startline="1685" endline="1700">edit_stats</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

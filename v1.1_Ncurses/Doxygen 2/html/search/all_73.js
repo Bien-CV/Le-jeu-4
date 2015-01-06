@@ -13,7 +13,6 @@ var searchData=
   ['skill_5fempty',['skill_empty',['../header_8h.html#ae6f347a0b1e26425b82734df3904273d',1,'header.h']]],
   ['skill_5flist_5fdefault',['skill_list_default',['../header_8h.html#a661f2fa1a0f9707f5a19494debc26d68',1,'header.h']]],
   ['skill_5fskip',['skill_skip',['../header_8h.html#ae423278c3d83b22e7ba58f31c1d4722a',1,'header.h']]],
-  ['sommet',['sommet',['../pile_8c.html#aa147cc6eb9a96dce9a8a3c7e8861c1c9',1,'pile.c']]],
   ['spawn_5fcharacter',['spawn_character',['../_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320',1,'Minimale.c']]],
   ['spawn_5fsauvage',['spawn_sauvage',['../_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e',1,'Minimale.c']]],
   ['stats',['stats',['../structt__character.html#a29711825af64d428d19df366a5056670',1,'t_character']]],
