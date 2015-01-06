@@ -50,7 +50,7 @@
 		///***********************************************************************************/
 		
 		
-		#define curseur (char)246
+		#define curseur (char)'O'
 		
 		#define case_terrain ((t_character){"",coord_default ,orientation_default ,status__terrain_default ,stats_terrain_default ,empty_skill_list, 0 , 0 })
 		#define case_obstacle ((t_character){"",coord_default ,orientation_default ,status_default ,stats_default ,empty_skill_list, -1 , 0 })
