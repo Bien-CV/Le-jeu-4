@@ -1,0 +1,573 @@
+.TH "Minimale.c" 3 "Tue Jan 6 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Minimale.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <ncurses\&.h>\fP
+.br
+\fC#include 'header\&.h'\fP
+.br
+\fC#include 'liste\&.h'\fP
+.br
+\fC#include 'file\&.h'\fP
+.br
+\fC#include 'pile\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKNRM\fP   '\\x1B[0m'"
+.br
+.ti -1c
+.RI "#define \fBKRED\fP   '\\x1B[31m'"
+.br
+.ti -1c
+.RI "#define \fBKGRN\fP   '\\x1B[32m'"
+.br
+.ti -1c
+.RI "#define \fBKYEL\fP   '\\x1B[33m'"
+.br
+.ti -1c
+.RI "#define \fBKBLU\fP   '\\x1B[34m'"
+.br
+.ti -1c
+.RI "#define \fBKMAG\fP   '\\x1B[35m'"
+.br
+.ti -1c
+.RI "#define \fBKCYN\fP   '\\x1B[36m'"
+.br
+.ti -1c
+.RI "#define \fBKWHT\fP   '\\x1B[37m'"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBlife_check\fP (int joueur_courant)"
+.br
+.RI "\fIFonction qui vérifie si un joueur a encore des personnages vivants sur le terrain\&. Appelle \fBare_my_mates_alive(int joueur_courant)\fP pour déterminer le joueur est encore en jeu\&. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0\&. \fP"
+.ti -1c
+.RI "void \fBjoueur_liste_suivant\fP (int nb_joueur, int *joueur_courant)"
+.br
+.RI "\fIPrend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs\&. \fP"
+.ti -1c
+.RI "void \fBcreer_terrain_rapide\fP (\fBt_camp\fP camp, int x, int y)"
+.br
+.RI "\fICréation brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle\&. \fP"
+.ti -1c
+.RI "void \fBvider_buffer\fP (void)"
+.br
+.RI "\fIVide le tampon de saisie clavier\&. \fP"
+.ti -1c
+.RI "int \fBare_my_mates_alive\fP (int joueur_courant)"
+.br
+.ti -1c
+.RI "int \fBcalcul_persos_IA\fP (int joueur_courant)"
+.br
+.ti -1c
+.RI "void \fBafficher_plateau_orientation\fP (int joueur_courant)"
+.br
+.RI "\fIAffiche le plateau avec les caractères correspondants à l'orientation\&. \fP"
+.ti -1c
+.RI "void \fBgeneration_nom_personnage\fP (char *nom)"
+.br
+.ti -1c
+.RI "void \fBplayers_life_check\fP ()"
+.br
+.RI "\fIActualise le fait que les joueurs soient vivants ou non\&. \fP"
+.ti -1c
+.RI "void \fBSauvegarder\fP (int joueur_courant)"
+.br
+.ti -1c
+.RI "void \fBCharger\fP (int joueur_courant)"
+.br
+.ti -1c
+.RI "int \fBgeneration_nombre_aleatoire\fP (int max)"
+.br
+.RI "\fIFonction qui renvoi un nombre aléatoire en 0 et 'max'\&. \fP"
+.ti -1c
+.RI "void \fBdeplacer_perso\fP (\fBt_coord\fP case_perso)"
+.br
+.RI "\fIDéplace le personnage sur le terrain\&. \fP"
+.ti -1c
+.RI "int \fBcases_voisines_calcul\fP (\fBt_coord\fP coordonnees)"
+.br
+.RI "\fIRenvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles\&. \fP"
+.ti -1c
+.RI "void \fBdeplacements_valides\fP (int *nbDepValid)"
+.br
+.RI "\fICalcule les positions de déplacement valide, les met dans la liste\&. \fP"
+.ti -1c
+.RI "\fBt_coord\fP \fBchoix_deplacement_humain\fP (int joueur_courant, int *nbDepValid)"
+.br
+.ti -1c
+.RI "\fBt_coord\fP \fBchoix_deplacement_IA\fP (int *nbDepValid)"
+.br
+.ti -1c
+.RI "void \fBinit_plateau\fP ()"
+.br
+.RI "\fIInitialise le plateau en le remplissant de terrain par défaut\&. \fP"
+.ti -1c
+.RI "int \fBcases_voisines_ATK\fP (\fBt_coord\fP coordonnees)"
+.br
+.ti -1c
+.RI "void \fBviser_case_valide\fP (\fBt_skill\fP skill, int *nbAtkValid)"
+.br
+.ti -1c
+.RI "\fBt_coord\fP \fBchoix_cible_IA\fP (\fBt_skill\fP skill, int *nbAtkValid)"
+.br
+.ti -1c
+.RI "void \fBinit_char_table\fP (\fBt_character\fP chars[])"
+.br
+.ti -1c
+.RI "void \fBafficher_skill\fP (int skill_nb, \fBt_skill\fP skill)"
+.br
+.ti -1c
+.RI "void \fBafficher_skill_list\fP (\fBt_character\fP perso)"
+.br
+.ti -1c
+.RI "void \fBafficher_infos_persos\fP (\fBt_character\fP perso)"
+.br
+.ti -1c
+.RI "\fBt_coord\fP \fBchoix_cible_humain\fP (\fBt_skill\fP skill, int joueur_courant)"
+.br
+.ti -1c
+.RI "void \fBselection_perso\fP (int joueur_courant)"
+.br
+.RI "\fIFonction qui propose la liste des personnages pouvant être sélectionnés\&. \fP"
+.ti -1c
+.RI "void \fBpasser_tour\fP ()"
+.br
+.RI "\fIFonction qui passe le tour du joueur actif\&. \fP"
+.ti -1c
+.RI "void \fBsuicide\fP (int joueur_courant)"
+.br
+.RI "\fIFonction permetant au joueur courant d'abandonner la partie\&. \fP"
+.ti -1c
+.RI "\fBt_skill\fP \fBselect_skill_IA\fP ()"
+.br
+.ti -1c
+.RI "\fBt_skill\fP \fBselect_skill\fP ()"
+.br
+.ti -1c
+.RI "\fBt_targetOrientation\fP \fBget_target_orientation\fP (\fBt_character\fP perso, \fBt_coord\fP cible)"
+.br
+.RI "\fIFonction déterminant quelle est l'orientation de la cible par rapport au joueur\&. \fP"
+.ti -1c
+.RI "void \fBappliquer_action\fP (\fBt_character\fP lanceur, \fBt_coord\fP cible, \fBt_skill\fP action)"
+.br
+.RI "\fIFonction appliquant le skill du personnage lanceur à la case cible\&. Remplit le tableau de personnages entré en paramètre de cases de terrain\&. \fP"
+.ti -1c
+.RI "void \fBorienter_perso_numpad\fP (int joueur_courant)"
+.br
+.RI "\fIPropose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation\&. \fP"
+.ti -1c
+.RI "void \fBorienter_perso\fP ()"
+.br
+.ti -1c
+.RI "int \fBperso_oriente_a_droite\fP ()"
+.br
+.ti -1c
+.RI "void \fBcharacter_hp_list\fP ()"
+.br
+.RI "\fIaffiche une liste avec les persos et leurs points de vie\&. \fP"
+.ti -1c
+.RI "void \fBtour\fP (int joueur_courant, int *nbAtkValid, int *nbDepValid)"
+.br
+.ti -1c
+.RI "int \fBall_dead_but_one\fP (int nb_joueurs)"
+.br
+.ti -1c
+.RI "void \fBcreer_perso_rapide\fP (\fBt_camp\fP camp, int x, int y)"
+.br
+.ti -1c
+.RI "void \fBedit_stats\fP (\fBt_character\fP perso, int HP, int Max_HP, int MP, int Max_MP, int \fBATK\fP, int \fBMATK\fP, int DEF, int MDEF, int MVT)"
+.br
+.ti -1c
+.RI "void \fBspawn_sauvage\fP ()"
+.br
+.ti -1c
+.RI "void \fBspawn_character\fP (\fBt_camp\fP camp_nouveau_perso)"
+.br
+.ti -1c
+.RI "void \fBtour_IA\fP (int joueur_courant, int *nbAtkValid, int *nbDepValid)"
+.br
+.ti -1c
+.RI "void \fBsaisie_nombre_joueurs\fP (int *nb_joueurs)"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.RI "\fIFonction principale Fonction principale qui permet de jouer en mode Kill'em'all\&. \fP"
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBcompteur_tour\fP =0"
+.br
+.ti -1c
+.RI "int \fBcompteur_joueurs_vivants\fP =0"
+.br
+.ti -1c
+.RI "\fBt_character\fP \fBValid_chars_IA\fP [\fBMaxTab\fP]"
+.br
+.ti -1c
+.RI "char \fBparticule_generateur_nom\fP [][20]"
+.br
+.ti -1c
+.RI "\fBt_character\fP \fBselected_character\fP"
+.br
+.ti -1c
+.RI "\fBt_character\fP \fBPlateau\fP [\fBTAILLE_MATRICE\fP][\fBTAILLE_MATRICE\fP]"
+.br
+.ti -1c
+.RI "\fBt_coord\fP \fBdepValid\fP [\fBTAILLE_MATRICE\fP *\fBTAILLE_MATRICE\fP][3]"
+.br
+.ti -1c
+.RI "\fBt_player\fP \fBplayer\fP [\fBMaxTab\fP]"
+.br
+.ti -1c
+.RI "int \fBindiceTabDepValid\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define KBLU   '\\x1B[34m'"
+
+.PP
+Definition at line 20 of file Minimale\&.c\&.
+.SS "#define KCYN   '\\x1B[36m'"
+
+.PP
+Definition at line 22 of file Minimale\&.c\&.
+.SS "#define KGRN   '\\x1B[32m'"
+
+.PP
+Definition at line 18 of file Minimale\&.c\&.
+.SS "#define KMAG   '\\x1B[35m'"
+
+.PP
+Definition at line 21 of file Minimale\&.c\&.
+.SS "#define KNRM   '\\x1B[0m'"
+
+.PP
+Definition at line 16 of file Minimale\&.c\&.
+.SS "#define KRED   '\\x1B[31m'"
+
+.PP
+Definition at line 17 of file Minimale\&.c\&.
+.SS "#define KWHT   '\\x1B[37m'"
+
+.PP
+Definition at line 23 of file Minimale\&.c\&.
+.SS "#define KYEL   '\\x1B[33m'"
+
+.PP
+Definition at line 19 of file Minimale\&.c\&.
+.SH "Function Documentation"
+.PP 
+.SS "void afficher_infos_persos (\fBt_character\fPperso)"
+
+.PP
+Definition at line 651 of file Minimale\&.c\&.
+.SS "void afficher_plateau_orientation (intjoueur_courant)"
+
+.PP
+Affiche le plateau avec les caractères correspondants à l'orientation\&. 
+.PP
+Definition at line 1547 of file Minimale\&.c\&.
+.SS "void afficher_skill (intskill_nb, \fBt_skill\fPskill)"
+
+.PP
+Definition at line 630 of file Minimale\&.c\&.
+.SS "void afficher_skill_list (\fBt_character\fPperso)"
+
+.PP
+Definition at line 642 of file Minimale\&.c\&.
+.SS "int all_dead_but_one (intnb_joueurs)"
+
+.PP
+Definition at line 1529 of file Minimale\&.c\&.
+.SS "void appliquer_action (\fBt_character\fPlanceur, \fBt_coord\fPcible, \fBt_skill\fPaction)"
+
+.PP
+Fonction appliquant le skill du personnage lanceur à la case cible\&. Remplit le tableau de personnages entré en paramètre de cases de terrain\&. 
+.PP
+Definition at line 1093 of file Minimale\&.c\&.
+.SS "int are_my_mates_alive (intjoueur_courant)"
+
+.PP
+Definition at line 1305 of file Minimale\&.c\&.
+.SS "int calcul_persos_IA (intjoueur_courant)"
+
+.PP
+Definition at line 1774 of file Minimale\&.c\&.
+.SS "int cases_voisines_ATK (\fBt_coord\fPcoordonnees)"
+
+.PP
+Definition at line 512 of file Minimale\&.c\&.
+.SS "int cases_voisines_calcul (\fBt_coord\fPcoordonnees)"
+
+.PP
+Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles\&. 
+.PP
+Definition at line 194 of file Minimale\&.c\&.
+.SS "void character_hp_list ()"
+
+.PP
+affiche une liste avec les persos et leurs points de vie\&. 
+.PP
+Definition at line 1389 of file Minimale\&.c\&.
+.SS "void Charger (intjoueur_courant)"
+
+.PP
+Definition at line 128 of file Minimale\&.c\&.
+.SS "\fBt_coord\fP choix_cible_humain (\fBt_skill\fPskill, intjoueur_courant)"
+
+.PP
+Definition at line 692 of file Minimale\&.c\&.
+.SS "\fBt_coord\fP choix_cible_IA (\fBt_skill\fPskill, int *nbAtkValid)"
+
+.PP
+Definition at line 590 of file Minimale\&.c\&.
+.SS "\fBt_coord\fP choix_deplacement_humain (intjoueur_courant, int *nbDepValid)"
+
+.PP
+Definition at line 293 of file Minimale\&.c\&.
+.SS "\fBt_coord\fP choix_deplacement_IA (int *nbDepValid)"
+
+.PP
+Definition at line 464 of file Minimale\&.c\&.
+.SS "void creer_perso_rapide (\fBt_camp\fPcamp, intx, inty)"
+
+.PP
+Definition at line 1619 of file Minimale\&.c\&.
+.SS "void creer_terrain_rapide (\fBt_camp\fPcamp, intx, inty)"
+
+.PP
+Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle\&. 
+.PP
+Definition at line 1639 of file Minimale\&.c\&.
+.SS "void deplacements_valides (int *nbDepValid)"
+
+.PP
+Calcule les positions de déplacement valide, les met dans la liste\&. 
+.PP
+Definition at line 249 of file Minimale\&.c\&.
+.SS "void deplacer_perso (\fBt_coord\fPcase_perso)"
+
+.PP
+Déplace le personnage sur le terrain\&. 
+.PP
+Definition at line 179 of file Minimale\&.c\&.
+.SS "void edit_stats (\fBt_character\fPperso, intHP, intMax_HP, intMP, intMax_MP, intATK, intMATK, intDEF, intMDEF, intMVT)"
+
+.PP
+Definition at line 1684 of file Minimale\&.c\&.
+.SS "void generation_nom_personnage (char *nom)"
+
+.PP
+Definition at line 1667 of file Minimale\&.c\&.
+.SS "int generation_nombre_aleatoire (intmax)"
+
+.PP
+Fonction qui renvoi un nombre aléatoire en 0 et 'max'\&. 
+.PP
+Definition at line 169 of file Minimale\&.c\&.
+.SS "\fBt_targetOrientation\fP get_target_orientation (\fBt_character\fPperso, \fBt_coord\fPcible)"
+
+.PP
+Fonction déterminant quelle est l'orientation de la cible par rapport au joueur\&. 
+.PP
+Definition at line 1033 of file Minimale\&.c\&.
+.SS "void init_char_table (\fBt_character\fPchars[])"
+
+.PP
+Definition at line 624 of file Minimale\&.c\&.
+.SS "void init_plateau ()"
+
+.PP
+Initialise le plateau en le remplissant de terrain par défaut\&. 
+.PP
+Definition at line 500 of file Minimale\&.c\&.
+.SS "void joueur_liste_suivant (intnb_joueur, int *joueur_courant)"
+
+.PP
+Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs\&. 
+.PP
+Definition at line 1291 of file Minimale\&.c\&.
+.SS "int life_check (intjoueur_courant)"
+
+.PP
+Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain\&. Appelle \fBare_my_mates_alive(int joueur_courant)\fP pour déterminer le joueur est encore en jeu\&. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0\&. 
+.PP
+Definition at line 1342 of file Minimale\&.c\&.
+.SS "int main ()"
+
+.PP
+Fonction principale Fonction principale qui permet de jouer en mode Kill'em'all\&. 
+.PP
+Definition at line 1801 of file Minimale\&.c\&.
+.SS "void orienter_perso ()"
+
+.PP
+Definition at line 1258 of file Minimale\&.c\&.
+.SS "void orienter_perso_numpad (intjoueur_courant)"
+
+.PP
+Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation\&. 
+.PP
+Definition at line 1165 of file Minimale\&.c\&.
+.SS "void passer_tour ()"
+
+.PP
+Fonction qui passe le tour du joueur actif\&. 
+.PP
+Definition at line 897 of file Minimale\&.c\&.
+.SS "int perso_oriente_a_droite ()"
+
+.PP
+Definition at line 1320 of file Minimale\&.c\&.
+.SS "void players_life_check ()"
+
+.PP
+Actualise le fait que les joueurs soient vivants ou non\&. 
+.PP
+Definition at line 1361 of file Minimale\&.c\&.
+.SS "void saisie_nombre_joueurs (int *nb_joueurs)"
+
+.PP
+Definition at line 1791 of file Minimale\&.c\&.
+.SS "void Sauvegarder (intjoueur_courant)"
+
+.PP
+Definition at line 80 of file Minimale\&.c\&.
+.SS "\fBt_skill\fP select_skill ()"
+
+.PP
+Definition at line 954 of file Minimale\&.c\&.
+.SS "\fBt_skill\fP select_skill_IA ()"
+
+.PP
+Definition at line 925 of file Minimale\&.c\&.
+.SS "void selection_perso (intjoueur_courant)"
+
+.PP
+Fonction qui propose la liste des personnages pouvant être sélectionnés\&. 
+.PP
+Definition at line 798 of file Minimale\&.c\&.
+.SS "void spawn_character (\fBt_camp\fPcamp_nouveau_perso)"
+
+.PP
+Definition at line 1717 of file Minimale\&.c\&.
+.SS "void spawn_sauvage ()"
+
+.PP
+Definition at line 1703 of file Minimale\&.c\&.
+.SS "void suicide (intjoueur_courant)"
+
+.PP
+Fonction permetant au joueur courant d'abandonner la partie\&. 
+.PP
+Definition at line 906 of file Minimale\&.c\&.
+.SS "void tour (intjoueur_courant, int *nbAtkValid, int *nbDepValid)"
+
+.PP
+Definition at line 1413 of file Minimale\&.c\&.
+.SS "void tour_IA (intjoueur_courant, int *nbAtkValid, int *nbDepValid)"
+
+.PP
+Definition at line 1731 of file Minimale\&.c\&.
+.SS "void vider_buffer (void)"
+
+.PP
+Vide le tampon de saisie clavier\&. 
+.PP
+Definition at line 1152 of file Minimale\&.c\&.
+.SS "void viser_case_valide (\fBt_skill\fPskill, int *nbAtkValid)"
+
+.PP
+Definition at line 554 of file Minimale\&.c\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int compteur_joueurs_vivants =0"
+
+.PP
+Definition at line 36 of file Minimale\&.c\&.
+.SS "int compteur_tour =0"
+
+.PP
+Definition at line 35 of file Minimale\&.c\&.
+.SS "\fBt_coord\fP depValid[\fBTAILLE_MATRICE\fP *\fBTAILLE_MATRICE\fP][3]"
+
+.PP
+Definition at line 64 of file Minimale\&.c\&.
+.SS "int indiceTabDepValid"
+
+.PP
+Definition at line 72 of file Minimale\&.c\&.
+.SS "char particule_generateur_nom[][20]"
+\fBInitial value:\fP
+.PP
+.nf
+= 
+    {
+        'ogre',
+        'etoileux',
+        'mur',
+        'elfe',
+        'borgne',
+        'attendrissant',
+        'enfant',
+        'planetaire',
+        'rayon',
+        'magique',
+        'terrible',
+        'sorcier',
+        'guerrier',
+        'sauvage',
+        'perverti',
+        'bienveillant',
+        'saint'
+    }
+.fi
+.PP
+Definition at line 39 of file Minimale\&.c\&.
+.SS "\fBt_character\fP Plateau[\fBTAILLE_MATRICE\fP][\fBTAILLE_MATRICE\fP]"
+
+.PP
+Definition at line 63 of file Minimale\&.c\&.
+.SS "\fBt_player\fP player[\fBMaxTab\fP]"
+
+.PP
+Definition at line 68 of file Minimale\&.c\&.
+.SS "\fBt_character\fP selected_character"
+
+.PP
+Definition at line 61 of file Minimale\&.c\&.
+.SS "\fBt_character\fP Valid_chars_IA[\fBMaxTab\fP]"
+
+.PP
+Definition at line 37 of file Minimale\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Le jeu 4 from the source code\&.

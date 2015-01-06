@@ -1,0 +1,15 @@
+<map id="liste_en_tete" name="liste_en_tete">
+<area shape="rect" id="node3" href="$liste_8h.html#a207cdf13008fdfbf84b897ca499e3b17" title="liste_afficher_contenu" alt="" coords="163,5,312,32"/>
+<area shape="rect" id="node5" href="$liste_8h.html#aeca8ab6b8935bc5fd81fa7a74e64879a" title="liste_afficher_queue" alt="" coords="168,56,307,83"/>
+<area shape="rect" id="node7" href="$liste_8h.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="169,157,306,184"/>
+<area shape="rect" id="node22" href="$liste_8h.html#a78de7382315436cf196cf30aac14257c" title="liste_calculer_nombre\l_elements" alt="" coords="163,209,311,250"/>
+<area shape="rect" id="node26" href="$liste_8c.html#ae6bf3307184d2f80167abcb9c2ad5b2b" title="liste_element_est_present" alt="" coords="150,107,325,133"/>
+<area shape="rect" id="node31" href="$_minimale_8c.html#aa1c28f345f10a0f18458c5aa14e73c79" title="choix_deplacement_IA" alt="" coords="373,324,528,351"/>
+<area shape="rect" id="node34" href="$_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6" title="choix_cible_IA" alt="" coords="397,271,504,297"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="375,216,526,243"/>
+<area shape="rect" id="node18" href="$_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="387,165,514,192"/>
+<area shape="rect" id="node11" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="586,165,630,192"/>
+<area shape="rect" id="node15" href="$_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="576,216,640,243"/>
+<area shape="rect" id="node13" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="688,191,739,217"/>
+<area shape="rect" id="node28" href="$_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="383,111,519,137"/>
+</map>

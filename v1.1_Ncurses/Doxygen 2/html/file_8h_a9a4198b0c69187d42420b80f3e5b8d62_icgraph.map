@@ -1,0 +1,9 @@
+<map id="file_ajouter" name="file_ajouter">
+<area shape="rect" id="node3" href="$_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103" title="Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles..." alt="" coords="139,27,293,54"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="342,27,493,54"/>
+<area shape="rect" id="node15" href="$_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113" title="cases_voisines_ATK" alt="" coords="143,129,289,155"/>
+<area shape="rect" id="node17" href="$_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="354,78,481,105"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="551,27,595,54"/>
+<area shape="rect" id="node11" href="$_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="541,78,605,105"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="653,53,704,79"/>
+</map>

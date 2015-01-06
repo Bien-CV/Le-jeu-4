@@ -1,0 +1,295 @@
+.TH "header.h" 3 "Tue Jan 6 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+header.h \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBt_status\fP"
+.br
+.ti -1c
+.RI "struct \fBt_stats\fP"
+.br
+.ti -1c
+.RI "struct \fBt_coord\fP"
+.br
+.ti -1c
+.RI "struct \fBt_skill\fP"
+.br
+.ti -1c
+.RI "struct \fBt_skill_list\fP"
+.br
+.ti -1c
+.RI "struct \fBt_character\fP"
+.br
+.ti -1c
+.RI "struct \fBt_player\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTAILLE_MATRICE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBMaxTab\fP   40"
+.br
+.ti -1c
+.RI "#define \fBMaxString\fP   40"
+.br
+.ti -1c
+.RI "#define \fBbloc1\fP   ((char)178)"
+.br
+.ti -1c
+.RI "#define \fBbloc2\fP   ((char)219)"
+.br
+.ti -1c
+.RI "#define \fBbloc3\fP   ((char)254)"
+.br
+.ti -1c
+.RI "#define \fBskill_attack\fP   ((\fBt_skill\fP){'Coup',1,ATK,1})"
+.br
+.ti -1c
+.RI "#define \fBskill_empty\fP   ((\fBt_skill\fP){'',0,\fBEMPTY\fP,0})"
+.br
+.ti -1c
+.RI "#define \fBskill_skip\fP   ((\fBt_skill\fP){'Passer le \fBtour\fP',0,EMPTY,0})"
+.br
+.ti -1c
+.RI "#define \fBcoord_default\fP   ((\fBt_coord\fP){-1,-1})"
+.br
+.ti -1c
+.RI "#define \fBorientation_default\fP   (\fBup\fP)"
+.br
+.ti -1c
+.RI "#define \fBstatus_default\fP   ((\fBt_status\fP){30,30,10,10})"
+.br
+.ti -1c
+.RI "#define \fBstatus__terrain_default\fP   ((\fBt_status\fP){0,0,0,0})"
+.br
+.ti -1c
+.RI "#define \fBstats_default\fP   ((\fBt_stats\fP){10,10,10,10,2})"
+.br
+.ti -1c
+.RI "#define \fBstats_terrain_default\fP   ((\fBt_stats\fP){0,0,0,0,0})"
+.br
+.ti -1c
+.RI "#define \fBskill_list_default\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+.br
+.ti -1c
+.RI "#define \fBempty_skill_list\fP   ((\fBt_skill_list\fP){\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP})"
+.br
+.ti -1c
+.RI "#define \fBcharacter_default\fP   ((\fBt_character\fP){'Default name', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, \fBsauvage\fP, 1})"
+.br
+.ti -1c
+.RI "#define \fBdefault_targetOrientation\fP   ((\fBt_targetOrientation\fP)\fBfront\fP)"
+.br
+.ti -1c
+.RI "#define \fBdefault_trap\fP   ((\fBt_character\fP){'Trap', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, 1, 1})"
+.br
+.ti -1c
+.RI "#define \fBcurseur\fP   (char)254"
+.br
+.ti -1c
+.RI "#define \fBcase_terrain\fP   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus__terrain_default\fP ,\fBstats_terrain_default\fP ,\fBempty_skill_list\fP, 0 , 0 })"
+.br
+.ti -1c
+.RI "#define \fBcase_obstacle\fP   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus_default\fP ,\fBstats_default\fP ,\fBempty_skill_list\fP, -1 , 0 })"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBt_camp\fP { \fBobstacle\fP =-1, \fBterrain\fP =0, \fBsauvage\fP =1 }"
+.br
+.ti -1c
+.RI "enum \fBt_skilltype\fP { \fBEMPTY\fP, \fBATK\fP, \fBMATK\fP, \fBTRAP\fP }"
+.br
+.ti -1c
+.RI "enum \fBt_orientation\fP { \fBup\fP, \fBright\fP, \fBdown\fP, \fBleft\fP }"
+.br
+.ti -1c
+.RI "enum \fBt_targetOrientation\fP { \fBfront\fP, \fBside\fP, \fBback\fP }"
+.br
+.ti -1c
+.RI "enum \fBt_character_type\fP { \fBLAND_UNIT\fP, \fBAIR_UNIT\fP, \fBJUMPING_UNIT\fP, \fBTRAP_UNIT\fP }"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define bloc1   ((char)178)"
+
+.PP
+Definition at line 8 of file header\&.h\&.
+.SS "#define bloc2   ((char)219)"
+
+.PP
+Definition at line 9 of file header\&.h\&.
+.SS "#define bloc3   ((char)254)"
+
+.PP
+Definition at line 10 of file header\&.h\&.
+.SS "#define case_obstacle   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus_default\fP ,\fBstats_default\fP ,\fBempty_skill_list\fP, -1 , 0 })"
+
+.PP
+Definition at line 30 of file header\&.h\&.
+.SS "#define case_terrain   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus__terrain_default\fP ,\fBstats_terrain_default\fP ,\fBempty_skill_list\fP, 0 , 0 })"
+
+.PP
+Definition at line 29 of file header\&.h\&.
+.SS "#define character_default   ((\fBt_character\fP){'Default name', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, \fBsauvage\fP, 1})"
+
+.PP
+Definition at line 23 of file header\&.h\&.
+.SS "#define coord_default   ((\fBt_coord\fP){-1,-1})"
+
+.PP
+Definition at line 15 of file header\&.h\&.
+.SS "#define curseur   (char)254"
+
+.PP
+Definition at line 27 of file header\&.h\&.
+.SS "#define default_targetOrientation   ((\fBt_targetOrientation\fP)\fBfront\fP)"
+
+.PP
+Definition at line 24 of file header\&.h\&.
+.SS "#define default_trap   ((\fBt_character\fP){'Trap', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, 1, 1})"
+
+.PP
+Definition at line 25 of file header\&.h\&.
+.SS "#define empty_skill_list   ((\fBt_skill_list\fP){\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP})"
+
+.PP
+Definition at line 22 of file header\&.h\&.
+.SS "#define MaxString   40"
+
+.PP
+Definition at line 6 of file header\&.h\&.
+.SS "#define MaxTab   40"
+
+.PP
+Definition at line 5 of file header\&.h\&.
+.SS "#define orientation_default   (\fBup\fP)"
+
+.PP
+Definition at line 16 of file header\&.h\&.
+.SS "#define skill_attack   ((\fBt_skill\fP){'Coup',1,ATK,1})"
+
+.PP
+Definition at line 12 of file header\&.h\&.
+.SS "#define skill_empty   ((\fBt_skill\fP){'',0,\fBEMPTY\fP,0})"
+
+.PP
+Definition at line 13 of file header\&.h\&.
+.SS "#define skill_list_default   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+
+.PP
+Definition at line 21 of file header\&.h\&.
+.SS "#define skill_skip   ((\fBt_skill\fP){'Passer le \fBtour\fP',0,EMPTY,0})"
+
+.PP
+Definition at line 14 of file header\&.h\&.
+.SS "#define stats_default   ((\fBt_stats\fP){10,10,10,10,2})"
+
+.PP
+Definition at line 19 of file header\&.h\&.
+.SS "#define stats_terrain_default   ((\fBt_stats\fP){0,0,0,0,0})"
+
+.PP
+Definition at line 20 of file header\&.h\&.
+.SS "#define status__terrain_default   ((\fBt_status\fP){0,0,0,0})"
+
+.PP
+Definition at line 18 of file header\&.h\&.
+.SS "#define status_default   ((\fBt_status\fP){30,30,10,10})"
+
+.PP
+Definition at line 17 of file header\&.h\&.
+.SS "#define TAILLE_MATRICE   5"
+
+.PP
+Definition at line 4 of file header\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBt_camp\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIobstacle \fP\fP
+.TP
+\fB\fIterrain \fP\fP
+.TP
+\fB\fIsauvage \fP\fP
+.PP
+Definition at line 32 of file header\&.h\&.
+.SS "enum \fBt_character_type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILAND_UNIT \fP\fP
+.TP
+\fB\fIAIR_UNIT \fP\fP
+.TP
+\fB\fIJUMPING_UNIT \fP\fP
+.TP
+\fB\fITRAP_UNIT \fP\fP
+.PP
+Definition at line 41 of file header\&.h\&.
+.SS "enum \fBt_orientation\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIup \fP\fP
+.TP
+\fB\fIright \fP\fP
+.TP
+\fB\fIdown \fP\fP
+.TP
+\fB\fIleft \fP\fP
+.PP
+Definition at line 34 of file header\&.h\&.
+.SS "enum \fBt_skilltype\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEMPTY \fP\fP
+.TP
+\fB\fIATK \fP\fP
+.TP
+\fB\fIMATK \fP\fP
+.TP
+\fB\fITRAP \fP\fP
+.PP
+Definition at line 33 of file header\&.h\&.
+.SS "enum \fBt_targetOrientation\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIfront \fP\fP
+.TP
+\fB\fIside \fP\fP
+.TP
+\fB\fIback \fP\fP
+.PP
+Definition at line 35 of file header\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Le jeu 4 from the source code\&.

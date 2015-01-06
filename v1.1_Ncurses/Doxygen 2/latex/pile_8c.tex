@@ -1,0 +1,121 @@
+\hypertarget{pile_8c}{\section{pile.\-c File Reference}
+\label{pile_8c}\index{pile.\-c@{pile.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}pile.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}header.\-h\char`\"{}}\\*
+Include dependency graph for pile.\-c\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{pile_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}~100
+\item 
+\#define \hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pile_8c_ae0e56a57ce8bf929fe621fa05304642c}{pile\-\_\-sommet} (\hyperlink{structt__coord}{t\-\_\-coord} $\ast$coord, int num\-Pile)
+\item 
+int \hyperlink{pile_8c_af155f0089e66cfa04a1239462b72b2df}{pilevide} (int num\-Pile)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+$<$$<$$<$$<$$<$$<$$<$ H\-E\-A\-D\#define\-Mstatict\-\_\-coordpile\mbox{[}\hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]}\mbox{[}\hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]};staticintsommet\mbox{[}\hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]};voidpile\-\_\-init(intnum\-Pile)\{\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}=-\/1;\}voidpile\-\_\-empiler(t\-\_\-coordcoord, \\*
+intnum\-Pile)\{if(\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\\*
+$<$ \hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}-\/1)\{\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}++;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X=coord.\-X;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y}=\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{coord.\-Y};\}\}voidpile\-\_\-depiler(\hyperlink{structt__coord}{t\-\_\-coord} \\*
+$\ast$coord, intnum\-Pile)\{if(\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}$>$\\*
+-\/1)\{coord-\/$>$X=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X;coord-\/$>$\\*
+\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y}=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y};\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}-\/-\/;\}\}intpile\-\_\-sommet(\hyperlink{structt__coord}{t\-\_\-coord} \\*
+$\ast$coord, intnum\-Pile)\{if(\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}$>$\\*
+-\/1)\{coord-\/$>$X=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X;coord-\/$>$\\*
+\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y}=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y};return1;\}return0;\}intpilevide(intnum\-Pile)\{return(\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}==-\/1);\}=======\#define\-Mstatict\-\_\-coordpile\mbox{[}\hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]}\mbox{[}\hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]};staticintsommet\mbox{[}\hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}\mbox{]};voidpile\-\_\-init(intnum\-Pile)\{\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}=-\/1;\}voidpile\-\_\-empiler(t\-\_\-coordcoord, \\*
+intnum\-Pile)\{if(\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\\*
+$<$ \hyperlink{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{M}-\/1)\{\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}++;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X=coord.\-X;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y}=\hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{coord.\-Y};\}\}voidpile\-\_\-depiler(\hyperlink{structt__coord}{t\-\_\-coord} \\*
+$\ast$coord, intnum\-Pile)\{if(\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}$>$\\*
+-\/1)\{coord-\/$>$ \hyperlink{pile_8c_a19bbaed68a9043f106cfe723cba4c81f}{X} =pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X
+\item 
+coord \hyperlink{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{Y} =pile\mbox{[}num\-Pile\mbox{]}\mbox{[}\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.Y
+\item 
+\hyperlink{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{sommet} \mbox{[}num\-Pile\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{\index{pile.\-c@{pile.\-c}!M@{M}}
+\index{M@{M}!pile.c@{pile.\-c}}
+\subsubsection[{M}]{\setlength{\rightskip}{0pt plus 5cm}\#define M~100}}\label{pile_8c_a52037c938e3c1b126c6277da5ca689d0}
+\hypertarget{pile_8c_a52037c938e3c1b126c6277da5ca689d0}{\index{pile.\-c@{pile.\-c}!M@{M}}
+\index{M@{M}!pile.c@{pile.\-c}}
+\subsubsection[{M}]{\setlength{\rightskip}{0pt plus 5cm}\#define M~100}}\label{pile_8c_a52037c938e3c1b126c6277da5ca689d0}
+
+
+\subsection{Function Documentation}
+\hypertarget{pile_8c_ae0e56a57ce8bf929fe621fa05304642c}{\index{pile.\-c@{pile.\-c}!pile\-\_\-sommet@{pile\-\_\-sommet}}
+\index{pile\-\_\-sommet@{pile\-\_\-sommet}!pile.c@{pile.\-c}}
+\subsubsection[{pile\-\_\-sommet}]{\setlength{\rightskip}{0pt plus 5cm}int pile\-\_\-sommet (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord} $\ast$}]{coord, }
+\item[{int}]{num\-Pile}
+\end{DoxyParamCaption}
+)}}\label{pile_8c_ae0e56a57ce8bf929fe621fa05304642c}
+
+
+Definition at line 99 of file pile.\-c.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pile_8c_ae0e56a57ce8bf929fe621fa05304642c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{pile_8c_af155f0089e66cfa04a1239462b72b2df}{\index{pile.\-c@{pile.\-c}!pilevide@{pilevide}}
+\index{pilevide@{pilevide}!pile.c@{pile.\-c}}
+\subsubsection[{pilevide}]{\setlength{\rightskip}{0pt plus 5cm}int pilevide (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Pile}
+\end{DoxyParamCaption}
+)}}\label{pile_8c_af155f0089e66cfa04a1239462b72b2df}
+
+
+Definition at line 108 of file pile.\-c.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}{\index{pile.\-c@{pile.\-c}!sommet@{sommet}}
+\index{sommet@{sommet}!pile.c@{pile.\-c}}
+\subsubsection[{sommet}]{\setlength{\rightskip}{0pt plus 5cm}sommet\mbox{[}num\-Pile\mbox{]}}}\label{pile_8c_aa147cc6eb9a96dce9a8a3c7e8861c1c9}
+
+
+Definition at line 95 of file pile.\-c.
+
+\hypertarget{pile_8c_a19bbaed68a9043f106cfe723cba4c81f}{\index{pile.\-c@{pile.\-c}!X@{X}}
+\index{X@{X}!pile.c@{pile.\-c}}
+\subsubsection[{X}]{\setlength{\rightskip}{0pt plus 5cm}$<$$<$$<$$<$$<$$<$$<$H\-E\-A\-D\#define\-Mstatict\-\_\-coordpile\mbox{[}{\bf M}\mbox{]}\mbox{[}{\bf M}\mbox{]};staticintsommet\mbox{[}{\bf M}\mbox{]};voidpile\-\_\-init(intnum\-Pile)\{{\bf sommet}\mbox{[}num\-Pile\mbox{]}=-\/1;\}voidpile\-\_\-empiler(t\-\_\-coordcoord,intnum\-Pile)\{if({\bf sommet}\mbox{[}num\-Pile\mbox{]}$<${\bf M}-\/1)\{{\bf sommet}\mbox{[}num\-Pile\mbox{]}++;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X=coord.\-X;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.{\bf Y}={\bf coord.\-Y};\}\}voidpile\-\_\-depiler({\bf t\-\_\-coord}$\ast$coord,intnum\-Pile)\{if({\bf sommet}\mbox{[}num\-Pile\mbox{]}$>$-\/1)\{coord-\/$>$X=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X;coord-\/$>${\bf Y}=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.{\bf Y};{\bf sommet}\mbox{[}num\-Pile\mbox{]}-\/-\/;\}\}intpile\-\_\-sommet({\bf t\-\_\-coord}$\ast$coord,intnum\-Pile)\{if({\bf sommet}\mbox{[}num\-Pile\mbox{]}$>$-\/1)\{coord-\/$>$X=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X;coord-\/$>${\bf Y}=pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.{\bf Y};return1;\}return0;\}intpilevide(intnum\-Pile)\{return({\bf sommet}\mbox{[}num\-Pile\mbox{]}==-\/1);\}=======\#define\-Mstatict\-\_\-coordpile\mbox{[}{\bf M}\mbox{]}\mbox{[}{\bf M}\mbox{]};staticintsommet\mbox{[}{\bf M}\mbox{]};voidpile\-\_\-init(intnum\-Pile)\{{\bf sommet}\mbox{[}num\-Pile\mbox{]}=-\/1;\}voidpile\-\_\-empiler(t\-\_\-coordcoord,intnum\-Pile)\{if({\bf sommet}\mbox{[}num\-Pile\mbox{]}$<${\bf M}-\/1)\{{\bf sommet}\mbox{[}num\-Pile\mbox{]}++;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X=coord.\-X;pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.{\bf Y}={\bf coord.\-Y};\}\}voidpile\-\_\-depiler({\bf t\-\_\-coord}$\ast$coord,intnum\-Pile)\{if({\bf sommet}\mbox{[}num\-Pile\mbox{]}$>$-\/1)\{coord-\/$>$ X =pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.X}}\label{pile_8c_a19bbaed68a9043f106cfe723cba4c81f}
+
+
+Definition at line 93 of file pile.\-c.
+
+\hypertarget{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}{\index{pile.\-c@{pile.\-c}!Y@{Y}}
+\index{Y@{Y}!pile.c@{pile.\-c}}
+\subsubsection[{Y}]{\setlength{\rightskip}{0pt plus 5cm}coord Y =pile\mbox{[}num\-Pile\mbox{]}\mbox{[}{\bf sommet}\mbox{[}num\-Pile\mbox{]}\mbox{]}.Y}}\label{pile_8c_a5e492df9dff4f3d39bb211ce005d191d}
+
+
+Definition at line 94 of file pile.\-c.
+
