@@ -63,7 +63,6 @@ void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 int nbDepValid;
-int nbAtkValid;
 
 t_player player[MaxTab];
 
@@ -547,12 +546,12 @@ int cases_voisines_ATK(t_coord coordonnees){
     return(nbVois);
 }
 
-void viser_case_valide(t_skill skill)
+void viser_case_valide(t_skill skill, int* nbAtkValid)
 {
     int mvtEffectue = 0;
     int nbVoisins=1;
     int nbBoucle;
-    nbAtkValid = 0;
+    *nbAtkValid = 0;
     liste_init();
     file_init();
     int nb_iteration;
@@ -580,10 +579,10 @@ void viser_case_valide(t_skill skill)
         mvtEffectue++;
     }
     liste_suppr_doublon();
-    nbAtkValid = liste_calculer_nombre_elements();
+    *nbAtkValid = liste_calculer_nombre_elements();
 }
 
-t_coord choix_cible_IA(t_skill skill)
+t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 {
     int i =0,choix;
    // t_camp tampon_camp_cible;
@@ -594,13 +593,13 @@ t_coord choix_cible_IA(t_skill skill)
 
 do{
    //     printw("Debut do\n");
-        choix=generation_nombre_aleatoire(nbAtkValid);
+        choix=generation_nombre_aleatoire(*nbAtkValid);
         liste_en_tete();
         for(i = 0; i < choix-1; i++)
 			liste_suivant();
         liste_valeur_elt(&coordonnees);
     //    printw("Fin do\n");
-    }while (!(choix<=nbAtkValid && choix > 0));
+    }while (!(choix<=*nbAtkValid && choix > 0));
    printw("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
     //printw("ChoixCible:%i\n",choix);
 
@@ -1389,7 +1388,7 @@ void character_hp_list()
 *
 *
 */
-void tour(int joueur_courant)
+void tour(int joueur_courant, int* nbAtkValid)
 {
 	
     int choix, nb_actions_faites = 0, deplacement_fait, indice_curseur =1, nb_choix_max = 5, coord_curs;
@@ -1488,7 +1487,7 @@ void tour(int joueur_courant)
             //tampon_skill = skill_selected;
             if(skill_selected.type != EMPTY)
             {
-                viser_case_valide(skill_selected);
+                viser_case_valide(skill_selected, nbAtkValid);
                 appliquer_action(selected_character, choix_cible_humain(skill_selected,joueur_courant), skill_selected);
             }else 
             {
@@ -1781,7 +1780,7 @@ void spawn_character(t_camp camp_nouveau_perso)
 	
 }
 
-void tour_IA(int joueur_courant)
+void tour_IA(int joueur_courant, int* nbAtkValid)
 {
     int nb_actions_faites, i;
     int nb_perso_vivants=calcul_persos_IA(joueur_courant);
@@ -1806,8 +1805,8 @@ void tour_IA(int joueur_courant)
                 {
 
 					
-                    viser_case_valide(skill_selected);
-                    appliquer_action(selected_character, choix_cible_IA(skill_selected), skill_selected);
+                    viser_case_valide(skill_selected, nbAtkValid);
+                    appliquer_action(selected_character, choix_cible_IA(skill_selected,nbAtkValid), skill_selected);
                 }else 
                 {
 					//printw("Skill EMPTY type.\n");
@@ -1856,6 +1855,7 @@ void saisie_nombre_joueurs(int* nb_joueurs )
 int main(){
 	int i;
 	int nb_joueurs, joueur_courant;
+	int nbAtkValid;
 	saisie_nombre_joueurs(&nb_joueurs);
 	srand((long)time(NULL));
 	
@@ -1933,9 +1933,9 @@ int main(){
             character_hp_list();
             if (joueur_courant==sauvage) 
             {
-                tour_IA(joueur_courant);
+                tour_IA(joueur_courant,&nbAtkValid);
                 
-            }else tour(joueur_courant);
+            }else tour(joueur_courant,&nbAtkValid);
             
             
         }
