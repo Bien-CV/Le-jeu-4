@@ -32,9 +32,7 @@ int are_my_mates_alive(int joueur_courant);
 int calcul_persos_IA(int joueur_courant);
 void afficher_plateau_orientation(int joueur_courant);
 void generation_nom_personnage(char * nom);
-int compteur_tour=0;
-int compteur_joueurs_vivants=0;
-t_character Valid_chars_IA[MaxTab];
+void players_life_check();
 
 char particule_generateur_nom[][20] = 
 	{
@@ -57,9 +55,11 @@ char particule_generateur_nom[][20] =
 		"saint"
 	};
 	
-	
-t_character selected_character;
-void players_life_check();
+
+int compteur_tour=0;
+int compteur_joueurs_vivants=0;
+
+t_character Valid_chars_IA[MaxTab];
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE];
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 
@@ -113,8 +113,7 @@ void Sauvegarder(int joueur_courant){
     sauvegarde=fopen(NomFichier,"wb");
     fwrite(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
     fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-    
-    fwrite(&joueur_courant,sizeof(int),sizeof(int),sauvegarde); //Que faire avec &joueur_courant ?
+    fwrite(&joueur_courant,sizeof(int),1,sauvegarde); //Que faire avec &joueur_courant ?
     fclose(fichierIndex);
     fclose(sauvegarde);
 }
@@ -125,7 +124,7 @@ void Sauvegarder(int joueur_courant){
  *
  */
  
-void Charger(int joueur_courant){
+int Charger(int joueur_courant){
     char NomFichier[20]="",FichierSauvegarde[20]="";
 
     FILE * fichierIndex;
@@ -148,15 +147,16 @@ void Charger(int joueur_courant){
             if(sauvegarde!=NULL){
                 fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
                 fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-                fread(&joueur_courant,sizeof(t_camp),sizeof(t_camp),sauvegarde);
+                fread(&joueur_courant,sizeof(t_camp),1,sauvegarde);
             }else {printw("Fichier incorrect\n");}
-        }while(!feof(sauvegarde));
+        }while(sauvegarde==NULL);
             fclose(sauvegarde);
             afficher_plateau_orientation(joueur_courant);
         }else {
 printw("Pas de sauvegarde disponible.\n");
         }
         fclose(fichierIndex);
+        return joueur_courant;
 }
 
 
@@ -176,13 +176,13 @@ int generation_nombre_aleatoire(int max)
  * \brief Déplace le personnage sur le terrain
  *
  */
-void deplacer_perso(t_coord case_perso)
+void deplacer_perso(t_coord case_perso, t_character* selected_character)
 {
-    Plateau[selected_character.position.X][selected_character.position.Y]= case_terrain ;
-    if(Plateau[case_perso.X][case_perso.Y].type == TRAP_UNIT){selected_character.status.HP -= Plateau[case_perso.X][case_perso.Y].stats.ATK;}	//appliquation des dégâts du piège!!!//par défaut, le piège enlève 20 HP!!!!
-    selected_character.position.X=case_perso.X;
-    selected_character.position.Y=case_perso.Y;
-    Plateau[case_perso.X][case_perso.Y]= selected_character; //la case du terrain (case_perso) prend le personnage "selected_chaacter"!
+    Plateau[selected_character->position.X][selected_character->position.Y]= case_terrain ;
+    if(Plateau[case_perso.X][case_perso.Y].type == TRAP_UNIT){selected_character->status.HP -= Plateau[case_perso.X][case_perso.Y].stats.ATK;}	//appliquation des dégâts du piège!!!//par défaut, le piège enlève 20 HP!!!!
+    selected_character->position.X=case_perso.X;
+    selected_character->position.Y=case_perso.Y;
+    Plateau[case_perso.X][case_perso.Y]= *selected_character; //la case du terrain (case_perso) prend le personnage "selected_chaacter"!
 
 }
 
@@ -246,7 +246,7 @@ int cases_voisines_calcul(t_coord coordonnees){
  * \brief Calcule les positions de déplacement valide, les met dans la liste
  *
  */
-void deplacements_valides(int* nbDepValid){// permet de calculer les positions valides pour son perso.
+void deplacements_valides(int* nbDepValid, t_character* selected_character){// permet de calculer les positions valides pour son perso.
     int mvtEffectue = 0;
     int nbVoisins=1;
     *nbDepValid = 0;
@@ -255,13 +255,13 @@ void deplacements_valides(int* nbDepValid){// permet de calculer les positions v
     file_init();
 
     int indice;
-    t_coord coordonnees = selected_character.position;
+    t_coord coordonnees = selected_character->position;
     
     file_ajouter(coordonnees);
     liste_ajout_droit(coordonnees); 
     //liste_valeur_elt(&coordonnees);
 
-    while(mvtEffectue <= selected_character.stats.MVT)
+    while(mvtEffectue <= selected_character->stats.MVT)
     {
         nbBoucle = nbVoisins;
         nbVoisins = 0;
@@ -274,7 +274,7 @@ void deplacements_valides(int* nbDepValid){// permet de calculer les positions v
             file_retirer(&coordonnees);  
             liste_ajout_droit(coordonnees);	
 
-            if(mvtEffectue < selected_character.stats.MVT)
+            if(mvtEffectue < selected_character->stats.MVT)
                 nbVoisins += cases_voisines_calcul(coordonnees);
         }
         mvtEffectue++;
@@ -290,12 +290,12 @@ void deplacements_valides(int* nbDepValid){// permet de calculer les positions v
  * \brief Permet au joueur de choisir la destination
  *
  */
-t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
+t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character* selected_character){
 	//***************/V1.2/*****************/
 		int mvt_effectue = 0, x, y;
 		char choix;
-		x = selected_character.position.X;
-		y = selected_character.position.Y;
+		x = selected_character->position.X;
+		y = selected_character->position.Y;
 		t_coord val = {x,y},sommet;
 		pile_init(0);
 		pile_empiler(val, 0);
@@ -304,9 +304,9 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 	{
 		clear();
 		if(Plateau[val.X][val.Y].type == TRAP_UNIT){move(TAILLE_MATRICE+3+5,0); printw("\n/!\\VOUS VOUS ETES PRIS UN PIEGE/!\\"); refresh();}
-		deplacer_perso(val);
+		deplacer_perso(val,selected_character);
 		move(0,0);
-		printw("Deplacement: %i/%i\n", mvt_effectue, selected_character.stats.MVT);
+		printw("Deplacement: %i/%i\n", mvt_effectue, selected_character->stats.MVT);
 		afficher_plateau_orientation(joueur_courant);
 		printw("\n\nValider =\"Entrée\"\nAnnuler =\"BackSpace\"");
 		mvaddch(y+2,x+3,curseur);
@@ -331,7 +331,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 					{
 						mvt_effectue--;
 						pile_depiler(&val,0);
-					}else if ( mvt_effectue < selected_character.stats.MVT )
+					}else if ( mvt_effectue < selected_character->stats.MVT )
 					{
 						mvt_effectue++;
 						pile_empiler(val, 0);
@@ -358,7 +358,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 					{
 						mvt_effectue--;
 						pile_depiler(&val,0);
-					}else if ( mvt_effectue < selected_character.stats.MVT )
+					}else if ( mvt_effectue < selected_character->stats.MVT )
 					{
 						mvt_effectue++;
 						pile_empiler(val, 0);
@@ -384,7 +384,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 					{
 						mvt_effectue--;
 						pile_depiler(&val,0);
-					}else if ( mvt_effectue < selected_character.stats.MVT )
+					}else if ( mvt_effectue < selected_character->stats.MVT )
 					{
 						mvt_effectue++;
 						pile_empiler(val, 0);
@@ -410,7 +410,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
 					{
 						mvt_effectue--;
 						pile_depiler(&val,0);
-					}else if ( mvt_effectue < selected_character.stats.MVT )
+					}else if ( mvt_effectue < selected_character->stats.MVT )
 					{
 						mvt_effectue++;
 						pile_empiler(val, 0);
@@ -461,7 +461,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid){
     return (coordonnees);*/
 }
 
-t_coord choix_deplacement_IA(int* nbDepValid){
+t_coord choix_deplacement_IA(int* nbDepValid,t_character* selected_character){
 	
     int i = 0, choix;
     t_coord coordonnees, choisi;
@@ -487,7 +487,7 @@ t_coord choix_deplacement_IA(int* nbDepValid){
         liste_valeur_elt(&choisi);
         coordonnees.X=choisi.X;
         coordonnees.Y=choisi.Y;
-        printw("Déplacement IA %s en %i,%i\n",selected_character.name,coordonnees.X,coordonnees.Y);
+        printw("Déplacement IA %s en %i,%i\n",selected_character->name,coordonnees.X,coordonnees.Y);
     return (coordonnees);
 }
 
@@ -551,7 +551,7 @@ int cases_voisines_ATK(t_coord coordonnees){
     return(nbVois);
 }
 
-void viser_case_valide(t_skill skill, int* nbAtkValid)
+void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_character)
 {
     int mvtEffectue = 0;
     int nbVoisins=1;
@@ -560,7 +560,7 @@ void viser_case_valide(t_skill skill, int* nbAtkValid)
     liste_init();
     file_init();
     int nb_iteration;
-    t_coord coordonnees = selected_character.position;
+    t_coord coordonnees = selected_character->position;
     file_ajouter(coordonnees); //dans la file, on met les coordonnées des case opour explorer le terrain sur la portée du coup
     liste_ajout_droit(coordonnees); // dans la liste, on a toutes les cases attaquables !!
     //liste_valeur_elt(&coordonnees);
@@ -627,7 +627,7 @@ void init_char_table(t_character chars[])
     for(i=0;i<MaxTab;i++) chars[i]=character_default;
 }
 
-void afficher_skill(int skill_nb, t_skill skill){
+void afficher_skill(int skill_nb, t_skill skill,t_character selected_character){
     printw("   %s ",skill.name);
     //printw("   %i - %s ",skill_nb,skill.name);
     if(skill.range==0 && skill.type != EMPTY) printw("on self ");
@@ -640,12 +640,12 @@ void afficher_skill(int skill_nb, t_skill skill){
 }
 
 void afficher_skill_list(t_character perso){
-		afficher_skill(1,perso.skill.a);
-        afficher_skill(2,perso.skill.b);
-        afficher_skill(3,perso.skill.c);
-        afficher_skill(4,perso.skill.d);
-		afficher_skill(5,perso.skill.e);
-        afficher_skill(6,perso.skill.wait);
+		afficher_skill(1,perso.skill.a,perso);
+        afficher_skill(2,perso.skill.b,perso);
+        afficher_skill(3,perso.skill.c,perso);
+        afficher_skill(4,perso.skill.d,perso);
+		afficher_skill(5,perso.skill.e,perso);
+        afficher_skill(6,perso.skill.wait,perso);
 }
 
 void afficher_infos_persos( t_character perso)
@@ -689,12 +689,12 @@ void afficher_infos_persos( t_character perso)
 
 
 
-t_coord choix_cible_humain(t_skill skill, int joueur_courant)
+t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
 {
 	//***************/V1.2/*****************/
     int valid = 0;
     char choix;
-    int x=selected_character.position.X, y=selected_character.position.Y;
+    int x=selected_character->position.X, y=selected_character->position.Y;
     t_coord val;
     
     
@@ -795,7 +795,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant)
 * \brief Fonction qui propose la liste des personnages pouvant être sélectionnés.
 *
 */
-void selection_perso(int joueur_courant){
+void selection_perso(int joueur_courant,t_character* selected_character){
 	
 	
 	//***************/V1.2/*****************/
@@ -850,7 +850,7 @@ void selection_perso(int joueur_courant){
 		getch();*/
 		
 	}while(choix != '\n' || (Plateau[x][y].camp != joueur_courant || Plateau[x][y].type == TRAP_UNIT));
-	selected_character = Plateau[x][y];
+	*selected_character = Plateau[x][y];
 	Plateau[x][y]= case_terrain;
 	//***************/V1.2/*****************/Fin
 	
@@ -914,44 +914,13 @@ void suicide(int joueur_courant){// Permet au joueur de quitter la partie.
     }
 }
 
-
 /**
 * \fn void init_char_table(t_char chars[])
 * \brief Fonction d'initialisation d'un tableau de personnages
 * Remplit le tableau de personnages entré en paramètre de cases de terrain.
 *
 */
-
-t_skill select_skill_IA(){
-	 int choix=1;
-        vider_buffer();
-
-        afficher_skill(1,selected_character.skill.a);
-        afficher_skill(2,selected_character.skill.b);
-        afficher_skill(3,selected_character.skill.c);
-        afficher_skill(4,selected_character.skill.d);
-		afficher_skill(5,selected_character.skill.e);
-        afficher_skill(6,selected_character.skill.wait);
-
-        switch(choix)
-        {   case 1:  printw("\n");return selected_character.skill.a;break;
-            case 2:  printw("\n");return selected_character.skill.b;break;
-            case 3:  printw("\n");return selected_character.skill.c;break;
-            case 4:  printw("\n");return selected_character.skill.d;break;
-            case 5:  printw("\n");return selected_character.skill.e;break;
-            case 6:  printw("\n");return selected_character.skill.wait;break;
-        }
-
-        return skill_empty;
-}
-
-/**
-* \fn void init_char_table(t_char chars[])
-* \brief Fonction d'initialisation d'un tableau de personnages
-* Remplit le tableau de personnages entré en paramètre de cases de terrain.
-*
-*/
-t_skill select_skill(){//selectionne le skill que le personange courant effectuera, l'execution du skill est la fonction Skill.
+t_skill select_skill(t_character selected_character){//selectionne le skill que le personange courant effectuera, l'execution du skill est la fonction Skill.
         
 	//***************/V1.2/*****************/
         int choix, indice_curseur = 1, nb_choix_max = 6;
@@ -960,12 +929,12 @@ t_skill select_skill(){//selectionne le skill que le personange courant effectue
         {
         clear();
         printw("Quel compétence voulez-vous utiliser ? \n\n");
-            afficher_skill(1,selected_character.skill.a);
-            afficher_skill(2,selected_character.skill.b);
-            afficher_skill(3,selected_character.skill.c);
-            afficher_skill(4,selected_character.skill.d);
-            afficher_skill(5,selected_character.skill.e);
-            afficher_skill(6,selected_character.skill.wait);
+            afficher_skill(1,selected_character.skill.a,selected_character);
+            afficher_skill(2,selected_character.skill.b,selected_character);
+            afficher_skill(3,selected_character.skill.c,selected_character);
+            afficher_skill(4,selected_character.skill.d,selected_character);
+            afficher_skill(5,selected_character.skill.e,selected_character);
+            afficher_skill(6,selected_character.skill.wait,selected_character);
             mvaddch((indice_curseur+1),1, '-');
             mvaddch((indice_curseur+1),2, '>');
             refresh();
@@ -1001,21 +970,21 @@ t_skill select_skill(){//selectionne le skill que le personange courant effectue
         printw("Quel compétence voulez-vous utiliser ? \n\n");
         do
         {
-            afficher_skill(1,selected_character.skill.a);
-            afficher_skill(2,selected_character.skill.b);
-            afficher_skill(3,selected_character.skill.c);
-            afficher_skill(4,selected_character.skill.d);
-            afficher_skill(5,selected_character.skill.e);
-            afficher_skill(6,selected_character.skill.wait);
+            afficher_skill(1,selected_character->skill.a);
+            afficher_skill(2,selected_character->skill.b);
+            afficher_skill(3,selected_character->skill.c);
+            afficher_skill(4,selected_character->skill.d);
+            afficher_skill(5,selected_character->skill.e);
+            afficher_skill(6,selected_character->skill.wait);
             scanf("%d",&choix);
 
             switch(choix)
-            {   case 1:  printw("\n");return selected_character.skill.a;break;
-                case 2:  printw("\n");return selected_character.skill.b;break;
-                case 3:  printw("\n");return selected_character.skill.c;break;
-                case 4:  printw("\n");return selected_character.skill.d;break;
-                case 5:  printw("\n");return selected_character.skill.e;break;
-                case 6:  printw("\n");return selected_character.skill.wait;break;
+            {   case 1:  printw("\n");return selected_character->skill.a;break;
+                case 2:  printw("\n");return selected_character->skill.b;break;
+                case 3:  printw("\n");return selected_character->skill.c;break;
+                case 4:  printw("\n");return selected_character->skill.d;break;
+                case 5:  printw("\n");return selected_character->skill.e;break;
+                case 6:  printw("\n");return selected_character->skill.wait;break;
   default: printw("Erreur: votre choix doit être compris entre 1 et 6\n");
             }
         }
@@ -1162,10 +1131,10 @@ void vider_buffer(void)
 * 
 *
 */
-void orienter_perso_numpad(int joueur_courant){
+void orienter_perso_numpad(int joueur_courant, t_character* selected_character){
     char input, curs;
 
-	switch(selected_character.orientation)
+	switch(selected_character->orientation)
 	{
 		case 0:
 			curs = '^';break;
@@ -1188,7 +1157,7 @@ void orienter_perso_numpad(int joueur_courant){
 		printw("Choisissez l'orientation : \n");
 		afficher_plateau_orientation(joueur_courant);
 		printw("Valider =\"Entrée\"");
-		mvaddch(selected_character.position.Y+2, selected_character.position.X+3, curs);
+		mvaddch(selected_character->position.Y+2, selected_character->position.X+3, curs);
             refresh();
             input = getch();
 			if(input == 65)
@@ -1218,33 +1187,8 @@ void orienter_perso_numpad(int joueur_courant){
             default:printw("Orientation incorrecte");
         }
     
-    Plateau[selected_character.position.X][selected_character.position.Y].orientation=tampon_orientation;
-    selected_character.orientation=tampon_orientation;
-	//***************/V1.2/*****************/Fin
-	/*
-    int choix=1;
-    char input;
-    t_orientation tampon_orientation;
-    printw("Choisissez l'orientation : \n");
-    vider_buffer();
-    while(choix)
-    {
-        
-        printw("\n  8 - Nord\n  6 - Est\n  5 - Sud\n  4 - Ouest\n");
-        input = getchar();
-        while (getchar() != '\n');
-        switch(input)
-        {
-            case '8':tampon_orientation=up;choix=0;break;
-            case '6':tampon_orientation=right;choix=0;break;
-            case '5':tampon_orientation=down;choix=0;break;
-            case '4':tampon_orientation=left;choix=0;break;
-            default:printw("Orientation incorrecte");
-        }
-    }
-    
-    Plateau[selected_character.position.X][selected_character.position.Y].orientation=tampon_orientation;
-    selected_character.orientation=tampon_orientation;*/
+    Plateau[selected_character->position.X][selected_character->position.Y].orientation=tampon_orientation;
+    selected_character->orientation=tampon_orientation;
     
 }
 
@@ -1255,7 +1199,7 @@ void orienter_perso_numpad(int joueur_courant){
 * 
 *
 */
-void orienter_perso(){
+void orienter_perso(t_character* selected_character){
     int choix=1;
     char input;
     t_orientation buffer;
@@ -1277,8 +1221,8 @@ void orienter_perso(){
         }
     }
     
-    Plateau[selected_character.position.X][selected_character.position.Y].orientation=buffer;
-    selected_character.orientation=buffer;
+    Plateau[selected_character->position.X][selected_character->position.Y].orientation=buffer;
+    selected_character->orientation=buffer;
     
 }
 
@@ -1410,13 +1354,15 @@ void character_hp_list()
 *
 *
 */
-void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
+void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selected_character)
 {
 	
     int choix, nb_actions_faites = 0, deplacement_fait, indice_curseur =1, nb_choix_max = 5, coord_curs, est_vivant = 1;
     t_skill skill_selected;
     t_coord coordonnees_perso;
     
+    do
+    {
         do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
         {   
 			clear();
@@ -1462,26 +1408,27 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
 			}
         }
         while ((choix != '\n') );
+        
             switch(indice_curseur)
-            {   case 1: printw("\n");selection_perso(joueur_courant); break;
+            {   case 1: printw("\n");selection_perso(joueur_courant,selected_character); break;
                 case 2: printw("\n");passer_tour(); break;
                 case 3: printw("\n");suicide(joueur_courant);life_check(joueur_courant); break;//Abandon
                 case 4: printw("\n");Sauvegarder(joueur_courant);break;
-                case 5: printw("\n");Charger(joueur_courant);break;
+                case 5: printw("\n");joueur_courant=Charger(joueur_courant);break;
                 default: printw("Erreur: votre choix doit être compris entre 1 et 5\n");
-			}
-	
+		}
+}while(indice_curseur>=4);
 		
     if (indice_curseur==1){   // Se déclenche après sélection d'un personnage, c'est la suite d'actions liées au personnage sélectionné
 		
         //skill_selected.type = ATK;	WTF Nigga ?
-        while(nb_actions_faites < selected_character.nb_action_tour && est_vivant == 1 /* && skill_selected.type != EMPTY*/)
+        while(nb_actions_faites < selected_character->nb_action_tour && est_vivant == 1 /* && skill_selected.type != EMPTY*/)
         {
             if(deplacement_fait != 1)
             {
-                deplacements_valides(nbDepValid);
-                coordonnees_perso = choix_deplacement_humain(joueur_courant, nbDepValid);
-                deplacer_perso(coordonnees_perso);
+                deplacements_valides(nbDepValid,selected_character);
+                coordonnees_perso = choix_deplacement_humain(joueur_courant, nbDepValid,selected_character);
+                deplacer_perso(coordonnees_perso,selected_character);
                 //deplacer_perso(choix_deplacement_humain());
                 deplacement_fait = 1;
             }
@@ -1497,18 +1444,18 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid)
 			}
 			else
 			{
-				skill_selected = select_skill();//selectionne l’action que le joueur souhaite effectuer (exple: selection_perso / passer_tour…) retourne le n° de l’action à effectuer
+				skill_selected = select_skill(*selected_character);//selectionne l’action que le joueur souhaite effectuer (exple: selection_perso / passer_tour…) retourne le n° de l’action à effectuer
 				//tampon_skill = skill_selected;
 				if(skill_selected.type != EMPTY)
 				{
-					viser_case_valide(skill_selected, nbAtkValid);
-					appliquer_action(selected_character, choix_cible_humain(skill_selected, joueur_courant), skill_selected);
+					viser_case_valide(skill_selected, nbAtkValid,selected_character);
+					appliquer_action(*selected_character, choix_cible_humain(skill_selected, joueur_courant,selected_character), skill_selected);
 				}else 
 				{
-					appliquer_action(selected_character, selected_character.position, skill_selected);
+					appliquer_action(*selected_character, selected_character->position, skill_selected);
 				}
 				nb_actions_faites++;
-				orienter_perso_numpad(joueur_courant);
+				orienter_perso_numpad(joueur_courant,selected_character);
 				//OrienterPerso();
 			}
         }
@@ -1727,7 +1674,7 @@ void spawn_character(t_camp camp_nouveau_perso, t_orientation orientation, t_cla
 	
 }
 
-void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid)
+void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* selected_character)
 {
     int nb_actions_faites, i;
     int nb_perso_vivants=calcul_persos_IA(joueur_courant);
@@ -1735,28 +1682,28 @@ void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid)
     t_skill skill_selected;
     for (i=0; i<nb_perso_vivants ; i++ )
     {	
-		selected_character=Plateau[Valid_chars_IA[i].position.X][Valid_chars_IA[i].position.Y];
-        if (selected_character.camp==joueur_courant) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
+		*selected_character=Plateau[Valid_chars_IA[i].position.X][Valid_chars_IA[i].position.Y];
+        if (selected_character->camp==joueur_courant) //Vérifie que la case appartient à l'IA, en cas de mort d'un perso durant le tour d'un autre perso de l'IA, sinon contrôle d'une case terrain ou obstacle, ce qui serait gênant.
         {		
-                for(nb_actions_faites=0;nb_actions_faites < selected_character.nb_action_tour;nb_actions_faites++)
+                for(nb_actions_faites=0;nb_actions_faites < selected_character->nb_action_tour;nb_actions_faites++)
             {
 
-                deplacements_valides(nbDepValid);
+                deplacements_valides(nbDepValid,selected_character);
 
 				
-                deplacer_perso(choix_deplacement_IA(nbDepValid));
-                skill_selected = selected_character.skill.a;
+                deplacer_perso(choix_deplacement_IA(nbDepValid,selected_character),selected_character);
+                skill_selected = selected_character->skill.a;
                 
                 if(skill_selected.type != EMPTY)
                 {
 
 					
-                    viser_case_valide(skill_selected, nbAtkValid);
-                    appliquer_action(selected_character, choix_cible_IA(skill_selected,nbAtkValid), skill_selected);
+                    viser_case_valide(skill_selected, nbAtkValid,selected_character);
+                    appliquer_action(*selected_character, choix_cible_IA(skill_selected,nbAtkValid), skill_selected);
                 }else 
                 {
 					//printw("Skill EMPTY type.\n");
-                    appliquer_action(selected_character, selected_character.position, skill_selected);
+                    appliquer_action(*selected_character, selected_character->position, skill_selected);
                 }
 
             }
@@ -1938,6 +1885,7 @@ int menu_principal()
 int main(){
 	int i;
 	int nb_joueurs = 2, joueur_courant = 2;
+	t_character selected_character;
 	int nbAtkValid;
 	int nbDepValid, choix_menu = 0;
 	//saisie_nombre_joueurs(&nb_joueurs);
@@ -2026,9 +1974,9 @@ int main(){
             character_hp_list();
             if (joueur_courant==sauvage) 
             {
-                tour_IA(joueur_courant,&nbAtkValid,&nbDepValid);
+                tour_IA(joueur_courant,&nbAtkValid,&nbDepValid,&selected_character);
                 
-            }else tour(joueur_courant,&nbAtkValid,&nbDepValid);
+            }else tour(joueur_courant,&nbAtkValid,&nbDepValid,&selected_character);
             
             
         }
