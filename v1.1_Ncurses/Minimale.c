@@ -1857,10 +1857,10 @@ int main(){
 	strcpy(player[4].name,"Arthur");
 	
 	creer_terrain_rapide(obstacle,3,2);
-	creer_terrain_rapide(obstacle,2,2);
+
 	creer_terrain_rapide(obstacle,1,2);
 	creer_terrain_rapide(obstacle,0,2);
-	creer_terrain_rapide(obstacle,4,2);
+
 	
 	
 	/*
