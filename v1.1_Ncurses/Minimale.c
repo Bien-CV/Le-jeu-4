@@ -72,7 +72,7 @@ int indiceTabDepValid;
 
 /**
  * \fn void Sauvegarder()
- * \brief Sauvegarde la partie dans un fichier
+ * \brief Sauvegarde la partie en cours dans un fichier
  *
  */
  
@@ -119,7 +119,7 @@ void Sauvegarder(int joueur_courant){
 
 /**
  * \fn void Charger()
- * \brief Permet de charger une partie depuis un fichier
+ * \brief Permet de charger une partie depuis un fichier de sauvegarde
  *
  */
  int Charger(int joueur_courant){
@@ -172,7 +172,8 @@ int generation_nombre_aleatoire(int max)
 /**
  * \fn void deplacer_perso(t_coord case_perso)
  * \brief Déplace le personnage sur le terrain
- *
+ * \brief Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case_perso'.
+ * \brief Si la 'case_perso' contenait un piège, le perso perd des HP.
  */
 void deplacer_perso(t_coord case_perso, t_character* selected_character)
 {
@@ -186,7 +187,7 @@ void deplacer_perso(t_coord case_perso, t_character* selected_character)
 
 /**
  * \fn int cases_voisines_calcul(t_coord coordonnees)
- * \brief Renvoi le nombre de case voisine vide, met dans la file la liste des coordonnées voisines accessibles
+ * \brief Renvoi le nombre de case voisine vide; met dans la file, la liste des coordonnées voisines accessibles
  *
  */
 int cases_voisines_calcul(t_coord coordonnees){
@@ -286,6 +287,7 @@ void deplacements_valides(int* nbDepValid, t_character* selected_character){// p
 /**
  * \fn t_coord choix_deplacement_humain(int joueur_courant)
  * \brief Permet au joueur de choisir la destination
+ * \brief Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède.
  *
  */
 t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character* selected_character){
@@ -310,14 +312,14 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 		mvaddch(y+2,x+3,curseur);
 		//refresh();
 		choix = getch();
-		if(choix == 127 && mvt_effectue > 0)
+		if(choix == 127 && mvt_effectue > 0)//touche backSpace = touche effacer
 		{
 			mvt_effectue--;
 			pile_depiler(&val, 0);
 			x = val.X;
 			y = val.Y;
 		}
-		if(choix == 68)
+		if(choix == 68)//flèche du bas
 		{
 			
 			if(x > 0)
@@ -345,7 +347,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 67)
+		if(choix == 67)//flèche du haut
 		{
 			if(x < TAILLE_MATRICE-1)
 			{
@@ -371,7 +373,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 65)
+		if(choix == 65)//flèche de gauche
 		{
 			if(y > 0)
 			{
@@ -397,7 +399,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 66)
+		if(choix == 66)//flèche de droite
 		{
 			if(y < TAILLE_MATRICE-1)
 			{
@@ -458,6 +460,9 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
     printw("\n");
     return (coordonnees);*/
 }
+
+
+
 
 t_coord choix_deplacement_IA(int* nbDepValid,t_character* selected_character){
 	
