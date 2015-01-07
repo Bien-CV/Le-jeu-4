@@ -1,3 +1,15 @@
+/**
+* \file Minimale.c
+* \brief Code principale
+* \author Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY.
+* \version 1.1
+* \date 06 Janvier 2015
+*
+* programme de jeu: Tactics Arena
+*
+*/
+
+
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
