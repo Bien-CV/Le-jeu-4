@@ -34,6 +34,7 @@
 		#define stats_terrain_default ((t_stats){0,0,0,0,0})
 		#define skill_trap ((t_skill){"Placer Piege", 3, TRAP, 10})
 		#define skill_soin ((t_skill){"Soigner", 3, MATK, -3})
+		#define skill_bandage ((t_skill){"Se soigner", 0, MATK, -1})
 		#define skill_fireball ((t_skill){"Boule de feu", 5, MATK, 3})
 		#define skill_list_default ((t_skill_list){ skill_attack,skill_trap,skill_empty,skill_empty,skill_empty,skill_skip})
 		#define empty_skill_list ((t_skill_list){skill_empty,skill_empty,skill_empty,skill_empty,skill_empty,skill_empty})
@@ -54,14 +55,14 @@
 		
 		
 		#define character_tank ((t_character){"Tank name", coord_default, orientation_default, status_tank, stats_tank, skill_list_tank, sauvage, 1})
-		#define skill_list_tank ((t_skill_list){ skill_attack,skill_empty,skill_empty,skill_empty,skill_empty,skill_skip})
-		#define status_tank ((t_status){400,400,0,0})
-		#define stats_tank ((t_stats){70,0,60,50,3})
+		#define skill_list_tank ((t_skill_list){ skill_attack,skill_bandage,skill_empty,skill_empty,skill_empty,skill_skip})
+		#define status_tank ((t_status){400,400,100,100})
+		#define stats_tank ((t_stats){70,75,60,50,3})
 		
 		#define character_soigneur ((t_character){"Healer name", coord_default, orientation_default, status_soigneur, stats_soigneur, skill_list_soigneur, sauvage, 1})
-		#define skill_list_soigneur ((t_skill_list){ skill_soin,skill_empty,skill_empty,skill_empty,skill_empty,skill_skip})
+		#define skill_list_soigneur ((t_skill_list){ skill_attack,skill_soin,skill_empty,skill_empty,skill_empty,skill_skip})
 		#define status_soigneur ((t_status){400,400,200,200})
-		#define stats_soigneur ((t_stats){20,150,0,60,2})
+		#define stats_soigneur ((t_stats){20,100,0,60,2})
 		///***********************************************************************************/
 		
 		

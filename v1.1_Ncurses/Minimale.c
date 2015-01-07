@@ -1727,7 +1727,9 @@ void spawn_sauvage()
 	}while(Plateau[x_buffer][y_buffer].camp !=0);
 	printw("Coordonnées de creation du personnage chaotique : %i , %i. Camp case : %i",x_buffer,y_buffer,Plateau[x_buffer][y_buffer].camp);
 	creer_perso_rapide(sauvage,x_buffer,y_buffer,berseker);
-	edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
+	//edit_stats(Plateau[x_buffer][y_buffer],20,20,10,10,30,30,10,20,5);
+	Plateau[x_buffer][y_buffer].status.HP=50;
+	Plateau[x_buffer][y_buffer].status.Max_HP=50;
 	
 }
 
