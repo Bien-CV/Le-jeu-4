@@ -19,7 +19,8 @@
 		#define stats_default ((t_stats){100,100,20,20,2})
 		#define stats_terrain_default ((t_stats){0,0,0,0,0})
 		#define skill_trap ((t_skill){"Placer Piege", 3, TRAP, 10})
-		#define skill_soin ((t_skill){"Soigner", 3, MATK, -30})
+		#define skill_soin ((t_skill){"Soigner", 3, MATK, -3})
+		#define skill_fireball ((t_skill){"Boule de feu", 5, MATK, 3})
 		#define skill_list_default ((t_skill_list){ skill_attack,skill_trap,skill_empty,skill_empty,skill_empty,skill_skip})
 		#define empty_skill_list ((t_skill_list){skill_empty,skill_empty,skill_empty,skill_empty,skill_empty,skill_empty})
 		#define character_default ((t_character){"Default name", coord_default, orientation_default, status_default, stats_default, skill_list_default, sauvage, 1})
@@ -33,7 +34,7 @@
 		#define stats_berseker ((t_stats){200,0,0,0,4})
 		
 		#define character_mage ((t_character){"Mage name", coord_default, orientation_default, status_mage, stats_mage, skill_list_mage, sauvage, 1})
-		#define skill_list_mage ((t_skill_list){ skill_attack,skill_empty,skill_empty,skill_empty,skill_empty,skill_skip})
+		#define skill_list_mage ((t_skill_list){ skill_attack,skill_fireball,skill_empty,skill_empty,skill_empty,skill_skip})
 		#define status_mage ((t_status){400,400,100,100})
 		#define stats_mage ((t_stats){50,100,0,60,2})
 		
