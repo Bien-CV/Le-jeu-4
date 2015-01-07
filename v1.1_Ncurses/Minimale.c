@@ -331,7 +331,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 			x = val.X;
 			y = val.Y;
 		}
-		if(choix == 68)//flèche du bas
+		if(choix == 68 || choix == 22477)//flèche de droite
 		{
 			
 			if(x > 0)
@@ -359,7 +359,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 67)//flèche du haut
+		if(choix == 67 || choix == 22475)//flèche de gauche
 		{
 			if(x < TAILLE_MATRICE-1)
 			{
@@ -385,7 +385,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 65)//flèche de gauche
+		if(choix == 65 || choix == 22472)//flèche du haut
 		{
 			if(y > 0)
 			{
@@ -411,7 +411,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 66)//flèche de droite
+		if(choix == 66 || choix == 22480)//flèche du bas
 		{
 			if(y < TAILLE_MATRICE-1)
 			{
