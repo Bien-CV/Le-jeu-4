@@ -324,7 +324,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 		mvaddch(y+2,x+3,curseur);
 		//refresh();
 		choix = getch();
-		if(choix == 127 && mvt_effectue > 0)//touche backSpace = touche effacer
+		if((choix == 127 || choix == 8) && mvt_effectue > 0)//touche backSpace = touche effacer
 		{
 			mvt_effectue--;
 			pile_depiler(&val, 0);
