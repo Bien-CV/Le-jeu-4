@@ -1,3 +1,15 @@
+/**
+* \file Minimale.c
+* \brief Code principale
+* \author Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY.
+* \version 1.1
+* \date 06 Janvier 2015
+*
+* programme de jeu: Tactics Arena
+*
+*/
+
+
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -600,6 +612,10 @@ void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_char
     *nbAtkValid = liste_calculer_nombre_elements();
 }
 
+/**
+ * \fn t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
+ * \brief choisi parmi la liste des cases à attaquer pour l'IA, une case
+ */
 t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 {
     int i =0,choix;
@@ -640,6 +656,10 @@ void init_char_table(t_character chars[])
     for(i=0;i<MaxTab;i++) chars[i]=character_default;
 }
 
+/**
+ * \fn void afficher_skill(int skill_nb, t_skill skill,t_character selected_character)
+ * \brief Affiche le nom, la portée, la puissance d'une compétence.
+ */
 void afficher_skill(int skill_nb, t_skill skill,t_character selected_character){
     printw("   %s ",skill.name);
     //printw("   %i - %s ",skill_nb,skill.name);
@@ -652,6 +672,10 @@ void afficher_skill(int skill_nb, t_skill skill,t_character selected_character){
     printw("\n");
 }
 
+/**
+ * \fn void afficher_skill_list(t_character perso)
+ * \brief affiche la liste des compétence d'un personnage
+ */
 void afficher_skill_list(t_character perso){
 		afficher_skill(1,perso.skill.a,perso);
         afficher_skill(2,perso.skill.b,perso);
@@ -661,6 +685,10 @@ void afficher_skill_list(t_character perso){
         afficher_skill(6,perso.skill.wait,perso);
 }
 
+/**
+ * \fn void afficher_infos_persos( t_character perso)
+ * \brief affiche les informations du personnage
+ */
 void afficher_infos_persos( t_character perso)
 {
 	move(1, TAILLE_MATRICE+3+10);
@@ -705,6 +733,10 @@ void afficher_infos_persos( t_character perso)
 
 
 
+/**
+ * \fn t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
+ * \brief Permet au joueur de choisir, grâce à un curseur, une case à attaquer
+ */
 t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
 {
 	//***************/V1.2/*****************/
@@ -808,7 +840,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 
 /**
 * \fn void selection_perso(int joueur_courant)
-* \brief Fonction qui propose la liste des personnages pouvant être sélectionnés.
+* \brief Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur
 *
 */
 void selection_perso(int joueur_courant,t_character* selected_character){
@@ -931,11 +963,9 @@ void suicide(int joueur_courant){// Permet au joueur de quitter la partie.
 }
 
 /**
-* \fn void init_char_table(t_char chars[])
-* \brief Fonction d'initialisation d'un tableau de personnages
-* Remplit le tableau de personnages entré en paramètre de cases de terrain.
-*
-*/
+ * \fn t_skill select_skill(t_character selected_character)
+ * \brief Permet au joueur de choisir,  graphiquement, une compétence à effectuer
+ */
 t_skill select_skill(t_character selected_character){//selectionne le skill que le personange courant effectuera, l'execution du skill est la fonction Skill.
         
 	//***************/V1.2/*****************/
@@ -1142,8 +1172,8 @@ void vider_buffer(void)
 }
 
 /**
-* \fn void orienter_perso_numpad(int joueur_courant)
-* \brief Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation.
+* \fn void orienter_perso_numpad(int joueur_courant, t_character* selected_character)
+* \brief Cette fonction permet au joueur d'orienter son personnage avec les flèches directionnelles
 * 
 *
 */
@@ -1258,8 +1288,7 @@ void joueur_liste_suivant(int nb_joueurs, int* joueur_courant)
 
 /**
 * \fn int are_my_mates_alive(joueur_courant)
-* \brief Fonction d'initialisation d'un tableau de personnages
-* Remplit le tableau de personnages entré en paramètre de cases de terrain.
+* \brief Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts
 *
 */
 int are_my_mates_alive(int joueur_courant){
@@ -1277,6 +1306,10 @@ int are_my_mates_alive(int joueur_courant){
     return nb_perso;
 }
 
+
+/**
+ * \fn WHAT THE FUCK!!!!!
+ */
 int perso_oriente_a_droite()
 {
 	int i,j;
@@ -1638,6 +1671,10 @@ void creer_terrain_rapide(t_camp camp,int x, int y)
 }
 
 
+/**
+ * \fn void generation_nom_personnage(char * nom)
+ * \brief génère aléatoirement un nom pour un perso
+ */
 void generation_nom_personnage(char * nom)
 {
 	int i;
@@ -1655,6 +1692,11 @@ void generation_nom_personnage(char * nom)
 	strcpy(nom,random_name);
 	free(random_name);
 }
+
+/**
+ * \fn void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int ATK , int MATK , int DEF , int MDEF , int MVT)
+ * \brief modifie les statistiques d'un personnage
+ */
 void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int ATK , int MATK , int DEF , int MDEF , int MVT)
 {
 	int x_buffer=perso.position.X,y_buffer=perso.position.Y;
@@ -1755,10 +1797,14 @@ int calcul_persos_IA(int joueur_courant){
     }
     return nb_perso;
 }
-
+/**
+ * \fn void saisie_nombre_joueurs(int* nb_joueurs )
+ * \brief permet à l'utilisateur de rentrer le nombre de joueur à jouer
+ */
 void saisie_nombre_joueurs(int* nb_joueurs )
 {
 	*nb_joueurs=4;
+	scanw("%i", &nb_joueurs);
 }
 /**
 * \fn int main()

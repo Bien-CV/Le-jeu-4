@@ -1,3 +1,17 @@
+/**
+ * \file header.h
+ * \brief header
+ * \author Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY.
+ * \version 1.1
+ * \date 06 Janvier 2015
+ *
+ * programme de jeu: Tactics Arena
+ *
+ */
+
+
+
+
 #ifndef H_HEADER
 #define H_HEADER
  
