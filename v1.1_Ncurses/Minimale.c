@@ -463,7 +463,10 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 
 
 
-
+/**
+ * \fn t_coord choix_deplacement_IA(int* nbDepValid,t_character* selected_character)
+ * \brief cette fonction retourne les coordonnées du déplacement choisi pour l'IA
+ */
 t_coord choix_deplacement_IA(int* nbDepValid,t_character* selected_character){
 	
     int i = 0, choix;
@@ -512,6 +515,10 @@ void init_plateau()
     }
 }
 
+/**
+ * \fn int cases_voisines_ATK(t_coord coordonnees)
+ * \brief Renvoi le nombre de case voisine ; met dans la file, la liste des coordonnées voisines
+ */
 int cases_voisines_ATK(t_coord coordonnees){
     int nbVois = 0;
     t_coord coord;
@@ -553,7 +560,10 @@ int cases_voisines_ATK(t_coord coordonnees){
 
     return(nbVois);
 }
-
+/**
+ * \fn void deplacements_valides(int* nbDepValid)
+ * \brief Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée
+ */
 void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_character)
 {
     int mvtEffectue = 0;
