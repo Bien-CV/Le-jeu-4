@@ -723,9 +723,9 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 		if(valid == 0)printw("non ");
 		printw("valide");
 		if(Plateau[x][y].camp>0 && Plateau[x][y].type != TRAP_UNIT){afficher_infos_persos(Plateau[x][y]);}
-		attron(COLOR_PAIR(1));
+		attron(COLOR_PAIR(2));
 		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(1));
+		attroff(COLOR_PAIR(2));
 		//refresh();
 		choix = getch();
 		if(choix == 127)
@@ -836,9 +836,9 @@ void selection_perso(int joueur_courant,t_character* selected_character){
 	afficher_plateau_orientation(joueur_courant);
 		//printw("\n\n%i - %i",x, y);
 		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur_courant)){afficher_infos_persos(Plateau[x][y]);}
-		attron(COLOR_PAIR(1));
+		attron(COLOR_PAIR(2));
 		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(1));
+		attroff(COLOR_PAIR(2));
 		refresh();
 		choix = getch();
 		if(choix == 68)
@@ -1737,12 +1737,6 @@ void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* s
             }
         }
     }
-
-	//scanf("%d", &i);
-
-       
-
-
 }
 
 int calcul_persos_IA(int joueur_courant){
@@ -1816,7 +1810,13 @@ int main(){
 	strcpy(player[3].name,"Yann");
 	strcpy(player[4].name,"Arthur");
 	
-	creer_terrain_rapide(obstacle,3,1);
+	creer_terrain_rapide(obstacle,3,2);
+	creer_terrain_rapide(obstacle,2,2);
+	creer_terrain_rapide(obstacle,1,2);
+	creer_terrain_rapide(obstacle,0,2);
+	creer_terrain_rapide(obstacle,4,2);
+	
+	
 	/*
 	spawn_sauvage();
 	for (i=2;i<nb_joueurs;i++)
@@ -1840,9 +1840,6 @@ int main(){
 	creer_perso_rapide(3,4,5,default_class);
 	joueur_courant=2;
 	
-	
-        
-    //spawn_sauvage();
     
 	players_life_check();
 	for (i=1;i<=MaxTab;i++)
