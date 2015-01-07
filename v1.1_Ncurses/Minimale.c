@@ -1655,6 +1655,10 @@ void creer_terrain_rapide(t_camp camp,int x, int y)
 }
 
 
+/**
+ * \fn void generation_nom_personnage(char * nom)
+ * \brief génère aléatoirement un nom pour un perso
+ */
 void generation_nom_personnage(char * nom)
 {
 	int i;
@@ -1672,6 +1676,11 @@ void generation_nom_personnage(char * nom)
 	strcpy(nom,random_name);
 	free(random_name);
 }
+
+/**
+ * \fn void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int ATK , int MATK , int DEF , int MDEF , int MVT)
+ * \brief modifie les statistiques d'un personnage
+ */
 void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int ATK , int MATK , int DEF , int MDEF , int MVT)
 {
 	int x_buffer=perso.position.X,y_buffer=perso.position.Y;
@@ -1779,10 +1788,14 @@ int calcul_persos_IA(int joueur_courant){
     }
     return nb_perso;
 }
-
+/**
+ * \fn void saisie_nombre_joueurs(int* nb_joueurs )
+ * \brief permet à l'utilisateur de rentrer le nombre de joueur à jouer
+ */
 void saisie_nombre_joueurs(int* nb_joueurs )
 {
 	*nb_joueurs=4;
+	scanw("%i", &nb_joueurs);
 }
 /**
 * \fn int main()
