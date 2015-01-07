@@ -439,7 +439,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 		}
 		pile_sommet(&sommet,0);
 		
-	}while(choix != '\n' );
+	}while(choix != '\n' && choix  != 13);
 	
 	return((t_coord){x,y});
 	
@@ -760,7 +760,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 		attroff(COLOR_PAIR(2));
 		//refresh();
 		choix = getch();
-		if(choix == 127)
+		if(choix == 127 || choix == 8)
 		{
 			x = val.X;
 			y = val.Y;
@@ -792,7 +792,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 		}
 		valid = liste_element_est_present(val, 0);
 		
-	}while(choix != '\n' || valid == 0);
+	}while((choix != '\n' && choix != 13) || valid == 0);
 	return (val);
 }
 	//***************/V1.2/*****************/Fin
@@ -897,7 +897,7 @@ void selection_perso(int joueur_courant,t_character* selected_character){
 		printw("perso: %i\njoueur: %i", Plateau[x][y].camp, joueur);
 		getch();*/
 		
-	}while(choix != '\n' || (Plateau[x][y].camp != joueur_courant || Plateau[x][y].type == TRAP_UNIT));
+	}while((choix != '\n' && choix != 13) || (Plateau[x][y].camp != joueur_courant || Plateau[x][y].type == TRAP_UNIT));
 	*selected_character = Plateau[x][y];
 	Plateau[x][y]= case_terrain;
 	//***************/V1.2/*****************/Fin
@@ -1197,7 +1197,7 @@ void orienter_perso_numpad(int joueur_courant, t_character* selected_character){
     t_orientation tampon_orientation;
     //viderBuffer();
     
-    while(input != '\n')
+    while(input != '\n' && input != 13)
     {
         clear();
 		printw("Choisissez l'orientation : \n");
@@ -1456,7 +1456,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
 				indice_curseur++;
 			}
         }
-        while ((choix != '\n') );
+        while ((choix != '\n' && choix != 13) );
         
             switch(indice_curseur)
             {   case 1: printw("\n");selection_perso(joueur_courant,selected_character); break;
