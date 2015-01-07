@@ -1799,6 +1799,7 @@ int calcul_persos_IA(int joueur_courant){
     }
     return nb_perso;
 }
+
 /**
  * \fn void saisie_nombre_joueurs(int* nb_joueurs )
  * \brief permet à l'utilisateur de rentrer le nombre de joueur à jouer
