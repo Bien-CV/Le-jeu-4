@@ -948,11 +948,9 @@ void suicide(int joueur_courant){// Permet au joueur de quitter la partie.
 }
 
 /**
-* \fn void init_char_table(t_char chars[])
-* \brief Fonction d'initialisation d'un tableau de personnages
-* Remplit le tableau de personnages entré en paramètre de cases de terrain.
-*
-*/
+ * \fn t_skill select_skill(t_character selected_character)
+ * \brief Permet au joueur de choisir,  graphiquement, une compétence à effectuer
+ */
 t_skill select_skill(t_character selected_character){//selectionne le skill que le personange courant effectuera, l'execution du skill est la fonction Skill.
         
 	//***************/V1.2/*****************/
@@ -1159,8 +1157,8 @@ void vider_buffer(void)
 }
 
 /**
-* \fn void orienter_perso_numpad(int joueur_courant)
-* \brief Propose une liste numérique des orientations du perso indiqué en paramètre d'entrée et change son orientation.
+* \fn void orienter_perso_numpad(int joueur_courant, t_character* selected_character)
+* \brief Cette fonction permet au joueur d'orienter son personnage avec les flèches directionnelles
 * 
 *
 */
@@ -1275,8 +1273,7 @@ void joueur_liste_suivant(int nb_joueurs, int* joueur_courant)
 
 /**
 * \fn int are_my_mates_alive(joueur_courant)
-* \brief Fonction d'initialisation d'un tableau de personnages
-* Remplit le tableau de personnages entré en paramètre de cases de terrain.
+* \brief Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts
 *
 */
 int are_my_mates_alive(int joueur_courant){
@@ -1294,6 +1291,10 @@ int are_my_mates_alive(int joueur_courant){
     return nb_perso;
 }
 
+
+/**
+ * \fn WHAT THE FUCK!!!!!
+ */
 int perso_oriente_a_droite()
 {
 	int i,j;
