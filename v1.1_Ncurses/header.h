@@ -5,7 +5,7 @@
  * \version 1.1
  * \date 06 Janvier 2015
  *
- * programme de jeu: Tactics Arena
+ * programme de jeu: Le Jeu 4 ( T-RPG)
  *
  */
 
