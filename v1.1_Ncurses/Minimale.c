@@ -600,6 +600,10 @@ void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_char
     *nbAtkValid = liste_calculer_nombre_elements();
 }
 
+/**
+ * \fn t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
+ * \brief choisi parmi la liste des cases à attaquer pour l'IA, une case
+ */
 t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 {
     int i =0,choix;
@@ -640,6 +644,10 @@ void init_char_table(t_character chars[])
     for(i=0;i<MaxTab;i++) chars[i]=character_default;
 }
 
+/**
+ * \fn void afficher_skill(int skill_nb, t_skill skill,t_character selected_character)
+ * \brief Affiche le nom, la portée, la puissance d'une compétence.
+ */
 void afficher_skill(int skill_nb, t_skill skill,t_character selected_character){
     printw("   %s ",skill.name);
     //printw("   %i - %s ",skill_nb,skill.name);
@@ -652,6 +660,10 @@ void afficher_skill(int skill_nb, t_skill skill,t_character selected_character){
     printw("\n");
 }
 
+/**
+ * \fn void afficher_skill_list(t_character perso)
+ * \brief affiche la liste des compétence d'un personnage
+ */
 void afficher_skill_list(t_character perso){
 		afficher_skill(1,perso.skill.a,perso);
         afficher_skill(2,perso.skill.b,perso);
@@ -661,6 +673,10 @@ void afficher_skill_list(t_character perso){
         afficher_skill(6,perso.skill.wait,perso);
 }
 
+/**
+ * \fn void afficher_infos_persos( t_character perso)
+ * \brief affiche les informations du personnage
+ */
 void afficher_infos_persos( t_character perso)
 {
 	move(1, TAILLE_MATRICE+3+10);
@@ -702,6 +718,10 @@ void afficher_infos_persos( t_character perso)
 
 
 
+/**
+ * \fn t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
+ * \brief Permet au joueur de choisir, grâce à un curseur, une case à attaquer
+ */
 t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
 {
 	//***************/V1.2/*****************/
@@ -805,7 +825,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 
 /**
 * \fn void selection_perso(int joueur_courant)
-* \brief Fonction qui propose la liste des personnages pouvant être sélectionnés.
+* \brief Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur
 *
 */
 void selection_perso(int joueur_courant,t_character* selected_character){
