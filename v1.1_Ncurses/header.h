@@ -51,12 +51,12 @@
 		///***********************************************************************************/
 		
 		
-		#define curseur (char)'O'
+		#define curseur (char)254
 		
 		#define case_terrain ((t_character){"",coord_default ,orientation_default ,status__terrain_default ,stats_terrain_default ,empty_skill_list, 0 , 0 })
 		#define case_obstacle ((t_character){"",coord_default ,orientation_default ,status_default ,stats_default ,empty_skill_list, -1 , 0 })
 
-		typedef enum {defaut ,berseker = 1, mage, tank, soigneur}t_classe;
+		typedef enum {default_class ,berseker = 1, mage, tank, soigneur}t_classe;
 		typedef enum {obstacle =-1,terrain=0, sauvage=1}t_camp;
 		typedef enum {EMPTY,ATK,MATK,TRAP}t_skilltype;
 		typedef enum {up,right,down,left}t_orientation;
@@ -67,7 +67,7 @@
 		typedef struct { char name[MaxString] ; int range ; t_skilltype type ; int damage_coeff ;} t_skill;
 		typedef struct { t_skill a; t_skill b; t_skill c; t_skill d; t_skill e; t_skill wait; } t_skill_list;
 		typedef enum {LAND_UNIT,AIR_UNIT,JUMPING_UNIT,TRAP_UNIT}t_character_type;
-		typedef struct{char name[MaxString] ; t_coord position; t_orientation orientation ; t_status status ; t_stats stats ; t_skill_list skill; t_camp camp; int nb_action_tour; t_character_type type;} t_character ;
+		typedef struct{char name[MaxString] ; t_coord position; t_orientation orientation ; t_status status ; t_stats stats ; t_skill_list skill; t_camp camp; int nb_action_tour; t_character_type type; t_classe classe; } t_character ;
 		
 		typedef struct { int alive ; char name[MaxString] ;} t_player;
  

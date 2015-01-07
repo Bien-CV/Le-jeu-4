@@ -666,7 +666,10 @@ void afficher_infos_persos( t_character perso)
 	move(1, TAILLE_MATRICE+3+10);
 	printw("Nom : %s ",perso.name);
 	move(2, TAILLE_MATRICE+3+10);
-	//printw("Camp : %s ",perso.camp);
+	if (perso.classe==1) printw("Classe : Berseker ");
+	if (perso.classe==2) printw("Classe : Mage ");
+	if (perso.classe==3) printw("Classe : Tank ");
+	if (perso.classe==4) printw("Classe : Soigneur ");
 	//printw("Position : %i,%i ",perso.position.X,perso.position.Y);
 	
 	
@@ -1597,6 +1600,7 @@ void creer_perso_rapide(t_camp camp,int x, int y,t_classe classe )
     Plateau[x][y].position.Y=y;
     if (camp==2) Plateau[x][y].orientation=down;
     if (camp==3) Plateau[x][y].orientation=up;
+    Plateau[x][y].classe=classe;
     
 }
 
@@ -1727,7 +1731,6 @@ void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* s
                     appliquer_action(*selected_character, choix_cible_IA(skill_selected,nbAtkValid), skill_selected);
                 }else 
                 {
-					//printw("Skill EMPTY type.\n");
                     appliquer_action(*selected_character, selected_character->position, skill_selected);
                 }
 
@@ -1828,12 +1831,13 @@ int main(){
 	creer_perso_rapide(2,3,0,mage);
 	creer_perso_rapide(2,2,0,soigneur);
 	creer_perso_rapide(2,1,0,tank);
-	
-	creer_perso_rapide(3,1,5,berseker);
-	creer_perso_rapide(3,2,5,mage);
-	creer_perso_rapide(3,3,5,soigneur);
-	creer_perso_rapide(3,4,5,tank);
-	
+	creer_perso_rapide(2,0,0,default_class);
+		
+	creer_perso_rapide(3,0,5,berseker);
+	creer_perso_rapide(3,1,5,mage);
+	creer_perso_rapide(3,2,5,soigneur);
+	creer_perso_rapide(3,3,5,tank);
+	creer_perso_rapide(3,4,5,default_class);
 	joueur_courant=2;
 	
 	
@@ -1884,25 +1888,6 @@ int main(){
 		if (player[i].alive==1) printw("Victoire de %s !\n",player[i].name);
 	}
         
-    /*    
-    for (i=1;i<=nb_joueurs;i++)
-	{
-		if (player[i].alive==1) printw("Victoire de %s !\n",player[i].name);
-	}
-	int statistiques_generation_random[5];
-	for (i=0;i<5;i++)
-	{
-		statistiques_generation_random[i]=0;
-	}
-	for (i=0;i<2000;i++)
-	{
-		statistiques_generation_random[generation_nombre_aleatoire(4)]++;
-	}
-	for (i=0;i<5;i++)
-	{
-		printw("occurences de %i : %i\n",i,statistiques_generation_random[i]);
-	}
-	*/
 	getch();
 	endwin();
 	
