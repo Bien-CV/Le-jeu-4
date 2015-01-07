@@ -331,7 +331,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 			x = val.X;
 			y = val.Y;
 		}
-		if(choix == 68 || choix == 22477)//flèche de droite
+		if(choix == 68 || choix == 22475)//flèche de gauche
 		{
 			
 			if(x > 0)
@@ -359,7 +359,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 				}
 			}
 		}
-		if(choix == 67 || choix == 22475)//flèche de gauche
+		if(choix == 67 || choix == 22477)//flèche de droite
 		{
 			if(x < TAILLE_MATRICE-1)
 			{
@@ -997,7 +997,7 @@ t_skill select_skill(t_character selected_character){//selectionne le skill que 
 			}
             //choix = getch() -48;
         }
-        while ((choix !='\n') );
+        while ((choix !='\n' && choix != 13) );
 
             switch(indice_curseur)
             {   case 1:  printw("\n");return selected_character.skill.a;break;
