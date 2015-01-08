@@ -321,7 +321,9 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 		printw("Deplacement: %i/%i\n", mvt_effectue, selected_character->stats.MVT);
 		afficher_plateau_orientation(joueur_courant);
 		printw("\n\nValider =\"Entrée\"\nAnnuler =\"BackSpace\"");
+		attron(COLOR_PAIR(7));
 		mvaddch(y+2,x+3,curseur);
+		attroff(COLOR_PAIR(7));
 		//refresh();
 		choix = getch();
 		if((choix == 127 || choix == 8) && mvt_effectue > 0)//touche backSpace = touche effacer
@@ -755,9 +757,9 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 		if(valid == 0)printw("non ");
 		printw("valide");
 		if(Plateau[x][y].camp>0 && Plateau[x][y].type != TRAP_UNIT){afficher_infos_persos(Plateau[x][y]);}
-		attron(COLOR_PAIR(2));
+		attron(COLOR_PAIR(7));
 		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(2));
+		attroff(COLOR_PAIR(7));
 		//refresh();
 		choix = getch();
 		if(choix == 127 || choix == 8)
@@ -868,9 +870,9 @@ void selection_perso(int joueur_courant,t_character* selected_character){
 	afficher_plateau_orientation(joueur_courant);
 		//printw("\n\n%i - %i",x, y);
 		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur_courant)){afficher_infos_persos(Plateau[x][y]);}
-		attron(COLOR_PAIR(2));
+		attron(COLOR_PAIR(7));
 		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(2));
+		attroff(COLOR_PAIR(7));
 		refresh();
 		choix = getch();
 		if(choix == 68)
@@ -1445,12 +1447,12 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
             mvaddch((indice_curseur+TAILLE_MATRICE+2),coord_curs, '*');
             refresh();
             choix = getch();
-			if(choix == 65)
+			if(choix == 65 || choix == 72)
 			{
 				if(indice_curseur <= 1) indice_curseur = nb_choix_max+1; //nb_choix_max = 5 = le choix max
 				indice_curseur--;
 			}
-			if(choix == 66)
+			if(choix == 66 || choix == 80)
 			{
 				if(indice_curseur >= nb_choix_max) indice_curseur = 0;
 				indice_curseur++;
@@ -1837,6 +1839,7 @@ int main(){
 	init_pair(4, COLOR_MAGENTA, COLOR_BLACK);
 	init_pair(5, COLOR_YELLOW, COLOR_BLACK);
 	init_pair(6, COLOR_BLUE, COLOR_BLACK);
+	init_pair(7, COLOR_BLACK, COLOR_WHITE);
 
 		/*if(has_colors() == FALSE)
 	{	endwin();
