@@ -1014,7 +1014,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
     yenemy=cible.Y;
     oenemy=Plateau[xenemy][yenemy].orientation;
 
-    if((xenemy-yenemy>=xperso-yperso)&&(xenemy+yenemy<xperso+yperso))//Vérifie si l'énemi est au Nord
+    if((xenemy-yenemy>=xperso-yperso)&&(xenemy+yenemy<xperso+yperso))//Vérifie si l'ennemi est au Nord
     {
         switch(oenemy)
         {
@@ -1024,7 +1024,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
             case left: if(xenemy-yenemy==xperso-yperso){return back;}else return side ; break;
         }
     }
-    else if((xenemy-yenemy>xperso-yperso)&&(xenemy+yenemy>=xperso+yperso))//Vérifie si l'énemi est à l'Est
+    else if((xenemy-yenemy>xperso-yperso)&&(xenemy+yenemy>=xperso+yperso))//Vérifie si l'ennemi est à l'Est
     {
         switch(oenemy)
         {
@@ -1034,7 +1034,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
             case left: return front ; break;
         }
     }
-    else if((xenemy-yenemy<=xperso-yperso)&&(xenemy+yenemy>xperso+yperso))//Vérifie si l'énemi est au Sud
+    else if((xenemy-yenemy<=xperso-yperso)&&(xenemy+yenemy>xperso+yperso))//Vérifie si l'ennemi est au Sud
     {
         switch(oenemy)
         {
@@ -1044,7 +1044,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
             case left: if(xenemy+yenemy==xperso+yperso){return front;}else return side ; break;
         }
     }
-    else if((xenemy-yenemy<xperso-yperso)&&(xenemy+yenemy<=xperso+yperso))//Vérifie si l'énemi est à l'Ouest
+    else if((xenemy-yenemy<xperso-yperso)&&(xenemy+yenemy<=xperso+yperso))//Vérifie si l'ennemi est à l'Ouest
     {
         switch(oenemy)
         {
