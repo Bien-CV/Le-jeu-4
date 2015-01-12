@@ -90,17 +90,17 @@ int indiceTabDepValid;
  
 void Sauvegarder(int joueur_courant){
 	
-    char NomFichier[20]="",FichierSauvegarde[20]="";
+    char NomFichier[20]="",FichierSauvegarde[20]="";//Nom du fichier entré et nom des fichiers enregistrés
     int present=1;
 
     FILE * fichierIndex;
     FILE * sauvegarde;
-    fichierIndex=fopen("IndexSauvegarde.txt","r");
+    fichierIndex=fopen("IndexSauvegarde.txt","r");//Fichier contenant des noms des sauvegardes déjà existantes
     fscanf(fichierIndex,"%s",FichierSauvegarde);
-    if(!feof(fichierIndex)){
+    if(!feof(fichierIndex)){//On verifie que l'index n'est pas vide
         printw("Sauvegarde deja existante :\n");
 
-        while(!feof(fichierIndex))
+        while(!feof(fichierIndex))//Et on affiche les noms des sauvegardes déjà existantes
         {
             printw("%s\n",FichierSauvegarde);
             fscanf(fichierIndex,"%s",FichierSauvegarde);
@@ -111,8 +111,8 @@ void Sauvegarder(int joueur_courant){
     fclose(fichierIndex);
     fichierIndex=fopen("IndexSauvegarde.txt","r+");
     printw("Entrez un nom de sauvegarde :");
-    getstr(NomFichier);
-    while(!feof(fichierIndex))
+    getstr(NomFichier);//On choisie un fichier dans la liste
+    while(!feof(fichierIndex))//On verifie si il est déjà dans la liste
     {
         fscanf(fichierIndex,"%s",FichierSauvegarde);
         if(!strcmp(NomFichier,FichierSauvegarde))
@@ -120,7 +120,7 @@ void Sauvegarder(int joueur_courant){
             present=0;
         }
     }
-    if(present) fprintf(fichierIndex,"%s ",NomFichier);
+    if(present) fprintf(fichierIndex,"%s ",NomFichier);//Si il n'est pas présent son nom est écrit dans l'index
     sauvegarde=fopen(NomFichier,"wb");
     fwrite(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
     fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
@@ -134,40 +134,38 @@ void Sauvegarder(int joueur_courant){
  * \brief Permet de charger une partie depuis un fichier de sauvegarde
  *
  */
- int Charger(int joueur_courant){
-char NomFichier[20]="",FichierSauvegarde[20]="";
-FILE * fichierIndex;
-FILE * sauvegarde;
-fichierIndex=fopen("IndexSauvegarde.txt","r");
-fscanf(fichierIndex,"%s",FichierSauvegarde);
-if(!feof(fichierIndex)){
-printw("Sauvegarde deja existante :\n");
-while(!feof(fichierIndex))
-{
-printw("%s\n",FichierSauvegarde);
-fscanf(fichierIndex,"%s",FichierSauvegarde);
+int Charger(int joueur_courant){
+	char NomFichier[20]="",FichierSauvegarde[20]="";//Nom du fichier entré et nom des fichiers enregistrés
+	FILE * fichierIndex;
+	FILE * sauvegarde;
+	fichierIndex=fopen("IndexSauvegarde.txt","r");//Fichier contenant des noms des sauvegardes déjà existantes
+	fscanf(fichierIndex,"%s",FichierSauvegarde);
+	if(!feof(fichierIndex)){//On verifie que l'index n'est pas vide
+		printw("Sauvegarde deja existante :\n");
+		while(!feof(fichierIndex))//Et on affiche les noms des sauvegardes déjà existantes
+		{
+			printw("%s\n",FichierSauvegarde);
+			fscanf(fichierIndex,"%s",FichierSauvegarde);
+		}
+		printw("\n");
+		do{
+			printw("Choisir un fichier : ");
+			getstr(NomFichier);//On choisie un fichier dans la liste
+			sauvegarde=fopen(NomFichier,"rb");
+			if(sauvegarde!=NULL){
+				fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
+				fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
+				fread(&joueur_courant,sizeof(t_camp),1,sauvegarde);
+			}else {printw("Fichier incorrect\n");}//On retape le nom si il est incorrect
+		}while(sauvegarde==NULL);
+		fclose(sauvegarde);
+		afficher_plateau_orientation(joueur_courant);
+	}else {
+		printw("Pas de sauvegarde disponible.\n");
+	}
+	fclose(fichierIndex);
+	return joueur_courant;
 }
-printw("\n");
-do{
-printw("Choisir un fichier : ");
-getstr(NomFichier);
-sauvegarde=fopen(NomFichier,"rb");
-if(sauvegarde!=NULL){
-fread(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
-fread(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-fread(&joueur_courant,sizeof(t_camp),1,sauvegarde);
-}else {printw("Fichier incorrect\n");}
-}while(sauvegarde==NULL);
-fclose(sauvegarde);
-afficher_plateau_orientation(joueur_courant);
-}else {
-printw("Pas de sauvegarde disponible.\n");
-}
-fclose(fichierIndex);
-return joueur_courant;
-}
-
-
 
 
 /**
