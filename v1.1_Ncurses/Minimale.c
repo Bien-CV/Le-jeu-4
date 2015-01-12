@@ -1131,12 +1131,12 @@ void vider_buffer(void)
 }
 
 /**
-* \fn void orienter_perso_numpad(int joueur_courant, t_character* selected_character)
+* \fn void orienter_perso_fleches(int joueur_courant, t_character* selected_character)
 * \brief Cette fonction permet au joueur d'orienter son personnage avec les flèches directionnelles
 * 
 *
 */
-void orienter_perso_numpad(int joueur_courant, t_character* selected_character){
+void orienter_perso_fleches(int joueur_courant, t_character* selected_character){
     char input, curs;
 
 	switch(selected_character->orientation)
@@ -1194,41 +1194,6 @@ void orienter_perso_numpad(int joueur_courant, t_character* selected_character){
     selected_character->orientation=tampon_orientation;
     
 }
-
-
-/**
-* \fn void orienter_perso(t_character perso)
-* \brief Propose une liste des orientations du perso indiqué en paramètre d'entrée et change son orientation.
-* 
-*
-*/
-void orienter_perso(t_character* selected_character){
-    int choix=1;
-    char input;
-    t_orientation buffer;
-    printw("Choisissez l'orientation : \n");
-    vider_buffer();
-    while(choix)
-    {
-        
-        printw("\n  z - Nord\n  d - Est\n  s - Sud\n  q - Ouest\n");
-        input = getchar();
-        while (getchar() != '\n');
-        switch(input)
-        {
-            case 'z':buffer=up;choix=0;break;
-            case 'd':buffer=right;choix=0;break;
-            case 's':buffer=down;choix=0;break;
-            case 'q':buffer=left;choix=0;break;
-            default:printw("Orientation incorrecte");
-        }
-    }
-    
-    Plateau[selected_character->position.X][selected_character->position.Y].orientation=buffer;
-    selected_character->orientation=buffer;
-    
-}
-
 
 /**
 * \fn void joueur_liste_suivant(int nb_joueurs, int* joueur_courant)
@@ -1461,8 +1426,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
 					appliquer_action(*selected_character, selected_character->position, skill_selected);
 				}
 				nb_actions_faites++;
-				orienter_perso_numpad(joueur_courant,selected_character);
-				//OrienterPerso();
+				orienter_perso_fleches(joueur_courant,selected_character);
 			}
         }
 
