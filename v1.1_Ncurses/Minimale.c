@@ -1110,7 +1110,6 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         Plateau[cible.X][cible.Y].camp = lanceur.camp;
         Plateau[cible.X][cible.Y].position.X = cible.X;
         Plateau[cible.X][cible.Y].position.Y = cible.Y;
-        //printw("%s, %i",Plateau[cible.X][cible.Y].name, Plateau[cible.X][cible.Y].camp);
     }
 
     if (Plateau[cible.X][cible.Y].status.HP< 0) Plateau[cible.X][cible.Y].status.HP=0;
@@ -1157,7 +1156,6 @@ void orienter_perso_numpad(int joueur_courant, t_character* selected_character){
 			curs = '<';break;
 	}
     t_orientation tampon_orientation;
-    //viderBuffer();
     
     while(input != '\n' && input != 13)
     {
@@ -1184,7 +1182,6 @@ void orienter_perso_numpad(int joueur_courant, t_character* selected_character){
 			{
 				curs = '<';
 			}
-        //while (getchar() != '\n');
     }
         switch(curs)
         {
@@ -1409,7 +1406,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
             choix = getch();
 			if(choix == 65 || choix == 72)
 			{
-				if(indice_curseur <= 1) indice_curseur = nb_choix_max+1; //nb_choix_max = 5 = le choix max
+				if(indice_curseur <= 1) indice_curseur = nb_choix_max+1; //nb_choix_max = 5 = le nombre de choix
 				indice_curseur--;
 			}
 			if(choix == 66 || choix == 80)
@@ -1433,7 +1430,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
     if (indice_curseur==1){   // Se déclenche après sélection d'un personnage, c'est la suite d'actions liées au personnage sélectionné
 		
         //skill_selected.type = ATK;	WTF Nigga ?
-        while(nb_actions_faites < selected_character->nb_action_tour && est_vivant == 1 /* && skill_selected.type != EMPTY*/)
+        while(nb_actions_faites < selected_character->nb_action_tour && est_vivant == 1)
         {
             if(deplacement_fait != 1)
             {
@@ -1519,12 +1516,6 @@ void afficher_plateau_orientation(int joueur_courant){
 			if (j==-1)
 			{
 				 printw("%i",i);
-			/*}else if ( Plateau[i][j].camp == joueur )
-            {
-				if(Plateau[i][j].type == TRAP_UNIT)
-					printw("%c",'X');
-				else
-					printw("%c",'O');*/
             }else if((Plateau[i][j].camp>0 && Plateau[i][j].type != TRAP_UNIT) || Plateau[i][j].camp == joueur_courant)
             {
 				if(Plateau[i][j].camp==1)attron(COLOR_PAIR(2));//Gestion de couleurs
@@ -1562,7 +1553,7 @@ void afficher_plateau_orientation(int joueur_courant){
             
 			attroff(COLOR_PAIR(1));//gestion de couleur de fond
         }
-        /*if (j!=-1)*/ printw("|");
+        printw("|");
     }
 	printw("\n");
 	refresh();
@@ -1787,12 +1778,12 @@ int main(){
 	srand((long)time(NULL));
 	
 	
-	initscr();
+	initscr();	//initialisation de l'écran pour le Ncurses
 	raw();
-	curs_set(0);
+	curs_set(0);	//curseur invisible
 	
 	
-    start_color();
+    start_color();	//initialistaion des couleurs
 	init_pair(1, COLOR_WHITE, COLOR_BLACK);
 	init_pair(2, COLOR_RED, COLOR_BLACK);
 	init_pair(3, COLOR_GREEN, COLOR_BLACK);
@@ -1800,18 +1791,6 @@ int main(){
 	init_pair(5, COLOR_YELLOW, COLOR_BLACK);
 	init_pair(6, COLOR_BLUE, COLOR_BLACK);
 	init_pair(7, COLOR_BLACK, COLOR_WHITE);
-
-		/*if(has_colors() == FALSE)
-	{	endwin();
-		printw("Your terminal does not support color\n");
-		refresh();
-		exit(1);
-	}
-	getch();
-	start_color();
-	init_color(COLOR_RED, 700, 0, 0);
-	init_pair(1, COLOR_RED, COLOR_BLACK);
-	attron(COLOR_PAIR(1));*/
 	
 
 	
@@ -1828,15 +1807,7 @@ int main(){
 	creer_terrain_rapide(obstacle,0,2);
 
 	
-	
-	/*
-	spawn_sauvage();
-	for (i=2;i<nb_joueurs;i++)
-	{
-		spawn_character(i);
-		spawn_character(i);
-	}
-	*/
+
 	
 	
 	creer_perso_rapide(2,4,0,berseker);
