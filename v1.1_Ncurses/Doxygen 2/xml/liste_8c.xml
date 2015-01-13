@@ -120,8 +120,8 @@
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="14" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="12" bodyend="17"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -172,7 +172,7 @@
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -196,8 +196,8 @@
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="611" endline="628">choix_cible_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1aaf16c3ff04ebc19da036b0332d82ccee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -257,8 +257,8 @@
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="611" endline="628">choix_cible_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -282,8 +282,8 @@
         <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" compoundref="_minimale_8c" startline="464" endline="492">choix_deplacement_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="590" endline="613">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="611" endline="628">choix_cible_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a0282305b4b91dc5376333ac820bdf995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -344,8 +344,8 @@
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1ac7289b3f288aec0c22e5272c4851e0ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -383,8 +383,8 @@
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1aeca8ab6b8935bc5fd81fa7a74e64879a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -401,8 +401,8 @@
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="135" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="134" bodyend="141"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a48218f7c1bafab1e92490a0963ee7451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -421,11 +421,11 @@
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
         <references refid="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" compoundref="liste_8c" startline="73" endline="83">liste_oter_elt</references>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a78de7382315436cf196cf30aac14257c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -443,8 +443,8 @@
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1ae6bf3307184d2f80167abcb9c2ad5b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -469,10 +469,10 @@
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
-        <referencedby refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" compoundref="_minimale_8c" startline="692" endline="749">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="705" endline="762">choix_cible_humain</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -483,7 +483,7 @@
 <codeline lineno="1"><highlight class="comment">/*<sp/>Mise<sp/>en<sp/>oeuvre<sp/>contigue<sp/>d&apos;une<sp/>liste<sp/>d&apos;entiers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2" refid="liste_8c_1a31f3788284a4b6e361baa5bb3142c852" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>N_LISTE<sp/>100</highlight></codeline>
 <codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="liste_8h" kindref="compound">liste.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound" tooltip="header">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Déclaration<sp/>du<sp/>tableau<sp/>contenant<sp/>les<sp/>éléments<sp/>de<sp/>liste<sp/>*/</highlight><highlight class="normal"></highlight></codeline>

@@ -1,8 +1,11 @@
-.TH "header.h" 3 "Mardi Janvier 6 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
+.TH "header.h" 3 "Mardi Janvier 13 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 header.h \- 
+.PP
+header  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -35,7 +38,7 @@ header.h \-
 
 .in +1c
 .ti -1c
-.RI "#define \fBTAILLE_MATRICE\fP   5"
+.RI "#define \fBTAILLE_MATRICE\fP   6"
 .br
 .ti -1c
 .RI "#define \fBMaxTab\fP   40"
@@ -68,19 +71,31 @@ header.h \-
 .RI "#define \fBorientation_default\fP   (\fBup\fP)"
 .br
 .ti -1c
-.RI "#define \fBstatus_default\fP   ((\fBt_status\fP){30,30,10,10})"
+.RI "#define \fBstatus_default\fP   ((\fBt_status\fP){400,400,100,100})"
 .br
 .ti -1c
 .RI "#define \fBstatus__terrain_default\fP   ((\fBt_status\fP){0,0,0,0})"
 .br
 .ti -1c
-.RI "#define \fBstats_default\fP   ((\fBt_stats\fP){10,10,10,10,2})"
+.RI "#define \fBstats_default\fP   ((\fBt_stats\fP){100,100,20,20,2})"
 .br
 .ti -1c
 .RI "#define \fBstats_terrain_default\fP   ((\fBt_stats\fP){0,0,0,0,0})"
 .br
 .ti -1c
-.RI "#define \fBskill_list_default\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+.RI "#define \fBskill_trap\fP   ((\fBt_skill\fP){'Placer Piege', 3, TRAP, 10})"
+.br
+.ti -1c
+.RI "#define \fBskill_soin\fP   ((\fBt_skill\fP){'Soigner', 3, MATK, -3})"
+.br
+.ti -1c
+.RI "#define \fBskill_bandage\fP   ((\fBt_skill\fP){'Se soigner', 0, MATK, -1})"
+.br
+.ti -1c
+.RI "#define \fBskill_fireball\fP   ((\fBt_skill\fP){'Boule de feu', 5, MATK, 3})"
+.br
+.ti -1c
+.RI "#define \fBskill_list_default\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_trap\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
 .br
 .ti -1c
 .RI "#define \fBempty_skill_list\fP   ((\fBt_skill_list\fP){\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP})"
@@ -95,8 +110,58 @@ header.h \-
 .RI "#define \fBdefault_trap\fP   ((\fBt_character\fP){'Trap', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, 1, 1})"
 .br
 .ti -1c
-.RI "#define \fBcurseur\fP   (char)254"
+.RI "#define \fBcharacter_berseker\fP   ((\fBt_character\fP){'Berseker name', coord_default, \fBorientation_default\fP, \fBstatus_berseker\fP, \fBstats_berseker\fP, \fBskill_list_berseker\fP, \fBsauvage\fP, 1})"
 .br
+.RI "\fI**************************Default Characters*******************************/ \fP"
+.ti -1c
+.RI "#define \fBskill_list_berseker\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+.br
+.ti -1c
+.RI "#define \fBstatus_berseker\fP   ((\fBt_status\fP){400,400,0,0})"
+.br
+.ti -1c
+.RI "#define \fBstats_berseker\fP   ((\fBt_stats\fP){200,0,0,0,4})"
+.br
+.ti -1c
+.RI "#define \fBcharacter_mage\fP   ((\fBt_character\fP){'Mage name', coord_default, \fBorientation_default\fP, \fBstatus_mage\fP, \fBstats_mage\fP, \fBskill_list_mage\fP, \fBsauvage\fP, 1})"
+.br
+.ti -1c
+.RI "#define \fBskill_list_mage\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_fireball\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+.br
+.ti -1c
+.RI "#define \fBstatus_mage\fP   ((\fBt_status\fP){400,400,100,100})"
+.br
+.ti -1c
+.RI "#define \fBstats_mage\fP   ((\fBt_stats\fP){50,100,0,60,2})"
+.br
+.ti -1c
+.RI "#define \fBcharacter_tank\fP   ((\fBt_character\fP){'Tank name', coord_default, \fBorientation_default\fP, \fBstatus_tank\fP, \fBstats_tank\fP, \fBskill_list_tank\fP, \fBsauvage\fP, 1})"
+.br
+.ti -1c
+.RI "#define \fBskill_list_tank\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_bandage\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+.br
+.ti -1c
+.RI "#define \fBstatus_tank\fP   ((\fBt_status\fP){400,400,100,100})"
+.br
+.ti -1c
+.RI "#define \fBstats_tank\fP   ((\fBt_stats\fP){70,75,60,50,3})"
+.br
+.ti -1c
+.RI "#define \fBcharacter_soigneur\fP   ((\fBt_character\fP){'Healer name', coord_default, \fBorientation_default\fP, \fBstatus_soigneur\fP, \fBstats_soigneur\fP, \fBskill_list_soigneur\fP, \fBsauvage\fP, 1})"
+.br
+.ti -1c
+.RI "#define \fBskill_list_soigneur\fP   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_soin\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+.br
+.ti -1c
+.RI "#define \fBstatus_soigneur\fP   ((\fBt_status\fP){400,400,200,200})"
+.br
+.ti -1c
+.RI "#define \fBstats_soigneur\fP   ((\fBt_stats\fP){20,100,0,60,2})"
+.br
+.ti -1c
+.RI "#define \fBcurseur\fP   (char)219"
+.br
+.RI "\fI***********************************************************************************/ \fP"
 .ti -1c
 .RI "#define \fBcase_terrain\fP   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus__terrain_default\fP ,\fBstats_terrain_default\fP ,\fBempty_skill_list\fP, 0 , 0 })"
 .br
@@ -107,6 +172,9 @@ header.h \-
 .SS "Énumérations"
 
 .in +1c
+.ti -1c
+.RI "enum \fBt_classe\fP { \fBdefault_class\fP, \fBberseker\fP = 1, \fBmage\fP, \fBtank\fP, \fBsoigneur\fP }"
+.br
 .ti -1c
 .RI "enum \fBt_camp\fP { \fBobstacle\fP =-1, \fBterrain\fP =0, \fBsauvage\fP =1 }"
 .br
@@ -123,100 +191,206 @@ header.h \-
 .RI "enum \fBt_character_type\fP { \fBLAND_UNIT\fP, \fBAIR_UNIT\fP, \fBJUMPING_UNIT\fP, \fBTRAP_UNIT\fP }"
 .br
 .in -1c
+.SH "Description détaillée"
+.PP 
+header 
+
+\fBAuteur:\fP
+.RS 4
+Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY\&. 
+.RE
+.PP
+\fBVersion:\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+06 Janvier 2015
+.RE
+.PP
+programme de jeu: Le Jeu 4 ( T-RPG) 
+.PP
+Définition dans le fichier \fBheader\&.h\fP\&.
 .SH "Documentation des macros"
 .PP 
 .SS "#define bloc1   ((char)178)"
 
 .PP
-Définition à la ligne 8 du fichier header\&.h\&.
+Définition à la ligne 22 du fichier header\&.h\&.
 .SS "#define bloc2   ((char)219)"
 
 .PP
-Définition à la ligne 9 du fichier header\&.h\&.
+Définition à la ligne 23 du fichier header\&.h\&.
 .SS "#define bloc3   ((char)254)"
 
 .PP
-Définition à la ligne 10 du fichier header\&.h\&.
+Définition à la ligne 24 du fichier header\&.h\&.
 .SS "#define case_obstacle   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus_default\fP ,\fBstats_default\fP ,\fBempty_skill_list\fP, -1 , 0 })"
 
 .PP
-Définition à la ligne 30 du fichier header\&.h\&.
+Définition à la ligne 72 du fichier header\&.h\&.
 .SS "#define case_terrain   ((\fBt_character\fP){'',\fBcoord_default\fP ,\fBorientation_default\fP ,\fBstatus__terrain_default\fP ,\fBstats_terrain_default\fP ,\fBempty_skill_list\fP, 0 , 0 })"
 
 .PP
-Définition à la ligne 29 du fichier header\&.h\&.
+Définition à la ligne 71 du fichier header\&.h\&.
+.SS "#define character_berseker   ((\fBt_character\fP){'Berseker name', coord_default, \fBorientation_default\fP, \fBstatus_berseker\fP, \fBstats_berseker\fP, \fBskill_list_berseker\fP, \fBsauvage\fP, 1})"
+
+.PP
+**************************Default Characters*******************************/ 
+.PP
+Définition à la ligne 46 du fichier header\&.h\&.
 .SS "#define character_default   ((\fBt_character\fP){'Default name', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, \fBsauvage\fP, 1})"
 
 .PP
-Définition à la ligne 23 du fichier header\&.h\&.
+Définition à la ligne 41 du fichier header\&.h\&.
+.SS "#define character_mage   ((\fBt_character\fP){'Mage name', coord_default, \fBorientation_default\fP, \fBstatus_mage\fP, \fBstats_mage\fP, \fBskill_list_mage\fP, \fBsauvage\fP, 1})"
+
+.PP
+Définition à la ligne 51 du fichier header\&.h\&.
+.SS "#define character_soigneur   ((\fBt_character\fP){'Healer name', coord_default, \fBorientation_default\fP, \fBstatus_soigneur\fP, \fBstats_soigneur\fP, \fBskill_list_soigneur\fP, \fBsauvage\fP, 1})"
+
+.PP
+Définition à la ligne 62 du fichier header\&.h\&.
+.SS "#define character_tank   ((\fBt_character\fP){'Tank name', coord_default, \fBorientation_default\fP, \fBstatus_tank\fP, \fBstats_tank\fP, \fBskill_list_tank\fP, \fBsauvage\fP, 1})"
+
+.PP
+Définition à la ligne 57 du fichier header\&.h\&.
 .SS "#define coord_default   ((\fBt_coord\fP){-1,-1})"
 
 .PP
-Définition à la ligne 15 du fichier header\&.h\&.
-.SS "#define curseur   (char)254"
+Définition à la ligne 29 du fichier header\&.h\&.
+.SS "#define curseur   (char)219"
 
 .PP
-Définition à la ligne 27 du fichier header\&.h\&.
+***********************************************************************************/ 
+.PP
+Définition à la ligne 69 du fichier header\&.h\&.
 .SS "#define default_targetOrientation   ((\fBt_targetOrientation\fP)\fBfront\fP)"
 
 .PP
-Définition à la ligne 24 du fichier header\&.h\&.
+Définition à la ligne 42 du fichier header\&.h\&.
 .SS "#define default_trap   ((\fBt_character\fP){'Trap', coord_default, \fBorientation_default\fP, \fBstatus_default\fP, \fBstats_default\fP, \fBskill_list_default\fP, 1, 1})"
 
 .PP
-Définition à la ligne 25 du fichier header\&.h\&.
+Définition à la ligne 43 du fichier header\&.h\&.
 .SS "#define empty_skill_list   ((\fBt_skill_list\fP){\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP})"
 
 .PP
-Définition à la ligne 22 du fichier header\&.h\&.
+Définition à la ligne 40 du fichier header\&.h\&.
 .SS "#define MaxString   40"
 
 .PP
-Définition à la ligne 6 du fichier header\&.h\&.
+Définition à la ligne 20 du fichier header\&.h\&.
 .SS "#define MaxTab   40"
 
 .PP
-Définition à la ligne 5 du fichier header\&.h\&.
+Définition à la ligne 19 du fichier header\&.h\&.
 .SS "#define orientation_default   (\fBup\fP)"
 
 .PP
-Définition à la ligne 16 du fichier header\&.h\&.
+Définition à la ligne 30 du fichier header\&.h\&.
 .SS "#define skill_attack   ((\fBt_skill\fP){'Coup',1,ATK,1})"
 
 .PP
-Définition à la ligne 12 du fichier header\&.h\&.
+Définition à la ligne 26 du fichier header\&.h\&.
+.SS "#define skill_bandage   ((\fBt_skill\fP){'Se soigner', 0, MATK, -1})"
+
+.PP
+Définition à la ligne 37 du fichier header\&.h\&.
 .SS "#define skill_empty   ((\fBt_skill\fP){'',0,\fBEMPTY\fP,0})"
 
 .PP
-Définition à la ligne 13 du fichier header\&.h\&.
-.SS "#define skill_list_default   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+Définition à la ligne 27 du fichier header\&.h\&.
+.SS "#define skill_fireball   ((\fBt_skill\fP){'Boule de feu', 5, MATK, 3})"
 
 .PP
-Définition à la ligne 21 du fichier header\&.h\&.
+Définition à la ligne 38 du fichier header\&.h\&.
+.SS "#define skill_list_berseker   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+
+.PP
+Définition à la ligne 47 du fichier header\&.h\&.
+.SS "#define skill_list_default   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_trap\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+
+.PP
+Définition à la ligne 39 du fichier header\&.h\&.
+.SS "#define skill_list_mage   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_fireball\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+
+.PP
+Définition à la ligne 52 du fichier header\&.h\&.
+.SS "#define skill_list_soigneur   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_soin\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+
+.PP
+Définition à la ligne 63 du fichier header\&.h\&.
+.SS "#define skill_list_tank   ((\fBt_skill_list\fP){ \fBskill_attack\fP,\fBskill_bandage\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_empty\fP,\fBskill_skip\fP})"
+
+.PP
+Définition à la ligne 58 du fichier header\&.h\&.
 .SS "#define skill_skip   ((\fBt_skill\fP){'Passer le \fBtour\fP',0,EMPTY,0})"
 
 .PP
-Définition à la ligne 14 du fichier header\&.h\&.
-.SS "#define stats_default   ((\fBt_stats\fP){10,10,10,10,2})"
+Définition à la ligne 28 du fichier header\&.h\&.
+.SS "#define skill_soin   ((\fBt_skill\fP){'Soigner', 3, MATK, -3})"
 
 .PP
-Définition à la ligne 19 du fichier header\&.h\&.
+Définition à la ligne 36 du fichier header\&.h\&.
+.SS "#define skill_trap   ((\fBt_skill\fP){'Placer Piege', 3, TRAP, 10})"
+
+.PP
+Définition à la ligne 35 du fichier header\&.h\&.
+.SS "#define stats_berseker   ((\fBt_stats\fP){200,0,0,0,4})"
+
+.PP
+Définition à la ligne 49 du fichier header\&.h\&.
+.SS "#define stats_default   ((\fBt_stats\fP){100,100,20,20,2})"
+
+.PP
+Définition à la ligne 33 du fichier header\&.h\&.
+.SS "#define stats_mage   ((\fBt_stats\fP){50,100,0,60,2})"
+
+.PP
+Définition à la ligne 54 du fichier header\&.h\&.
+.SS "#define stats_soigneur   ((\fBt_stats\fP){20,100,0,60,2})"
+
+.PP
+Définition à la ligne 65 du fichier header\&.h\&.
+.SS "#define stats_tank   ((\fBt_stats\fP){70,75,60,50,3})"
+
+.PP
+Définition à la ligne 60 du fichier header\&.h\&.
 .SS "#define stats_terrain_default   ((\fBt_stats\fP){0,0,0,0,0})"
 
 .PP
-Définition à la ligne 20 du fichier header\&.h\&.
+Définition à la ligne 34 du fichier header\&.h\&.
 .SS "#define status__terrain_default   ((\fBt_status\fP){0,0,0,0})"
 
 .PP
+Définition à la ligne 32 du fichier header\&.h\&.
+.SS "#define status_berseker   ((\fBt_status\fP){400,400,0,0})"
+
+.PP
+Définition à la ligne 48 du fichier header\&.h\&.
+.SS "#define status_default   ((\fBt_status\fP){400,400,100,100})"
+
+.PP
+Définition à la ligne 31 du fichier header\&.h\&.
+.SS "#define status_mage   ((\fBt_status\fP){400,400,100,100})"
+
+.PP
+Définition à la ligne 53 du fichier header\&.h\&.
+.SS "#define status_soigneur   ((\fBt_status\fP){400,400,200,200})"
+
+.PP
+Définition à la ligne 64 du fichier header\&.h\&.
+.SS "#define status_tank   ((\fBt_status\fP){400,400,100,100})"
+
+.PP
+Définition à la ligne 59 du fichier header\&.h\&.
+.SS "#define TAILLE_MATRICE   6"
+
+.PP
 Définition à la ligne 18 du fichier header\&.h\&.
-.SS "#define status_default   ((\fBt_status\fP){30,30,10,10})"
-
-.PP
-Définition à la ligne 17 du fichier header\&.h\&.
-.SS "#define TAILLE_MATRICE   5"
-
-.PP
-Définition à la ligne 4 du fichier header\&.h\&.
 .SH "Documentation du type de l'énumération"
 .PP 
 .SS "enum \fBt_camp\fP"
@@ -231,7 +405,7 @@ Définition à la ligne 4 du fichier header\&.h\&.
 .TP
 \fB\fIsauvage \fP\fP
 .PP
-Définition à la ligne 32 du fichier header\&.h\&.
+Définition à la ligne 75 du fichier header\&.h\&.
 .SS "enum \fBt_character_type\fP"
 
 .PP
@@ -246,7 +420,24 @@ Définition à la ligne 32 du fichier header\&.h\&.
 .TP
 \fB\fITRAP_UNIT \fP\fP
 .PP
-Définition à la ligne 41 du fichier header\&.h\&.
+Définition à la ligne 84 du fichier header\&.h\&.
+.SS "enum \fBt_classe\fP"
+
+.PP
+\fBValeurs énumérées\fP
+.in +1c
+.TP
+\fB\fIdefault_class \fP\fP
+.TP
+\fB\fIberseker \fP\fP
+.TP
+\fB\fImage \fP\fP
+.TP
+\fB\fItank \fP\fP
+.TP
+\fB\fIsoigneur \fP\fP
+.PP
+Définition à la ligne 74 du fichier header\&.h\&.
 .SS "enum \fBt_orientation\fP"
 
 .PP
@@ -261,7 +452,7 @@ Définition à la ligne 41 du fichier header\&.h\&.
 .TP
 \fB\fIleft \fP\fP
 .PP
-Définition à la ligne 34 du fichier header\&.h\&.
+Définition à la ligne 77 du fichier header\&.h\&.
 .SS "enum \fBt_skilltype\fP"
 
 .PP
@@ -276,7 +467,7 @@ Définition à la ligne 34 du fichier header\&.h\&.
 .TP
 \fB\fITRAP \fP\fP
 .PP
-Définition à la ligne 33 du fichier header\&.h\&.
+Définition à la ligne 76 du fichier header\&.h\&.
 .SS "enum \fBt_targetOrientation\fP"
 
 .PP
@@ -289,7 +480,7 @@ Définition à la ligne 33 du fichier header\&.h\&.
 .TP
 \fB\fIback \fP\fP
 .PP
-Définition à la ligne 35 du fichier header\&.h\&.
+Définition à la ligne 78 du fichier header\&.h\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour Le jeu 4 à partir du code source\&.

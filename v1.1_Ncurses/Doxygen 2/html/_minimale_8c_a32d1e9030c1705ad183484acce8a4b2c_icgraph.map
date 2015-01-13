@@ -1,6 +1,6 @@
 <map id="get_target_orientation" name="get_target_orientation">
 <area shape="rect" id="node3" href="$_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc" title="Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages..." alt="" coords="201,31,317,57"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="375,5,419,32"/>
-<area shape="rect" id="node9" href="$_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="365,56,429,83"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="tour" alt="" coords="375,5,419,32"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#a7e9553a32f70742aa8787a781dd50cea" title="tour_IA" alt="" coords="365,56,429,83"/>
 <area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="477,31,528,57"/>
 </map>

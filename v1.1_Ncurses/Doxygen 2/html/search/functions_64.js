@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['deplacements_5fvalides',['deplacements_valides',['../_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5',1,'Minimale.c']]],
-  ['deplacer_5fperso',['deplacer_perso',['../_minimale_8c.html#a3f74d85bb951bc6b755696903c848531',1,'Minimale.c']]]
+  ['deplacements_5fvalides',['deplacements_valides',['../_minimale_8c.html#a9f570d5aff57367c773e3e7d090e91e8',1,'Minimale.c']]],
+  ['deplacer_5fperso',['deplacer_perso',['../_minimale_8c.html#a7c39da4bb12212b65b8999022d45e592',1,'Minimale.c']]]
 ];

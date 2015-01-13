@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="structt__argent" kind="struct" prot="public">
+    <compoundname>t_argent</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structt__argent_1ac9861e6f25598b3c0cc625a9d18a908d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int or</definition>
+        <argsstring></argsstring>
+        <name>or</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/Minimale_sans_Plateau_Global.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/Minimale_sans_Plateau_Global.c" bodystart="10" bodyend="-1"/>
+        <referencedby refid="_minimale__sans___plateau___global_8c_1abb89407465743d7002d01b8a4756c45b" compoundref="_minimale__sans___plateau___global_8c" startline="23" endline="28">reinitialiser_perso2</referencedby>
+        <referencedby refid="_minimale__sans___plateau___global_8c_1a91378f4c1d8a94f5aae3ff1bfc0bec55" compoundref="_minimale__sans___plateau___global_8c" startline="30" endline="33">afficher_perso</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structt__argent_1aaf2331208dfb16a05b9f58f27bb24fa9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int argent</definition>
+        <argsstring></argsstring>
+        <name>argent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/Minimale_sans_Plateau_Global.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/Minimale_sans_Plateau_Global.c" bodystart="10" bodyend="-1"/>
+        <referencedby refid="_minimale__sans___plateau___global_8c_1a91378f4c1d8a94f5aae3ff1bfc0bec55" compoundref="_minimale__sans___plateau___global_8c" startline="30" endline="33">afficher_perso</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/Minimale_sans_Plateau_Global.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/Minimale_sans_Plateau_Global.c" bodystart="10" bodyend="10"/>
+    <listofallmembers>
+      <member refid="structt__argent_1aaf2331208dfb16a05b9f58f27bb24fa9" prot="public" virt="non-virtual"><scope>t_argent</scope><name>argent</name></member>
+      <member refid="structt__argent_1ac9861e6f25598b3c0cc625a9d18a908d" prot="public" virt="non-virtual"><scope>t_argent</scope><name>or</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

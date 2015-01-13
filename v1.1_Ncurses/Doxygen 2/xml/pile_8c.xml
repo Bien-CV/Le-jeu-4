@@ -95,7 +95,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" line="22" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="22" bodyend="24"/>
-        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8c_1a153b92d8383b4d328bcd9f20d77b8d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -118,9 +118,9 @@
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" line="26" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="26" bodyend="33"/>
         <references refid="pile_8c_1a52037c938e3c1b126c6277da5ca689d0" compoundref="pile_8c" startline="15">M</references>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
-        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8c_1a243aa7fe5bd1ff307d4c7aa5f76739c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,9 +142,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" line="35" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="35" bodyend="41"/>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
-        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8c_1ae0e56a57ce8bf929fe621fa05304642c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -166,9 +166,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" line="43" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="43" bodyend="50"/>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
-        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8c_1af155f0089e66cfa04a1239462b72b2df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -201,7 +201,7 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pile_8h" kindref="compound">pile.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound" tooltip="header">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15" refid="pile_8c_1a52037c938e3c1b126c6277da5ca689d0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M<sp/>100</highlight></codeline>
 <codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>

@@ -113,8 +113,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="9" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="8" bodyend="14"/>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a9a4198b0c69187d42420b80f3e5b8d62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -133,10 +133,10 @@
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="17" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="16" bodyend="27"/>
         <references refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" compoundref="file_8c" startline="4">TMAX</references>
-        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="194" endline="241">cases_voisines_calcul</referencedby>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="512" endline="552">cases_voisines_ATK</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="203" endline="250">cases_voisines_calcul</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="527" endline="567">cases_voisines_ATK</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a59173755d515eb366fb01dba42a73e8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,8 +155,8 @@
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="30" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="29" bodyend="40"/>
         <references refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" compoundref="file_8c" startline="4">TMAX</references>
-        <referencedby refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" compoundref="_minimale_8c" startline="249" endline="286">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" compoundref="_minimale_8c" startline="554" endline="588">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a30c4f88a35783c4832434e9676ad98f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -201,8 +201,8 @@
         </inbodydescription>
         <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="54" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="53" bodyend="68"/>
         <references refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" compoundref="file_8c" startline="4">TMAX</references>
-        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="38">t_coord::X</references>
-        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="38">t_coord::Y</references>
+        <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
+        <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -211,7 +211,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="file_8h" kindref="compound">file.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound" tooltip="header">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4" refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TMAX<sp/>100</highlight></codeline>
 <codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>file[<ref refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" kindref="member">TMAX</ref>];<sp/><sp/></highlight><highlight class="comment">//tableau<sp/>contenant<sp/>les<sp/>valeurs<sp/>de<sp/>la<sp/>file</highlight><highlight class="normal"></highlight></codeline>

@@ -1,7 +1,7 @@
 <map id="liste_init" name="liste_init">
-<area shape="rect" id="node3" href="$_minimale_8c.html#aaadb3730c96b5ae1d0fc498c3432f6a5" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="126,5,277,32"/>
-<area shape="rect" id="node12" href="$_minimale_8c.html#a93abf905224d72b20101bb2a6e0ab417" title="viser_case_valide" alt="" coords="138,56,265,83"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="335,5,379,32"/>
-<area shape="rect" id="node9" href="$_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="325,56,389,83"/>
+<area shape="rect" id="node3" href="$_minimale_8c.html#a9f570d5aff57367c773e3e7d090e91e8" title="deplacements_valides" alt="" coords="126,5,277,32"/>
+<area shape="rect" id="node12" href="$_minimale_8c.html#a27d15a9ecfe1e4f2c30cecc92307a80f" title="viser_case_valide" alt="" coords="138,56,265,83"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="tour" alt="" coords="335,5,379,32"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#a7e9553a32f70742aa8787a781dd50cea" title="tour_IA" alt="" coords="325,56,389,83"/>
 <area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="437,31,488,57"/>
 </map>

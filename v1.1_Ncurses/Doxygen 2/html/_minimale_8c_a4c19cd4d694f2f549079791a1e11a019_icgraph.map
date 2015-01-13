@@ -1,0 +1,9 @@
+<map id="afficher_skill" name="afficher_skill">
+<area shape="rect" id="node3" href="$_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec" title="affiche la liste des compétence d&#39;un personnage" alt="" coords="150,56,269,83"/>
+<area shape="rect" id="node16" href="$_minimale_8c.html#a011c6275934a222e8ba74fae00af32e1" title="Permet au joueur de choisir, graphiquement, une compétence à effectuer dans un menu." alt="" coords="347,107,434,133"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="affiche les informations du personnage" alt="" coords="317,56,464,83"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#a69347b1b74ee79025e3c6ce20b5b49a4" title="Permet au joueur de choisir, grâce à un curseur, une case à attaquer." alt="" coords="512,5,648,32"/>
+<area shape="rect" id="node13" href="$_minimale_8c.html#a51a4f431807e8c3c3059c27e8d755411" title="selection_perso" alt="" coords="523,56,637,83"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="tour" alt="" coords="697,56,741,83"/>
+<area shape="rect" id="node11" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="789,56,840,83"/>
+</map>

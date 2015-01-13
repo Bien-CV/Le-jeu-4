@@ -10,6 +10,7 @@
     <member refid="structt__character_1a48707185be865bad67e5c61e5903ae5a" kind="variable"><name>camp</name></member>
     <member refid="structt__character_1aaff424b51f4bd3db2c199cc08f21f86d" kind="variable"><name>nb_action_tour</name></member>
     <member refid="structt__character_1a3b5fecb9824668aab778f82005089942" kind="variable"><name>type</name></member>
+    <member refid="structt__character_1a6d86411cdb6af508aed7d5904887ac6e" kind="variable"><name>classe</name></member>
   </compound>
   <compound refid="structt__coord" kind="struct"><name>t_coord</name>
     <member refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" kind="variable"><name>X</name></member>
@@ -83,14 +84,40 @@
     <member refid="header_8h_1ad92274bc74ce5fee209d6177f46b06e3" kind="define"><name>status__terrain_default</name></member>
     <member refid="header_8h_1af720a86d25a368a1484318d8a877961b" kind="define"><name>stats_default</name></member>
     <member refid="header_8h_1a06744a7db35a5caffebfeef65fecff32" kind="define"><name>stats_terrain_default</name></member>
+    <member refid="header_8h_1adad158d03b8077347b44c54b1c56ddaa" kind="define"><name>skill_trap</name></member>
+    <member refid="header_8h_1a38bad206ff07a3005b3766598eb74574" kind="define"><name>skill_soin</name></member>
+    <member refid="header_8h_1ac695aefca36396263b581917e2bf01a6" kind="define"><name>skill_bandage</name></member>
+    <member refid="header_8h_1a4a8c1b88a1b8565d97bd811951f1dbfc" kind="define"><name>skill_fireball</name></member>
     <member refid="header_8h_1a661f2fa1a0f9707f5a19494debc26d68" kind="define"><name>skill_list_default</name></member>
     <member refid="header_8h_1ae31f7588359442249a6f01914a7eb769" kind="define"><name>empty_skill_list</name></member>
     <member refid="header_8h_1a6e8b24c0508661b7539c8b9e38975508" kind="define"><name>character_default</name></member>
     <member refid="header_8h_1ad8e55599d4e25ea791fd084a348e0967" kind="define"><name>default_targetOrientation</name></member>
     <member refid="header_8h_1a05114c8c78053bf80235674b9d7440c4" kind="define"><name>default_trap</name></member>
+    <member refid="header_8h_1aebd8635285525b252b1dc986a576c383" kind="define"><name>character_berseker</name></member>
+    <member refid="header_8h_1a7fa5964157c37681813ea380f7fd09cf" kind="define"><name>skill_list_berseker</name></member>
+    <member refid="header_8h_1a92f9c78dcd344865fc670ed555346112" kind="define"><name>status_berseker</name></member>
+    <member refid="header_8h_1ac187fca43db8f9a38e8eb4675a55ec57" kind="define"><name>stats_berseker</name></member>
+    <member refid="header_8h_1a48c0cfb872d1e5e8db4e1bf65c5b4347" kind="define"><name>character_mage</name></member>
+    <member refid="header_8h_1a7ee3d0b5bb7136671f0c2c52335daed4" kind="define"><name>skill_list_mage</name></member>
+    <member refid="header_8h_1af6158aeb7f3a9608f9d84219cef447f2" kind="define"><name>status_mage</name></member>
+    <member refid="header_8h_1abd37a804ee1df6324bc89304b763f957" kind="define"><name>stats_mage</name></member>
+    <member refid="header_8h_1a941f42dbea81b439a126da6bea0fe7a9" kind="define"><name>character_tank</name></member>
+    <member refid="header_8h_1a0053c2ea576452b370c8a0b2d488bf0a" kind="define"><name>skill_list_tank</name></member>
+    <member refid="header_8h_1a294092636ce2faeb5fdaf290c58bff9e" kind="define"><name>status_tank</name></member>
+    <member refid="header_8h_1ac60eca7e6e6388f387848a6f8ee43770" kind="define"><name>stats_tank</name></member>
+    <member refid="header_8h_1a900c0c28c302b2963a6f83b539f3723a" kind="define"><name>character_soigneur</name></member>
+    <member refid="header_8h_1abb3519a55bae22ffcb9c2cad71ee8642" kind="define"><name>skill_list_soigneur</name></member>
+    <member refid="header_8h_1a02a5e1a4a0d0a488f9230ec155e85cff" kind="define"><name>status_soigneur</name></member>
+    <member refid="header_8h_1ab30faec022d8d8ef12f90aa26b424d75" kind="define"><name>stats_soigneur</name></member>
     <member refid="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" kind="define"><name>curseur</name></member>
     <member refid="header_8h_1a7dd5f83f4f2f4ea483fc49807ff9f43b" kind="define"><name>case_terrain</name></member>
     <member refid="header_8h_1a8a976ee03aa89e3b22be5595252d3c04" kind="define"><name>case_obstacle</name></member>
+    <member refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77" kind="enum"><name>t_classe</name></member>
+    <member refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a6cd985e2430397d1eacae869d742d174" kind="enumvalue"><name>default_class</name></member>
+    <member refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a29b84c6f2d6687534863ab8a8a0483aa" kind="enumvalue"><name>berseker</name></member>
+    <member refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77ac5491f1da1ea96cd82b488a30568432f" kind="enumvalue"><name>mage</name></member>
+    <member refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a5970642cf6e8bb17100a6ac4ecfa0a36" kind="enumvalue"><name>tank</name></member>
+    <member refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77aa4b77937e67f9a21424c3eabb2783d17" kind="enumvalue"><name>soigneur</name></member>
     <member refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" kind="enum"><name>t_camp</name></member>
     <member refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a8703eca1f6f779dd8bebfc200139b07d" kind="enumvalue"><name>obstacle</name></member>
     <member refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528ae55222d4b0e83581c51f843e87e3cfe2" kind="enumvalue"><name>terrain</name></member>
@@ -170,7 +197,6 @@
     <member refid="_minimale_8c_1aeb67ecf1ba206af9765bba7ecd7cd929" kind="variable"><name>compteur_joueurs_vivants</name></member>
     <member refid="_minimale_8c_1a0d10b4d51713595a0aecf92594403ca3" kind="variable"><name>Valid_chars_IA</name></member>
     <member refid="_minimale_8c_1a08b1b223d56118ff55a1caf616e22186" kind="variable"><name>particule_generateur_nom</name></member>
-    <member refid="_minimale_8c_1afd49c2feefa9ee6ce4af9beea5b8a88c" kind="variable"><name>selected_character</name></member>
     <member refid="_minimale_8c_1a816e050bd234e1024a41068177f1ac49" kind="variable"><name>Plateau</name></member>
     <member refid="_minimale_8c_1a5a6e59130d22bce1f5ec9490b20d7fb3" kind="variable"><name>depValid</name></member>
     <member refid="_minimale_8c_1adb6f8f74ea8aeb8c5a3f0d838ca80999" kind="variable"><name>player</name></member>
@@ -185,40 +211,38 @@
     <member refid="_minimale_8c_1a97c357428c810b5f8ed3fcbeb973dd88" kind="function"><name>generation_nom_personnage</name></member>
     <member refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" kind="function"><name>players_life_check</name></member>
     <member refid="_minimale_8c_1aebdcead4bd058408b30ee5924910d1f6" kind="function"><name>Sauvegarder</name></member>
-    <member refid="_minimale_8c_1a49285114d9ea55b17aaaf5b5e21432a5" kind="function"><name>Charger</name></member>
+    <member refid="_minimale_8c_1a841458aecfd962618c6b89231954f407" kind="function"><name>Charger</name></member>
     <member refid="_minimale_8c_1a693e68e5f8ca09f46ad6b746c07d0332" kind="function"><name>generation_nombre_aleatoire</name></member>
-    <member refid="_minimale_8c_1a3f74d85bb951bc6b755696903c848531" kind="function"><name>deplacer_perso</name></member>
+    <member refid="_minimale_8c_1a7c39da4bb12212b65b8999022d45e592" kind="function"><name>deplacer_perso</name></member>
     <member refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" kind="function"><name>cases_voisines_calcul</name></member>
-    <member refid="_minimale_8c_1aaadb3730c96b5ae1d0fc498c3432f6a5" kind="function"><name>deplacements_valides</name></member>
-    <member refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" kind="function"><name>choix_deplacement_humain</name></member>
-    <member refid="_minimale_8c_1aa1c28f345f10a0f18458c5aa14e73c79" kind="function"><name>choix_deplacement_IA</name></member>
+    <member refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" kind="function"><name>deplacements_valides</name></member>
+    <member refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" kind="function"><name>choix_deplacement_humain</name></member>
+    <member refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" kind="function"><name>choix_deplacement_IA</name></member>
     <member refid="_minimale_8c_1aa17c4e2a8512aa83516a20e0df29a123" kind="function"><name>init_plateau</name></member>
     <member refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" kind="function"><name>cases_voisines_ATK</name></member>
-    <member refid="_minimale_8c_1a93abf905224d72b20101bb2a6e0ab417" kind="function"><name>viser_case_valide</name></member>
+    <member refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" kind="function"><name>viser_case_valide</name></member>
     <member refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" kind="function"><name>choix_cible_IA</name></member>
     <member refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" kind="function"><name>init_char_table</name></member>
-    <member refid="_minimale_8c_1af5c4cbfb002da8b8595316d87548ab93" kind="function"><name>afficher_skill</name></member>
+    <member refid="_minimale_8c_1a4c19cd4d694f2f549079791a1e11a019" kind="function"><name>afficher_skill</name></member>
     <member refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" kind="function"><name>afficher_skill_list</name></member>
     <member refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" kind="function"><name>afficher_infos_persos</name></member>
-    <member refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" kind="function"><name>choix_cible_humain</name></member>
-    <member refid="_minimale_8c_1ae7570939d9a77836280496452e995a49" kind="function"><name>selection_perso</name></member>
+    <member refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" kind="function"><name>choix_cible_humain</name></member>
+    <member refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" kind="function"><name>selection_perso</name></member>
     <member refid="_minimale_8c_1add579b3bffa443553769bdacdd18a9e0" kind="function"><name>passer_tour</name></member>
     <member refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" kind="function"><name>suicide</name></member>
-    <member refid="_minimale_8c_1a10f645fb2dcd1253cf4b728d7020b727" kind="function"><name>select_skill_IA</name></member>
-    <member refid="_minimale_8c_1a54b8579a2cf79307a0ce11d29597d2f1" kind="function"><name>select_skill</name></member>
+    <member refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" kind="function"><name>select_skill</name></member>
     <member refid="_minimale_8c_1a32d1e9030c1705ad183484acce8a4b2c" kind="function"><name>get_target_orientation</name></member>
     <member refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" kind="function"><name>appliquer_action</name></member>
-    <member refid="_minimale_8c_1a2ee0cc6d76b7e497988562a817c096a1" kind="function"><name>orienter_perso_numpad</name></member>
-    <member refid="_minimale_8c_1ae628b0fb007cb8d89fe76de11151934e" kind="function"><name>orienter_perso</name></member>
+    <member refid="_minimale_8c_1a44e760d2c48ba5cdbf8466de23d78484" kind="function"><name>orienter_perso_fleches</name></member>
     <member refid="_minimale_8c_1a0529503b2d07980eab95dcd282587007" kind="function"><name>perso_oriente_a_droite</name></member>
     <member refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" kind="function"><name>character_hp_list</name></member>
-    <member refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" kind="function"><name>tour</name></member>
+    <member refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" kind="function"><name>tour</name></member>
     <member refid="_minimale_8c_1aa6bc2b819d20d08ea1c98f09c15f2c47" kind="function"><name>all_dead_but_one</name></member>
-    <member refid="_minimale_8c_1afbbdb6480cb3ab0ba8f8ac1615d4e22e" kind="function"><name>creer_perso_rapide</name></member>
+    <member refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" kind="function"><name>creer_perso_rapide</name></member>
     <member refid="_minimale_8c_1af63ad36c60d60f979a15f7bf3a24c5a3" kind="function"><name>edit_stats</name></member>
     <member refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" kind="function"><name>spawn_sauvage</name></member>
     <member refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" kind="function"><name>spawn_character</name></member>
-    <member refid="_minimale_8c_1aee3a984cc380669ef226b08039d592da" kind="function"><name>tour_IA</name></member>
+    <member refid="_minimale_8c_1a7e9553a32f70742aa8787a781dd50cea" kind="function"><name>tour_IA</name></member>
     <member refid="_minimale_8c_1a0b7596f8f2c018a80e51c70268d338fd" kind="function"><name>saisie_nombre_joueurs</name></member>
     <member refid="_minimale_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>

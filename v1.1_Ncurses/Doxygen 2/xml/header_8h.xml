@@ -79,33 +79,33 @@
       <sectiondef kind="define">
       <memberdef kind="define" id="header_8h_1a523c276fa2df3dd24764b5bb500dbde6" prot="public" static="no">
         <name>TAILLE_MATRICE</name>
-        <initializer>5</initializer>
+        <initializer>6</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="4" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="4" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1aebdcead4bd058408b30ee5924910d1f6" compoundref="_minimale_8c" startline="80" endline="120">Sauvegarder</referencedby>
-        <referencedby refid="_minimale_8c_1a49285114d9ea55b17aaaf5b5e21432a5" compoundref="_minimale_8c" startline="128" endline="160">Charger</referencedby>
-        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="194" endline="241">cases_voisines_calcul</referencedby>
-        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
-        <referencedby refid="_minimale_8c_1aa17c4e2a8512aa83516a20e0df29a123" compoundref="_minimale_8c" startline="500" endline="510">init_plateau</referencedby>
-        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="512" endline="552">cases_voisines_ATK</referencedby>
-        <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="651" endline="688">afficher_infos_persos</referencedby>
-        <referencedby refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" compoundref="_minimale_8c" startline="692" endline="749">choix_cible_humain</referencedby>
-        <referencedby refid="_minimale_8c_1ae7570939d9a77836280496452e995a49" compoundref="_minimale_8c" startline="798" endline="889">selection_perso</referencedby>
-        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="906" endline="915">suicide</referencedby>
-        <referencedby refid="_minimale_8c_1ae1d5aa28a687b31b055f49ea44866780" compoundref="_minimale_8c" startline="1305" endline="1318">are_my_mates_alive</referencedby>
-        <referencedby refid="_minimale_8c_1a0529503b2d07980eab95dcd282587007" compoundref="_minimale_8c" startline="1320" endline="1334">perso_oriente_a_droite</referencedby>
-        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1361" endline="1382">players_life_check</referencedby>
-        <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1389" endline="1405">character_hp_list</referencedby>
-        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
-        <referencedby refid="_minimale_8c_1a1fdf262e6e18d594322ddcfdde4e4b3e" compoundref="_minimale_8c" startline="1548" endline="1612">afficher_plateau_orientation</referencedby>
-        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1704" endline="1716">spawn_sauvage</referencedby>
-        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1718" endline="1730">spawn_character</referencedby>
-        <referencedby refid="_minimale_8c_1a0255b1b3f70d1d35a858e9e512c8f988" compoundref="_minimale_8c" startline="1775" endline="1790">calcul_persos_IA</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="18" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1aebdcead4bd058408b30ee5924910d1f6" compoundref="_minimale_8c" startline="91" endline="130">Sauvegarder</referencedby>
+        <referencedby refid="_minimale_8c_1a841458aecfd962618c6b89231954f407" compoundref="_minimale_8c" startline="137" endline="168">Charger</referencedby>
+        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="203" endline="250">cases_voisines_calcul</referencedby>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1aa17c4e2a8512aa83516a20e0df29a123" compoundref="_minimale_8c" startline="511" endline="521">init_plateau</referencedby>
+        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="527" endline="567">cases_voisines_ATK</referencedby>
+        <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="677" endline="697">afficher_infos_persos</referencedby>
+        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="705" endline="762">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="811" endline="898">selection_perso</referencedby>
+        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="915" endline="924">suicide</referencedby>
+        <referencedby refid="_minimale_8c_1ae1d5aa28a687b31b055f49ea44866780" compoundref="_minimale_8c" startline="1216" endline="1229">are_my_mates_alive</referencedby>
+        <referencedby refid="_minimale_8c_1a0529503b2d07980eab95dcd282587007" compoundref="_minimale_8c" startline="1235" endline="1249">perso_oriente_a_droite</referencedby>
+        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1276" endline="1297">players_life_check</referencedby>
+        <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1304" endline="1320">character_hp_list</referencedby>
+        <referencedby refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" compoundref="_minimale_8c" startline="1328" endline="1437">tour</referencedby>
+        <referencedby refid="_minimale_8c_1a1fdf262e6e18d594322ddcfdde4e4b3e" compoundref="_minimale_8c" startline="1465" endline="1523">afficher_plateau_orientation</referencedby>
+        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1635" endline="1649">spawn_sauvage</referencedby>
+        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1651" endline="1663">spawn_character</referencedby>
+        <referencedby refid="_minimale_8c_1a0255b1b3f70d1d35a858e9e512c8f988" compoundref="_minimale_8c" startline="1701" endline="1716">calcul_persos_IA</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a220380eaa4bfe0ffeab9859c6f3d2076" prot="public" static="no">
         <name>MaxTab</name>
@@ -116,10 +116,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="5" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="5" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="624" endline="628">init_char_table</referencedby>
-        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1361" endline="1382">players_life_check</referencedby>
-        <referencedby refid="_minimale_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_minimale_8c" startline="1802" endline="1927">main</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="19" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="639" endline="643">init_char_table</referencedby>
+        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1276" endline="1297">players_life_check</referencedby>
+        <referencedby refid="_minimale_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_minimale_8c" startline="1733" endline="1837">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ab154998a3a376095f3601bc35c5cf523" prot="public" static="no">
         <name>MaxString</name>
@@ -130,9 +130,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="6" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="6" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1afbbdb6480cb3ab0ba8f8ac1615d4e22e" compoundref="_minimale_8c" startline="1620" endline="1632">creer_perso_rapide</referencedby>
-        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1640" endline="1665">creer_terrain_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="20" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1561" endline="1586">creer_terrain_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1abcbf07dd09e51c934ff60872f465727a" prot="public" static="no">
         <name>bloc1</name>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="8" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="8" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="22" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a6f35bce5de1d159bff01cc3d33c9c72c" prot="public" static="no">
         <name>bloc2</name>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="9" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="9" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="23" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a54589dbd40ede83ce0d307134bed6999" prot="public" static="no">
         <name>bloc3</name>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="10" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="24" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a293f382892dd9160685d3131e4881495" prot="public" static="no">
         <name>skill_attack</name>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="12" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="12" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="26" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ae6f347a0b1e26425b82734df3904273d" prot="public" static="no">
         <name>skill_empty</name>
@@ -187,20 +187,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="13" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="13" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a10f645fb2dcd1253cf4b728d7020b727" compoundref="_minimale_8c" startline="925" endline="946">select_skill_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a54b8579a2cf79307a0ce11d29597d2f1" compoundref="_minimale_8c" startline="954" endline="1025">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="27" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" prot="public" static="no">
         <name>skill_skip</name>
-        <initializer>((<ref refid="structt__skill" kindref="compound">t_skill</ref>){&quot;Passer le <ref refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" kindref="member">tour</ref>&quot;,0,EMPTY,0})</initializer>
+        <initializer>((<ref refid="structt__skill" kindref="compound">t_skill</ref>){&quot;Passer le <ref refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" kindref="member">tour</ref>&quot;,0,EMPTY,0})</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="14" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="14" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="28" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a6cbdba3415482afa3d3e831cd1a739a2" prot="public" static="no">
         <name>coord_default</name>
@@ -211,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="15" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="15" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="29" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" prot="public" static="no">
         <name>orientation_default</name>
@@ -222,18 +221,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="16" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="16" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="30" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a7c38568d47211679c8483fc60e185651" prot="public" static="no">
         <name>status_default</name>
-        <initializer>((<ref refid="structt__status" kindref="compound">t_status</ref>){30,30,10,10})</initializer>
+        <initializer>((<ref refid="structt__status" kindref="compound">t_status</ref>){400,400,100,100})</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="17" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="17" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="31" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ad92274bc74ce5fee209d6177f46b06e3" prot="public" static="no">
         <name>status__terrain_default</name>
@@ -244,18 +243,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="18" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="18" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="32" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1af720a86d25a368a1484318d8a877961b" prot="public" static="no">
         <name>stats_default</name>
-        <initializer>((<ref refid="structt__stats" kindref="compound">t_stats</ref>){10,10,10,10,2})</initializer>
+        <initializer>((<ref refid="structt__stats" kindref="compound">t_stats</ref>){100,100,20,20,2})</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="19" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="19" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="33" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a06744a7db35a5caffebfeef65fecff32" prot="public" static="no">
         <name>stats_terrain_default</name>
@@ -266,18 +265,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="20" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="20" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="34" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="define" id="header_8h_1a661f2fa1a0f9707f5a19494debc26d68" prot="public" static="no">
-        <name>skill_list_default</name>
-        <initializer>((<ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>){ <ref refid="header_8h_1a293f382892dd9160685d3131e4881495" kindref="member">skill_attack</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" kindref="member">skill_skip</ref>})</initializer>
+      <memberdef kind="define" id="header_8h_1adad158d03b8077347b44c54b1c56ddaa" prot="public" static="no">
+        <name>skill_trap</name>
+        <initializer>((<ref refid="structt__skill" kindref="compound">t_skill</ref>){&quot;Placer Piege&quot;, 3, TRAP, 10})</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="21" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="21" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="35" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a38bad206ff07a3005b3766598eb74574" prot="public" static="no">
+        <name>skill_soin</name>
+        <initializer>((<ref refid="structt__skill" kindref="compound">t_skill</ref>){&quot;Soigner&quot;, 3, MATK, -3})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="36" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1ac695aefca36396263b581917e2bf01a6" prot="public" static="no">
+        <name>skill_bandage</name>
+        <initializer>((<ref refid="structt__skill" kindref="compound">t_skill</ref>){&quot;Se soigner&quot;, 0, MATK, -1})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="37" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a4a8c1b88a1b8565d97bd811951f1dbfc" prot="public" static="no">
+        <name>skill_fireball</name>
+        <initializer>((<ref refid="structt__skill" kindref="compound">t_skill</ref>){&quot;Boule de feu&quot;, 5, MATK, 3})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="38" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a661f2fa1a0f9707f5a19494debc26d68" prot="public" static="no">
+        <name>skill_list_default</name>
+        <initializer>((<ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>){ <ref refid="header_8h_1a293f382892dd9160685d3131e4881495" kindref="member">skill_attack</ref>,<ref refid="header_8h_1adad158d03b8077347b44c54b1c56ddaa" kindref="member">skill_trap</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" kindref="member">skill_skip</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ae31f7588359442249a6f01914a7eb769" prot="public" static="no">
         <name>empty_skill_list</name>
@@ -288,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="22" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="22" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="40" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a6e8b24c0508661b7539c8b9e38975508" prot="public" static="no">
         <name>character_default</name>
@@ -299,9 +342,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="23" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="23" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="624" endline="628">init_char_table</referencedby>
-        <referencedby refid="_minimale_8c_1afbbdb6480cb3ab0ba8f8ac1615d4e22e" compoundref="_minimale_8c" startline="1620" endline="1632">creer_perso_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="41" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="639" endline="643">init_char_table</referencedby>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ad8e55599d4e25ea791fd084a348e0967" prot="public" static="no">
         <name>default_targetOrientation</name>
@@ -312,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="24" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="24" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="42" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a05114c8c78053bf80235674b9d7440c4" prot="public" static="no">
         <name>default_trap</name>
@@ -323,22 +366,202 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="25" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="25" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="43" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1068" endline="1116">appliquer_action</referencedby>
       </memberdef>
-      <memberdef kind="define" id="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" prot="public" static="no">
-        <name>curseur</name>
-        <initializer>(char)254</initializer>
+      <memberdef kind="define" id="header_8h_1aebd8635285525b252b1dc986a576c383" prot="public" static="no">
+        <name>character_berseker</name>
+        <initializer>((<ref refid="structt__character" kindref="compound">t_character</ref>){&quot;Berseker name&quot;, coord_default, <ref refid="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" kindref="member">orientation_default</ref>, <ref refid="header_8h_1a92f9c78dcd344865fc670ed555346112" kindref="member">status_berseker</ref>, <ref refid="header_8h_1ac187fca43db8f9a38e8eb4675a55ec57" kindref="member">stats_berseker</ref>, <ref refid="header_8h_1a7fa5964157c37681813ea380f7fd09cf" kindref="member">skill_list_berseker</ref>, <ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a4a0e079df1b0c47b395b996f7240b48c" kindref="member">sauvage</ref>, 1})</initializer>
+        <briefdescription>
+<para>**************************Default Characters*******************************/ </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="46" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a7fa5964157c37681813ea380f7fd09cf" prot="public" static="no">
+        <name>skill_list_berseker</name>
+        <initializer>((<ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>){ <ref refid="header_8h_1a293f382892dd9160685d3131e4881495" kindref="member">skill_attack</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" kindref="member">skill_skip</ref>})</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="27" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a22abc2bad1fd63372797a0e3fe103f07" compoundref="_minimale_8c" startline="293" endline="462">choix_deplacement_humain</referencedby>
-        <referencedby refid="_minimale_8c_1a7c9c98d472a87c9f8a877ceb74dea5ac" compoundref="_minimale_8c" startline="692" endline="749">choix_cible_humain</referencedby>
-        <referencedby refid="_minimale_8c_1ae7570939d9a77836280496452e995a49" compoundref="_minimale_8c" startline="798" endline="889">selection_perso</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="47" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a92f9c78dcd344865fc670ed555346112" prot="public" static="no">
+        <name>status_berseker</name>
+        <initializer>((<ref refid="structt__status" kindref="compound">t_status</ref>){400,400,0,0})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="48" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1ac187fca43db8f9a38e8eb4675a55ec57" prot="public" static="no">
+        <name>stats_berseker</name>
+        <initializer>((<ref refid="structt__stats" kindref="compound">t_stats</ref>){200,0,0,0,4})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="49" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a48c0cfb872d1e5e8db4e1bf65c5b4347" prot="public" static="no">
+        <name>character_mage</name>
+        <initializer>((<ref refid="structt__character" kindref="compound">t_character</ref>){&quot;Mage name&quot;, coord_default, <ref refid="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" kindref="member">orientation_default</ref>, <ref refid="header_8h_1af6158aeb7f3a9608f9d84219cef447f2" kindref="member">status_mage</ref>, <ref refid="header_8h_1abd37a804ee1df6324bc89304b763f957" kindref="member">stats_mage</ref>, <ref refid="header_8h_1a7ee3d0b5bb7136671f0c2c52335daed4" kindref="member">skill_list_mage</ref>, <ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a4a0e079df1b0c47b395b996f7240b48c" kindref="member">sauvage</ref>, 1})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="51" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a7ee3d0b5bb7136671f0c2c52335daed4" prot="public" static="no">
+        <name>skill_list_mage</name>
+        <initializer>((<ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>){ <ref refid="header_8h_1a293f382892dd9160685d3131e4881495" kindref="member">skill_attack</ref>,<ref refid="header_8h_1a4a8c1b88a1b8565d97bd811951f1dbfc" kindref="member">skill_fireball</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" kindref="member">skill_skip</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="52" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1af6158aeb7f3a9608f9d84219cef447f2" prot="public" static="no">
+        <name>status_mage</name>
+        <initializer>((<ref refid="structt__status" kindref="compound">t_status</ref>){400,400,100,100})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="53" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1abd37a804ee1df6324bc89304b763f957" prot="public" static="no">
+        <name>stats_mage</name>
+        <initializer>((<ref refid="structt__stats" kindref="compound">t_stats</ref>){50,100,0,60,2})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="54" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a941f42dbea81b439a126da6bea0fe7a9" prot="public" static="no">
+        <name>character_tank</name>
+        <initializer>((<ref refid="structt__character" kindref="compound">t_character</ref>){&quot;Tank name&quot;, coord_default, <ref refid="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" kindref="member">orientation_default</ref>, <ref refid="header_8h_1a294092636ce2faeb5fdaf290c58bff9e" kindref="member">status_tank</ref>, <ref refid="header_8h_1ac60eca7e6e6388f387848a6f8ee43770" kindref="member">stats_tank</ref>, <ref refid="header_8h_1a0053c2ea576452b370c8a0b2d488bf0a" kindref="member">skill_list_tank</ref>, <ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a4a0e079df1b0c47b395b996f7240b48c" kindref="member">sauvage</ref>, 1})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="57" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a0053c2ea576452b370c8a0b2d488bf0a" prot="public" static="no">
+        <name>skill_list_tank</name>
+        <initializer>((<ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>){ <ref refid="header_8h_1a293f382892dd9160685d3131e4881495" kindref="member">skill_attack</ref>,<ref refid="header_8h_1ac695aefca36396263b581917e2bf01a6" kindref="member">skill_bandage</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" kindref="member">skill_skip</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="58" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a294092636ce2faeb5fdaf290c58bff9e" prot="public" static="no">
+        <name>status_tank</name>
+        <initializer>((<ref refid="structt__status" kindref="compound">t_status</ref>){400,400,100,100})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="59" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1ac60eca7e6e6388f387848a6f8ee43770" prot="public" static="no">
+        <name>stats_tank</name>
+        <initializer>((<ref refid="structt__stats" kindref="compound">t_stats</ref>){70,75,60,50,3})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="60" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a900c0c28c302b2963a6f83b539f3723a" prot="public" static="no">
+        <name>character_soigneur</name>
+        <initializer>((<ref refid="structt__character" kindref="compound">t_character</ref>){&quot;Healer name&quot;, coord_default, <ref refid="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" kindref="member">orientation_default</ref>, <ref refid="header_8h_1a02a5e1a4a0d0a488f9230ec155e85cff" kindref="member">status_soigneur</ref>, <ref refid="header_8h_1ab30faec022d8d8ef12f90aa26b424d75" kindref="member">stats_soigneur</ref>, <ref refid="header_8h_1abb3519a55bae22ffcb9c2cad71ee8642" kindref="member">skill_list_soigneur</ref>, <ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a4a0e079df1b0c47b395b996f7240b48c" kindref="member">sauvage</ref>, 1})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="62" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1abb3519a55bae22ffcb9c2cad71ee8642" prot="public" static="no">
+        <name>skill_list_soigneur</name>
+        <initializer>((<ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>){ <ref refid="header_8h_1a293f382892dd9160685d3131e4881495" kindref="member">skill_attack</ref>,<ref refid="header_8h_1a38bad206ff07a3005b3766598eb74574" kindref="member">skill_soin</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" kindref="member">skill_empty</ref>,<ref refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" kindref="member">skill_skip</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="63" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1a02a5e1a4a0d0a488f9230ec155e85cff" prot="public" static="no">
+        <name>status_soigneur</name>
+        <initializer>((<ref refid="structt__status" kindref="compound">t_status</ref>){400,400,200,200})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="64" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1ab30faec022d8d8ef12f90aa26b424d75" prot="public" static="no">
+        <name>stats_soigneur</name>
+        <initializer>((<ref refid="structt__stats" kindref="compound">t_stats</ref>){20,100,0,60,2})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="65" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" prot="public" static="no">
+        <name>curseur</name>
+        <initializer>(char)219</initializer>
+        <briefdescription>
+<para>***********************************************************************************/ </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="69" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="705" endline="762">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="811" endline="898">selection_perso</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a7dd5f83f4f2f4ea483fc49807ff9f43b" prot="public" static="no">
         <name>case_terrain</name>
@@ -349,13 +572,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="29" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="29" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a3f74d85bb951bc6b755696903c848531" compoundref="_minimale_8c" startline="179" endline="187">deplacer_perso</referencedby>
-        <referencedby refid="_minimale_8c_1ae7570939d9a77836280496452e995a49" compoundref="_minimale_8c" startline="798" endline="889">selection_perso</referencedby>
-        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="906" endline="915">suicide</referencedby>
-        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1093" endline="1142">appliquer_action</referencedby>
-        <referencedby refid="_minimale_8c_1a779ee1563d913e90d9ad93b9adf6867e" compoundref="_minimale_8c" startline="1413" endline="1520">tour</referencedby>
-        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1640" endline="1665">creer_terrain_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="71" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7c39da4bb12212b65b8999022d45e592" compoundref="_minimale_8c" startline="188" endline="196">deplacer_perso</referencedby>
+        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="811" endline="898">selection_perso</referencedby>
+        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="915" endline="924">suicide</referencedby>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1068" endline="1116">appliquer_action</referencedby>
+        <referencedby refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" compoundref="_minimale_8c" startline="1328" endline="1437">tour</referencedby>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1561" endline="1586">creer_terrain_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a8a976ee03aa89e3b22be5595252d3c04" prot="public" static="no">
         <name>case_obstacle</name>
@@ -366,11 +589,57 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="30" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="30" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1640" endline="1665">creer_terrain_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="72" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1561" endline="1586">creer_terrain_rapide</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
+      <memberdef kind="enum" id="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77" prot="public" static="no">
+        <name>t_classe</name>
+        <enumvalue id="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a6cd985e2430397d1eacae869d742d174" prot="public">
+          <name>default_class</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a29b84c6f2d6687534863ab8a8a0483aa" prot="public">
+          <name>berseker</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77ac5491f1da1ea96cd82b488a30568432f" prot="public">
+          <name>mage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a5970642cf6e8bb17100a6ac4ecfa0a36" prot="public">
+          <name>tank</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77aa4b77937e67f9a21424c3eabb2783d17" prot="public">
+          <name>soigneur</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="74" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="74" bodyend="74"/>
+      </memberdef>
       <memberdef kind="enum" id="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" prot="public" static="no">
         <name>t_camp</name>
         <enumvalue id="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a8703eca1f6f779dd8bebfc200139b07d" prot="public">
@@ -403,7 +672,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="32" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="32" bodyend="32"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="75" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a440f669d36bc2028077af38574051204" prot="public" static="no">
         <name>t_skilltype</name>
@@ -441,7 +710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="33" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="33" bodyend="33"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="76" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="76" bodyend="76"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4" prot="public" static="no">
         <name>t_orientation</name>
@@ -479,7 +748,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="34" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="34" bodyend="34"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="77" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a05b909310980a637d41bd67fc4d5c389" prot="public" static="no">
         <name>t_targetOrientation</name>
@@ -510,7 +779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="35" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="35" bodyend="35"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="78" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1ac8020d257c824e4b188c04ee386ebfda" prot="public" static="no">
         <name>t_character_type</name>
@@ -548,64 +817,96 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="41" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="41" bodyend="41"/>
+        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="84" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="84" bodyend="84"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>header </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY. </para></simplesect>
+<simplesect kind="version"><para>1.1 </para></simplesect>
+<simplesect kind="date"><para>06 Janvier 2015</para></simplesect>
+programme de jeu: Le Jeu 4 ( T-RPG) </para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>H_HEADER</highlight></codeline>
-<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>H_HEADER</highlight></codeline>
-<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="4" refid="header_8h_1a523c276fa2df3dd24764b5bb500dbde6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TAILLE_MATRICE<sp/>5</highlight></codeline>
-<codeline lineno="5" refid="header_8h_1a220380eaa4bfe0ffeab9859c6f3d2076" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>MaxTab<sp/>40</highlight></codeline>
-<codeline lineno="6" refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>MaxString<sp/>40</highlight></codeline>
-<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CODES<sp/>ASCII</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="header_8h_1abcbf07dd09e51c934ff60872f465727a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>bloc1<sp/>((char)178)</highlight></codeline>
-<codeline lineno="9" refid="header_8h_1a6f35bce5de1d159bff01cc3d33c9c72c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>bloc2<sp/>((char)219)</highlight></codeline>
-<codeline lineno="10" refid="header_8h_1a54589dbd40ede83ce0d307134bed6999" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>bloc3<sp/>((char)254)</highlight></codeline>
-<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//struct<sp/>Default<sp/>//VALEURS<sp/>PAR<sp/>DEFAULT</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="header_8h_1a293f382892dd9160685d3131e4881495" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_attack<sp/>((t_skill){&quot;Coup&quot;,1,ATK,1})</highlight></codeline>
-<codeline lineno="13" refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_empty<sp/>((t_skill){&quot;&quot;,0,EMPTY,0})</highlight></codeline>
-<codeline lineno="14" refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_skip<sp/>((t_skill){&quot;Passer<sp/>le<sp/>tour&quot;,0,EMPTY,0})</highlight></codeline>
-<codeline lineno="15" refid="header_8h_1a6cbdba3415482afa3d3e831cd1a739a2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>coord_default<sp/>((t_coord){-1,-1})</highlight></codeline>
-<codeline lineno="16" refid="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>orientation_default<sp/>(up)</highlight></codeline>
-<codeline lineno="17" refid="header_8h_1a7c38568d47211679c8483fc60e185651" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status_default<sp/>((t_status){30,30,10,10})</highlight></codeline>
-<codeline lineno="18" refid="header_8h_1ad92274bc74ce5fee209d6177f46b06e3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status__terrain_default<sp/>((t_status){0,0,0,0})</highlight></codeline>
-<codeline lineno="19" refid="header_8h_1af720a86d25a368a1484318d8a877961b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_default<sp/>((t_stats){10,10,10,10,2})</highlight></codeline>
-<codeline lineno="20" refid="header_8h_1a06744a7db35a5caffebfeef65fecff32" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_terrain_default<sp/>((t_stats){0,0,0,0,0})</highlight></codeline>
-<codeline lineno="21" refid="header_8h_1a661f2fa1a0f9707f5a19494debc26d68" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_list_default<sp/>((t_skill_list){<sp/>skill_attack,skill_empty,skill_empty,skill_empty,skill_empty,skill_skip})</highlight></codeline>
-<codeline lineno="22" refid="header_8h_1ae31f7588359442249a6f01914a7eb769" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>empty_skill_list<sp/>((t_skill_list){skill_empty,skill_empty,skill_empty,skill_empty,skill_empty,skill_empty})</highlight></codeline>
-<codeline lineno="23" refid="header_8h_1a6e8b24c0508661b7539c8b9e38975508" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>character_default<sp/>((t_character){&quot;Default<sp/>name&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_default,<sp/>stats_default,<sp/>skill_list_default,<sp/>sauvage,<sp/>1})</highlight></codeline>
-<codeline lineno="24" refid="header_8h_1ad8e55599d4e25ea791fd084a348e0967" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>default_targetOrientation<sp/>((t_targetOrientation)front)</highlight></codeline>
-<codeline lineno="25" refid="header_8h_1a05114c8c78053bf80235674b9d7440c4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>default_trap<sp/>((t_character){&quot;Trap&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_default,<sp/>stats_default,<sp/>skill_list_default,<sp/>1,<sp/>1})</highlight></codeline>
-<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="27" refid="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>curseur<sp/>(char)254</highlight></codeline>
-<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="29" refid="header_8h_1a7dd5f83f4f2f4ea483fc49807ff9f43b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>case_terrain<sp/>((t_character){&quot;&quot;,coord_default<sp/>,orientation_default<sp/>,status__terrain_default<sp/>,stats_terrain_default<sp/>,empty_skill_list,<sp/>0<sp/>,<sp/>0<sp/>})</highlight></codeline>
-<codeline lineno="30" refid="header_8h_1a8a976ee03aa89e3b22be5595252d3c04" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>case_obstacle<sp/>((t_character){&quot;&quot;,coord_default<sp/>,orientation_default<sp/>,status_default<sp/>,stats_default<sp/>,empty_skill_list,<sp/>-1<sp/>,<sp/>0<sp/>})</highlight></codeline>
-<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528ae55222d4b0e83581c51f843e87e3cfe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a8703eca1f6f779dd8bebfc200139b07d" kindref="member">obstacle</ref><sp/>=-1,<ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528ae55222d4b0e83581c51f843e87e3cfe2" kindref="member">terrain</ref>=0,<sp/><ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a4a0e079df1b0c47b395b996f7240b48c" kindref="member">sauvage</ref>=1}<ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" kindref="member">t_camp</ref>;</highlight></codeline>
-<codeline lineno="33" refid="header_8h_1a440f669d36bc2028077af38574051204ac0533b6cb94383273589b6764c8a0796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a440f669d36bc2028077af38574051204a2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>,<ref refid="header_8h_1a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9" kindref="member">ATK</ref>,<ref refid="header_8h_1a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8" kindref="member">MATK</ref>,<ref refid="header_8h_1a440f669d36bc2028077af38574051204ac0533b6cb94383273589b6764c8a0796" kindref="member">TRAP</ref>}<ref refid="header_8h_1a440f669d36bc2028077af38574051204" kindref="member">t_skilltype</ref>;</highlight></codeline>
-<codeline lineno="34" refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4aebc281bf093563220c2270ba57dedfce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4aebc281bf093563220c2270ba57dedfce" kindref="member">up</ref>,<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4af763d610923b0c4614e8ecd65212666a" kindref="member">right</ref>,<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4a00156fc42b17a87d0746d97b42caf296" kindref="member">down</ref>,<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4ab0ac36b187aa60c167ffcead3d5a03c0" kindref="member">left</ref>}<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4" kindref="member">t_orientation</ref>;</highlight></codeline>
-<codeline lineno="35" refid="header_8h_1a05b909310980a637d41bd67fc4d5c389" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389ab30562d2871f1a5b7d220569f54ccceb" kindref="member">front</ref>,<sp/><ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389a6e20889cbd4a669c96acec7eb0f836f4" kindref="member">side</ref>,<sp/><ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389aa0cf137e48905c39b94f23a05b14e7c9" kindref="member">back</ref>}<ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389" kindref="member">t_targetOrientation</ref>;</highlight></codeline>
-<codeline lineno="36" refid="structt__status_1a30fc75b90111fc791752dd1add6ed991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>HP<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Max_HP<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structt__status_1a30fc75b90111fc791752dd1add6ed991" kindref="member">MP</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Max_MP<sp/>;}<sp/><ref refid="structt__status" kindref="compound">t_status</ref><sp/>;</highlight></codeline>
-<codeline lineno="37" refid="structt__stats_1a397f7940443939415a50f324dc5f56f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="header_8h_1a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9" kindref="member">ATK</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="header_8h_1a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8" kindref="member">MATK</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DEF<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MDEF<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structt__stats_1a397f7940443939415a50f324dc5f56f9" kindref="member">MVT</ref><sp/>;}<sp/><ref refid="structt__stats" kindref="compound">t_stats</ref>;</highlight></codeline>
-<codeline lineno="38" refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref><sp/>;}<ref refid="structt__coord" kindref="compound">t_coord</ref>;</highlight></codeline>
-<codeline lineno="39" refid="structt__skill_1ac00edc3c188c78c47878a357ecff2954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" kindref="member">MaxString</ref>]<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>range<sp/>;<sp/><ref refid="header_8h_1a440f669d36bc2028077af38574051204" kindref="member">t_skilltype</ref><sp/><ref refid="structt__skill_1ac00edc3c188c78c47878a357ecff2954" kindref="member">type</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>damage_coeff<sp/>;}<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref>;</highlight></codeline>
-<codeline lineno="40" refid="structt__skill__list_1a2a4af1a4acb8da6061990f9bd8d0a564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>a;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>b;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>c;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>d;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>e;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/><ref refid="structt__skill__list_1a2a4af1a4acb8da6061990f9bd8d0a564" kindref="member">wait</ref>;<sp/>}<sp/><ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>;</highlight></codeline>
-<codeline lineno="41" refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa5b5e1b4421db434bf27a112d197081e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa88bc03071d883ba67f80a4dbc8712ab5" kindref="member">LAND_UNIT</ref>,<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaad28f3d40a0201f066f5b8adb539a5a94" kindref="member">AIR_UNIT</ref>,<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa6d5cb476c95a2f13156fa5d298afa208" kindref="member">JUMPING_UNIT</ref>,<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa5b5e1b4421db434bf27a112d197081e1" kindref="member">TRAP_UNIT</ref>}<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfda" kindref="member">t_character_type</ref>;</highlight></codeline>
-<codeline lineno="42" refid="structt__character_1a3b5fecb9824668aab778f82005089942" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" kindref="member">MaxString</ref>]<sp/>;<sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>position;<sp/><ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4" kindref="member">t_orientation</ref><sp/>orientation<sp/>;<sp/><ref refid="structt__status" kindref="compound">t_status</ref><sp/>status<sp/>;<sp/><ref refid="structt__stats" kindref="compound">t_stats</ref><sp/>stats<sp/>;<sp/><ref refid="structt__skill__list" kindref="compound">t_skill_list</ref><sp/>skill;<sp/><ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" kindref="member">t_camp</ref><sp/>camp;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_action_tour;<sp/><ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfda" kindref="member">t_character_type</ref><sp/><ref refid="structt__character_1a3b5fecb9824668aab778f82005089942" kindref="member">type</ref>;}<sp/><ref refid="structt__character" kindref="compound">t_character</ref><sp/>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="44" refid="structt__player_1ab27f28c5ead39031421706ddbbd1edea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>alive<sp/>;<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" kindref="member">MaxString</ref>]<sp/>;}<sp/><ref refid="structt__player" kindref="compound">t_player</ref>;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="15"><highlight class="preprocessor">#ifndef<sp/>H_HEADER</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>H_HEADER</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="18" refid="header_8h_1a523c276fa2df3dd24764b5bb500dbde6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TAILLE_MATRICE<sp/>6</highlight></codeline>
+<codeline lineno="19" refid="header_8h_1a220380eaa4bfe0ffeab9859c6f3d2076" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>MaxTab<sp/>40</highlight></codeline>
+<codeline lineno="20" refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>MaxString<sp/>40</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CODES<sp/>ASCII</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="header_8h_1abcbf07dd09e51c934ff60872f465727a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>bloc1<sp/>((char)178)</highlight></codeline>
+<codeline lineno="23" refid="header_8h_1a6f35bce5de1d159bff01cc3d33c9c72c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>bloc2<sp/>((char)219)</highlight></codeline>
+<codeline lineno="24" refid="header_8h_1a54589dbd40ede83ce0d307134bed6999" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>bloc3<sp/>((char)254)</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//struct<sp/>Default<sp/>//VALEURS<sp/>PAR<sp/>DEFAULT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="header_8h_1a293f382892dd9160685d3131e4881495" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_attack<sp/>((t_skill){&quot;Coup&quot;,1,ATK,1})</highlight></codeline>
+<codeline lineno="27" refid="header_8h_1ae6f347a0b1e26425b82734df3904273d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_empty<sp/>((t_skill){&quot;&quot;,0,EMPTY,0})</highlight></codeline>
+<codeline lineno="28" refid="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_skip<sp/>((t_skill){&quot;Passer<sp/>le<sp/>tour&quot;,0,EMPTY,0})</highlight></codeline>
+<codeline lineno="29" refid="header_8h_1a6cbdba3415482afa3d3e831cd1a739a2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>coord_default<sp/>((t_coord){-1,-1})</highlight></codeline>
+<codeline lineno="30" refid="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>orientation_default<sp/>(up)</highlight></codeline>
+<codeline lineno="31" refid="header_8h_1a7c38568d47211679c8483fc60e185651" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status_default<sp/>((t_status){400,400,100,100})</highlight></codeline>
+<codeline lineno="32" refid="header_8h_1ad92274bc74ce5fee209d6177f46b06e3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status__terrain_default<sp/>((t_status){0,0,0,0})</highlight></codeline>
+<codeline lineno="33" refid="header_8h_1af720a86d25a368a1484318d8a877961b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_default<sp/>((t_stats){100,100,20,20,2})</highlight></codeline>
+<codeline lineno="34" refid="header_8h_1a06744a7db35a5caffebfeef65fecff32" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_terrain_default<sp/>((t_stats){0,0,0,0,0})</highlight></codeline>
+<codeline lineno="35" refid="header_8h_1adad158d03b8077347b44c54b1c56ddaa" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_trap<sp/>((t_skill){&quot;Placer<sp/>Piege&quot;,<sp/>3,<sp/>TRAP,<sp/>10})</highlight></codeline>
+<codeline lineno="36" refid="header_8h_1a38bad206ff07a3005b3766598eb74574" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_soin<sp/>((t_skill){&quot;Soigner&quot;,<sp/>3,<sp/>MATK,<sp/>-3})</highlight></codeline>
+<codeline lineno="37" refid="header_8h_1ac695aefca36396263b581917e2bf01a6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_bandage<sp/>((t_skill){&quot;Se<sp/>soigner&quot;,<sp/>0,<sp/>MATK,<sp/>-1})</highlight></codeline>
+<codeline lineno="38" refid="header_8h_1a4a8c1b88a1b8565d97bd811951f1dbfc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_fireball<sp/>((t_skill){&quot;Boule<sp/>de<sp/>feu&quot;,<sp/>5,<sp/>MATK,<sp/>3})</highlight></codeline>
+<codeline lineno="39" refid="header_8h_1a661f2fa1a0f9707f5a19494debc26d68" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_list_default<sp/>((t_skill_list){<sp/>skill_attack,skill_trap,skill_empty,skill_empty,skill_empty,skill_skip})</highlight></codeline>
+<codeline lineno="40" refid="header_8h_1ae31f7588359442249a6f01914a7eb769" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>empty_skill_list<sp/>((t_skill_list){skill_empty,skill_empty,skill_empty,skill_empty,skill_empty,skill_empty})</highlight></codeline>
+<codeline lineno="41" refid="header_8h_1a6e8b24c0508661b7539c8b9e38975508" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>character_default<sp/>((t_character){&quot;Default<sp/>name&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_default,<sp/>stats_default,<sp/>skill_list_default,<sp/>sauvage,<sp/>1})</highlight></codeline>
+<codeline lineno="42" refid="header_8h_1ad8e55599d4e25ea791fd084a348e0967" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>default_targetOrientation<sp/>((t_targetOrientation)front)</highlight></codeline>
+<codeline lineno="43" refid="header_8h_1a05114c8c78053bf80235674b9d7440c4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>default_trap<sp/>((t_character){&quot;Trap&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_default,<sp/>stats_default,<sp/>skill_list_default,<sp/>1,<sp/>1})</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="header_8h_1aebd8635285525b252b1dc986a576c383" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>character_berseker<sp/>((t_character){&quot;Berseker<sp/>name&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_berseker,<sp/>stats_berseker,<sp/>skill_list_berseker,<sp/>sauvage,<sp/>1})</highlight></codeline>
+<codeline lineno="47" refid="header_8h_1a7fa5964157c37681813ea380f7fd09cf" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_list_berseker<sp/>((t_skill_list){<sp/>skill_attack,skill_empty,skill_empty,skill_empty,skill_empty,skill_skip})</highlight></codeline>
+<codeline lineno="48" refid="header_8h_1a92f9c78dcd344865fc670ed555346112" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status_berseker<sp/>((t_status){400,400,0,0})</highlight></codeline>
+<codeline lineno="49" refid="header_8h_1ac187fca43db8f9a38e8eb4675a55ec57" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_berseker<sp/>((t_stats){200,0,0,0,4})</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="header_8h_1a48c0cfb872d1e5e8db4e1bf65c5b4347" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>character_mage<sp/>((t_character){&quot;Mage<sp/>name&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_mage,<sp/>stats_mage,<sp/>skill_list_mage,<sp/>sauvage,<sp/>1})</highlight></codeline>
+<codeline lineno="52" refid="header_8h_1a7ee3d0b5bb7136671f0c2c52335daed4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_list_mage<sp/>((t_skill_list){<sp/>skill_attack,skill_fireball,skill_empty,skill_empty,skill_empty,skill_skip})</highlight></codeline>
+<codeline lineno="53" refid="header_8h_1af6158aeb7f3a9608f9d84219cef447f2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status_mage<sp/>((t_status){400,400,100,100})</highlight></codeline>
+<codeline lineno="54" refid="header_8h_1abd37a804ee1df6324bc89304b763f957" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_mage<sp/>((t_stats){50,100,0,60,2})</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="header_8h_1a941f42dbea81b439a126da6bea0fe7a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>character_tank<sp/>((t_character){&quot;Tank<sp/>name&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_tank,<sp/>stats_tank,<sp/>skill_list_tank,<sp/>sauvage,<sp/>1})</highlight></codeline>
+<codeline lineno="58" refid="header_8h_1a0053c2ea576452b370c8a0b2d488bf0a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_list_tank<sp/>((t_skill_list){<sp/>skill_attack,skill_bandage,skill_empty,skill_empty,skill_empty,skill_skip})</highlight></codeline>
+<codeline lineno="59" refid="header_8h_1a294092636ce2faeb5fdaf290c58bff9e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status_tank<sp/>((t_status){400,400,100,100})</highlight></codeline>
+<codeline lineno="60" refid="header_8h_1ac60eca7e6e6388f387848a6f8ee43770" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_tank<sp/>((t_stats){70,75,60,50,3})</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="header_8h_1a900c0c28c302b2963a6f83b539f3723a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>character_soigneur<sp/>((t_character){&quot;Healer<sp/>name&quot;,<sp/>coord_default,<sp/>orientation_default,<sp/>status_soigneur,<sp/>stats_soigneur,<sp/>skill_list_soigneur,<sp/>sauvage,<sp/>1})</highlight></codeline>
+<codeline lineno="63" refid="header_8h_1abb3519a55bae22ffcb9c2cad71ee8642" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>skill_list_soigneur<sp/>((t_skill_list){<sp/>skill_attack,skill_soin,skill_empty,skill_empty,skill_empty,skill_skip})</highlight></codeline>
+<codeline lineno="64" refid="header_8h_1a02a5e1a4a0d0a488f9230ec155e85cff" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>status_soigneur<sp/>((t_status){400,400,200,200})</highlight></codeline>
+<codeline lineno="65" refid="header_8h_1ab30faec022d8d8ef12f90aa26b424d75" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>stats_soigneur<sp/>((t_stats){20,100,0,60,2})</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>curseur<sp/>(char)219</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="header_8h_1a7dd5f83f4f2f4ea483fc49807ff9f43b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>case_terrain<sp/>((t_character){&quot;&quot;,coord_default<sp/>,orientation_default<sp/>,status__terrain_default<sp/>,stats_terrain_default<sp/>,empty_skill_list,<sp/>0<sp/>,<sp/>0<sp/>})</highlight></codeline>
+<codeline lineno="72" refid="header_8h_1a8a976ee03aa89e3b22be5595252d3c04" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>case_obstacle<sp/>((t_character){&quot;&quot;,coord_default<sp/>,orientation_default<sp/>,status_default<sp/>,stats_default<sp/>,empty_skill_list,<sp/>-1<sp/>,<sp/>0<sp/>})</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a5970642cf6e8bb17100a6ac4ecfa0a36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a6cd985e2430397d1eacae869d742d174" kindref="member">default_class</ref><sp/>,<ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a29b84c6f2d6687534863ab8a8a0483aa" kindref="member">berseker</ref><sp/>=<sp/>1,<sp/><ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77ac5491f1da1ea96cd82b488a30568432f" kindref="member">mage</ref>,<sp/><ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77a5970642cf6e8bb17100a6ac4ecfa0a36" kindref="member">tank</ref>,<sp/><ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77aa4b77937e67f9a21424c3eabb2783d17" kindref="member">soigneur</ref>}<ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77" kindref="member">t_classe</ref>;</highlight></codeline>
+<codeline lineno="75" refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528ae55222d4b0e83581c51f843e87e3cfe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a8703eca1f6f779dd8bebfc200139b07d" kindref="member">obstacle</ref><sp/>=-1,<ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528ae55222d4b0e83581c51f843e87e3cfe2" kindref="member">terrain</ref>=0,<sp/><ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528a4a0e079df1b0c47b395b996f7240b48c" kindref="member">sauvage</ref>=1}<ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" kindref="member">t_camp</ref>;</highlight></codeline>
+<codeline lineno="76" refid="header_8h_1a440f669d36bc2028077af38574051204ac0533b6cb94383273589b6764c8a0796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a440f669d36bc2028077af38574051204a2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>,<ref refid="header_8h_1a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9" kindref="member">ATK</ref>,<ref refid="header_8h_1a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8" kindref="member">MATK</ref>,<ref refid="header_8h_1a440f669d36bc2028077af38574051204ac0533b6cb94383273589b6764c8a0796" kindref="member">TRAP</ref>}<ref refid="header_8h_1a440f669d36bc2028077af38574051204" kindref="member">t_skilltype</ref>;</highlight></codeline>
+<codeline lineno="77" refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4aebc281bf093563220c2270ba57dedfce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4aebc281bf093563220c2270ba57dedfce" kindref="member">up</ref>,<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4af763d610923b0c4614e8ecd65212666a" kindref="member">right</ref>,<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4a00156fc42b17a87d0746d97b42caf296" kindref="member">down</ref>,<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4ab0ac36b187aa60c167ffcead3d5a03c0" kindref="member">left</ref>}<ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4" kindref="member">t_orientation</ref>;</highlight></codeline>
+<codeline lineno="78" refid="header_8h_1a05b909310980a637d41bd67fc4d5c389" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389ab30562d2871f1a5b7d220569f54ccceb" kindref="member">front</ref>,<sp/><ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389a6e20889cbd4a669c96acec7eb0f836f4" kindref="member">side</ref>,<sp/><ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389aa0cf137e48905c39b94f23a05b14e7c9" kindref="member">back</ref>}<ref refid="header_8h_1a05b909310980a637d41bd67fc4d5c389" kindref="member">t_targetOrientation</ref>;</highlight></codeline>
+<codeline lineno="79" refid="structt__status_1a30fc75b90111fc791752dd1add6ed991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>HP<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Max_HP<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structt__status_1a30fc75b90111fc791752dd1add6ed991" kindref="member">MP</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Max_MP<sp/>;}<sp/><ref refid="structt__status" kindref="compound">t_status</ref><sp/>;</highlight></codeline>
+<codeline lineno="80" refid="structt__stats_1a397f7940443939415a50f324dc5f56f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="header_8h_1a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9" kindref="member">ATK</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="header_8h_1a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8" kindref="member">MATK</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>DEF<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MDEF<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structt__stats_1a397f7940443939415a50f324dc5f56f9" kindref="member">MVT</ref><sp/>;}<sp/><ref refid="structt__stats" kindref="compound">t_stats</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>X<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" kindref="member">Y</ref><sp/>;}<ref refid="structt__coord" kindref="compound">t_coord</ref>;</highlight></codeline>
+<codeline lineno="82" refid="structt__skill_1ac00edc3c188c78c47878a357ecff2954" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" kindref="member">MaxString</ref>]<sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>range<sp/>;<sp/><ref refid="header_8h_1a440f669d36bc2028077af38574051204" kindref="member">t_skilltype</ref><sp/><ref refid="structt__skill_1ac00edc3c188c78c47878a357ecff2954" kindref="member">type</ref><sp/>;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>damage_coeff<sp/>;}<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structt__skill__list_1a2a4af1a4acb8da6061990f9bd8d0a564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>a;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>b;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>c;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>d;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/>e;<sp/><ref refid="structt__skill" kindref="compound">t_skill</ref><sp/><ref refid="structt__skill__list_1a2a4af1a4acb8da6061990f9bd8d0a564" kindref="member">wait</ref>;<sp/>}<sp/><ref refid="structt__skill__list" kindref="compound">t_skill_list</ref>;</highlight></codeline>
+<codeline lineno="84" refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa5b5e1b4421db434bf27a112d197081e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa88bc03071d883ba67f80a4dbc8712ab5" kindref="member">LAND_UNIT</ref>,<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaad28f3d40a0201f066f5b8adb539a5a94" kindref="member">AIR_UNIT</ref>,<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa6d5cb476c95a2f13156fa5d298afa208" kindref="member">JUMPING_UNIT</ref>,<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfdaa5b5e1b4421db434bf27a112d197081e1" kindref="member">TRAP_UNIT</ref>}<ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfda" kindref="member">t_character_type</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structt__character_1a3b5fecb9824668aab778f82005089942" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" kindref="member">MaxString</ref>]<sp/>;<sp/><ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>position;<sp/><ref refid="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4" kindref="member">t_orientation</ref><sp/>orientation<sp/>;<sp/><ref refid="structt__status" kindref="compound">t_status</ref><sp/>status<sp/>;<sp/><ref refid="structt__stats" kindref="compound">t_stats</ref><sp/>stats<sp/>;<sp/><ref refid="structt__skill__list" kindref="compound">t_skill_list</ref><sp/>skill;<sp/><ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" kindref="member">t_camp</ref><sp/>camp;<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_action_tour;<sp/><ref refid="header_8h_1ac8020d257c824e4b188c04ee386ebfda" kindref="member">t_character_type</ref><sp/><ref refid="structt__character_1a3b5fecb9824668aab778f82005089942" kindref="member">type</ref>;<sp/><ref refid="header_8h_1a853cf4e56ef5ad960bf764a4fafe7e77" kindref="member">t_classe</ref><sp/>classe;<sp/>}<sp/><ref refid="structt__character" kindref="compound">t_character</ref><sp/>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="structt__player_1ab27f28c5ead39031421706ddbbd1edea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>alive<sp/>;<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="header_8h_1ab154998a3a376095f3601bc35c5cf523" kindref="member">MaxString</ref>]<sp/>;}<sp/><ref refid="structt__player" kindref="compound">t_player</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h"/>
   </compounddef>

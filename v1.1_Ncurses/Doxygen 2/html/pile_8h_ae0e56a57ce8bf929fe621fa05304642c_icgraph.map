@@ -1,5 +1,5 @@
 <map id="pile_sommet" name="pile_sommet">
-<area shape="rect" id="node3" href="$_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07" title="choix_deplacement_humain" alt="" coords="150,5,333,32"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="382,5,426,32"/>
+<area shape="rect" id="node3" href="$_minimale_8c.html#a2b0fb79b0717094d1023fea7baf48c98" title="choix_deplacement_humain" alt="" coords="150,5,333,32"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="tour" alt="" coords="382,5,426,32"/>
 <area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="475,5,525,32"/>
 </map>
