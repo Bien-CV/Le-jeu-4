@@ -1,5 +1,8 @@
 Le-jeu-4
 
+Pour rappel, 5 minutes de présentation par personne (soir 5 pour un monôme, 10 pour un binôme et 15 pour un trinôme — comme quoi ça aide de réviser ses tables de multiplication !) qui seront suivies de 5 minutes de questions (soit 5 minutes pour un monôme, 5 minutes pour un binôme et 5 minutes pour un trinôme).
+
+
 Choses à faire par ordre de priorité :
 
 -Virer toutes les variables globales du programme
@@ -10,7 +13,7 @@ Choses à faire par ordre de priorité :
 
 Il faut remplacer les nombres magiques 65 66 et autres correspondant à un appui sur une touche directionnelle par des constantes nommées plus explicitement.
 
-
+Annuler n'annule pas l'action. Cela nous renvoie au début de l'action, mais ne l'annule pas.
 
 
 

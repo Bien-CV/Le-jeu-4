@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Le jeu 4: Référence du fichier Minimale_sans_Plateau_Global.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-univ.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Le jeu 4
+   &#160;<span id="projectnumber">v1.1 Ncurses</span>
+   </div>
+   <div id="projectbrief">Moteur de jeu T-RPG réalisé par Baptiste Canovas-Virly, Arthur Lemée et Yann Guenver.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Minimale_sans_Plateau_Global.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;ctype.h&gt;</code><br/>
+<code>#include &lt;ncurses.h&gt;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Minimale_sans_Plateau_Global.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale__sans___plateau___global_8c__incl.png" border="0" usemap="#_minimale__sans___plateau___global_8c" alt=""/></div>
+<map name="_minimale__sans___plateau___global_8c" id="_minimale__sans___plateau___global_8c">
+</map>
+</div>
+</div>
+<p><a href="_minimale__sans___plateau___global_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__argent.html">t_argent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__richesses.html">t_richesses</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structt__character.html">t_character</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab4964fe70f6061202bd01ff0394fb270"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale__sans___plateau___global_8c.html#ab4964fe70f6061202bd01ff0394fb270">reinitialiser_perso</a> (<a class="el" href="structt__character.html">t_character</a> plateau[10][10])</td></tr>
+<tr class="separator:ab4964fe70f6061202bd01ff0394fb270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb89407465743d7002d01b8a4756c45b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale__sans___plateau___global_8c.html#abb89407465743d7002d01b8a4756c45b">reinitialiser_perso2</a> (<a class="el" href="structt__character.html">t_character</a> *plateau[10][10])</td></tr>
+<tr class="separator:abb89407465743d7002d01b8a4756c45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91378f4c1d8a94f5aae3ff1bfc0bec55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale__sans___plateau___global_8c.html#a91378f4c1d8a94f5aae3ff1bfc0bec55">afficher_perso</a> (<a class="el" href="structt__character.html">t_character</a> perso)</td></tr>
+<tr class="separator:a91378f4c1d8a94f5aae3ff1bfc0bec55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_minimale__sans___plateau___global_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a91378f4c1d8a94f5aae3ff1bfc0bec55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficher_perso </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>perso</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale__sans___plateau___global_8c_source.html#l00030">30</a> du fichier <a class="el" href="_minimale__sans___plateau___global_8c_source.html">Minimale_sans_Plateau_Global.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale__sans___plateau___global_8c_a91378f4c1d8a94f5aae3ff1bfc0bec55_icgraph.png" border="0" usemap="#_minimale__sans___plateau___global_8c_a91378f4c1d8a94f5aae3ff1bfc0bec55_icgraph" alt=""/></div>
+<map name="_minimale__sans___plateau___global_8c_a91378f4c1d8a94f5aae3ff1bfc0bec55_icgraph" id="_minimale__sans___plateau___global_8c_a91378f4c1d8a94f5aae3ff1bfc0bec55_icgraph">
+<area shape="rect" id="node3" href="_minimale__sans___plateau___global_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="157,5,208,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale__sans___plateau___global_8c_source.html#l00035">35</a> du fichier <a class="el" href="_minimale__sans___plateau___global_8c_source.html">Minimale_sans_Plateau_Global.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale__sans___plateau___global_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#_minimale__sans___plateau___global_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="_minimale__sans___plateau___global_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="_minimale__sans___plateau___global_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node3" href="_minimale__sans___plateau___global_8c.html#ab4964fe70f6061202bd01ff0394fb270" title="reinitialiser_perso" alt="" coords="108,5,231,32"/><area shape="rect" id="node5" href="_minimale__sans___plateau___global_8c.html#abb89407465743d7002d01b8a4756c45b" title="reinitialiser_perso2" alt="" coords="104,56,235,83"/><area shape="rect" id="node7" href="_minimale__sans___plateau___global_8c.html#a91378f4c1d8a94f5aae3ff1bfc0bec55" title="afficher_perso" alt="" coords="117,107,221,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4964fe70f6061202bd01ff0394fb270"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reinitialiser_perso </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a>&#160;</td>
+          <td class="paramname"><em>plateau</em>[10][10]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale__sans___plateau___global_8c_source.html#l00016">16</a> du fichier <a class="el" href="_minimale__sans___plateau___global_8c_source.html">Minimale_sans_Plateau_Global.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale__sans___plateau___global_8c_ab4964fe70f6061202bd01ff0394fb270_icgraph.png" border="0" usemap="#_minimale__sans___plateau___global_8c_ab4964fe70f6061202bd01ff0394fb270_icgraph" alt=""/></div>
+<map name="_minimale__sans___plateau___global_8c_ab4964fe70f6061202bd01ff0394fb270_icgraph" id="_minimale__sans___plateau___global_8c_ab4964fe70f6061202bd01ff0394fb270_icgraph">
+<area shape="rect" id="node3" href="_minimale__sans___plateau___global_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="176,5,227,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abb89407465743d7002d01b8a4756c45b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reinitialiser_perso2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structt__character.html">t_character</a> *&#160;</td>
+          <td class="paramname"><em>plateau</em>[10][10]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_minimale__sans___plateau___global_8c_source.html#l00023">23</a> du fichier <a class="el" href="_minimale__sans___plateau___global_8c_source.html">Minimale_sans_Plateau_Global.c</a>.</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="_minimale__sans___plateau___global_8c_abb89407465743d7002d01b8a4756c45b_icgraph.png" border="0" usemap="#_minimale__sans___plateau___global_8c_abb89407465743d7002d01b8a4756c45b_icgraph" alt=""/></div>
+<map name="_minimale__sans___plateau___global_8c_abb89407465743d7002d01b8a4756c45b_icgraph" id="_minimale__sans___plateau___global_8c_abb89407465743d7002d01b8a4756c45b_icgraph">
+<area shape="rect" id="node3" href="_minimale__sans___plateau___global_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="184,5,235,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi Janvier 7 2015 16:30:45 pour Le jeu 4 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

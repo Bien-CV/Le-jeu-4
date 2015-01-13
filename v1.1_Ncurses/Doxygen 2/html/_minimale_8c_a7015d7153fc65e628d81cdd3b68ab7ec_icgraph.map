@@ -1,7 +1,7 @@
 <map id="afficher_skill_list" name="afficher_skill_list">
-<area shape="rect" id="node3" href="$_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="afficher_infos_persos" alt="" coords="173,31,320,57"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a7c9c98d472a87c9f8a877ceb74dea5ac" title="choix_cible_humain" alt="" coords="368,5,504,32"/>
-<area shape="rect" id="node11" href="$_minimale_8c.html#ae7570939d9a77836280496452e995a49" title="Fonction qui propose la liste des personnages pouvant être sélectionnés." alt="" coords="379,56,493,83"/>
-<area shape="rect" id="node7" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="553,31,597,57"/>
+<area shape="rect" id="node3" href="$_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c" title="affiche les informations du personnage" alt="" coords="173,31,320,57"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#a69347b1b74ee79025e3c6ce20b5b49a4" title="Permet au joueur de choisir, grâce à un curseur, une case à attaquer." alt="" coords="368,5,504,32"/>
+<area shape="rect" id="node11" href="$_minimale_8c.html#a51a4f431807e8c3c3059c27e8d755411" title="selection_perso" alt="" coords="379,56,493,83"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="tour" alt="" coords="553,31,597,57"/>
 <area shape="rect" id="node9" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="645,31,696,57"/>
 </map>

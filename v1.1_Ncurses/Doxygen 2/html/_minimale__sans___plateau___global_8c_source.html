@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Le jeu 4:  Fichier source de Minimale_sans_Plateau_Global.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-univ.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Le jeu 4
+   &#160;<span id="projectnumber">v1.1 Ncurses</span>
+   </div>
+   <div id="projectbrief">Moteur de jeu T-RPG réalisé par Baptiste Canovas-Virly, Arthur Lemée et Yann Guenver.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Minimale_sans_Plateau_Global.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_minimale__sans___plateau___global_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;ctype.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;ncurses.h&gt;</span>    </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="structt__argent.html#ac9861e6f25598b3c0cc625a9d18a908d">   10</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct </span>{ <span class="keywordtype">int</span> <a class="code" href="structt__argent.html#ac9861e6f25598b3c0cc625a9d18a908d">or</a> ; <span class="keywordtype">int</span> argent ;}<a class="code" href="structt__argent.html">t_argent</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="structt__richesses.html#a2b6ab4591114fab25daaf1d15385ba2b">   11</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct </span>{ <a class="code" href="structt__argent.html">t_argent</a> argent ; <span class="keywordtype">int</span> <a class="code" href="structt__richesses.html#a2b6ab4591114fab25daaf1d15385ba2b">joyaux</a> ;}<a class="code" href="structt__richesses.html">t_richesses</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">   13</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">struct</span>{ <a class="code" href="structt__richesses.html">t_richesses</a> <a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a> ; <span class="keywordtype">int</span> age ;} <a class="code" href="structt__character.html">t_character</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="_minimale__sans___plateau___global_8c.html#ab4964fe70f6061202bd01ff0394fb270">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_minimale__sans___plateau___global_8c.html#ab4964fe70f6061202bd01ff0394fb270">reinitialiser_perso</a>(<a class="code" href="structt__character.html">t_character</a> plateau[10][10])</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    plateau-&gt;perso.<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>=(<a class="code" href="structt__richesses.html">t_richesses</a>){{0,0},0};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="_minimale__sans___plateau___global_8c.html#abb89407465743d7002d01b8a4756c45b">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_minimale__sans___plateau___global_8c.html#abb89407465743d7002d01b8a4756c45b">reinitialiser_perso2</a>(<a class="code" href="structt__character.html">t_character</a>* plateau[10][10])</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    plateau-&gt;perso-&gt;<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>.<a class="code" href="structt__richesses.html#a42c6b53e55205ecde9f2cc1c9ce90d85">argent</a>.<a class="code" href="structt__argent.html#ac9861e6f25598b3c0cc625a9d18a908d">or</a>=0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="_minimale__sans___plateau___global_8c.html#a91378f4c1d8a94f5aae3ff1bfc0bec55">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_minimale__sans___plateau___global_8c.html#a91378f4c1d8a94f5aae3ff1bfc0bec55">afficher_perso</a>(<a class="code" href="structt__character.html">t_character</a> perso)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    printf(<span class="stringliteral">&quot;Or:%i Argent:%i Joyaux:%i Age:%i\n&quot;</span>,perso.<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>.<a class="code" href="structt__richesses.html#a42c6b53e55205ecde9f2cc1c9ce90d85">argent</a>.<a class="code" href="structt__argent.html#ac9861e6f25598b3c0cc625a9d18a908d">or</a>,perso.<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>.<a class="code" href="structt__richesses.html#a42c6b53e55205ecde9f2cc1c9ce90d85">argent</a>.<a class="code" href="structt__argent.html#aaf2331208dfb16a05b9f58f27bb24fa9">argent</a>,perso.<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>.<a class="code" href="structt__richesses.html#a2b6ab4591114fab25daaf1d15385ba2b">joyaux</a>,perso.<a class="code" href="structt__character.html#a91d98a856bbd96810b40af3ca5cc901a">age</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="_minimale__sans___plateau___global_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all.">main</a>()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="structt__richesses.html">t_richesses</a> riche={{1000000,1000000},100000};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structt__richesses.html">t_richesses</a> pas_riche={{2,3},1};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="structt__character.html">t_character</a> plateau[10][10];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    plateau[0][0].<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>=riche;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    plateau[0][0].<a class="code" href="structt__character.html#a91d98a856bbd96810b40af3ca5cc901a">age</a>=143;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    plateau[0][1].<a class="code" href="structt__character.html#aa12ea2527c01765f22ef2c1a43e0333a">money</a>=pas_riche;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    plateau[0][1].<a class="code" href="structt__character.html#a91d98a856bbd96810b40af3ca5cc901a">age</a>=13;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="_minimale__sans___plateau___global_8c.html#ab4964fe70f6061202bd01ff0394fb270">reinitialiser_perso</a>(plateau);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="_minimale__sans___plateau___global_8c.html#abb89407465743d7002d01b8a4756c45b">reinitialiser_perso2</a>(plateau);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="_minimale__sans___plateau___global_8c.html#a91378f4c1d8a94f5aae3ff1bfc0bec55">afficher_perso</a>(plateau[0][0]);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="_minimale__sans___plateau___global_8c.html#a91378f4c1d8a94f5aae3ff1bfc0bec55">afficher_perso</a>(plateau[0][1]);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi Janvier 7 2015 16:30:44 pour Le jeu 4 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>
