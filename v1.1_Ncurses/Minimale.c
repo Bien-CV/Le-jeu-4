@@ -1073,26 +1073,6 @@ int are_my_mates_alive(int joueur_courant){
     return nb_perso;
 }
 
-
-/**
- * \fn WHAT THE FUCK!!!!!
- */
-int perso_oriente_a_droite()
-{
-	int i,j;
-    for(i=0;i<TAILLE_MATRICE;i++)
-    {
-        for(j=0;j<TAILLE_MATRICE;j++)
-        {
-            if(Plateau[i][j].orientation==right)
-            {
-                return 1;
-            }
-        }
-    }
-    return 0;
-}
-
 /**
 * \fn int life_check(int joueur_courant)
 * \brief Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain.
@@ -1179,7 +1159,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
     
     do
     {
-        do                                            //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
+        do                     //Propose de sélectionner un personnager et le jouer, passer le tour, ou de se suicider.
         {   
 			clear();
 			afficher_plateau_orientation(joueur_courant);
@@ -1281,8 +1261,6 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
 
 }
 
-
-
 /**
 * \fn int all_dead_but_one(void)
 * \brief Fonction déterminant si un seul joueur est vivant.
@@ -1308,7 +1286,7 @@ int all_dead_but_one(int nb_joueurs){
 *
 */
 void afficher_plateau_orientation(int joueur_courant){
-	//***************/V1.2/*****************/
+
 	int i,j;
     for(j=-1;j<TAILLE_MATRICE;j++)
     {
@@ -1364,7 +1342,6 @@ void afficher_plateau_orientation(int joueur_courant){
     }
 	printw("\n");
 	refresh();
-
 }
 
 /**
@@ -1375,8 +1352,6 @@ void afficher_plateau_orientation(int joueur_courant){
 */
 void creer_perso_rapide(t_camp camp,int x, int y,t_classe classe )
 {
-	
-	
 	
 	char chaine_tampon[MaxString];
 	chaine_tampon[0]=0;
@@ -1401,7 +1376,6 @@ void creer_perso_rapide(t_camp camp,int x, int y,t_classe classe )
 * \fn void creer_terrain_rapide(t_camp camp,int x, int y)
 * \brief Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle.
 * 
-*
 */
 void creer_terrain_rapide(t_camp camp,int x, int y)
 {
@@ -1476,7 +1450,10 @@ void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int
 
 		//Pour déclarer facilement : int HP=000,Max_HP=000,MP=000,Max_MP=000,ATK=000,MATK=000,DEF=000,MDEF=000,MVT=000;
 		//edit_stats(HP,Max_HP,MP,Max_MP,ATK,MATK,DEF,MDEF,MVT);
-		
+/**
+ * \fn void spawn_sauvage()
+ * \brief 
+ */
 void spawn_sauvage()
 {
 	player[1].alive=1;
