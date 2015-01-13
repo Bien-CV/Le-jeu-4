@@ -1,6 +1,6 @@
 /**
 * \file Minimale.c
-* \brief Code principale
+* \brief Code principal
 * \author Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY.
 * \version 1.1
 * \date 06 Janvier 2015
@@ -75,19 +75,18 @@ t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE]; 	//matrice du plateau de je
 t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 
 
-
 t_player player[MaxTab];	//la liste des joueurs
 
 
-
 int indiceTabDepValid;
+
+
 
 /**
  * \fn void Sauvegarder()
  * \brief Sauvegarde la partie en cours dans un fichier
  *
  */
- 
 void Sauvegarder(int joueur_courant){
 	
     char NomFichier[20]="",FichierSauvegarde[20]="";//Nom du fichier entré et nom des fichiers enregistrés
@@ -124,7 +123,7 @@ void Sauvegarder(int joueur_courant){
     sauvegarde=fopen(NomFichier,"wb");
     fwrite(Plateau,TAILLE_MATRICE*TAILLE_MATRICE,sizeof(t_character),sauvegarde);
     fwrite(player,sizeof(player)/sizeof(t_player),sizeof(t_player),sauvegarde);
-    fwrite(&joueur_courant,sizeof(int),1,sauvegarde); //Que faire avec &joueur_courant ?
+    fwrite(&joueur_courant,sizeof(int),1,sauvegarde);
     fclose(fichierIndex);
     fclose(sauvegarde);
 }
@@ -182,8 +181,8 @@ int generation_nombre_aleatoire(int max)
 /**
  * \fn void deplacer_perso(t_coord case_perso)
  * \brief Déplace le personnage sur le terrain
- * \brief Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case_perso'.
- * \brief Si la 'case_perso' contenait un piège, le perso perd des HP.
+ * Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case_perso'.
+ * Si la 'case_perso' contenait un piège, le perso perd des HP.
  */
 void deplacer_perso(t_coord case_perso, t_character* selected_character)
 {
@@ -298,7 +297,7 @@ void deplacements_valides(int* nbDepValid, t_character* selected_character){
  *
  */
 t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character* selected_character){
-	//***************/V1.2/*****************/
+	
 		int mvt_effectue = 0, x, y;
 		char choix;
 		x = selected_character->position.X;
@@ -439,35 +438,6 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 	}while(choix != '\n' && choix  != 13);
 	
 	return((t_coord){x,y});
-	
-	//***************/V1.2/*****************/Fin
-    /*int i = 0, j, choix = 1;
-    vider_buffer();
-    t_coord coordonnees, choisi;
-    liste_en_tete();
-    printw("Quel Deplacement voulez-vous effectuer ? \n");
-    while(!liste_est_hors_liste()){
-        liste_valeur_elt(&coordonnees);
-        liste_suivant();
-        printw("   %i - (%i,%i)\n",i+1, coordonnees.X, coordonnees.Y);
-        i++;
-    }
-
-    while(choix){
-        scanf("%i",&j);
-        if(j<=nbDepValid && j > 0)
-        {
-            liste_en_tete();
-            for(i = 0; i < j-1; i++)
-                liste_suivant();
-            liste_valeur_elt(&choisi);
-            coordonnees.X=choisi.X;
-            coordonnees.Y=choisi.Y;
-            choix=0;
-        }else{printw("Numero incorrect\n");}
-    }
-    printw("\n");
-    return (coordonnees);*/
 }
 
 
@@ -532,8 +502,8 @@ int cases_voisines_ATK(t_coord coordonnees){
 		
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
-            file_ajouter(coord);
-            nbVois++;
+            file_ajouter(coord);	//ajoute à la file les coordonnées si elles sont valides et accessibles
+            nbVois++;				//incrémente le nombre d'éléments AJOUTÉS à la liste!
         }
 
         coord = coordonnees;
@@ -541,8 +511,8 @@ int cases_voisines_ATK(t_coord coordonnees){
 
         if(coord.X >= 0 && coord.X <= TAILLE_MATRICE-1)
         {
-            file_ajouter(coord);
-            nbVois++;
+            file_ajouter(coord);	//ajoute à la file les coordonnées si elles sont valides et accessibles
+            nbVois++;				//incrémente le nombre d'éléments AJOUTÉS à la liste!
         }
 
         coord = coordonnees;
@@ -550,8 +520,8 @@ int cases_voisines_ATK(t_coord coordonnees){
 
         if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
-            file_ajouter(coord);
-            nbVois++;
+            file_ajouter(coord);	//ajoute à la file les coordonnées si elles sont valides et accessibles
+            nbVois++;				//incrémente le nombre d'éléments AJOUTÉS à la liste!
         }
 
         coord = coordonnees;
@@ -559,8 +529,8 @@ int cases_voisines_ATK(t_coord coordonnees){
 
         if(coord.Y >= 0 && coord.Y <= TAILLE_MATRICE-1)
         {
-            file_ajouter(coord);
-            nbVois++;
+            file_ajouter(coord);	//ajoute à la file les coordonnées si elles sont valides et accessibles
+            nbVois++;				//incrémente le nombre d'éléments AJOUTÉS à la liste!
         }
 
     return(nbVois);
@@ -606,7 +576,7 @@ void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_char
 
 /**
  * \fn t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
- * \brief choisi parmi la liste des cases à attaquer pour l'IA, une case
+ * \brief Choisi parmi la liste des cases à attaquer pour l'IA, une case
  */
 t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 {
@@ -614,28 +584,25 @@ t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
     t_coord coordonnees;
     liste_en_tete();
 
-do{
+	do{
         choix=generation_nombre_aleatoire(*nbAtkValid);
         liste_en_tete();
         for(i = 0; i < choix-1; i++)
 			liste_suivant();
         liste_valeur_elt(&coordonnees);
     }while (!(choix<=*nbAtkValid && choix > 0));
-   printw("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
+	printw("Cible:%i,%i\n",coordonnees.X,coordonnees.Y);
 
-    
     return (coordonnees);
 }
 
 
-
-
 /**
-* \fn void init_char_table(t_char chars[])
-* \brief Fonction d'initialisation d'un tableau de personnages
-* Remplit le tableau de personnages entré en paramètre de cases de terrain.
-*
-*/
+ * \fn void init_char_table(t_char chars[])
+ * \brief Fonction d'initialisation d'un tableau de personnages
+ * Remplit le tableau de personnages entré en paramètre de cases de terrain.
+ *
+ */
 void init_char_table(t_character chars[])
 {
     int i;
@@ -659,7 +626,7 @@ void afficher_skill(int skill_nb, t_skill skill,t_character selected_character){
 
 /**
  * \fn void afficher_skill_list(t_character perso)
- * \brief affiche la liste des compétence d'un personnage
+ * \brief Affiche la liste des compétence d'un personnage
  */
 void afficher_skill_list(t_character perso){
 		afficher_skill(1,perso.skill.a,perso);
@@ -672,7 +639,7 @@ void afficher_skill_list(t_character perso){
 
 /**
  * \fn void afficher_infos_persos( t_character perso)
- * \brief affiche les informations du personnage
+ * \brief Affiche les informations du personnage
  */
 void afficher_infos_persos( t_character perso)
 {
@@ -704,7 +671,7 @@ void afficher_infos_persos( t_character perso)
  */
 t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
 {
-	//***************/V1.2/*****************/
+	
     int valid = 0;
     char choix;
     int x=selected_character->position.X, y=selected_character->position.Y;
@@ -760,47 +727,6 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 	}while((choix != '\n' && choix != 13) || valid == 0);
 	return (val);
 }
-	//***************/V1.2/*****************/Fin
-	/*
-    int i =0,choix;
-    t_camp tampon_camp_cible;
-    vider_buffer();
-    t_coord coordonnees;
-    liste_en_tete();
-    printw("Choisissez votre cible. \n\n");
-    while(!liste_est_hors_liste()){
-        liste_valeur_elt(&coordonnees);
-        tampon_camp_cible=Plateau[coordonnees.X][coordonnees.Y].camp;
-        liste_suivant();
-        printw("   %i - ",i+1);
-        printw("%s %iHP", Plateau[coordonnees.X][coordonnees.Y].name,Plateau[coordonnees.X][coordonnees.Y].status.HP);
-        if (( tampon_camp_cible>0) && (joueur==tampon_camp_cible) ){
-			printw(" - Ami");
-		} else if (tampon_camp_cible>0)
-		{
-			printw(" - %s, joueur%i",player[tampon_camp_cible].name,tampon_camp_cible);
-		}else if (tampon_camp_cible==0)
-		{
-			printw(" - Terrain");
-		}else if (tampon_camp_cible==-1)
-		{
-			printw(" - Obstacle");
-		}
-        printw(" (%i,%i)",coordonnees.X, coordonnees.Y);
-        printw("\n");
-        i++;
-    }
-    
-    do{
-        
-        scanf("%i",&choix);
-        liste_en_tete();
-        for(i = 0; i < choix-1; i++)
-			liste_suivant();
-        liste_valeur_elt(&coordonnees);
-    }while (!(choix<=nbAtkValid && choix > 0));
-    return (coordonnees);*/
-
 
 
 /**
@@ -810,8 +736,6 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 */
 void selection_perso(int joueur_courant,t_character* selected_character){
 	
-	
-	//***************/V1.2/*****************/
 	int x = 0,y = 0;
 	char choix;
 	
@@ -861,46 +785,11 @@ void selection_perso(int joueur_courant,t_character* selected_character){
 	}while((choix != '\n' && choix != 13) || (Plateau[x][y].camp != joueur_courant || Plateau[x][y].type == TRAP_UNIT));
 	*selected_character = Plateau[x][y];
 	Plateau[x][y]= case_terrain;
-	//***************/V1.2/*****************/Fin
-	
-	/*
-    int i,j,nb_perso=0,choix,choix_fait=1;
-    t_character Valid_chars[MaxTab];
-    init_char_table(Valid_chars);
-    t_character perso_selectionne;
-    vider_buffer();
-    printw("Quel personnage voulez-vous selectionner ? \n");
-    for(i=0;i<TAILLE_MATRICE;i++)
-    {
-        for(j=0;j<TAILLE_MATRICE;j++)
-        {
-            if(Plateau[i][j].camp==joueur && strcmp(Plateau[i][j].name, "Trap") != 0)
-            {
-                Valid_chars[nb_perso]=Plateau[i][j];
-                nb_perso++;
-            }
-        }
-    }
-	printw("\n");
-    for(i=0;i<nb_perso;i++){
-        printw("   %i - (%i,%i) %s HP: %i\n",i+1,Valid_chars[i].position.X,Valid_chars[i].position.Y,Valid_chars[i].name,Valid_chars[i].status.HP);
-    }
-	
-    while(choix_fait){
-        scanf("%i",&choix);
-        if(choix<=nb_perso && choix > 0)
-        {
-            perso_selectionne=Valid_chars[choix-1];
-            choix_fait=0;
-        }else{printw("Numero incorrect");}
-    }
-    selected_character=perso_selectionne; //selected_character est la variable globale correspondant au perso sélectionné*/
 }
 
 /**
 * \fn void passer_tour()
 * \brief Fonction qui passe le tour du joueur actif
-*
 *
 */
 void passer_tour(){
@@ -917,7 +806,7 @@ void suicide(int joueur_courant){
     for(i=0;i<TAILLE_MATRICE;i++){
         for(j=0;j<TAILLE_MATRICE;j++){
             if(Plateau[i][j].camp==joueur_courant){
-            Plateau[i][j]=case_terrain;
+				Plateau[i][j]=case_terrain;	//Remplace tout les personnage du joueur par une case vide
             }
         }
     }
@@ -929,7 +818,6 @@ void suicide(int joueur_courant){
  */
 t_skill select_skill(t_character selected_character){
         
-	//***************/V1.2/*****************/
         int choix, indice_curseur = 1, nb_choix_max = 6;
         
         do
@@ -969,33 +857,6 @@ t_skill select_skill(t_character selected_character){
 				default: printw("Erreur: votre choix doit être compris entre 1 et 6\n");
             }
         printw("\n");
-	//***************/V1.2/*****************/Fin
-        /*
-        int choix;
-        vider_buffer();
-        printw("Quel compétence voulez-vous utiliser ? \n\n");
-        do
-        {
-            afficher_skill(1,selected_character->skill.a);
-            afficher_skill(2,selected_character->skill.b);
-            afficher_skill(3,selected_character->skill.c);
-            afficher_skill(4,selected_character->skill.d);
-            afficher_skill(5,selected_character->skill.e);
-            afficher_skill(6,selected_character->skill.wait);
-            scanf("%d",&choix);
-
-            switch(choix)
-            {   case 1:  printw("\n");return selected_character->skill.a;break;
-                case 2:  printw("\n");return selected_character->skill.b;break;
-                case 3:  printw("\n");return selected_character->skill.c;break;
-                case 4:  printw("\n");return selected_character->skill.d;break;
-                case 5:  printw("\n");return selected_character->skill.e;break;
-                case 6:  printw("\n");return selected_character->skill.wait;break;
-  default: printw("Erreur: votre choix doit être compris entre 1 et 6\n");
-            }
-        }
-        while ((choix<1) ||(choix>6) );
-        printw("\n");*/
         return skill_empty;
 }
 
@@ -1014,7 +875,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
     yenemy=cible.Y;
     oenemy=Plateau[xenemy][yenemy].orientation;
 
-    if((xenemy-yenemy>=xperso-yperso)&&(xenemy+yenemy<xperso+yperso))//Vérifie si l'ennemi est au Nord
+    if((xenemy-yenemy>=xperso-yperso)&&(xenemy+yenemy<xperso+yperso))//Vérifie si la cible est au Nord
     {
         switch(oenemy)
         {
@@ -1024,7 +885,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
             case left: if(xenemy-yenemy==xperso-yperso){return back;}else return side ; break;
         }
     }
-    else if((xenemy-yenemy>xperso-yperso)&&(xenemy+yenemy>=xperso+yperso))//Vérifie si l'ennemi est à l'Est
+    else if((xenemy-yenemy>xperso-yperso)&&(xenemy+yenemy>=xperso+yperso))//Vérifie si la cible est à l'Est
     {
         switch(oenemy)
         {
@@ -1034,7 +895,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
             case left: return front ; break;
         }
     }
-    else if((xenemy-yenemy<=xperso-yperso)&&(xenemy+yenemy>xperso+yperso))//Vérifie si l'ennemi est au Sud
+    else if((xenemy-yenemy<=xperso-yperso)&&(xenemy+yenemy>xperso+yperso))//Vérifie si la cible est au Sud
     {
         switch(oenemy)
         {
@@ -1044,7 +905,7 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
             case left: if(xenemy+yenemy==xperso+yperso){return front;}else return side ; break;
         }
     }
-    else if((xenemy-yenemy<xperso-yperso)&&(xenemy+yenemy<=xperso+yperso))//Vérifie si l'ennemi est à l'Ouest
+    else if((xenemy-yenemy<xperso-yperso)&&(xenemy+yenemy<=xperso+yperso))//Vérifie si la cible est à l'Ouest
     {
         switch(oenemy)
         {
@@ -1067,22 +928,20 @@ t_targetOrientation get_target_orientation (t_character perso, t_coord cible ){
 */
 void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
     int total_dmg;
-    t_targetOrientation targetOrientation= get_target_orientation(lanceur,cible);
     int coefOrientation;
-    //typedef struct { char name[20] ; int range ; t_skilltype type ; int damage_coeff ;} t_skill;
-    //typedef struct { int HP ; int Max_HP ; int MP ; int Max_MP ;} t_status ;
-    //typedef struct { int ATK ; int MATK ; int DEF ; int MDEF ; int MVT ;} t_stats;
-    //typedef enum {EMPTY,ATK,MATK}t_skilltype;
+    t_targetOrientation targetOrientation= get_target_orientation(lanceur,cible);
+    
+
     if(targetOrientation==0) coefOrientation=1;
     if(targetOrientation==1) coefOrientation=1;
     if(targetOrientation==2) coefOrientation=2;
 
+
     if (action.type == MATK){
-        
         printw("MATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.MATK; //degats avant réduction
         if(total_dmg>0) {
-                total_dmg-=Plateau[cible.X][cible.Y].stats.MDEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg-=Plateau[cible.X][cible.Y].stats.MDEF/10; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
                 total_dmg*=coefOrientation;
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
@@ -1091,7 +950,7 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
         printw("ATK : %d,%d\n", cible.X, cible.Y);
         total_dmg=action.damage_coeff*lanceur.stats.ATK; //degats avant réduction
         if(total_dmg>0) {
-                total_dmg-=Plateau[cible.X][cible.Y].stats.DEF/10;//*coefOrientation; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
+                total_dmg-=Plateau[cible.X][cible.Y].stats.DEF/10; // réduction des dégâts, ignore les soins. Les soins sont des dégâts négatifs.
                 total_dmg*=coefOrientation;
         }
         Plateau[cible.X][cible.Y].status.HP -= total_dmg;
@@ -1115,20 +974,6 @@ void appliquer_action(t_character lanceur, t_coord cible, t_skill action){
     if (Plateau[cible.X][cible.Y].status.HP<= 0) Plateau[cible.X][cible.Y]=case_terrain;
 }
 
-
-
-/**
-* \fn void vider_buffer(void)
-* \brief Vide le tampon de saisie clavier.
-* 
-*
-*/
-void vider_buffer(void)
-{
-  //int c;
-  //while((c=getchar()) != EOF && c != '\n');
- 
-}
 
 /**
 * \fn void orienter_perso_fleches(int joueur_courant, t_character* selected_character)
