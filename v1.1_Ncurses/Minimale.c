@@ -1240,25 +1240,21 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
 			}
 			else
 			{
-				skill_selected = select_skill(*selected_character);//selectionne l’action que le joueur souhaite effectuer (exple: selection_perso / passer_tour…) retourne le n° de l’action à effectuer
-				//tampon_skill = skill_selected;
-				if(skill_selected.type != EMPTY)
-				{
-					viser_case_valide(skill_selected, nbAtkValid,selected_character);
-					appliquer_action(*selected_character, choix_cible_humain(skill_selected, joueur_courant,selected_character), skill_selected);
-				}else 
-				{
-					appliquer_action(*selected_character, selected_character->position, skill_selected);
-				}
-				nb_actions_faites++;
-				orienter_perso_fleches(joueur_courant,selected_character);
+			skill_selected = select_skill(*selected_character);//selectionne l’action que le joueur souhaite effectuer (exple: selection_perso / passer_tour…) retourne le n° de l’action à effectuer
+			//tampon_skill = skill_selected;
+			if(skill_selected.type != EMPTY)
+			{
+				viser_case_valide(skill_selected, nbAtkValid,selected_character);
+				appliquer_action(*selected_character, choix_cible_humain(skill_selected, joueur_courant,selected_character), skill_selected);
+			}else 
+			{
+				appliquer_action(*selected_character, selected_character->position, skill_selected);
 			}
+			nb_actions_faites++;
+			orienter_perso_fleches(joueur_courant,selected_character);
+		}
         }
-
-       
-
     }
-
 }
 
 /**
@@ -1348,7 +1344,6 @@ void afficher_plateau_orientation(int joueur_courant){
 * \fn void creer_perso_rapide(char nom[MaxTab], t_camp camp,int x, int y)
 * \brief Création brève de perso.
 * 
-*
 */
 void creer_perso_rapide(t_camp camp,int x, int y,t_classe classe )
 {
@@ -1452,7 +1447,7 @@ void edit_stats( t_character perso,int HP , int Max_HP , int MP , int Max_MP,int
 		//edit_stats(HP,Max_HP,MP,Max_MP,ATK,MATK,DEF,MDEF,MVT);
 /**
  * \fn void spawn_sauvage()
- * \brief 
+ * \brief Créé un personnage du camp neutre à une position aléatoire sur le terrain
  */
 void spawn_sauvage()
 {
@@ -1470,6 +1465,11 @@ void spawn_sauvage()
 	
 }
 
+/**
+ * /fn void spawn_character(t_camp camp_nouveau_perso)
+ * /brief Permet la création d'un personnage joueur à la position entrée
+ * 
+ */
 void spawn_character(t_camp camp_nouveau_perso)
 {
 	player[camp_nouveau_perso].alive=1;
@@ -1484,6 +1484,11 @@ void spawn_character(t_camp camp_nouveau_perso)
 	
 }
 
+/**
+ * /fn void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* selected_character)
+ * /brief Fonction de déroulement d'un tour pour l'IA.
+ * 
+ */
 void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* selected_character)
 {
     int nb_actions_faites, i;
@@ -1520,6 +1525,11 @@ void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* s
     }
 }
 
+/**
+ * /fn int calcul_persos_IA(int joueur_courant){
+ * /brief Calcule le nombre de personnage controlé par l'IA
+ * 
+ */
 int calcul_persos_IA(int joueur_courant){
     int i,j,nb_perso=0;
     init_char_table(Valid_chars_IA);
@@ -1530,7 +1540,7 @@ int calcul_persos_IA(int joueur_courant){
             if(Plateau[i][j].camp==joueur_courant)
             {
                 Valid_chars_IA[nb_perso]=Plateau[i][j];
-                nb_perso++;
+                nb_perso++;	//Incrémente si le personnage est bien du camp sauvage
             }
         }
     }
@@ -1543,9 +1553,9 @@ int calcul_persos_IA(int joueur_courant){
  */
 void saisie_nombre_joueurs(int* nb_joueurs )
 {
-	*nb_joueurs=4;
 	scanw("%i", &nb_joueurs);
 }
+
 /**
 * \fn int main()
 * \brief Fonction principale
@@ -1576,10 +1586,6 @@ int main(){
 	init_pair(6, COLOR_BLUE, COLOR_BLACK);
 	init_pair(7, COLOR_BLACK, COLOR_WHITE);
 	
-
-	
-	
-	
 	strcpy(player[1].name,"la nature");
 	strcpy(player[2].name,"Baptiste");
 	strcpy(player[3].name,"Yann");
@@ -1590,9 +1596,6 @@ int main(){
 	creer_terrain_rapide(obstacle,1,2);
 	creer_terrain_rapide(obstacle,0,2);
 
-	
-
-	
 	
 	creer_perso_rapide(2,4,0,berseker);
 	creer_perso_rapide(2,3,0,mage);
