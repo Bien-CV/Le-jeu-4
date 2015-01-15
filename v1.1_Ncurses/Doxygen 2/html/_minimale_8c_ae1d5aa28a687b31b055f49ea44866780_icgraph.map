@@ -1,0 +1,5 @@
+<map id="are_my_mates_alive" name="are_my_mates_alive">
+<area shape="rect" id="node3" href="$_minimale_8c.html#a704aac80f0e314dab07203a35f05aef2" title="Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0." alt="" coords="198,5,279,32"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="Fonction de déroulement d&#39;un tour pour le joueur entré en paramètre." alt="" coords="329,5,373,32"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="421,5,472,32"/>
+</map>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+  <compounddef id="_readme_8md" kind="file">
+    <compoundname>Readme.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Peut-être<sp/>penser<sp/>à<sp/>la<sp/>génération<sp/>de<sp/><ref refid="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528ae55222d4b0e83581c51f843e87e3cfe2" kindref="member">terrain</ref>.<sp/>Ca<sp/>serait<sp/>pas<sp/>mal<sp/>un<sp/>ptit<sp/>donjon<sp/>avec<sp/>des<sp/>salles.</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">Configuration<sp/>de<sp/>Geany,<sp/>cliquer<sp/>sur<sp/>le<sp/>menu<sp/>déroulant<sp/>à<sp/>côté<sp/>de<sp/>build,<sp/>puis<sp/></highlight><highlight class="stringliteral">&quot;définir<sp/>les<sp/>commandes<sp/>de<sp/>construction&quot;</highlight><highlight class="normal"><sp/>puis<sp/><sp/>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">http:</highlight><highlight class="comment">//image.noelshack.com/fichiers/2014/51/1418816409-capture-du-2014-12-17-12-38-56.png</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/Readme.md"/>
+  </compounddef>
+</doxygen>

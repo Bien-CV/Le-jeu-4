@@ -1,0 +1,521 @@
+\hypertarget{liste_8h}{\section{Référence du fichier liste.\-h}
+\label{liste_8h}\index{liste.\-h@{liste.\-h}}
+}
+{\ttfamily \#include \char`\"{}header.\-h\char`\"{}}\\*
+Graphe des dépendances par inclusion de liste.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{liste_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{liste_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{liste_8h_aa325493a520928cd959f5cf829747b1c}{liste\-\_\-init} (void)
+\item 
+int \hyperlink{liste_8h_a1e4d1c45ace210278d08fd886268a0e3}{liste\-\_\-est\-\_\-vide} (void)
+\item 
+int \hyperlink{liste_8h_ad4a1a49d8756b972708e0870f9420776}{liste\-\_\-est\-\_\-hors\-\_\-liste} (void)
+\item 
+void \hyperlink{liste_8h_a9cbc13cd82829b3541fae0c01209f963}{liste\-\_\-en\-\_\-tete} (void)
+\item 
+void \hyperlink{liste_8h_aaf16c3ff04ebc19da036b0332d82ccee}{liste\-\_\-en\-\_\-queue} (void)
+\item 
+void \hyperlink{liste_8h_ae62f982aac8059018f004e3a7e2e7f21}{liste\-\_\-precedent} (void)
+\item 
+void \hyperlink{liste_8h_a801cf7ec08fb2c6b1dceb32af4a46111}{liste\-\_\-suivant} (void)
+\item 
+void \hyperlink{liste_8h_a1ad09d74d2d4f3b298db6b834933d744}{liste\-\_\-valeur\-\_\-elt} (\hyperlink{structt__coord}{t\-\_\-coord} $\ast$e)
+\item 
+void \hyperlink{liste_8h_a0282305b4b91dc5376333ac820bdf995}{liste\-\_\-modif\-\_\-elt} (\hyperlink{structt__coord}{t\-\_\-coord} v)
+\item 
+void \hyperlink{liste_8h_ac46b950926c8191e47c3822c624d2e1d}{liste\-\_\-oter\-\_\-elt} (void)
+\item 
+void \hyperlink{liste_8h_ae9c711baf0f41d27a5002c3e249687d8}{liste\-\_\-ajout\-\_\-droit} (\hyperlink{structt__coord}{t\-\_\-coord} e)
+\item 
+void \hyperlink{liste_8h_ac7289b3f288aec0c22e5272c4851e0ee}{liste\-\_\-ajout\-\_\-gauche} (\hyperlink{structt__coord}{t\-\_\-coord} e)
+\item 
+void \hyperlink{liste_8h_a207cdf13008fdfbf84b897ca499e3b17}{liste\-\_\-afficher\-\_\-contenu} ()
+\item 
+void \hyperlink{liste_8h_aeca8ab6b8935bc5fd81fa7a74e64879a}{liste\-\_\-afficher\-\_\-queue} ()
+\item 
+void \hyperlink{liste_8h_a48218f7c1bafab1e92490a0963ee7451}{liste\-\_\-suppr\-\_\-doublon} ()
+\item 
+int \hyperlink{liste_8h_a78de7382315436cf196cf30aac14257c}{liste\-\_\-calculer\-\_\-nombre\-\_\-elements} ()
+\item 
+int \hyperlink{liste_8h_ae6bf3307184d2f80167abcb9c2ad5b2b}{liste\-\_\-element\-\_\-est\-\_\-present} (\hyperlink{structt__coord}{t\-\_\-coord} e, int num\-Pile)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{liste_8h_a207cdf13008fdfbf84b897ca499e3b17}{\index{liste.\-h@{liste.\-h}!liste\-\_\-afficher\-\_\-contenu@{liste\-\_\-afficher\-\_\-contenu}}
+\index{liste\-\_\-afficher\-\_\-contenu@{liste\-\_\-afficher\-\_\-contenu}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-afficher\-\_\-contenu}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-afficher\-\_\-contenu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a207cdf13008fdfbf84b897ca499e3b17}
+
+
+Définition à la ligne 120 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a207cdf13008fdfbf84b897ca499e3b17_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_aeca8ab6b8935bc5fd81fa7a74e64879a}{\index{liste.\-h@{liste.\-h}!liste\-\_\-afficher\-\_\-queue@{liste\-\_\-afficher\-\_\-queue}}
+\index{liste\-\_\-afficher\-\_\-queue@{liste\-\_\-afficher\-\_\-queue}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-afficher\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-afficher\-\_\-queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_aeca8ab6b8935bc5fd81fa7a74e64879a}
+
+
+Définition à la ligne 134 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_aeca8ab6b8935bc5fd81fa7a74e64879a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_ae9c711baf0f41d27a5002c3e249687d8}{\index{liste.\-h@{liste.\-h}!liste\-\_\-ajout\-\_\-droit@{liste\-\_\-ajout\-\_\-droit}}
+\index{liste\-\_\-ajout\-\_\-droit@{liste\-\_\-ajout\-\_\-droit}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-ajout\-\_\-droit}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-ajout\-\_\-droit (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{e}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_ae9c711baf0f41d27a5002c3e249687d8}
+
+
+Définition à la ligne 85 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{liste_8h_ae9c711baf0f41d27a5002c3e249687d8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_ae9c711baf0f41d27a5002c3e249687d8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_ac7289b3f288aec0c22e5272c4851e0ee}{\index{liste.\-h@{liste.\-h}!liste\-\_\-ajout\-\_\-gauche@{liste\-\_\-ajout\-\_\-gauche}}
+\index{liste\-\_\-ajout\-\_\-gauche@{liste\-\_\-ajout\-\_\-gauche}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-ajout\-\_\-gauche}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-ajout\-\_\-gauche (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{e}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_ac7289b3f288aec0c22e5272c4851e0ee}
+
+
+Définition à la ligne 103 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{liste_8h_ac7289b3f288aec0c22e5272c4851e0ee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a78de7382315436cf196cf30aac14257c}{\index{liste.\-h@{liste.\-h}!liste\-\_\-calculer\-\_\-nombre\-\_\-elements@{liste\-\_\-calculer\-\_\-nombre\-\_\-elements}}
+\index{liste\-\_\-calculer\-\_\-nombre\-\_\-elements@{liste\-\_\-calculer\-\_\-nombre\-\_\-elements}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-calculer\-\_\-nombre\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}int liste\-\_\-calculer\-\_\-nombre\-\_\-elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a78de7382315436cf196cf30aac14257c}
+
+
+Définition à la ligne 167 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a78de7382315436cf196cf30aac14257c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a78de7382315436cf196cf30aac14257c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_ae6bf3307184d2f80167abcb9c2ad5b2b}{\index{liste.\-h@{liste.\-h}!liste\-\_\-element\-\_\-est\-\_\-present@{liste\-\_\-element\-\_\-est\-\_\-present}}
+\index{liste\-\_\-element\-\_\-est\-\_\-present@{liste\-\_\-element\-\_\-est\-\_\-present}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-element\-\_\-est\-\_\-present}]{\setlength{\rightskip}{0pt plus 5cm}int liste\-\_\-element\-\_\-est\-\_\-present (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{e, }
+\item[{int}]{num\-Pile}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_ae6bf3307184d2f80167abcb9c2ad5b2b}
+
+
+Définition à la ligne 182 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_ae6bf3307184d2f80167abcb9c2ad5b2b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_ae6bf3307184d2f80167abcb9c2ad5b2b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_aaf16c3ff04ebc19da036b0332d82ccee}{\index{liste.\-h@{liste.\-h}!liste\-\_\-en\-\_\-queue@{liste\-\_\-en\-\_\-queue}}
+\index{liste\-\_\-en\-\_\-queue@{liste\-\_\-en\-\_\-queue}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-en\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-en\-\_\-queue (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_aaf16c3ff04ebc19da036b0332d82ccee}
+
+
+Définition à la ligne 38 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{liste_8h_aaf16c3ff04ebc19da036b0332d82ccee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a9cbc13cd82829b3541fae0c01209f963}{\index{liste.\-h@{liste.\-h}!liste\-\_\-en\-\_\-tete@{liste\-\_\-en\-\_\-tete}}
+\index{liste\-\_\-en\-\_\-tete@{liste\-\_\-en\-\_\-tete}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-en\-\_\-tete}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-en\-\_\-tete (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a9cbc13cd82829b3541fae0c01209f963}
+
+
+Définition à la ligne 31 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{liste_8h_a9cbc13cd82829b3541fae0c01209f963_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a9cbc13cd82829b3541fae0c01209f963_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_ad4a1a49d8756b972708e0870f9420776}{\index{liste.\-h@{liste.\-h}!liste\-\_\-est\-\_\-hors\-\_\-liste@{liste\-\_\-est\-\_\-hors\-\_\-liste}}
+\index{liste\-\_\-est\-\_\-hors\-\_\-liste@{liste\-\_\-est\-\_\-hors\-\_\-liste}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-est\-\_\-hors\-\_\-liste}]{\setlength{\rightskip}{0pt plus 5cm}int liste\-\_\-est\-\_\-hors\-\_\-liste (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_ad4a1a49d8756b972708e0870f9420776}
+
+
+Définition à la ligne 25 du fichier liste.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_ad4a1a49d8756b972708e0870f9420776_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a1e4d1c45ace210278d08fd886268a0e3}{\index{liste.\-h@{liste.\-h}!liste\-\_\-est\-\_\-vide@{liste\-\_\-est\-\_\-vide}}
+\index{liste\-\_\-est\-\_\-vide@{liste\-\_\-est\-\_\-vide}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-est\-\_\-vide}]{\setlength{\rightskip}{0pt plus 5cm}int liste\-\_\-est\-\_\-vide (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a1e4d1c45ace210278d08fd886268a0e3}
+
+
+Définition à la ligne 19 du fichier liste.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a1e4d1c45ace210278d08fd886268a0e3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_aa325493a520928cd959f5cf829747b1c}{\index{liste.\-h@{liste.\-h}!liste\-\_\-init@{liste\-\_\-init}}
+\index{liste\-\_\-init@{liste\-\_\-init}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_aa325493a520928cd959f5cf829747b1c}
+
+
+Définition à la ligne 12 du fichier liste.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_aa325493a520928cd959f5cf829747b1c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a0282305b4b91dc5376333ac820bdf995}{\index{liste.\-h@{liste.\-h}!liste\-\_\-modif\-\_\-elt@{liste\-\_\-modif\-\_\-elt}}
+\index{liste\-\_\-modif\-\_\-elt@{liste\-\_\-modif\-\_\-elt}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-modif\-\_\-elt}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-modif\-\_\-elt (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{v}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a0282305b4b91dc5376333ac820bdf995}
+
+
+Définition à la ligne 66 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{liste_8h_a0282305b4b91dc5376333ac820bdf995_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_ac46b950926c8191e47c3822c624d2e1d}{\index{liste.\-h@{liste.\-h}!liste\-\_\-oter\-\_\-elt@{liste\-\_\-oter\-\_\-elt}}
+\index{liste\-\_\-oter\-\_\-elt@{liste\-\_\-oter\-\_\-elt}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-oter\-\_\-elt}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-oter\-\_\-elt (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_ac46b950926c8191e47c3822c624d2e1d}
+
+
+Définition à la ligne 73 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{liste_8h_ac46b950926c8191e47c3822c624d2e1d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_ac46b950926c8191e47c3822c624d2e1d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_ae62f982aac8059018f004e3a7e2e7f21}{\index{liste.\-h@{liste.\-h}!liste\-\_\-precedent@{liste\-\_\-precedent}}
+\index{liste\-\_\-precedent@{liste\-\_\-precedent}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-precedent}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-precedent (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_ae62f982aac8059018f004e3a7e2e7f21}
+
+
+Définition à la ligne 45 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{liste_8h_ae62f982aac8059018f004e3a7e2e7f21_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a801cf7ec08fb2c6b1dceb32af4a46111}{\index{liste.\-h@{liste.\-h}!liste\-\_\-suivant@{liste\-\_\-suivant}}
+\index{liste\-\_\-suivant@{liste\-\_\-suivant}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-suivant}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-suivant (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a801cf7ec08fb2c6b1dceb32af4a46111}
+
+
+Définition à la ligne 52 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{liste_8h_a801cf7ec08fb2c6b1dceb32af4a46111_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a801cf7ec08fb2c6b1dceb32af4a46111_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a48218f7c1bafab1e92490a0963ee7451}{\index{liste.\-h@{liste.\-h}!liste\-\_\-suppr\-\_\-doublon@{liste\-\_\-suppr\-\_\-doublon}}
+\index{liste\-\_\-suppr\-\_\-doublon@{liste\-\_\-suppr\-\_\-doublon}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-suppr\-\_\-doublon}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-suppr\-\_\-doublon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a48218f7c1bafab1e92490a0963ee7451}
+
+
+Définition à la ligne 143 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a48218f7c1bafab1e92490a0963ee7451_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a48218f7c1bafab1e92490a0963ee7451_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{liste_8h_a1ad09d74d2d4f3b298db6b834933d744}{\index{liste.\-h@{liste.\-h}!liste\-\_\-valeur\-\_\-elt@{liste\-\_\-valeur\-\_\-elt}}
+\index{liste\-\_\-valeur\-\_\-elt@{liste\-\_\-valeur\-\_\-elt}!liste.h@{liste.\-h}}
+\subsubsection[{liste\-\_\-valeur\-\_\-elt}]{\setlength{\rightskip}{0pt plus 5cm}void liste\-\_\-valeur\-\_\-elt (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{liste_8h_a1ad09d74d2d4f3b298db6b834933d744}
+
+
+Définition à la ligne 59 du fichier liste.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{liste_8h_a1ad09d74d2d4f3b298db6b834933d744_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{liste_8h_a1ad09d74d2d4f3b298db6b834933d744_icgraph}
+\end{center}
+\end{figure}
+
+

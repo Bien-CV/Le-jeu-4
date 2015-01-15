@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Le jeu 4: Variables globale</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo-univ.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Le jeu 4
+   &#160;<span id="projectnumber">v1.1 Ncurses</span>
+   </div>
+   <div id="projectbrief">Moteur de jeu T-RPG réalisé par Baptiste Canovas-Virly, Arthur Lemée et Yann Guenver.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li class="current"><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="globals.html"><span>Tout</span></a></li>
+      <li class="current"><a href="globals_func.html"><span>Fonctions</span></a></li>
+      <li><a href="globals_vars.html"><span>Variables</span></a></li>
+      <li><a href="globals_enum.html"><span>Énumérations</span></a></li>
+      <li><a href="globals_eval.html"><span>Valeurs&#160;énumérées</span></a></li>
+      <li><a href="globals_defs.html"><span>Macros</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_j"><span>j</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>afficher_infos_persos()
+: <a class="el" href="_minimale_8c.html#ad312ec60fc8d45f956471549de9ab21c">Minimale.c</a>
+</li>
+<li>afficher_plateau_orientation()
+: <a class="el" href="_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e">Minimale.c</a>
+</li>
+<li>afficher_skill()
+: <a class="el" href="_minimale_8c.html#a4c19cd4d694f2f549079791a1e11a019">Minimale.c</a>
+</li>
+<li>afficher_skill_list()
+: <a class="el" href="_minimale_8c.html#a7015d7153fc65e628d81cdd3b68ab7ec">Minimale.c</a>
+</li>
+<li>all_dead_but_one()
+: <a class="el" href="_minimale_8c.html#aa6bc2b819d20d08ea1c98f09c15f2c47">Minimale.c</a>
+</li>
+<li>appliquer_action()
+: <a class="el" href="_minimale_8c.html#a28d9c8c6a5abddd6a89ddb258b5114bc">Minimale.c</a>
+</li>
+<li>are_my_mates_alive()
+: <a class="el" href="_minimale_8c.html#ae1d5aa28a687b31b055f49ea44866780">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>calcul_persos_IA()
+: <a class="el" href="_minimale_8c.html#a0255b1b3f70d1d35a858e9e512c8f988">Minimale.c</a>
+</li>
+<li>cases_voisines_ATK()
+: <a class="el" href="_minimale_8c.html#ad6b417d8f6547affac1cc287a6762113">Minimale.c</a>
+</li>
+<li>cases_voisines_calcul()
+: <a class="el" href="_minimale_8c.html#ac07dd1dbd17abd8de085e601421c8103">Minimale.c</a>
+</li>
+<li>character_hp_list()
+: <a class="el" href="_minimale_8c.html#a21af16606028cc5f140a51a2314c2668">Minimale.c</a>
+</li>
+<li>Charger()
+: <a class="el" href="_minimale_8c.html#a841458aecfd962618c6b89231954f407">Minimale.c</a>
+</li>
+<li>choix_cible_humain()
+: <a class="el" href="_minimale_8c.html#a69347b1b74ee79025e3c6ce20b5b49a4">Minimale.c</a>
+</li>
+<li>choix_cible_IA()
+: <a class="el" href="_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6">Minimale.c</a>
+</li>
+<li>choix_deplacement_humain()
+: <a class="el" href="_minimale_8c.html#a2b0fb79b0717094d1023fea7baf48c98">Minimale.c</a>
+</li>
+<li>choix_deplacement_IA()
+: <a class="el" href="_minimale_8c.html#aaa20acb53c08f4a15be29bb9d70cd9f1">Minimale.c</a>
+</li>
+<li>creer_perso_rapide()
+: <a class="el" href="_minimale_8c.html#a59cfde1d574adf960660220d74a3d3d4">Minimale.c</a>
+</li>
+<li>creer_terrain_rapide()
+: <a class="el" href="_minimale_8c.html#a88cec99ca1b112fc0553d0f09c19fcd7">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>deplacements_valides()
+: <a class="el" href="_minimale_8c.html#a9f570d5aff57367c773e3e7d090e91e8">Minimale.c</a>
+</li>
+<li>deplacer_perso()
+: <a class="el" href="_minimale_8c.html#a7c39da4bb12212b65b8999022d45e592">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>edit_stats()
+: <a class="el" href="_minimale_8c.html#af63ad36c60d60f979a15f7bf3a24c5a3">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>file_afficher_elt()
+: <a class="el" href="file_8c.html#a96c6e33606180f008c28906ff16f873a">file.c</a>
+, <a class="el" href="file_8h.html#a96c6e33606180f008c28906ff16f873a">file.h</a>
+</li>
+<li>file_ajouter()
+: <a class="el" href="file_8h.html#a9a4198b0c69187d42420b80f3e5b8d62">file.h</a>
+, <a class="el" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62">file.c</a>
+</li>
+<li>file_init()
+: <a class="el" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a">file.c</a>
+, <a class="el" href="file_8h.html#a004123a6f8cce9d4168b0ea8cfdf133a">file.h</a>
+</li>
+<li>file_liste_afficher_queue()
+: <a class="el" href="file_8h.html#a141d57004b90128d46274ba60f61249f">file.h</a>
+, <a class="el" href="file_8c.html#a141d57004b90128d46274ba60f61249f">file.c</a>
+</li>
+<li>file_retirer()
+: <a class="el" href="file_8h.html#a59173755d515eb366fb01dba42a73e8e">file.h</a>
+, <a class="el" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e">file.c</a>
+</li>
+<li>file_vide()
+: <a class="el" href="file_8c.html#a30c4f88a35783c4832434e9676ad98f5">file.c</a>
+, <a class="el" href="file_8h.html#a30c4f88a35783c4832434e9676ad98f5">file.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>generation_nom_personnage()
+: <a class="el" href="_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88">Minimale.c</a>
+</li>
+<li>generation_nombre_aleatoire()
+: <a class="el" href="_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332">Minimale.c</a>
+</li>
+<li>get_target_orientation()
+: <a class="el" href="_minimale_8c.html#a32d1e9030c1705ad183484acce8a4b2c">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>init_char_table()
+: <a class="el" href="_minimale_8c.html#ad7419c3036235a80b59bc983660be2ee">Minimale.c</a>
+</li>
+<li>init_plateau()
+: <a class="el" href="_minimale_8c.html#aa17c4e2a8512aa83516a20e0df29a123">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_j"></a>- j -</h3><ul>
+<li>joueur_liste_suivant()
+: <a class="el" href="_minimale_8c.html#a1f36ed2102ea6a97801ef419173a730b">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>life_check()
+: <a class="el" href="_minimale_8c.html#a704aac80f0e314dab07203a35f05aef2">Minimale.c</a>
+</li>
+<li>liste_afficher_contenu()
+: <a class="el" href="liste_8c.html#a207cdf13008fdfbf84b897ca499e3b17">liste.c</a>
+, <a class="el" href="liste_8h.html#a207cdf13008fdfbf84b897ca499e3b17">liste.h</a>
+</li>
+<li>liste_afficher_queue()
+: <a class="el" href="liste_8c.html#aeca8ab6b8935bc5fd81fa7a74e64879a">liste.c</a>
+, <a class="el" href="liste_8h.html#aeca8ab6b8935bc5fd81fa7a74e64879a">liste.h</a>
+</li>
+<li>liste_ajout_droit()
+: <a class="el" href="liste_8c.html#ae9c711baf0f41d27a5002c3e249687d8">liste.c</a>
+, <a class="el" href="liste_8h.html#ae9c711baf0f41d27a5002c3e249687d8">liste.h</a>
+</li>
+<li>liste_ajout_gauche()
+: <a class="el" href="liste_8c.html#ac7289b3f288aec0c22e5272c4851e0ee">liste.c</a>
+, <a class="el" href="liste_8h.html#ac7289b3f288aec0c22e5272c4851e0ee">liste.h</a>
+</li>
+<li>liste_calculer_nombre_elements()
+: <a class="el" href="liste_8c.html#a78de7382315436cf196cf30aac14257c">liste.c</a>
+, <a class="el" href="liste_8h.html#a78de7382315436cf196cf30aac14257c">liste.h</a>
+</li>
+<li>liste_element_est_present()
+: <a class="el" href="liste_8c.html#ae6bf3307184d2f80167abcb9c2ad5b2b">liste.c</a>
+, <a class="el" href="liste_8h.html#ae6bf3307184d2f80167abcb9c2ad5b2b">liste.h</a>
+</li>
+<li>liste_en_queue()
+: <a class="el" href="liste_8c.html#aaf16c3ff04ebc19da036b0332d82ccee">liste.c</a>
+, <a class="el" href="liste_8h.html#aaf16c3ff04ebc19da036b0332d82ccee">liste.h</a>
+</li>
+<li>liste_en_tete()
+: <a class="el" href="liste_8c.html#a9cbc13cd82829b3541fae0c01209f963">liste.c</a>
+, <a class="el" href="liste_8h.html#a9cbc13cd82829b3541fae0c01209f963">liste.h</a>
+</li>
+<li>liste_est_hors_liste()
+: <a class="el" href="liste_8c.html#ad4a1a49d8756b972708e0870f9420776">liste.c</a>
+, <a class="el" href="liste_8h.html#ad4a1a49d8756b972708e0870f9420776">liste.h</a>
+</li>
+<li>liste_est_vide()
+: <a class="el" href="liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3">liste.c</a>
+, <a class="el" href="liste_8h.html#a1e4d1c45ace210278d08fd886268a0e3">liste.h</a>
+</li>
+<li>liste_init()
+: <a class="el" href="liste_8c.html#aa325493a520928cd959f5cf829747b1c">liste.c</a>
+, <a class="el" href="liste_8h.html#aa325493a520928cd959f5cf829747b1c">liste.h</a>
+</li>
+<li>liste_modif_elt()
+: <a class="el" href="liste_8h.html#a0282305b4b91dc5376333ac820bdf995">liste.h</a>
+, <a class="el" href="liste_8c.html#a0282305b4b91dc5376333ac820bdf995">liste.c</a>
+</li>
+<li>liste_oter_elt()
+: <a class="el" href="liste_8h.html#ac46b950926c8191e47c3822c624d2e1d">liste.h</a>
+, <a class="el" href="liste_8c.html#ac46b950926c8191e47c3822c624d2e1d">liste.c</a>
+</li>
+<li>liste_precedent()
+: <a class="el" href="liste_8h.html#ae62f982aac8059018f004e3a7e2e7f21">liste.h</a>
+, <a class="el" href="liste_8c.html#ae62f982aac8059018f004e3a7e2e7f21">liste.c</a>
+</li>
+<li>liste_suivant()
+: <a class="el" href="liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111">liste.c</a>
+, <a class="el" href="liste_8h.html#a801cf7ec08fb2c6b1dceb32af4a46111">liste.h</a>
+</li>
+<li>liste_suppr_doublon()
+: <a class="el" href="liste_8h.html#a48218f7c1bafab1e92490a0963ee7451">liste.h</a>
+, <a class="el" href="liste_8c.html#a48218f7c1bafab1e92490a0963ee7451">liste.c</a>
+</li>
+<li>liste_valeur_elt()
+: <a class="el" href="liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744">liste.c</a>
+, <a class="el" href="liste_8h.html#a1ad09d74d2d4f3b298db6b834933d744">liste.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>main()
+: <a class="el" href="_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>orienter_perso_fleches()
+: <a class="el" href="_minimale_8c.html#a44e760d2c48ba5cdbf8466de23d78484">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>passer_tour()
+: <a class="el" href="_minimale_8c.html#add579b3bffa443553769bdacdd18a9e0">Minimale.c</a>
+</li>
+<li>pile_depiler()
+: <a class="el" href="pile_8c.html#a243aa7fe5bd1ff307d4c7aa5f76739c1">pile.c</a>
+, <a class="el" href="pile_8h.html#a243aa7fe5bd1ff307d4c7aa5f76739c1">pile.h</a>
+</li>
+<li>pile_empiler()
+: <a class="el" href="pile_8c.html#a153b92d8383b4d328bcd9f20d77b8d0c">pile.c</a>
+, <a class="el" href="pile_8h.html#a153b92d8383b4d328bcd9f20d77b8d0c">pile.h</a>
+</li>
+<li>pile_init()
+: <a class="el" href="pile_8c.html#ac2513cb21eb42f39b02122fa30fd21ca">pile.c</a>
+, <a class="el" href="pile_8h.html#ac2513cb21eb42f39b02122fa30fd21ca">pile.h</a>
+</li>
+<li>pile_sommet()
+: <a class="el" href="pile_8h.html#ae0e56a57ce8bf929fe621fa05304642c">pile.h</a>
+, <a class="el" href="pile_8c.html#ae0e56a57ce8bf929fe621fa05304642c">pile.c</a>
+</li>
+<li>pilevide()
+: <a class="el" href="pile_8c.html#af155f0089e66cfa04a1239462b72b2df">pile.c</a>
+, <a class="el" href="pile_8h.html#af155f0089e66cfa04a1239462b72b2df">pile.h</a>
+</li>
+<li>players_life_check()
+: <a class="el" href="_minimale_8c.html#a01e6e73a74f481fc32b060f3e52b8a5f">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>saisie_nombre_joueurs()
+: <a class="el" href="_minimale_8c.html#a0b7596f8f2c018a80e51c70268d338fd">Minimale.c</a>
+</li>
+<li>Sauvegarder()
+: <a class="el" href="_minimale_8c.html#aebdcead4bd058408b30ee5924910d1f6">Minimale.c</a>
+</li>
+<li>select_skill()
+: <a class="el" href="_minimale_8c.html#a011c6275934a222e8ba74fae00af32e1">Minimale.c</a>
+</li>
+<li>selection_perso()
+: <a class="el" href="_minimale_8c.html#a51a4f431807e8c3c3059c27e8d755411">Minimale.c</a>
+</li>
+<li>spawn_character()
+: <a class="el" href="_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320">Minimale.c</a>
+</li>
+<li>spawn_sauvage()
+: <a class="el" href="_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e">Minimale.c</a>
+</li>
+<li>suicide()
+: <a class="el" href="_minimale_8c.html#af96504b67683769d99d267ab8244cdc8">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>tour()
+: <a class="el" href="_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94">Minimale.c</a>
+</li>
+<li>tour_IA()
+: <a class="el" href="_minimale_8c.html#a7e9553a32f70742aa8787a781dd50cea">Minimale.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>vider_buffer()
+: <a class="el" href="_minimale_8c.html#a183c5f911befa83432ff61674e326603">Minimale.c</a>
+</li>
+<li>viser_case_valide()
+: <a class="el" href="_minimale_8c.html#a27d15a9ecfe1e4f2c30cecc92307a80f">Minimale.c</a>
+</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi Janvier 15 2015 15:22:32 pour Le jeu 4 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

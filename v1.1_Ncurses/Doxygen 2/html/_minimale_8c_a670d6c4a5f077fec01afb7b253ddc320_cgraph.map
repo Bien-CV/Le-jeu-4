@@ -1,0 +1,5 @@
+<map id="spawn_character" name="spawn_character">
+<area shape="rect" id="node3" href="$_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire entre 0 et &#39;max&#39;." alt="" coords="595,5,783,32"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#a59cfde1d574adf960660220d74a3d3d4" title="Création brève de perso." alt="" coords="177,31,309,57"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="génère aléatoirement un nom pour un perso" alt="" coords="358,31,546,57"/>
+</map>

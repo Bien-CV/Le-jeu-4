@@ -1,0 +1,1695 @@
+\hypertarget{_minimale_8c}{\section{Référence du fichier Minimale.\-c}
+\label{_minimale_8c}\index{Minimale.\-c@{Minimale.\-c}}
+}
+
+
+Code principal.  
+
+
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$ncurses.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}header.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}liste.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}file.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pile.\-h\char`\"{}}\\*
+Graphe des dépendances par inclusion de Minimale.\-c\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_minimale_8c_a137aa83ec74421d226a90c92ec032ac9}{K\-N\-R\-M}~\char`\"{}\textbackslash{}x1\-B\mbox{[}0m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_a66290957baed5df3930ada4cb8caccf1}{K\-R\-E\-D}~\char`\"{}\textbackslash{}x1\-B\mbox{[}31m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_ac081c83b067273757f7a2e54a5957d41}{K\-G\-R\-N}~\char`\"{}\textbackslash{}x1\-B\mbox{[}32m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_a897b10d246533c95ba86cb79f92e465a}{K\-Y\-E\-L}~\char`\"{}\textbackslash{}x1\-B\mbox{[}33m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_a3f838f2fc3a9a3b434be606fc908964b}{K\-B\-L\-U}~\char`\"{}\textbackslash{}x1\-B\mbox{[}34m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_a6825f05d3b9d619d91d79d0ef18bb8b2}{K\-M\-A\-G}~\char`\"{}\textbackslash{}x1\-B\mbox{[}35m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_a32036c94dbb166a3f874b7efc169841f}{K\-C\-Y\-N}~\char`\"{}\textbackslash{}x1\-B\mbox{[}36m\char`\"{}
+\item 
+\#define \hyperlink{_minimale_8c_af0036c8022c9980079ab17e5c87fd478}{K\-W\-H\-T}~\char`\"{}\textbackslash{}x1\-B\mbox{[}37m\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_minimale_8c_a704aac80f0e314dab07203a35f05aef2}{life\-\_\-check} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle \hyperlink{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}{are\-\_\-my\-\_\-mates\-\_\-alive(int joueur\-\_\-courant)} pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a1f36ed2102ea6a97801ef419173a730b}{joueur\-\_\-liste\-\_\-suivant} (int nb\-\_\-joueur, int $\ast$joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7}{creer\-\_\-terrain\-\_\-rapide} (\hyperlink{header_8h_a4bb25c9352f7bb2ea2eb663ccf579528}{t\-\_\-camp} camp, int x, int y)
+\begin{DoxyCompactList}\small\item\em Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a183c5f911befa83432ff61674e326603}{vider\-\_\-buffer} (void)
+\item 
+int \hyperlink{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}{are\-\_\-my\-\_\-mates\-\_\-alive} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts. \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988}{calcul\-\_\-persos\-\_\-\-I\-A} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Calcule le nombre de personnage controlé par l'I\-A. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e}{afficher\-\_\-plateau\-\_\-orientation} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Affiche le plateau avec les caractères correspondants à l'orientation. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88}{generation\-\_\-nom\-\_\-personnage} (char $\ast$nom)
+\begin{DoxyCompactList}\small\item\em génère aléatoirement un nom pour un perso \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f}{players\-\_\-life\-\_\-check} ()
+\begin{DoxyCompactList}\small\item\em Actualise le fait que les joueurs soient vivants ou non. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_aebdcead4bd058408b30ee5924910d1f6}{Sauvegarder} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Sauvegarde la partie en cours dans un fichier. \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_a841458aecfd962618c6b89231954f407}{Charger} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Permet de charger une partie depuis un fichier de sauvegarde. \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332}{generation\-\_\-nombre\-\_\-aleatoire} (int max)
+\begin{DoxyCompactList}\small\item\em Fonction qui renvoi un nombre aléatoire entre 0 et 'max'. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a7c39da4bb12212b65b8999022d45e592}{deplacer\-\_\-perso} (\hyperlink{structt__coord}{t\-\_\-coord} case\-\_\-perso, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Déplace le personnage sur le terrain Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case\-\_\-perso'. Si la 'case\-\_\-perso' contenait un piège, le perso perd des H\-P. \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_ac07dd1dbd17abd8de085e601421c8103}{cases\-\_\-voisines\-\_\-calcul} (\hyperlink{structt__coord}{t\-\_\-coord} coordonnees)
+\begin{DoxyCompactList}\small\item\em Renvoi le nombre de case voisine vide; met dans la file, la liste des coordonnées voisines accessibles. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8}{deplacements\-\_\-valides} (int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Calcule les positions de déplacement valide, les met dans la liste. \end{DoxyCompactList}\item 
+\hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98}{choix\-\_\-deplacement\-\_\-humain} (int joueur\-\_\-courant, int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de choisir la destination Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède. \end{DoxyCompactList}\item 
+\hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_aaa20acb53c08f4a15be29bb9d70cd9f1}{choix\-\_\-deplacement\-\_\-\-I\-A} (int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em cette fonction retourne les coordonnées du déplacement choisi pour l'I\-A \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123}{init\-\_\-plateau} ()
+\begin{DoxyCompactList}\small\item\em Initialise le plateau en le remplissant de terrain par défaut. \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_ad6b417d8f6547affac1cc287a6762113}{cases\-\_\-voisines\-\_\-\-A\-T\-K} (\hyperlink{structt__coord}{t\-\_\-coord} coordonnees)
+\begin{DoxyCompactList}\small\item\em Renvoi le nombre de case voisine. Met dans la file la liste des coordonnées voisines. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f}{viser\-\_\-case\-\_\-valide} (\hyperlink{structt__skill}{t\-\_\-skill} skill, int $\ast$nb\-Atk\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée. \end{DoxyCompactList}\item 
+\hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6}{choix\-\_\-cible\-\_\-\-I\-A} (\hyperlink{structt__skill}{t\-\_\-skill} skill, int $\ast$nb\-Atk\-Valid)
+\begin{DoxyCompactList}\small\item\em Choisi parmi la liste des cases à attaquer pour l'I\-A, une case vide peut être attaquée. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_ad7419c3036235a80b59bc983660be2ee}{init\-\_\-char\-\_\-table} (\hyperlink{structt__character}{t\-\_\-character} chars\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction d'initialisation d'un tableau de personnages. Remplit le tableau de personnages entré en paramètre de cases de terrain. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a4c19cd4d694f2f549079791a1e11a019}{afficher\-\_\-skill} (int skill\-\_\-nb, \hyperlink{structt__skill}{t\-\_\-skill} skill, \hyperlink{structt__character}{t\-\_\-character} selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Affiche le nom, la portée, la puissance d'une compétence. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec}{afficher\-\_\-skill\-\_\-list} (\hyperlink{structt__character}{t\-\_\-character} perso)
+\begin{DoxyCompactList}\small\item\em Affiche la liste des compétence d'un personnage. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c}{afficher\-\_\-infos\-\_\-persos} (\hyperlink{structt__character}{t\-\_\-character} perso)
+\begin{DoxyCompactList}\small\item\em Affiche les informations du personnage. \end{DoxyCompactList}\item 
+\hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a69347b1b74ee79025e3c6ce20b5b49a4}{choix\-\_\-cible\-\_\-humain} (\hyperlink{structt__skill}{t\-\_\-skill} skill, int joueur\-\_\-courant, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de choisir, grâce à un curseur, une case à attaquer. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411}{selection\-\_\-perso} (int joueur\-\_\-courant, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_add579b3bffa443553769bdacdd18a9e0}{passer\-\_\-tour} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui passe le tour du joueur actif. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_af96504b67683769d99d267ab8244cdc8}{suicide} (int joueur\-\_\-courant)
+\begin{DoxyCompactList}\small\item\em Fonction permetant au joueur courant d'abandonner la partie. \end{DoxyCompactList}\item 
+\hyperlink{structt__skill}{t\-\_\-skill} \hyperlink{_minimale_8c_a011c6275934a222e8ba74fae00af32e1}{select\-\_\-skill} (\hyperlink{structt__character}{t\-\_\-character} selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de choisir, graphiquement, une compétence à effectuer dans un menu. \end{DoxyCompactList}\item 
+\hyperlink{header_8h_a05b909310980a637d41bd67fc4d5c389}{t\-\_\-target\-Orientation} \hyperlink{_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c}{get\-\_\-target\-\_\-orientation} (\hyperlink{structt__character}{t\-\_\-character} perso, \hyperlink{structt__coord}{t\-\_\-coord} cible)
+\begin{DoxyCompactList}\small\item\em Fonction déterminant quelle est l'orientation de la cible par rapport au joueur. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc}{appliquer\-\_\-action} (\hyperlink{structt__character}{t\-\_\-character} lanceur, \hyperlink{structt__coord}{t\-\_\-coord} cible, \hyperlink{structt__skill}{t\-\_\-skill} action)
+\begin{DoxyCompactList}\small\item\em Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages entré en paramètre de cases de terrain. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a44e760d2c48ba5cdbf8466de23d78484}{orienter\-\_\-perso\-\_\-fleches} (int joueur\-\_\-courant, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet au joueur d'orienter son personnage avec les flèches directionnelles. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a21af16606028cc5f140a51a2314c2668}{character\-\_\-hp\-\_\-list} ()
+\begin{DoxyCompactList}\small\item\em affiche une liste avec les persos et leurs points de vie. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94}{tour} (int joueur\-\_\-courant, int $\ast$nb\-Atk\-Valid, int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Fonction de déroulement d'un tour pour le joueur entré en paramètre. \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47}{all\-\_\-dead\-\_\-but\-\_\-one} (int nb\-\_\-joueurs)
+\begin{DoxyCompactList}\small\item\em Fonction déterminant si un seul joueur est vivant. Appellé par la fonction principale pour déterminer si c'est la fin de la partie. Renvoie 0 si plus d'un joueur survit, sinon renvoie 1. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4}{creer\-\_\-perso\-\_\-rapide} (\hyperlink{header_8h_a4bb25c9352f7bb2ea2eb663ccf579528}{t\-\_\-camp} camp, int x, int y, \hyperlink{header_8h_a853cf4e56ef5ad960bf764a4fafe7e77}{t\-\_\-classe} classe)
+\begin{DoxyCompactList}\small\item\em Création brève de perso. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3}{edit\-\_\-stats} (\hyperlink{structt__character}{t\-\_\-character} perso, int H\-P, int Max\-\_\-\-H\-P, int M\-P, int Max\-\_\-\-M\-P, int \hyperlink{header_8h_a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9}{A\-T\-K}, int \hyperlink{header_8h_a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8}{M\-A\-T\-K}, int D\-E\-F, int M\-D\-E\-F, int M\-V\-T)
+\begin{DoxyCompactList}\small\item\em modifie les statistiques d'un personnage \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e}{spawn\-\_\-sauvage} ()
+\begin{DoxyCompactList}\small\item\em Créé un personnage du camp neutre à une position aléatoire sur le terrain. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320}{spawn\-\_\-character} (\hyperlink{header_8h_a4bb25c9352f7bb2ea2eb663ccf579528}{t\-\_\-camp} camp\-\_\-nouveau\-\_\-perso)
+\begin{DoxyCompactList}\small\item\em Permet la création d'un personnage joueur à la position entrée. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea}{tour\-\_\-\-I\-A} (int joueur\-\_\-courant, int $\ast$nb\-Atk\-Valid, int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
+\begin{DoxyCompactList}\small\item\em Fonction de déroulement d'un tour pour l'I\-A. \end{DoxyCompactList}\item 
+void \hyperlink{_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd}{saisie\-\_\-nombre\-\_\-joueurs} (int $\ast$nb\-\_\-joueurs)
+\begin{DoxyCompactList}\small\item\em permet à l'utilisateur de rentrer le nombre de joueur à jouer \end{DoxyCompactList}\item 
+int \hyperlink{_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Fonction principale Fonction principale qui permet de jouer en mode Kill'em'all. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_minimale_8c_a66ecc67604b45591ca621e1c1936d009}{compteur\-\_\-tour} =0
+\item 
+int \hyperlink{_minimale_8c_aeb67ecf1ba206af9765bba7ecd7cd929}{compteur\-\_\-joueurs\-\_\-vivants} =0
+\item 
+\hyperlink{structt__character}{t\-\_\-character} \hyperlink{_minimale_8c_a0d10b4d51713595a0aecf92594403ca3}{Valid\-\_\-chars\-\_\-\-I\-A} \mbox{[}\hyperlink{header_8h_a220380eaa4bfe0ffeab9859c6f3d2076}{Max\-Tab}\mbox{]}
+\item 
+char \hyperlink{_minimale_8c_a08b1b223d56118ff55a1caf616e22186}{particule\-\_\-generateur\-\_\-nom} \mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}
+\item 
+\hyperlink{structt__character}{t\-\_\-character} \hyperlink{_minimale_8c_a816e050bd234e1024a41068177f1ac49}{Plateau} \mbox{[}\hyperlink{header_8h_a523c276fa2df3dd24764b5bb500dbde6}{T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}\mbox{[}\hyperlink{header_8h_a523c276fa2df3dd24764b5bb500dbde6}{T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}
+\item 
+\hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a5a6e59130d22bce1f5ec9490b20d7fb3}{dep\-Valid} \mbox{[}\hyperlink{header_8h_a523c276fa2df3dd24764b5bb500dbde6}{T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E} $\ast$\hyperlink{header_8h_a523c276fa2df3dd24764b5bb500dbde6}{T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}\mbox{[}3\mbox{]}
+\item 
+\hyperlink{structt__player}{t\-\_\-player} \hyperlink{_minimale_8c_adb6f8f74ea8aeb8c5a3f0d838ca80999}{player} \mbox{[}\hyperlink{header_8h_a220380eaa4bfe0ffeab9859c6f3d2076}{Max\-Tab}\mbox{]}
+\item 
+int \hyperlink{_minimale_8c_a6cfe6e5ba882446145a8c3f5508e2ea6}{indice\-Tab\-Dep\-Valid}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Code principal. \begin{DoxyAuthor}{Auteur}
+Arthur L\-E\-M\-E\-E, Yann G\-U\-E\-N\-V\-E\-R, Baptiste C\-A\-N\-O\-V\-A\-S-\/\-V\-I\-R\-L\-Y. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06 Janvier 2015
+\end{DoxyDate}
+programme de jeu\-: Tactics Arena 
+
+Définition dans le fichier \hyperlink{_minimale_8c_source}{Minimale.\-c}.
+
+
+
+\subsection{Documentation des macros}
+\hypertarget{_minimale_8c_a3f838f2fc3a9a3b434be606fc908964b}{\index{Minimale.\-c@{Minimale.\-c}!K\-B\-L\-U@{K\-B\-L\-U}}
+\index{K\-B\-L\-U@{K\-B\-L\-U}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-B\-L\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-B\-L\-U~\char`\"{}\textbackslash{}x1\-B\mbox{[}34m\char`\"{}}}\label{_minimale_8c_a3f838f2fc3a9a3b434be606fc908964b}
+
+
+Définition à la ligne 32 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a32036c94dbb166a3f874b7efc169841f}{\index{Minimale.\-c@{Minimale.\-c}!K\-C\-Y\-N@{K\-C\-Y\-N}}
+\index{K\-C\-Y\-N@{K\-C\-Y\-N}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-C\-Y\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-C\-Y\-N~\char`\"{}\textbackslash{}x1\-B\mbox{[}36m\char`\"{}}}\label{_minimale_8c_a32036c94dbb166a3f874b7efc169841f}
+
+
+Définition à la ligne 34 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_ac081c83b067273757f7a2e54a5957d41}{\index{Minimale.\-c@{Minimale.\-c}!K\-G\-R\-N@{K\-G\-R\-N}}
+\index{K\-G\-R\-N@{K\-G\-R\-N}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-G\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-G\-R\-N~\char`\"{}\textbackslash{}x1\-B\mbox{[}32m\char`\"{}}}\label{_minimale_8c_ac081c83b067273757f7a2e54a5957d41}
+
+
+Définition à la ligne 30 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a6825f05d3b9d619d91d79d0ef18bb8b2}{\index{Minimale.\-c@{Minimale.\-c}!K\-M\-A\-G@{K\-M\-A\-G}}
+\index{K\-M\-A\-G@{K\-M\-A\-G}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-M\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-M\-A\-G~\char`\"{}\textbackslash{}x1\-B\mbox{[}35m\char`\"{}}}\label{_minimale_8c_a6825f05d3b9d619d91d79d0ef18bb8b2}
+
+
+Définition à la ligne 33 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a137aa83ec74421d226a90c92ec032ac9}{\index{Minimale.\-c@{Minimale.\-c}!K\-N\-R\-M@{K\-N\-R\-M}}
+\index{K\-N\-R\-M@{K\-N\-R\-M}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-N\-R\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-N\-R\-M~\char`\"{}\textbackslash{}x1\-B\mbox{[}0m\char`\"{}}}\label{_minimale_8c_a137aa83ec74421d226a90c92ec032ac9}
+
+
+Définition à la ligne 28 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a66290957baed5df3930ada4cb8caccf1}{\index{Minimale.\-c@{Minimale.\-c}!K\-R\-E\-D@{K\-R\-E\-D}}
+\index{K\-R\-E\-D@{K\-R\-E\-D}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-R\-E\-D~\char`\"{}\textbackslash{}x1\-B\mbox{[}31m\char`\"{}}}\label{_minimale_8c_a66290957baed5df3930ada4cb8caccf1}
+
+
+Définition à la ligne 29 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_af0036c8022c9980079ab17e5c87fd478}{\index{Minimale.\-c@{Minimale.\-c}!K\-W\-H\-T@{K\-W\-H\-T}}
+\index{K\-W\-H\-T@{K\-W\-H\-T}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-W\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-W\-H\-T~\char`\"{}\textbackslash{}x1\-B\mbox{[}37m\char`\"{}}}\label{_minimale_8c_af0036c8022c9980079ab17e5c87fd478}
+
+
+Définition à la ligne 35 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a897b10d246533c95ba86cb79f92e465a}{\index{Minimale.\-c@{Minimale.\-c}!K\-Y\-E\-L@{K\-Y\-E\-L}}
+\index{K\-Y\-E\-L@{K\-Y\-E\-L}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{K\-Y\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define K\-Y\-E\-L~\char`\"{}\textbackslash{}x1\-B\mbox{[}33m\char`\"{}}}\label{_minimale_8c_a897b10d246533c95ba86cb79f92e465a}
+
+
+Définition à la ligne 31 du fichier Minimale.\-c.
+
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c}{\index{Minimale.\-c@{Minimale.\-c}!afficher\-\_\-infos\-\_\-persos@{afficher\-\_\-infos\-\_\-persos}}
+\index{afficher\-\_\-infos\-\_\-persos@{afficher\-\_\-infos\-\_\-persos}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{afficher\-\_\-infos\-\_\-persos}]{\setlength{\rightskip}{0pt plus 5cm}void afficher\-\_\-infos\-\_\-persos (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{perso}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c}
+
+
+Affiche les informations du personnage. 
+
+
+
+Définition à la ligne 644 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e}{\index{Minimale.\-c@{Minimale.\-c}!afficher\-\_\-plateau\-\_\-orientation@{afficher\-\_\-plateau\-\_\-orientation}}
+\index{afficher\-\_\-plateau\-\_\-orientation@{afficher\-\_\-plateau\-\_\-orientation}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{afficher\-\_\-plateau\-\_\-orientation}]{\setlength{\rightskip}{0pt plus 5cm}void afficher\-\_\-plateau\-\_\-orientation (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e}
+
+
+Affiche le plateau avec les caractères correspondants à l'orientation. 
+
+
+
+Définition à la ligne 1283 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a4c19cd4d694f2f549079791a1e11a019}{\index{Minimale.\-c@{Minimale.\-c}!afficher\-\_\-skill@{afficher\-\_\-skill}}
+\index{afficher\-\_\-skill@{afficher\-\_\-skill}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{afficher\-\_\-skill}]{\setlength{\rightskip}{0pt plus 5cm}void afficher\-\_\-skill (
+\begin{DoxyParamCaption}
+\item[{int}]{skill\-\_\-nb, }
+\item[{{\bf t\-\_\-skill}}]{skill, }
+\item[{{\bf t\-\_\-character}}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a4c19cd4d694f2f549079791a1e11a019}
+
+
+Affiche le nom, la portée, la puissance d'une compétence. 
+
+
+
+Définition à la ligne 616 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a4c19cd4d694f2f549079791a1e11a019_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec}{\index{Minimale.\-c@{Minimale.\-c}!afficher\-\_\-skill\-\_\-list@{afficher\-\_\-skill\-\_\-list}}
+\index{afficher\-\_\-skill\-\_\-list@{afficher\-\_\-skill\-\_\-list}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{afficher\-\_\-skill\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}void afficher\-\_\-skill\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{perso}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec}
+
+
+Affiche la liste des compétence d'un personnage. 
+
+
+
+Définition à la ligne 631 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47}{\index{Minimale.\-c@{Minimale.\-c}!all\-\_\-dead\-\_\-but\-\_\-one@{all\-\_\-dead\-\_\-but\-\_\-one}}
+\index{all\-\_\-dead\-\_\-but\-\_\-one@{all\-\_\-dead\-\_\-but\-\_\-one}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{all\-\_\-dead\-\_\-but\-\_\-one}]{\setlength{\rightskip}{0pt plus 5cm}int all\-\_\-dead\-\_\-but\-\_\-one (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\-\_\-joueurs}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47}
+
+
+Fonction déterminant si un seul joueur est vivant. Appellé par la fonction principale pour déterminer si c'est la fin de la partie. Renvoie 0 si plus d'un joueur survit, sinon renvoie 1. 
+
+
+
+Définition à la ligne 1265 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc}{\index{Minimale.\-c@{Minimale.\-c}!appliquer\-\_\-action@{appliquer\-\_\-action}}
+\index{appliquer\-\_\-action@{appliquer\-\_\-action}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{appliquer\-\_\-action}]{\setlength{\rightskip}{0pt plus 5cm}void appliquer\-\_\-action (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{lanceur, }
+\item[{{\bf t\-\_\-coord}}]{cible, }
+\item[{{\bf t\-\_\-skill}}]{action}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc}
+
+
+Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages entré en paramètre de cases de terrain. 
+
+
+
+Définition à la ligne 929 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}{\index{Minimale.\-c@{Minimale.\-c}!are\-\_\-my\-\_\-mates\-\_\-alive@{are\-\_\-my\-\_\-mates\-\_\-alive}}
+\index{are\-\_\-my\-\_\-mates\-\_\-alive@{are\-\_\-my\-\_\-mates\-\_\-alive}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{are\-\_\-my\-\_\-mates\-\_\-alive}]{\setlength{\rightskip}{0pt plus 5cm}int are\-\_\-my\-\_\-mates\-\_\-alive (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}
+
+
+Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts. 
+
+
+
+Définition à la ligne 1061 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988}{\index{Minimale.\-c@{Minimale.\-c}!calcul\-\_\-persos\-\_\-\-I\-A@{calcul\-\_\-persos\-\_\-\-I\-A}}
+\index{calcul\-\_\-persos\-\_\-\-I\-A@{calcul\-\_\-persos\-\_\-\-I\-A}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{calcul\-\_\-persos\-\_\-\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}int calcul\-\_\-persos\-\_\-\-I\-A (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988}
+
+
+Calcule le nombre de personnage controlé par l'I\-A. 
+
+
+
+Définition à la ligne 1532 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ad6b417d8f6547affac1cc287a6762113}{\index{Minimale.\-c@{Minimale.\-c}!cases\-\_\-voisines\-\_\-\-A\-T\-K@{cases\-\_\-voisines\-\_\-\-A\-T\-K}}
+\index{cases\-\_\-voisines\-\_\-\-A\-T\-K@{cases\-\_\-voisines\-\_\-\-A\-T\-K}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{cases\-\_\-voisines\-\_\-\-A\-T\-K}]{\setlength{\rightskip}{0pt plus 5cm}int cases\-\_\-voisines\-\_\-\-A\-T\-K (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{coordonnees}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ad6b417d8f6547affac1cc287a6762113}
+
+
+Renvoi le nombre de case voisine. Met dans la file la liste des coordonnées voisines. 
+
+
+
+Définition à la ligne 497 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{_minimale_8c_ad6b417d8f6547affac1cc287a6762113_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ad6b417d8f6547affac1cc287a6762113_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ac07dd1dbd17abd8de085e601421c8103}{\index{Minimale.\-c@{Minimale.\-c}!cases\-\_\-voisines\-\_\-calcul@{cases\-\_\-voisines\-\_\-calcul}}
+\index{cases\-\_\-voisines\-\_\-calcul@{cases\-\_\-voisines\-\_\-calcul}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{cases\-\_\-voisines\-\_\-calcul}]{\setlength{\rightskip}{0pt plus 5cm}int cases\-\_\-voisines\-\_\-calcul (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{coordonnees}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ac07dd1dbd17abd8de085e601421c8103}
+
+
+Renvoi le nombre de case voisine vide; met dans la file, la liste des coordonnées voisines accessibles. 
+
+
+
+Définition à la ligne 201 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ac07dd1dbd17abd8de085e601421c8103_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a21af16606028cc5f140a51a2314c2668}{\index{Minimale.\-c@{Minimale.\-c}!character\-\_\-hp\-\_\-list@{character\-\_\-hp\-\_\-list}}
+\index{character\-\_\-hp\-\_\-list@{character\-\_\-hp\-\_\-list}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{character\-\_\-hp\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}void character\-\_\-hp\-\_\-list (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a21af16606028cc5f140a51a2314c2668}
+
+
+affiche une liste avec les persos et leurs points de vie. 
+
+
+
+Définition à la ligne 1128 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{_minimale_8c_a21af16606028cc5f140a51a2314c2668_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a841458aecfd962618c6b89231954f407}{\index{Minimale.\-c@{Minimale.\-c}!Charger@{Charger}}
+\index{Charger@{Charger}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{Charger}]{\setlength{\rightskip}{0pt plus 5cm}int Charger (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a841458aecfd962618c6b89231954f407}
+
+
+Permet de charger une partie depuis un fichier de sauvegarde. 
+
+
+
+Définition à la ligne 135 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{_minimale_8c_a841458aecfd962618c6b89231954f407_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{_minimale_8c_a841458aecfd962618c6b89231954f407_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a69347b1b74ee79025e3c6ce20b5b49a4}{\index{Minimale.\-c@{Minimale.\-c}!choix\-\_\-cible\-\_\-humain@{choix\-\_\-cible\-\_\-humain}}
+\index{choix\-\_\-cible\-\_\-humain@{choix\-\_\-cible\-\_\-humain}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{choix\-\_\-cible\-\_\-humain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-coord} choix\-\_\-cible\-\_\-humain (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-skill}}]{skill, }
+\item[{int}]{joueur\-\_\-courant, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a69347b1b74ee79025e3c6ce20b5b49a4}
+
+
+Permet au joueur de choisir, grâce à un curseur, une case à attaquer. 
+
+
+
+Définition à la ligne 672 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a69347b1b74ee79025e3c6ce20b5b49a4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{_minimale_8c_a69347b1b74ee79025e3c6ce20b5b49a4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6}{\index{Minimale.\-c@{Minimale.\-c}!choix\-\_\-cible\-\_\-\-I\-A@{choix\-\_\-cible\-\_\-\-I\-A}}
+\index{choix\-\_\-cible\-\_\-\-I\-A@{choix\-\_\-cible\-\_\-\-I\-A}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{choix\-\_\-cible\-\_\-\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-coord} choix\-\_\-cible\-\_\-\-I\-A (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-skill}}]{skill, }
+\item[{int $\ast$}]{nb\-Atk\-Valid}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6}
+
+
+Choisi parmi la liste des cases à attaquer pour l'I\-A, une case vide peut être attaquée. 
+
+
+
+Définition à la ligne 581 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98}{\index{Minimale.\-c@{Minimale.\-c}!choix\-\_\-deplacement\-\_\-humain@{choix\-\_\-deplacement\-\_\-humain}}
+\index{choix\-\_\-deplacement\-\_\-humain@{choix\-\_\-deplacement\-\_\-humain}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{choix\-\_\-deplacement\-\_\-humain}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-coord} choix\-\_\-deplacement\-\_\-humain (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant, }
+\item[{int $\ast$}]{nb\-Dep\-Valid, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98}
+
+
+Permet au joueur de choisir la destination Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède. 
+
+
+
+Définition à la ligne 298 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_aaa20acb53c08f4a15be29bb9d70cd9f1}{\index{Minimale.\-c@{Minimale.\-c}!choix\-\_\-deplacement\-\_\-\-I\-A@{choix\-\_\-deplacement\-\_\-\-I\-A}}
+\index{choix\-\_\-deplacement\-\_\-\-I\-A@{choix\-\_\-deplacement\-\_\-\-I\-A}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{choix\-\_\-deplacement\-\_\-\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-coord} choix\-\_\-deplacement\-\_\-\-I\-A (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{nb\-Dep\-Valid, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_aaa20acb53c08f4a15be29bb9d70cd9f1}
+
+
+cette fonction retourne les coordonnées du déplacement choisi pour l'I\-A 
+
+
+
+Définition à la ligne 448 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_aaa20acb53c08f4a15be29bb9d70cd9f1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_aaa20acb53c08f4a15be29bb9d70cd9f1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4}{\index{Minimale.\-c@{Minimale.\-c}!creer\-\_\-perso\-\_\-rapide@{creer\-\_\-perso\-\_\-rapide}}
+\index{creer\-\_\-perso\-\_\-rapide@{creer\-\_\-perso\-\_\-rapide}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{creer\-\_\-perso\-\_\-rapide}]{\setlength{\rightskip}{0pt plus 5cm}void creer\-\_\-perso\-\_\-rapide (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-camp}}]{camp, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf t\-\_\-classe}}]{classe}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4}
+
+
+Création brève de perso. 
+
+
+
+Définition à la ligne 1347 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7}{\index{Minimale.\-c@{Minimale.\-c}!creer\-\_\-terrain\-\_\-rapide@{creer\-\_\-terrain\-\_\-rapide}}
+\index{creer\-\_\-terrain\-\_\-rapide@{creer\-\_\-terrain\-\_\-rapide}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{creer\-\_\-terrain\-\_\-rapide}]{\setlength{\rightskip}{0pt plus 5cm}void creer\-\_\-terrain\-\_\-rapide (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-camp}}]{camp, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7}
+
+
+Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle. 
+
+
+
+Définition à la ligne 1374 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8}{\index{Minimale.\-c@{Minimale.\-c}!deplacements\-\_\-valides@{deplacements\-\_\-valides}}
+\index{deplacements\-\_\-valides@{deplacements\-\_\-valides}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{deplacements\-\_\-valides}]{\setlength{\rightskip}{0pt plus 5cm}void deplacements\-\_\-valides (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{nb\-Dep\-Valid, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8}
+
+
+Calcule les positions de déplacement valide, les met dans la liste. 
+
+
+
+Définition à la ligne 256 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a7c39da4bb12212b65b8999022d45e592}{\index{Minimale.\-c@{Minimale.\-c}!deplacer\-\_\-perso@{deplacer\-\_\-perso}}
+\index{deplacer\-\_\-perso@{deplacer\-\_\-perso}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{deplacer\-\_\-perso}]{\setlength{\rightskip}{0pt plus 5cm}void deplacer\-\_\-perso (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-coord}}]{case\-\_\-perso, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a7c39da4bb12212b65b8999022d45e592}
+
+
+Déplace le personnage sur le terrain Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case\-\_\-perso'. Si la 'case\-\_\-perso' contenait un piège, le perso perd des H\-P. 
+
+
+
+Définition à la ligne 186 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a7c39da4bb12212b65b8999022d45e592_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3}{\index{Minimale.\-c@{Minimale.\-c}!edit\-\_\-stats@{edit\-\_\-stats}}
+\index{edit\-\_\-stats@{edit\-\_\-stats}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{edit\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}void edit\-\_\-stats (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{perso, }
+\item[{int}]{H\-P, }
+\item[{int}]{Max\-\_\-\-H\-P, }
+\item[{int}]{M\-P, }
+\item[{int}]{Max\-\_\-\-M\-P, }
+\item[{int}]{A\-T\-K, }
+\item[{int}]{M\-A\-T\-K, }
+\item[{int}]{D\-E\-F, }
+\item[{int}]{M\-D\-E\-F, }
+\item[{int}]{M\-V\-T}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3}
+
+
+modifie les statistiques d'un personnage 
+
+
+
+Définition à la ligne 1428 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88}{\index{Minimale.\-c@{Minimale.\-c}!generation\-\_\-nom\-\_\-personnage@{generation\-\_\-nom\-\_\-personnage}}
+\index{generation\-\_\-nom\-\_\-personnage@{generation\-\_\-nom\-\_\-personnage}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{generation\-\_\-nom\-\_\-personnage}]{\setlength{\rightskip}{0pt plus 5cm}void generation\-\_\-nom\-\_\-personnage (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nom}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88}
+
+
+génère aléatoirement un nom pour un perso 
+
+
+
+Définition à la ligne 1406 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332}{\index{Minimale.\-c@{Minimale.\-c}!generation\-\_\-nombre\-\_\-aleatoire@{generation\-\_\-nombre\-\_\-aleatoire}}
+\index{generation\-\_\-nombre\-\_\-aleatoire@{generation\-\_\-nombre\-\_\-aleatoire}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{generation\-\_\-nombre\-\_\-aleatoire}]{\setlength{\rightskip}{0pt plus 5cm}int generation\-\_\-nombre\-\_\-aleatoire (
+\begin{DoxyParamCaption}
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332}
+
+
+Fonction qui renvoi un nombre aléatoire entre 0 et 'max'. 
+
+
+
+Définition à la ligne 174 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c}{\index{Minimale.\-c@{Minimale.\-c}!get\-\_\-target\-\_\-orientation@{get\-\_\-target\-\_\-orientation}}
+\index{get\-\_\-target\-\_\-orientation@{get\-\_\-target\-\_\-orientation}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{get\-\_\-target\-\_\-orientation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-target\-Orientation} get\-\_\-target\-\_\-orientation (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{perso, }
+\item[{{\bf t\-\_\-coord}}]{cible}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c}
+
+
+Fonction déterminant quelle est l'orientation de la cible par rapport au joueur. 
+
+
+
+Définition à la ligne 869 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a32d1e9030c1705ad183484acce8a4b2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ad7419c3036235a80b59bc983660be2ee}{\index{Minimale.\-c@{Minimale.\-c}!init\-\_\-char\-\_\-table@{init\-\_\-char\-\_\-table}}
+\index{init\-\_\-char\-\_\-table@{init\-\_\-char\-\_\-table}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{init\-\_\-char\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-char\-\_\-table (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{chars\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ad7419c3036235a80b59bc983660be2ee}
+
+
+Fonction d'initialisation d'un tableau de personnages. Remplit le tableau de personnages entré en paramètre de cases de terrain. 
+
+
+
+Définition à la ligne 606 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ad7419c3036235a80b59bc983660be2ee_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123}{\index{Minimale.\-c@{Minimale.\-c}!init\-\_\-plateau@{init\-\_\-plateau}}
+\index{init\-\_\-plateau@{init\-\_\-plateau}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{init\-\_\-plateau}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-plateau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123}
+
+
+Initialise le plateau en le remplissant de terrain par défaut. 
+
+
+
+Définition à la ligne 480 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a1f36ed2102ea6a97801ef419173a730b}{\index{Minimale.\-c@{Minimale.\-c}!joueur\-\_\-liste\-\_\-suivant@{joueur\-\_\-liste\-\_\-suivant}}
+\index{joueur\-\_\-liste\-\_\-suivant@{joueur\-\_\-liste\-\_\-suivant}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{joueur\-\_\-liste\-\_\-suivant}]{\setlength{\rightskip}{0pt plus 5cm}void joueur\-\_\-liste\-\_\-suivant (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\-\_\-joueur, }
+\item[{int $\ast$}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a1f36ed2102ea6a97801ef419173a730b}
+
+
+Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de façon à ne pas dépasser le nombre de joueurs. 
+
+
+
+Définition à la ligne 1048 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{_minimale_8c_a1f36ed2102ea6a97801ef419173a730b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a704aac80f0e314dab07203a35f05aef2}{\index{Minimale.\-c@{Minimale.\-c}!life\-\_\-check@{life\-\_\-check}}
+\index{life\-\_\-check@{life\-\_\-check}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{life\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}int life\-\_\-check (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a704aac80f0e314dab07203a35f05aef2}
+
+
+Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain. Appelle \hyperlink{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}{are\-\_\-my\-\_\-mates\-\_\-alive(int joueur\-\_\-courant)} pour déterminer le joueur est encore en jeu. Renvoie 1 si le joueur a encore des personnages en vie, sinon 0. 
+
+
+
+Définition à la ligne 1082 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{_minimale_8c_a704aac80f0e314dab07203a35f05aef2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{_minimale_8c_a704aac80f0e314dab07203a35f05aef2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{Minimale.\-c@{Minimale.\-c}!main@{main}}
+\index{main@{main}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+
+Fonction principale Fonction principale qui permet de jouer en mode Kill'em'all. 
+
+
+
+Définition à la ligne 1564 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a44e760d2c48ba5cdbf8466de23d78484}{\index{Minimale.\-c@{Minimale.\-c}!orienter\-\_\-perso\-\_\-fleches@{orienter\-\_\-perso\-\_\-fleches}}
+\index{orienter\-\_\-perso\-\_\-fleches@{orienter\-\_\-perso\-\_\-fleches}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{orienter\-\_\-perso\-\_\-fleches}]{\setlength{\rightskip}{0pt plus 5cm}void orienter\-\_\-perso\-\_\-fleches (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a44e760d2c48ba5cdbf8466de23d78484}
+
+
+Cette fonction permet au joueur d'orienter son personnage avec les flèches directionnelles. 
+
+
+
+Définition à la ligne 984 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a44e760d2c48ba5cdbf8466de23d78484_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{_minimale_8c_a44e760d2c48ba5cdbf8466de23d78484_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_add579b3bffa443553769bdacdd18a9e0}{\index{Minimale.\-c@{Minimale.\-c}!passer\-\_\-tour@{passer\-\_\-tour}}
+\index{passer\-\_\-tour@{passer\-\_\-tour}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{passer\-\_\-tour}]{\setlength{\rightskip}{0pt plus 5cm}void passer\-\_\-tour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_add579b3bffa443553769bdacdd18a9e0}
+
+
+Fonction qui passe le tour du joueur actif. 
+
+
+
+Définition à la ligne 795 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{_minimale_8c_add579b3bffa443553769bdacdd18a9e0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f}{\index{Minimale.\-c@{Minimale.\-c}!players\-\_\-life\-\_\-check@{players\-\_\-life\-\_\-check}}
+\index{players\-\_\-life\-\_\-check@{players\-\_\-life\-\_\-check}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{players\-\_\-life\-\_\-check}]{\setlength{\rightskip}{0pt plus 5cm}void players\-\_\-life\-\_\-check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f}
+
+
+Actualise le fait que les joueurs soient vivants ou non. 
+
+
+
+Définition à la ligne 1100 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd}{\index{Minimale.\-c@{Minimale.\-c}!saisie\-\_\-nombre\-\_\-joueurs@{saisie\-\_\-nombre\-\_\-joueurs}}
+\index{saisie\-\_\-nombre\-\_\-joueurs@{saisie\-\_\-nombre\-\_\-joueurs}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{saisie\-\_\-nombre\-\_\-joueurs}]{\setlength{\rightskip}{0pt plus 5cm}void saisie\-\_\-nombre\-\_\-joueurs (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{nb\-\_\-joueurs}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd}
+
+
+permet à l'utilisateur de rentrer le nombre de joueur à jouer 
+
+
+
+Définition à la ligne 1553 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_aebdcead4bd058408b30ee5924910d1f6}{\index{Minimale.\-c@{Minimale.\-c}!Sauvegarder@{Sauvegarder}}
+\index{Sauvegarder@{Sauvegarder}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{Sauvegarder}]{\setlength{\rightskip}{0pt plus 5cm}void Sauvegarder (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_aebdcead4bd058408b30ee5924910d1f6}
+
+
+Sauvegarde la partie en cours dans un fichier. 
+
+
+
+Définition à la ligne 89 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{_minimale_8c_aebdcead4bd058408b30ee5924910d1f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a011c6275934a222e8ba74fae00af32e1}{\index{Minimale.\-c@{Minimale.\-c}!select\-\_\-skill@{select\-\_\-skill}}
+\index{select\-\_\-skill@{select\-\_\-skill}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{select\-\_\-skill}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-skill} select\-\_\-skill (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-character}}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a011c6275934a222e8ba74fae00af32e1}
+
+
+Permet au joueur de choisir, graphiquement, une compétence à effectuer dans un menu. 
+
+
+
+Définition à la ligne 819 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{_minimale_8c_a011c6275934a222e8ba74fae00af32e1_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{_minimale_8c_a011c6275934a222e8ba74fae00af32e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411}{\index{Minimale.\-c@{Minimale.\-c}!selection\-\_\-perso@{selection\-\_\-perso}}
+\index{selection\-\_\-perso@{selection\-\_\-perso}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{selection\-\_\-perso}]{\setlength{\rightskip}{0pt plus 5cm}void selection\-\_\-perso (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411}
+
+
+Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur. 
+
+
+
+Définition à la ligne 737 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320}{\index{Minimale.\-c@{Minimale.\-c}!spawn\-\_\-character@{spawn\-\_\-character}}
+\index{spawn\-\_\-character@{spawn\-\_\-character}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{spawn\-\_\-character}]{\setlength{\rightskip}{0pt plus 5cm}void spawn\-\_\-character (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-camp}}]{camp\-\_\-nouveau\-\_\-perso}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320}
+
+
+Permet la création d'un personnage joueur à la position entrée. 
+
+
+
+Définition à la ligne 1472 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e}{\index{Minimale.\-c@{Minimale.\-c}!spawn\-\_\-sauvage@{spawn\-\_\-sauvage}}
+\index{spawn\-\_\-sauvage@{spawn\-\_\-sauvage}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{spawn\-\_\-sauvage}]{\setlength{\rightskip}{0pt plus 5cm}void spawn\-\_\-sauvage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e}
+
+
+Créé un personnage du camp neutre à une position aléatoire sur le terrain. 
+
+
+
+Définition à la ligne 1451 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_af96504b67683769d99d267ab8244cdc8}{\index{Minimale.\-c@{Minimale.\-c}!suicide@{suicide}}
+\index{suicide@{suicide}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{suicide}]{\setlength{\rightskip}{0pt plus 5cm}void suicide (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_af96504b67683769d99d267ab8244cdc8}
+
+
+Fonction permetant au joueur courant d'abandonner la partie. 
+
+
+
+Définition à la ligne 804 du fichier Minimale.\-c.
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{_minimale_8c_af96504b67683769d99d267ab8244cdc8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94}{\index{Minimale.\-c@{Minimale.\-c}!tour@{tour}}
+\index{tour@{tour}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{tour}]{\setlength{\rightskip}{0pt plus 5cm}void tour (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant, }
+\item[{int $\ast$}]{nb\-Atk\-Valid, }
+\item[{int $\ast$}]{nb\-Dep\-Valid, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94}
+
+
+Fonction de déroulement d'un tour pour le joueur entré en paramètre. 
+
+
+
+Définition à la ligne 1152 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea}{\index{Minimale.\-c@{Minimale.\-c}!tour\-\_\-\-I\-A@{tour\-\_\-\-I\-A}}
+\index{tour\-\_\-\-I\-A@{tour\-\_\-\-I\-A}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{tour\-\_\-\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}void tour\-\_\-\-I\-A (
+\begin{DoxyParamCaption}
+\item[{int}]{joueur\-\_\-courant, }
+\item[{int $\ast$}]{nb\-Atk\-Valid, }
+\item[{int $\ast$}]{nb\-Dep\-Valid, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea}
+
+
+Fonction de déroulement d'un tour pour l'I\-A. 
+
+
+
+Définition à la ligne 1491 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{_minimale_8c_a183c5f911befa83432ff61674e326603}{\index{Minimale.\-c@{Minimale.\-c}!vider\-\_\-buffer@{vider\-\_\-buffer}}
+\index{vider\-\_\-buffer@{vider\-\_\-buffer}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{vider\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}void vider\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a183c5f911befa83432ff61674e326603}
+\hypertarget{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f}{\index{Minimale.\-c@{Minimale.\-c}!viser\-\_\-case\-\_\-valide@{viser\-\_\-case\-\_\-valide}}
+\index{viser\-\_\-case\-\_\-valide@{viser\-\_\-case\-\_\-valide}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{viser\-\_\-case\-\_\-valide}]{\setlength{\rightskip}{0pt plus 5cm}void viser\-\_\-case\-\_\-valide (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-skill}}]{skill, }
+\item[{int $\ast$}]{nb\-Atk\-Valid, }
+\item[{{\bf t\-\_\-character} $\ast$}]{selected\-\_\-character}
+\end{DoxyParamCaption}
+)}}\label{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f}
+
+
+Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée. 
+
+
+
+Définition à la ligne 542 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des variables}
+\hypertarget{_minimale_8c_aeb67ecf1ba206af9765bba7ecd7cd929}{\index{Minimale.\-c@{Minimale.\-c}!compteur\-\_\-joueurs\-\_\-vivants@{compteur\-\_\-joueurs\-\_\-vivants}}
+\index{compteur\-\_\-joueurs\-\_\-vivants@{compteur\-\_\-joueurs\-\_\-vivants}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{compteur\-\_\-joueurs\-\_\-vivants}]{\setlength{\rightskip}{0pt plus 5cm}int compteur\-\_\-joueurs\-\_\-vivants =0}}\label{_minimale_8c_aeb67ecf1ba206af9765bba7ecd7cd929}
+
+
+Définition à la ligne 47 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a66ecc67604b45591ca621e1c1936d009}{\index{Minimale.\-c@{Minimale.\-c}!compteur\-\_\-tour@{compteur\-\_\-tour}}
+\index{compteur\-\_\-tour@{compteur\-\_\-tour}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{compteur\-\_\-tour}]{\setlength{\rightskip}{0pt plus 5cm}int compteur\-\_\-tour =0}}\label{_minimale_8c_a66ecc67604b45591ca621e1c1936d009}
+
+
+Définition à la ligne 46 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a5a6e59130d22bce1f5ec9490b20d7fb3}{\index{Minimale.\-c@{Minimale.\-c}!dep\-Valid@{dep\-Valid}}
+\index{dep\-Valid@{dep\-Valid}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{dep\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-coord} dep\-Valid\mbox{[}{\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E} $\ast${\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}\mbox{[}3\mbox{]}}}\label{_minimale_8c_a5a6e59130d22bce1f5ec9490b20d7fb3}
+
+
+Définition à la ligne 74 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a6cfe6e5ba882446145a8c3f5508e2ea6}{\index{Minimale.\-c@{Minimale.\-c}!indice\-Tab\-Dep\-Valid@{indice\-Tab\-Dep\-Valid}}
+\index{indice\-Tab\-Dep\-Valid@{indice\-Tab\-Dep\-Valid}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{indice\-Tab\-Dep\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}int indice\-Tab\-Dep\-Valid}}\label{_minimale_8c_a6cfe6e5ba882446145a8c3f5508e2ea6}
+
+
+Définition à la ligne 80 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a08b1b223d56118ff55a1caf616e22186}{\index{Minimale.\-c@{Minimale.\-c}!particule\-\_\-generateur\-\_\-nom@{particule\-\_\-generateur\-\_\-nom}}
+\index{particule\-\_\-generateur\-\_\-nom@{particule\-\_\-generateur\-\_\-nom}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{particule\-\_\-generateur\-\_\-nom}]{\setlength{\rightskip}{0pt plus 5cm}char particule\-\_\-generateur\-\_\-nom\mbox{[}$\,$\mbox{]}\mbox{[}20\mbox{]}}}\label{_minimale_8c_a08b1b223d56118ff55a1caf616e22186}
+{\bfseries Valeur initiale \-:}
+\begin{DoxyCode}
+= 
+    \{
+        \textcolor{stringliteral}{"ogre"},
+        \textcolor{stringliteral}{"etoileux"},
+        \textcolor{stringliteral}{"mur"},
+        \textcolor{stringliteral}{"elfe"},
+        \textcolor{stringliteral}{"borgne"},
+        \textcolor{stringliteral}{"attendrissant"},
+        \textcolor{stringliteral}{"enfant"},
+        \textcolor{stringliteral}{"planetaire"},
+        \textcolor{stringliteral}{"rayon"},
+        \textcolor{stringliteral}{"magique"},
+        \textcolor{stringliteral}{"terrible"},
+        \textcolor{stringliteral}{"sorcier"},
+        \textcolor{stringliteral}{"guerrier"},
+        \textcolor{stringliteral}{"sauvage"},
+        \textcolor{stringliteral}{"perverti"},
+        \textcolor{stringliteral}{"bienveillant"},
+        \textcolor{stringliteral}{"saint"}
+    \}
+\end{DoxyCode}
+
+
+Définition à la ligne 50 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a816e050bd234e1024a41068177f1ac49}{\index{Minimale.\-c@{Minimale.\-c}!Plateau@{Plateau}}
+\index{Plateau@{Plateau}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{Plateau}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-character} Plateau\mbox{[}{\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}\mbox{[}{\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}}}\label{_minimale_8c_a816e050bd234e1024a41068177f1ac49}
+
+
+Définition à la ligne 73 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_adb6f8f74ea8aeb8c5a3f0d838ca80999}{\index{Minimale.\-c@{Minimale.\-c}!player@{player}}
+\index{player@{player}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-player} player\mbox{[}{\bf Max\-Tab}\mbox{]}}}\label{_minimale_8c_adb6f8f74ea8aeb8c5a3f0d838ca80999}
+
+
+Définition à la ligne 77 du fichier Minimale.\-c.
+
+\hypertarget{_minimale_8c_a0d10b4d51713595a0aecf92594403ca3}{\index{Minimale.\-c@{Minimale.\-c}!Valid\-\_\-chars\-\_\-\-I\-A@{Valid\-\_\-chars\-\_\-\-I\-A}}
+\index{Valid\-\_\-chars\-\_\-\-I\-A@{Valid\-\_\-chars\-\_\-\-I\-A}!Minimale.c@{Minimale.\-c}}
+\subsubsection[{Valid\-\_\-chars\-\_\-\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-character} Valid\-\_\-chars\-\_\-\-I\-A\mbox{[}{\bf Max\-Tab}\mbox{]}}}\label{_minimale_8c_a0d10b4d51713595a0aecf92594403ca3}
+
+
+Définition à la ligne 48 du fichier Minimale.\-c.
+

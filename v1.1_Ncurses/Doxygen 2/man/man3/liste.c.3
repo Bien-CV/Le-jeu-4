@@ -1,0 +1,183 @@
+.TH "liste.c" 3 "Jeudi Janvier 15 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+liste.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'liste\&.h'\fP
+.br
+\fC#include 'header\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBN_LISTE\fP   100"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBliste_init\fP (void)"
+.br
+.ti -1c
+.RI "int \fBliste_est_vide\fP (void)"
+.br
+.ti -1c
+.RI "int \fBliste_est_hors_liste\fP (void)"
+.br
+.ti -1c
+.RI "void \fBliste_en_tete\fP (void)"
+.br
+.ti -1c
+.RI "void \fBliste_en_queue\fP (void)"
+.br
+.ti -1c
+.RI "void \fBliste_precedent\fP (void)"
+.br
+.ti -1c
+.RI "void \fBliste_suivant\fP (void)"
+.br
+.ti -1c
+.RI "void \fBliste_valeur_elt\fP (\fBt_coord\fP *e)"
+.br
+.ti -1c
+.RI "void \fBliste_modif_elt\fP (\fBt_coord\fP v)"
+.br
+.ti -1c
+.RI "void \fBliste_oter_elt\fP (void)"
+.br
+.ti -1c
+.RI "void \fBliste_ajout_droit\fP (\fBt_coord\fP e)"
+.br
+.ti -1c
+.RI "void \fBliste_ajout_gauche\fP (\fBt_coord\fP e)"
+.br
+.ti -1c
+.RI "void \fBliste_afficher_contenu\fP ()"
+.br
+.ti -1c
+.RI "void \fBliste_afficher_queue\fP ()"
+.br
+.ti -1c
+.RI "void \fBliste_suppr_doublon\fP ()"
+.br
+.ti -1c
+.RI "int \fBliste_calculer_nombre_elements\fP ()"
+.br
+.ti -1c
+.RI "int \fBliste_element_est_present\fP (\fBt_coord\fP e, int numPile)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBt_coord\fP \fBT\fP [\fBN_LISTE\fP]"
+.br
+.ti -1c
+.RI "int \fBqueue\fP"
+.br
+.ti -1c
+.RI "int \fBec\fP"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define N_LISTE   100"
+
+.PP
+Définition à la ligne 2 du fichier liste\&.c\&.
+.SH "Documentation des fonctions"
+.PP 
+.SS "void liste_afficher_contenu ()"
+
+.PP
+Définition à la ligne 120 du fichier liste\&.c\&.
+.SS "void liste_afficher_queue ()"
+
+.PP
+Définition à la ligne 134 du fichier liste\&.c\&.
+.SS "void liste_ajout_droit (\fBt_coord\fPe)"
+
+.PP
+Définition à la ligne 85 du fichier liste\&.c\&.
+.SS "void liste_ajout_gauche (\fBt_coord\fPe)"
+
+.PP
+Définition à la ligne 103 du fichier liste\&.c\&.
+.SS "int liste_calculer_nombre_elements ()"
+
+.PP
+Définition à la ligne 167 du fichier liste\&.c\&.
+.SS "int liste_element_est_present (\fBt_coord\fPe, intnumPile)"
+
+.PP
+Définition à la ligne 182 du fichier liste\&.c\&.
+.SS "void liste_en_queue (void)"
+
+.PP
+Définition à la ligne 38 du fichier liste\&.c\&.
+.SS "void liste_en_tete (void)"
+
+.PP
+Définition à la ligne 31 du fichier liste\&.c\&.
+.SS "int liste_est_hors_liste (void)"
+
+.PP
+Définition à la ligne 25 du fichier liste\&.c\&.
+.SS "int liste_est_vide (void)"
+
+.PP
+Définition à la ligne 19 du fichier liste\&.c\&.
+.SS "void liste_init (void)"
+
+.PP
+Définition à la ligne 12 du fichier liste\&.c\&.
+.SS "void liste_modif_elt (\fBt_coord\fPv)"
+
+.PP
+Définition à la ligne 66 du fichier liste\&.c\&.
+.SS "void liste_oter_elt (void)"
+
+.PP
+Définition à la ligne 73 du fichier liste\&.c\&.
+.SS "void liste_precedent (void)"
+
+.PP
+Définition à la ligne 45 du fichier liste\&.c\&.
+.SS "void liste_suivant (void)"
+
+.PP
+Définition à la ligne 52 du fichier liste\&.c\&.
+.SS "void liste_suppr_doublon ()"
+
+.PP
+Définition à la ligne 143 du fichier liste\&.c\&.
+.SS "void liste_valeur_elt (\fBt_coord\fP *e)"
+
+.PP
+Définition à la ligne 59 du fichier liste\&.c\&.
+.SH "Documentation des variables"
+.PP 
+.SS "int ec"
+
+.PP
+Définition à la ligne 10 du fichier liste\&.c\&.
+.SS "int queue"
+
+.PP
+Définition à la ligne 10 du fichier liste\&.c\&.
+.SS "\fBt_coord\fP T[\fBN_LISTE\fP]"
+
+.PP
+Définition à la ligne 8 du fichier liste\&.c\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Le jeu 4 à partir du code source\&.

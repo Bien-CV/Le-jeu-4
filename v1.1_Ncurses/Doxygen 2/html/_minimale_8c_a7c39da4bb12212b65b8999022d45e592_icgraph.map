@@ -1,0 +1,6 @@
+<map id="deplacer_perso" name="deplacer_perso">
+<area shape="rect" id="node3" href="$_minimale_8c.html#a2b0fb79b0717094d1023fea7baf48c98" title="Permet au joueur de choisir la destination Le joueur déplace un curseur qui représente son joueur cou..." alt="" coords="166,5,349,32"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="Fonction de déroulement d&#39;un tour pour le joueur entré en paramètre." alt="" coords="407,56,451,83"/>
+<area shape="rect" id="node10" href="$_minimale_8c.html#a7e9553a32f70742aa8787a781dd50cea" title="Fonction de déroulement d&#39;un tour pour l&#39;IA." alt="" coords="397,107,461,133"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="509,81,560,108"/>
+</map>

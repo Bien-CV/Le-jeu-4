@@ -1,0 +1,4 @@
+<map id="creer_terrain_rapide" name="creer_terrain_rapide">
+<area shape="rect" id="node3" href="$_minimale_8c.html#aa17c4e2a8512aa83516a20e0df29a123" title="Initialise le plateau en le remplissant de terrain par défaut." alt="" coords="189,5,277,32"/>
+<area shape="rect" id="node5" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="208,56,259,83"/>
+</map>

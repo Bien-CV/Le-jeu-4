@@ -1,0 +1,8 @@
+<map id="choix_deplacement_humain" name="choix_deplacement_humain">
+<area shape="rect" id="node3" href="$pile_8c.html#ac2513cb21eb42f39b02122fa30fd21ca" title="pile_init" alt="" coords="295,5,361,32"/>
+<area shape="rect" id="node5" href="$pile_8c.html#a153b92d8383b4d328bcd9f20d77b8d0c" title="pile_empiler" alt="" coords="283,56,373,83"/>
+<area shape="rect" id="node7" href="$pile_8c.html#ae0e56a57ce8bf929fe621fa05304642c" title="pile_sommet" alt="" coords="280,107,376,133"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#a3f74d85bb951bc6b755696903c848531" title="Déplace le personnage sur le terrain." alt="" coords="273,157,383,184"/>
+<area shape="rect" id="node11" href="$_minimale_8c.html#a1fdf262e6e18d594322ddcfdde4e4b3e" title="Affiche le plateau avec les caractères correspondants à l&#39;orientation." alt="" coords="237,208,419,235"/>
+<area shape="rect" id="node13" href="$pile_8c.html#a243aa7fe5bd1ff307d4c7aa5f76739c1" title="pile_depiler" alt="" coords="285,259,371,285"/>
+</map>
