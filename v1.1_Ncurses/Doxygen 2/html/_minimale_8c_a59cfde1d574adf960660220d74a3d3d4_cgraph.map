@@ -1,4 +1,0 @@
-<map id="creer_perso_rapide" name="creer_perso_rapide">
-<area shape="rect" id="node3" href="$_minimale_8c.html#a97c357428c810b5f8ed3fcbeb973dd88" title="génère aléatoirement un nom pour un perso" alt="" coords="187,5,375,32"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire entre 0 et &#39;max&#39;." alt="" coords="425,5,613,32"/>
-</map>

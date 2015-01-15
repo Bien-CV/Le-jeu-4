@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
-  <compounddef id="md__readme" kind="page">
-    <compoundname>md_Readme</compoundname>
-    <title>Readme</title>
-    <detaileddescription>
-<para>Peut-être penser à la génération de terrain. Ca serait pas mal un ptit donjon avec des salles.</para><para>Configuration de Geany, cliquer sur le menu déroulant à côté de build, puis &quot;définir les commandes de construction&quot; puis :</para><para><ulink url="http://image.noelshack.com/fichiers/2014/51/1418816409-capture-du-2014-12-17-12-38-56.png">http://image.noelshack.com/fichiers/2014/51/1418816409-capture-du-2014-12-17-12-38-56.png</ulink> </para>    </detaileddescription>
-  </compounddef>
-</doxygen>

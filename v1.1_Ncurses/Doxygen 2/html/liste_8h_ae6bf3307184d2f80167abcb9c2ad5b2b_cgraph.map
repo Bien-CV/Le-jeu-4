@@ -1,7 +1,0 @@
-<map id="liste_element_est_present" name="liste_element_est_present">
-<area shape="rect" id="node3" href="$liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="236,5,332,32"/>
-<area shape="rect" id="node7" href="$liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="229,56,339,83"/>
-<area shape="rect" id="node9" href="$liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="387,107,522,133"/>
-<area shape="rect" id="node12" href="$liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="237,157,331,184"/>
-<area shape="rect" id="node5" href="$liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="403,5,506,32"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="deplacer_perso" name="deplacer_perso">
-<area shape="rect" id="node3" href="$_minimale_8c.html#a22abc2bad1fd63372797a0e3fe103f07" title="choix_deplacement_humain" alt="" coords="166,5,349,32"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a779ee1563d913e90d9ad93b9adf6867e" title="tour" alt="" coords="407,56,451,83"/>
-<area shape="rect" id="node10" href="$_minimale_8c.html#aee3a984cc380669ef226b08039d592da" title="tour_IA" alt="" coords="397,107,461,133"/>
-<area shape="rect" id="node7" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="509,81,560,108"/>
-</map>
