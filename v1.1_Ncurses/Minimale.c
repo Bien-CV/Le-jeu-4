@@ -297,6 +297,7 @@ void deplacements_valides(int* nbDepValid, t_character* selected_character){
  */
 t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character* selected_character){
 	
+	curs_set(1);	//curseur visible
 		int mvt_effectue = 0, x, y;
 		char choix;
 		x = selected_character->position.X;
@@ -314,9 +315,10 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 		printw("Deplacement: %i/%i\n", mvt_effectue, selected_character->stats.MVT);
 		afficher_plateau_orientation(joueur_courant);
 		printw("\n\nValider =\"Entrée\"\nAnnuler =\"BackSpace\"");
-		attron(COLOR_PAIR(7));
-		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(7));
+		//attron(COLOR_PAIR(7));
+		move(y+2, x+3);
+		//mvaddch(y+2,x+3,curseur);
+		//attroff(COLOR_PAIR(7));
 		//refresh();
 		choix = getch();
 		if((choix == 127 || choix == 8) && mvt_effectue > 0)//touche backSpace = touche effacer
@@ -436,6 +438,7 @@ t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character
 		
 	}while(choix != '\n' && choix  != 13);
 	
+	curs_set(0);	//curseur invisible
 	return((t_coord){x,y});
 }
 
@@ -672,6 +675,7 @@ void afficher_infos_persos( t_character perso)
 t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
 {
 	
+	curs_set(1);	//curseur visible
     int valid = 0;
     char choix;
     int x=selected_character->position.X, y=selected_character->position.Y;
@@ -687,9 +691,10 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 		if(valid == 0)printw("non ");
 		printw("valide");
 		if(Plateau[x][y].camp>0 && Plateau[x][y].type != TRAP_UNIT){afficher_infos_persos(Plateau[x][y]);}
-		attron(COLOR_PAIR(7));
-		mvaddch(y+2,x+3,curseur);
-		attroff(COLOR_PAIR(7));
+		//attron(COLOR_PAIR(7));
+		move(y+2,x+3);
+		//mvaddch(y+2,x+3,curseur);
+		//attroff(COLOR_PAIR(7));
 		//refresh();
 		choix = getch();
 		if(choix == 127 || choix == 8)
@@ -725,6 +730,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 		valid = liste_element_est_present(val, 0);	//vérifie si la case sélectionnée est présente dans la liste des cases attaquables
 		
 	}while((choix != '\n' && choix != 13) || valid == 0);
+	curs_set(0);	//curseur invisible
 	return (val);
 }
 
@@ -736,6 +742,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 */
 void selection_perso(int joueur_courant,t_character* selected_character){
 	
+	curs_set(1);	//curseur invisible
 	int x = 0,y = 0;
 	char choix;
 	
@@ -756,9 +763,10 @@ void selection_perso(int joueur_courant,t_character* selected_character){
 				if(joueur_courant==5)attroff(COLOR_PAIR(6));
 	afficher_plateau_orientation(joueur_courant);
 		if(Plateau[x][y].camp>0  && (Plateau[x][y].type != TRAP_UNIT || Plateau[x][y].camp == joueur_courant)){afficher_infos_persos(Plateau[x][y]);}
-		attron(COLOR_PAIR(7));
-		mvaddch(y+2,x+3,curseur);	//affiche le curseur
-		attroff(COLOR_PAIR(7));
+		//attron(COLOR_PAIR(7));
+		move(y+2,x+3);
+		//mvaddch(y+2,x+3,curseur);	//affiche le curseur
+		//attroff(COLOR_PAIR(7));
 		refresh();
 		choix = getch();
 		if(choix == 68)
@@ -785,6 +793,7 @@ void selection_perso(int joueur_courant,t_character* selected_character){
 	}while((choix != '\n' && choix != 13) || (Plateau[x][y].camp != joueur_courant || Plateau[x][y].type == TRAP_UNIT));
 	*selected_character = Plateau[x][y];
 	Plateau[x][y]= case_terrain;
+	curs_set(0);	//curseur invisible
 }
 
 /**
