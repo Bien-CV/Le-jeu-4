@@ -3,7 +3,7 @@
 }
 
 
-Code principale.  
+Code principal.  
 
 
 {\ttfamily \#include $<$assert.\-h$>$}\\*
@@ -53,11 +53,11 @@ void \hyperlink{_minimale_8c_a1f36ed2102ea6a97801ef419173a730b}{joueur\-\_\-list
 void \hyperlink{_minimale_8c_a88cec99ca1b112fc0553d0f09c19fcd7}{creer\-\_\-terrain\-\_\-rapide} (\hyperlink{header_8h_a4bb25c9352f7bb2ea2eb663ccf579528}{t\-\_\-camp} camp, int x, int y)
 \begin{DoxyCompactList}\small\item\em Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d'obstacle. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a183c5f911befa83432ff61674e326603}{vider\-\_\-buffer} (void)
-\begin{DoxyCompactList}\small\item\em Vide le tampon de saisie clavier. \end{DoxyCompactList}\item 
+\item 
 int \hyperlink{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}{are\-\_\-my\-\_\-mates\-\_\-alive} (int joueur\-\_\-courant)
-\item 
+\begin{DoxyCompactList}\small\item\em Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts. \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988}{calcul\-\_\-persos\-\_\-\-I\-A} (int joueur\-\_\-courant)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcule le nombre de personnage controlé par l'I\-A. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a1fdf262e6e18d594322ddcfdde4e4b3e}{afficher\-\_\-plateau\-\_\-orientation} (int joueur\-\_\-courant)
 \begin{DoxyCompactList}\small\item\em Affiche le plateau avec les caractères correspondants à l'orientation. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88}{generation\-\_\-nom\-\_\-personnage} (char $\ast$nom)
@@ -65,41 +65,41 @@ void \hyperlink{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88}{generation\-\_\-
 void \hyperlink{_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f}{players\-\_\-life\-\_\-check} ()
 \begin{DoxyCompactList}\small\item\em Actualise le fait que les joueurs soient vivants ou non. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_aebdcead4bd058408b30ee5924910d1f6}{Sauvegarder} (int joueur\-\_\-courant)
-\item 
+\begin{DoxyCompactList}\small\item\em Sauvegarde la partie en cours dans un fichier. \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_a841458aecfd962618c6b89231954f407}{Charger} (int joueur\-\_\-courant)
-\item 
+\begin{DoxyCompactList}\small\item\em Permet de charger une partie depuis un fichier de sauvegarde. \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_a693e68e5f8ca09f46ad6b746c07d0332}{generation\-\_\-nombre\-\_\-aleatoire} (int max)
 \begin{DoxyCompactList}\small\item\em Fonction qui renvoi un nombre aléatoire entre 0 et 'max'. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a7c39da4bb12212b65b8999022d45e592}{deplacer\-\_\-perso} (\hyperlink{structt__coord}{t\-\_\-coord} case\-\_\-perso, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Déplace le personnage sur le terrain Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case\-\_\-perso'. Si la 'case\-\_\-perso' contenait un piège, le perso perd des H\-P. \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_ac07dd1dbd17abd8de085e601421c8103}{cases\-\_\-voisines\-\_\-calcul} (\hyperlink{structt__coord}{t\-\_\-coord} coordonnees)
 \begin{DoxyCompactList}\small\item\em Renvoi le nombre de case voisine vide; met dans la file, la liste des coordonnées voisines accessibles. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8}{deplacements\-\_\-valides} (int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcule les positions de déplacement valide, les met dans la liste. \end{DoxyCompactList}\item 
 \hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98}{choix\-\_\-deplacement\-\_\-humain} (int joueur\-\_\-courant, int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Permet au joueur de choisir la destination Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède. \end{DoxyCompactList}\item 
 \hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_aaa20acb53c08f4a15be29bb9d70cd9f1}{choix\-\_\-deplacement\-\_\-\-I\-A} (int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
 \begin{DoxyCompactList}\small\item\em cette fonction retourne les coordonnées du déplacement choisi pour l'I\-A \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_aa17c4e2a8512aa83516a20e0df29a123}{init\-\_\-plateau} ()
 \begin{DoxyCompactList}\small\item\em Initialise le plateau en le remplissant de terrain par défaut. \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_ad6b417d8f6547affac1cc287a6762113}{cases\-\_\-voisines\-\_\-\-A\-T\-K} (\hyperlink{structt__coord}{t\-\_\-coord} coordonnees)
-\begin{DoxyCompactList}\small\item\em Renvoi le nombre de case voisine ; met dans la file, la liste des coordonnées voisines. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Renvoi le nombre de case voisine. Met dans la file la liste des coordonnées voisines. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f}{viser\-\_\-case\-\_\-valide} (\hyperlink{structt__skill}{t\-\_\-skill} skill, int $\ast$nb\-Atk\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée. \end{DoxyCompactList}\item 
 \hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6}{choix\-\_\-cible\-\_\-\-I\-A} (\hyperlink{structt__skill}{t\-\_\-skill} skill, int $\ast$nb\-Atk\-Valid)
-\begin{DoxyCompactList}\small\item\em choisi parmi la liste des cases à attaquer pour l'I\-A, une case \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Choisi parmi la liste des cases à attaquer pour l'I\-A, une case vide peut être attaquée. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_ad7419c3036235a80b59bc983660be2ee}{init\-\_\-char\-\_\-table} (\hyperlink{structt__character}{t\-\_\-character} chars\mbox{[}$\,$\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em Fonction d'initialisation d'un tableau de personnages. Remplit le tableau de personnages entré en paramètre de cases de terrain. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a4c19cd4d694f2f549079791a1e11a019}{afficher\-\_\-skill} (int skill\-\_\-nb, \hyperlink{structt__skill}{t\-\_\-skill} skill, \hyperlink{structt__character}{t\-\_\-character} selected\-\_\-character)
 \begin{DoxyCompactList}\small\item\em Affiche le nom, la portée, la puissance d'une compétence. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec}{afficher\-\_\-skill\-\_\-list} (\hyperlink{structt__character}{t\-\_\-character} perso)
-\begin{DoxyCompactList}\small\item\em affiche la liste des compétence d'un personnage \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Affiche la liste des compétence d'un personnage. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c}{afficher\-\_\-infos\-\_\-persos} (\hyperlink{structt__character}{t\-\_\-character} perso)
-\begin{DoxyCompactList}\small\item\em affiche les informations du personnage \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Affiche les informations du personnage. \end{DoxyCompactList}\item 
 \hyperlink{structt__coord}{t\-\_\-coord} \hyperlink{_minimale_8c_a69347b1b74ee79025e3c6ce20b5b49a4}{choix\-\_\-cible\-\_\-humain} (\hyperlink{structt__skill}{t\-\_\-skill} skill, int joueur\-\_\-courant, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
 \begin{DoxyCompactList}\small\item\em Permet au joueur de choisir, grâce à un curseur, une case à attaquer. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411}{selection\-\_\-perso} (int joueur\-\_\-courant, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_add579b3bffa443553769bdacdd18a9e0}{passer\-\_\-tour} ()
 \begin{DoxyCompactList}\small\item\em Fonction qui passe le tour du joueur actif. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_af96504b67683769d99d267ab8244cdc8}{suicide} (int joueur\-\_\-courant)
@@ -112,24 +112,22 @@ void \hyperlink{_minimale_8c_a28d9c8c6a5abddd6a89ddb258b5114bc}{appliquer\-\_\-a
 \begin{DoxyCompactList}\small\item\em Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le tableau de personnages entré en paramètre de cases de terrain. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a44e760d2c48ba5cdbf8466de23d78484}{orienter\-\_\-perso\-\_\-fleches} (int joueur\-\_\-courant, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
 \begin{DoxyCompactList}\small\item\em Cette fonction permet au joueur d'orienter son personnage avec les flèches directionnelles. \end{DoxyCompactList}\item 
-int \hyperlink{_minimale_8c_a0529503b2d07980eab95dcd282587007}{perso\-\_\-oriente\-\_\-a\-\_\-droite} ()
-\item 
 void \hyperlink{_minimale_8c_a21af16606028cc5f140a51a2314c2668}{character\-\_\-hp\-\_\-list} ()
 \begin{DoxyCompactList}\small\item\em affiche une liste avec les persos et leurs points de vie. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94}{tour} (int joueur\-\_\-courant, int $\ast$nb\-Atk\-Valid, int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Fonction de déroulement d'un tour pour le joueur entré en paramètre. \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47}{all\-\_\-dead\-\_\-but\-\_\-one} (int nb\-\_\-joueurs)
-\item 
+\begin{DoxyCompactList}\small\item\em Fonction déterminant si un seul joueur est vivant. Appellé par la fonction principale pour déterminer si c'est la fin de la partie. Renvoie 0 si plus d'un joueur survit, sinon renvoie 1. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4}{creer\-\_\-perso\-\_\-rapide} (\hyperlink{header_8h_a4bb25c9352f7bb2ea2eb663ccf579528}{t\-\_\-camp} camp, int x, int y, \hyperlink{header_8h_a853cf4e56ef5ad960bf764a4fafe7e77}{t\-\_\-classe} classe)
-\item 
+\begin{DoxyCompactList}\small\item\em Création brève de perso. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_af63ad36c60d60f979a15f7bf3a24c5a3}{edit\-\_\-stats} (\hyperlink{structt__character}{t\-\_\-character} perso, int H\-P, int Max\-\_\-\-H\-P, int M\-P, int Max\-\_\-\-M\-P, int \hyperlink{header_8h_a440f669d36bc2028077af38574051204a52c6d49f971f8f70cf3f3c474edc08f9}{A\-T\-K}, int \hyperlink{header_8h_a440f669d36bc2028077af38574051204a1fe261f2a80ef9b7055433a3c2d93af8}{M\-A\-T\-K}, int D\-E\-F, int M\-D\-E\-F, int M\-V\-T)
 \begin{DoxyCompactList}\small\item\em modifie les statistiques d'un personnage \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e}{spawn\-\_\-sauvage} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Créé un personnage du camp neutre à une position aléatoire sur le terrain. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320}{spawn\-\_\-character} (\hyperlink{header_8h_a4bb25c9352f7bb2ea2eb663ccf579528}{t\-\_\-camp} camp\-\_\-nouveau\-\_\-perso)
-\item 
+\begin{DoxyCompactList}\small\item\em Permet la création d'un personnage joueur à la position entrée. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea}{tour\-\_\-\-I\-A} (int joueur\-\_\-courant, int $\ast$nb\-Atk\-Valid, int $\ast$nb\-Dep\-Valid, \hyperlink{structt__character}{t\-\_\-character} $\ast$selected\-\_\-character)
-\item 
+\begin{DoxyCompactList}\small\item\em Fonction de déroulement d'un tour pour l'I\-A. \end{DoxyCompactList}\item 
 void \hyperlink{_minimale_8c_a0b7596f8f2c018a80e51c70268d338fd}{saisie\-\_\-nombre\-\_\-joueurs} (int $\ast$nb\-\_\-joueurs)
 \begin{DoxyCompactList}\small\item\em permet à l'utilisateur de rentrer le nombre de joueur à jouer \end{DoxyCompactList}\item 
 int \hyperlink{_minimale_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
@@ -156,7 +154,7 @@ int \hyperlink{_minimale_8c_a6cfe6e5ba882446145a8c3f5508e2ea6}{indice\-Tab\-Dep\
 
 
 \subsection{Description détaillée}
-Code principale. \begin{DoxyAuthor}{Auteur}
+Code principal. \begin{DoxyAuthor}{Auteur}
 Arthur L\-E\-M\-E\-E, Yann G\-U\-E\-N\-V\-E\-R, Baptiste C\-A\-N\-O\-V\-A\-S-\/\-V\-I\-R\-L\-Y. 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
@@ -240,11 +238,11 @@ Définition à la ligne 31 du fichier Minimale.\-c.
 )}}\label{_minimale_8c_ad312ec60fc8d45f956471549de9ab21c}
 
 
-affiche les informations du personnage 
+Affiche les informations du personnage. 
 
 
 
-Définition à la ligne 677 du fichier Minimale.\-c.
+Définition à la ligne 644 du fichier Minimale.\-c.
 
 
 
@@ -281,7 +279,7 @@ Affiche le plateau avec les caractères correspondants à l'orientation.
 
 
 
-Définition à la ligne 1465 du fichier Minimale.\-c.
+Définition à la ligne 1283 du fichier Minimale.\-c.
 
 
 
@@ -309,7 +307,7 @@ Affiche le nom, la portée, la puissance d'une compétence.
 
 
 
-Définition à la ligne 649 du fichier Minimale.\-c.
+Définition à la ligne 616 du fichier Minimale.\-c.
 
 
 
@@ -331,11 +329,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a7015d7153fc65e628d81cdd3b68ab7ec}
 
 
-affiche la liste des compétence d'un personnage 
+Affiche la liste des compétence d'un personnage. 
 
 
 
-Définition à la ligne 664 du fichier Minimale.\-c.
+Définition à la ligne 631 du fichier Minimale.\-c.
 
 
 
@@ -368,7 +366,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_aa6bc2b819d20d08ea1c98f09c15f2c47}
 
 
-Définition à la ligne 1447 du fichier Minimale.\-c.
+Fonction déterminant si un seul joueur est vivant. Appellé par la fonction principale pour déterminer si c'est la fin de la partie. Renvoie 0 si plus d'un joueur survit, sinon renvoie 1. 
+
+
+
+Définition à la ligne 1265 du fichier Minimale.\-c.
 
 
 
@@ -396,7 +398,7 @@ Fonction appliquant le skill du personnage lanceur à la case cible. Remplit le 
 
 
 
-Définition à la ligne 1068 du fichier Minimale.\-c.
+Définition à la ligne 929 du fichier Minimale.\-c.
 
 
 
@@ -429,7 +431,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_ae1d5aa28a687b31b055f49ea44866780}
 
 
-Définition à la ligne 1216 du fichier Minimale.\-c.
+Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts. 
+
+
+
+Définition à la ligne 1061 du fichier Minimale.\-c.
 
 
 
@@ -451,11 +457,16 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a0255b1b3f70d1d35a858e9e512c8f988}
 
 
-Définition à la ligne 1701 du fichier Minimale.\-c.
+Calcule le nombre de personnage controlé par l'I\-A. 
 
 
 
-Voici le graphe d'appel pour cette fonction \-:\nopagebreak
+Définition à la ligne 1532 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -484,11 +495,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_ad6b417d8f6547affac1cc287a6762113}
 
 
-Renvoi le nombre de case voisine ; met dans la file, la liste des coordonnées voisines. 
+Renvoi le nombre de case voisine. Met dans la file la liste des coordonnées voisines. 
 
 
 
-Définition à la ligne 527 du fichier Minimale.\-c.
+Définition à la ligne 497 du fichier Minimale.\-c.
 
 
 
@@ -525,7 +536,7 @@ Renvoi le nombre de case voisine vide; met dans la file, la liste des coordonné
 
 
 
-Définition à la ligne 203 du fichier Minimale.\-c.
+Définition à la ligne 201 du fichier Minimale.\-c.
 
 
 
@@ -562,7 +573,7 @@ affiche une liste avec les persos et leurs points de vie.
 
 
 
-Définition à la ligne 1304 du fichier Minimale.\-c.
+Définition à la ligne 1128 du fichier Minimale.\-c.
 
 
 
@@ -584,7 +595,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a841458aecfd962618c6b89231954f407}
 
 
-Définition à la ligne 137 du fichier Minimale.\-c.
+Permet de charger une partie depuis un fichier de sauvegarde. 
+
+
+
+Définition à la ligne 135 du fichier Minimale.\-c.
 
 
 
@@ -623,7 +638,7 @@ Permet au joueur de choisir, grâce à un curseur, une case à attaquer.
 
 
 
-Définition à la ligne 705 du fichier Minimale.\-c.
+Définition à la ligne 672 du fichier Minimale.\-c.
 
 
 
@@ -657,11 +672,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a29cde2a1505f65c5b2b190588516f6d6}
 
 
-choisi parmi la liste des cases à attaquer pour l'I\-A, une case 
+Choisi parmi la liste des cases à attaquer pour l'I\-A, une case vide peut être attaquée. 
 
 
 
-Définition à la ligne 611 du fichier Minimale.\-c.
+Définition à la ligne 581 du fichier Minimale.\-c.
 
 
 
@@ -696,7 +711,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a2b0fb79b0717094d1023fea7baf48c98}
 
 
-Définition à la ligne 300 du fichier Minimale.\-c.
+Permet au joueur de choisir la destination Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède. 
+
+
+
+Définition à la ligne 298 du fichier Minimale.\-c.
 
 
 
@@ -734,7 +753,7 @@ cette fonction retourne les coordonnées du déplacement choisi pour l'I\-A
 
 
 
-Définition à la ligne 479 du fichier Minimale.\-c.
+Définition à la ligne 448 du fichier Minimale.\-c.
 
 
 
@@ -770,7 +789,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a59cfde1d574adf960660220d74a3d3d4}
 
 
-Définition à la ligne 1531 du fichier Minimale.\-c.
+Création brève de perso. 
+
+
+
+Définition à la ligne 1347 du fichier Minimale.\-c.
 
 
 
@@ -809,7 +832,7 @@ Création brève de terrain ou obstacle, possible implémentation de génératio
 
 
 
-Définition à la ligne 1561 du fichier Minimale.\-c.
+Définition à la ligne 1374 du fichier Minimale.\-c.
 
 
 
@@ -843,7 +866,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a9f570d5aff57367c773e3e7d090e91e8}
 
 
-Définition à la ligne 258 du fichier Minimale.\-c.
+Calcule les positions de déplacement valide, les met dans la liste. 
+
+
+
+Définition à la ligne 256 du fichier Minimale.\-c.
 
 
 
@@ -877,7 +904,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a7c39da4bb12212b65b8999022d45e592}
 
 
-Définition à la ligne 188 du fichier Minimale.\-c.
+Déplace le personnage sur le terrain Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case\-\_\-perso'. Si la 'case\-\_\-perso' contenait un piège, le perso perd des H\-P. 
+
+
+
+Définition à la ligne 186 du fichier Minimale.\-c.
 
 
 
@@ -912,7 +943,7 @@ modifie les statistiques d'un personnage
 
 
 
-Définition à la ligne 1615 du fichier Minimale.\-c.
+Définition à la ligne 1428 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a97c357428c810b5f8ed3fcbeb973dd88}{\index{Minimale.\-c@{Minimale.\-c}!generation\-\_\-nom\-\_\-personnage@{generation\-\_\-nom\-\_\-personnage}}
 \index{generation\-\_\-nom\-\_\-personnage@{generation\-\_\-nom\-\_\-personnage}!Minimale.c@{Minimale.\-c}}
@@ -927,7 +958,7 @@ génère aléatoirement un nom pour un perso
 
 
 
-Définition à la ligne 1593 du fichier Minimale.\-c.
+Définition à la ligne 1406 du fichier Minimale.\-c.
 
 
 
@@ -964,7 +995,7 @@ Fonction qui renvoi un nombre aléatoire entre 0 et 'max'.
 
 
 
-Définition à la ligne 176 du fichier Minimale.\-c.
+Définition à la ligne 174 du fichier Minimale.\-c.
 
 
 
@@ -991,7 +1022,7 @@ Fonction déterminant quelle est l'orientation de la cible par rapport au joueur
 
 
 
-Définition à la ligne 1008 du fichier Minimale.\-c.
+Définition à la ligne 869 du fichier Minimale.\-c.
 
 
 
@@ -1013,7 +1044,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_ad7419c3036235a80b59bc983660be2ee}
 
 
-Définition à la ligne 639 du fichier Minimale.\-c.
+Fonction d'initialisation d'un tableau de personnages. Remplit le tableau de personnages entré en paramètre de cases de terrain. 
+
+
+
+Définition à la ligne 606 du fichier Minimale.\-c.
 
 
 
@@ -1039,7 +1074,7 @@ Initialise le plateau en le remplissant de terrain par défaut.
 
 
 
-Définition à la ligne 511 du fichier Minimale.\-c.
+Définition à la ligne 480 du fichier Minimale.\-c.
 
 
 
@@ -1066,7 +1101,7 @@ Prend en paramètre le nombre de joueurs et incrémente le numéro de joueur de 
 
 
 
-Définition à la ligne 1203 du fichier Minimale.\-c.
+Définition à la ligne 1048 du fichier Minimale.\-c.
 
 
 
@@ -1092,7 +1127,7 @@ Fonction qui vérifie si un joueur a encore des personnages vivants sur le terra
 
 
 
-Définition à la ligne 1257 du fichier Minimale.\-c.
+Définition à la ligne 1082 du fichier Minimale.\-c.
 
 
 
@@ -1129,7 +1164,7 @@ Fonction principale Fonction principale qui permet de jouer en mode Kill'em'all.
 
 
 
-Définition à la ligne 1733 du fichier Minimale.\-c.
+Définition à la ligne 1564 du fichier Minimale.\-c.
 
 
 
@@ -1157,7 +1192,7 @@ Cette fonction permet au joueur d'orienter son personnage avec les flèches dire
 
 
 
-Définition à la ligne 1139 du fichier Minimale.\-c.
+Définition à la ligne 984 du fichier Minimale.\-c.
 
 
 
@@ -1194,7 +1229,7 @@ Fonction qui passe le tour du joueur actif.
 
 
 
-Définition à la ligne 906 du fichier Minimale.\-c.
+Définition à la ligne 795 du fichier Minimale.\-c.
 
 
 
@@ -1206,17 +1241,6 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 \end{center}
 \end{figure}
 
-
-\hypertarget{_minimale_8c_a0529503b2d07980eab95dcd282587007}{\index{Minimale.\-c@{Minimale.\-c}!perso\-\_\-oriente\-\_\-a\-\_\-droite@{perso\-\_\-oriente\-\_\-a\-\_\-droite}}
-\index{perso\-\_\-oriente\-\_\-a\-\_\-droite@{perso\-\_\-oriente\-\_\-a\-\_\-droite}!Minimale.c@{Minimale.\-c}}
-\subsubsection[{perso\-\_\-oriente\-\_\-a\-\_\-droite}]{\setlength{\rightskip}{0pt plus 5cm}int perso\-\_\-oriente\-\_\-a\-\_\-droite (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{_minimale_8c_a0529503b2d07980eab95dcd282587007}
-
-
-Définition à la ligne 1235 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a01e6e73a74f481fc32b060f3e52b8a5f}{\index{Minimale.\-c@{Minimale.\-c}!players\-\_\-life\-\_\-check@{players\-\_\-life\-\_\-check}}
 \index{players\-\_\-life\-\_\-check@{players\-\_\-life\-\_\-check}!Minimale.c@{Minimale.\-c}}
@@ -1231,7 +1255,7 @@ Actualise le fait que les joueurs soient vivants ou non.
 
 
 
-Définition à la ligne 1276 du fichier Minimale.\-c.
+Définition à la ligne 1100 du fichier Minimale.\-c.
 
 
 
@@ -1257,7 +1281,7 @@ permet à l'utilisateur de rentrer le nombre de joueur à jouer
 
 
 
-Définition à la ligne 1722 du fichier Minimale.\-c.
+Définition à la ligne 1553 du fichier Minimale.\-c.
 
 
 
@@ -1279,7 +1303,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_aebdcead4bd058408b30ee5924910d1f6}
 
 
-Définition à la ligne 91 du fichier Minimale.\-c.
+Sauvegarde la partie en cours dans un fichier. 
+
+
+
+Définition à la ligne 89 du fichier Minimale.\-c.
 
 
 
@@ -1305,7 +1333,7 @@ Permet au joueur de choisir, graphiquement, une compétence à effectuer dans un
 
 
 
-Définition à la ligne 930 du fichier Minimale.\-c.
+Définition à la ligne 819 du fichier Minimale.\-c.
 
 
 
@@ -1339,7 +1367,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a51a4f431807e8c3c3059c27e8d755411}
 
 
-Définition à la ligne 811 du fichier Minimale.\-c.
+Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur. 
+
+
+
+Définition à la ligne 737 du fichier Minimale.\-c.
 
 
 
@@ -1372,7 +1404,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a670d6c4a5f077fec01afb7b253ddc320}
 
 
-Définition à la ligne 1651 du fichier Minimale.\-c.
+Permet la création d'un personnage joueur à la position entrée. 
+
+
+
+Définition à la ligne 1472 du fichier Minimale.\-c.
 
 
 
@@ -1394,7 +1430,11 @@ Voici le graphe d'appel pour cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_ae5778c7cb58f5d0dc868b2c3f632574e}
 
 
-Définition à la ligne 1635 du fichier Minimale.\-c.
+Créé un personnage du camp neutre à une position aléatoire sur le terrain. 
+
+
+
+Définition à la ligne 1451 du fichier Minimale.\-c.
 
 
 
@@ -1431,7 +1471,7 @@ Fonction permetant au joueur courant d'abandonner la partie.
 
 
 
-Définition à la ligne 915 du fichier Minimale.\-c.
+Définition à la ligne 804 du fichier Minimale.\-c.
 
 
 
@@ -1456,12 +1496,15 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_ae1c074b55c14adbcee8c67bed8995e94}
 
 
-Définition à la ligne 1328 du fichier Minimale.\-c.
+Fonction de déroulement d'un tour pour le joueur entré en paramètre. 
 
 
 
-Voici le graphe d'appel pour cette fonction \-:
-\nopagebreak
+Définition à la ligne 1152 du fichier Minimale.\-c.
+
+
+
+Voici le graphe d'appel pour cette fonction \-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -1493,7 +1536,11 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 )}}\label{_minimale_8c_a7e9553a32f70742aa8787a781dd50cea}
 
 
-Définition à la ligne 1665 du fichier Minimale.\-c.
+Fonction de déroulement d'un tour pour l'I\-A. 
+
+
+
+Définition à la ligne 1491 du fichier Minimale.\-c.
 
 
 
@@ -1525,14 +1572,6 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 \item[{void}]{}
 \end{DoxyParamCaption}
 )}}\label{_minimale_8c_a183c5f911befa83432ff61674e326603}
-
-
-Vide le tampon de saisie clavier. 
-
-
-
-Définition à la ligne 1126 du fichier Minimale.\-c.
-
 \hypertarget{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f}{\index{Minimale.\-c@{Minimale.\-c}!viser\-\_\-case\-\_\-valide@{viser\-\_\-case\-\_\-valide}}
 \index{viser\-\_\-case\-\_\-valide@{viser\-\_\-case\-\_\-valide}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{viser\-\_\-case\-\_\-valide}]{\setlength{\rightskip}{0pt plus 5cm}void viser\-\_\-case\-\_\-valide (
@@ -1544,7 +1583,11 @@ Définition à la ligne 1126 du fichier Minimale.\-c.
 )}}\label{_minimale_8c_a27d15a9ecfe1e4f2c30cecc92307a80f}
 
 
-Définition à la ligne 572 du fichier Minimale.\-c.
+Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée. 
+
+
+
+Définition à la ligne 542 du fichier Minimale.\-c.
 
 
 
@@ -1576,28 +1619,28 @@ Voici le graphe des appelants de cette fonction \-:\nopagebreak
 \subsubsection[{compteur\-\_\-joueurs\-\_\-vivants}]{\setlength{\rightskip}{0pt plus 5cm}int compteur\-\_\-joueurs\-\_\-vivants =0}}\label{_minimale_8c_aeb67ecf1ba206af9765bba7ecd7cd929}
 
 
-Définition à la ligne 48 du fichier Minimale.\-c.
+Définition à la ligne 47 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a66ecc67604b45591ca621e1c1936d009}{\index{Minimale.\-c@{Minimale.\-c}!compteur\-\_\-tour@{compteur\-\_\-tour}}
 \index{compteur\-\_\-tour@{compteur\-\_\-tour}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{compteur\-\_\-tour}]{\setlength{\rightskip}{0pt plus 5cm}int compteur\-\_\-tour =0}}\label{_minimale_8c_a66ecc67604b45591ca621e1c1936d009}
 
 
-Définition à la ligne 47 du fichier Minimale.\-c.
+Définition à la ligne 46 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a5a6e59130d22bce1f5ec9490b20d7fb3}{\index{Minimale.\-c@{Minimale.\-c}!dep\-Valid@{dep\-Valid}}
 \index{dep\-Valid@{dep\-Valid}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{dep\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-coord} dep\-Valid\mbox{[}{\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E} $\ast${\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}\mbox{[}3\mbox{]}}}\label{_minimale_8c_a5a6e59130d22bce1f5ec9490b20d7fb3}
 
 
-Définition à la ligne 75 du fichier Minimale.\-c.
+Définition à la ligne 74 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a6cfe6e5ba882446145a8c3f5508e2ea6}{\index{Minimale.\-c@{Minimale.\-c}!indice\-Tab\-Dep\-Valid@{indice\-Tab\-Dep\-Valid}}
 \index{indice\-Tab\-Dep\-Valid@{indice\-Tab\-Dep\-Valid}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{indice\-Tab\-Dep\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}int indice\-Tab\-Dep\-Valid}}\label{_minimale_8c_a6cfe6e5ba882446145a8c3f5508e2ea6}
 
 
-Définition à la ligne 83 du fichier Minimale.\-c.
+Définition à la ligne 80 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a08b1b223d56118ff55a1caf616e22186}{\index{Minimale.\-c@{Minimale.\-c}!particule\-\_\-generateur\-\_\-nom@{particule\-\_\-generateur\-\_\-nom}}
 \index{particule\-\_\-generateur\-\_\-nom@{particule\-\_\-generateur\-\_\-nom}!Minimale.c@{Minimale.\-c}}
@@ -1627,26 +1670,26 @@ Définition à la ligne 83 du fichier Minimale.\-c.
 \end{DoxyCode}
 
 
-Définition à la ligne 51 du fichier Minimale.\-c.
+Définition à la ligne 50 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a816e050bd234e1024a41068177f1ac49}{\index{Minimale.\-c@{Minimale.\-c}!Plateau@{Plateau}}
 \index{Plateau@{Plateau}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{Plateau}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-character} Plateau\mbox{[}{\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}\mbox{[}{\bf T\-A\-I\-L\-L\-E\-\_\-\-M\-A\-T\-R\-I\-C\-E}\mbox{]}}}\label{_minimale_8c_a816e050bd234e1024a41068177f1ac49}
 
 
-Définition à la ligne 74 du fichier Minimale.\-c.
+Définition à la ligne 73 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_adb6f8f74ea8aeb8c5a3f0d838ca80999}{\index{Minimale.\-c@{Minimale.\-c}!player@{player}}
 \index{player@{player}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-player} player\mbox{[}{\bf Max\-Tab}\mbox{]}}}\label{_minimale_8c_adb6f8f74ea8aeb8c5a3f0d838ca80999}
 
 
-Définition à la ligne 79 du fichier Minimale.\-c.
+Définition à la ligne 77 du fichier Minimale.\-c.
 
 \hypertarget{_minimale_8c_a0d10b4d51713595a0aecf92594403ca3}{\index{Minimale.\-c@{Minimale.\-c}!Valid\-\_\-chars\-\_\-\-I\-A@{Valid\-\_\-chars\-\_\-\-I\-A}}
 \index{Valid\-\_\-chars\-\_\-\-I\-A@{Valid\-\_\-chars\-\_\-\-I\-A}!Minimale.c@{Minimale.\-c}}
 \subsubsection[{Valid\-\_\-chars\-\_\-\-I\-A}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-character} Valid\-\_\-chars\-\_\-\-I\-A\mbox{[}{\bf Max\-Tab}\mbox{]}}}\label{_minimale_8c_a0d10b4d51713595a0aecf92594403ca3}
 
 
-Définition à la ligne 49 du fichier Minimale.\-c.
+Définition à la ligne 48 du fichier Minimale.\-c.
 

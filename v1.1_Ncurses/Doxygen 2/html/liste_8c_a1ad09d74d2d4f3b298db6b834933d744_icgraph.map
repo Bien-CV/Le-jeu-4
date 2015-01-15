@@ -4,11 +4,11 @@
 <area shape="rect" id="node7" href="$liste_8h.html#a48218f7c1bafab1e92490a0963ee7451" title="liste_suppr_doublon" alt="" coords="182,157,319,184"/>
 <area shape="rect" id="node22" href="$liste_8h.html#ae6bf3307184d2f80167abcb9c2ad5b2b" title="liste_element_est_present" alt="" coords="163,107,338,133"/>
 <area shape="rect" id="node27" href="$_minimale_8c.html#aaa20acb53c08f4a15be29bb9d70cd9f1" title="cette fonction retourne les coordonnées du déplacement choisi pour l&#39;IA" alt="" coords="387,259,541,285"/>
-<area shape="rect" id="node30" href="$_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6" title="choisi parmi la liste des cases à attaquer pour l&#39;IA, une case" alt="" coords="411,208,517,235"/>
-<area shape="rect" id="node9" href="$_minimale_8c.html#a9f570d5aff57367c773e3e7d090e91e8" title="deplacements_valides" alt="" coords="389,157,539,184"/>
-<area shape="rect" id="node18" href="$_minimale_8c.html#a27d15a9ecfe1e4f2c30cecc92307a80f" title="viser_case_valide" alt="" coords="401,107,527,133"/>
-<area shape="rect" id="node11" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="tour" alt="" coords="599,107,643,133"/>
-<area shape="rect" id="node15" href="$_minimale_8c.html#a7e9553a32f70742aa8787a781dd50cea" title="tour_IA" alt="" coords="589,157,653,184"/>
+<area shape="rect" id="node30" href="$_minimale_8c.html#a29cde2a1505f65c5b2b190588516f6d6" title="Choisi parmi la liste des cases à attaquer pour l&#39;IA, une case vide peut être attaquée." alt="" coords="411,208,517,235"/>
+<area shape="rect" id="node9" href="$_minimale_8c.html#a9f570d5aff57367c773e3e7d090e91e8" title="Calcule les positions de déplacement valide, les met dans la liste." alt="" coords="389,157,539,184"/>
+<area shape="rect" id="node18" href="$_minimale_8c.html#a27d15a9ecfe1e4f2c30cecc92307a80f" title="Calcule les positions d&#39;attaques valides, les met dans la liste. une case vide peut être attaquée..." alt="" coords="401,107,527,133"/>
+<area shape="rect" id="node11" href="$_minimale_8c.html#ae1c074b55c14adbcee8c67bed8995e94" title="Fonction de déroulement d&#39;un tour pour le joueur entré en paramètre." alt="" coords="599,107,643,133"/>
+<area shape="rect" id="node15" href="$_minimale_8c.html#a7e9553a32f70742aa8787a781dd50cea" title="Fonction de déroulement d&#39;un tour pour l&#39;IA." alt="" coords="589,157,653,184"/>
 <area shape="rect" id="node13" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="701,132,752,159"/>
 <area shape="rect" id="node24" href="$_minimale_8c.html#a69347b1b74ee79025e3c6ce20b5b49a4" title="Permet au joueur de choisir, grâce à un curseur, une case à attaquer." alt="" coords="396,56,532,83"/>
 </map>

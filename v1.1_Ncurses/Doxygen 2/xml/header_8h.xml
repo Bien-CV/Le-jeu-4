@@ -10,6 +10,10 @@
     <includedby refid="pile_8h" local="yes">pile.h</includedby>
     <includedby refid="pile_8c" local="yes">pile.c</includedby>
     <invincdepgraph>
+      <node id="69">
+        <label>Minimale.c</label>
+        <link refid="_minimale_8c"/>
+      </node>
       <node id="68">
         <label>file.c</label>
         <link refid="file_8c"/>
@@ -40,22 +44,6 @@
         <childnode refid="73" relation="include">
         </childnode>
       </node>
-      <node id="71">
-        <label>liste.c</label>
-        <link refid="liste_8c"/>
-      </node>
-      <node id="70">
-        <label>liste.h</label>
-        <link refid="liste_8h"/>
-        <childnode refid="71" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-      </node>
-      <node id="69">
-        <label>Minimale.c</label>
-        <link refid="_minimale_8c"/>
-      </node>
       <node id="73">
         <label>pile.c</label>
         <link refid="pile_8c"/>
@@ -66,6 +54,18 @@
         <childnode refid="69" relation="include">
         </childnode>
         <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>liste.c</label>
+        <link refid="liste_8c"/>
+      </node>
+      <node id="70">
+        <label>liste.h</label>
+        <link refid="liste_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -86,26 +86,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="18" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="18" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1aebdcead4bd058408b30ee5924910d1f6" compoundref="_minimale_8c" startline="91" endline="130">Sauvegarder</referencedby>
-        <referencedby refid="_minimale_8c_1a841458aecfd962618c6b89231954f407" compoundref="_minimale_8c" startline="137" endline="168">Charger</referencedby>
-        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="203" endline="250">cases_voisines_calcul</referencedby>
-        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
-        <referencedby refid="_minimale_8c_1aa17c4e2a8512aa83516a20e0df29a123" compoundref="_minimale_8c" startline="511" endline="521">init_plateau</referencedby>
-        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="527" endline="567">cases_voisines_ATK</referencedby>
-        <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="677" endline="697">afficher_infos_persos</referencedby>
-        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="705" endline="762">choix_cible_humain</referencedby>
-        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="811" endline="898">selection_perso</referencedby>
-        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="915" endline="924">suicide</referencedby>
-        <referencedby refid="_minimale_8c_1ae1d5aa28a687b31b055f49ea44866780" compoundref="_minimale_8c" startline="1216" endline="1229">are_my_mates_alive</referencedby>
-        <referencedby refid="_minimale_8c_1a0529503b2d07980eab95dcd282587007" compoundref="_minimale_8c" startline="1235" endline="1249">perso_oriente_a_droite</referencedby>
-        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1276" endline="1297">players_life_check</referencedby>
-        <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1304" endline="1320">character_hp_list</referencedby>
-        <referencedby refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" compoundref="_minimale_8c" startline="1328" endline="1437">tour</referencedby>
-        <referencedby refid="_minimale_8c_1a1fdf262e6e18d594322ddcfdde4e4b3e" compoundref="_minimale_8c" startline="1465" endline="1523">afficher_plateau_orientation</referencedby>
-        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1635" endline="1649">spawn_sauvage</referencedby>
-        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1651" endline="1663">spawn_character</referencedby>
-        <referencedby refid="_minimale_8c_1a0255b1b3f70d1d35a858e9e512c8f988" compoundref="_minimale_8c" startline="1701" endline="1716">calcul_persos_IA</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="18" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1aebdcead4bd058408b30ee5924910d1f6" compoundref="_minimale_8c" startline="89" endline="128">Sauvegarder</referencedby>
+        <referencedby refid="_minimale_8c_1a841458aecfd962618c6b89231954f407" compoundref="_minimale_8c" startline="135" endline="166">Charger</referencedby>
+        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="201" endline="248">cases_voisines_calcul</referencedby>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="298" endline="440">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1aa17c4e2a8512aa83516a20e0df29a123" compoundref="_minimale_8c" startline="480" endline="490">init_plateau</referencedby>
+        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="497" endline="537">cases_voisines_ATK</referencedby>
+        <referencedby refid="_minimale_8c_1ad312ec60fc8d45f956471549de9ab21c" compoundref="_minimale_8c" startline="644" endline="664">afficher_infos_persos</referencedby>
+        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="672" endline="729">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="737" endline="788">selection_perso</referencedby>
+        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="804" endline="813">suicide</referencedby>
+        <referencedby refid="_minimale_8c_1ae1d5aa28a687b31b055f49ea44866780" compoundref="_minimale_8c" startline="1061" endline="1074">are_my_mates_alive</referencedby>
+        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1100" endline="1121">players_life_check</referencedby>
+        <referencedby refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" compoundref="_minimale_8c" startline="1128" endline="1144">character_hp_list</referencedby>
+        <referencedby refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" compoundref="_minimale_8c" startline="1152" endline="1257">tour</referencedby>
+        <referencedby refid="_minimale_8c_1a1fdf262e6e18d594322ddcfdde4e4b3e" compoundref="_minimale_8c" startline="1283" endline="1340">afficher_plateau_orientation</referencedby>
+        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1451" endline="1465">spawn_sauvage</referencedby>
+        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1472" endline="1484">spawn_character</referencedby>
+        <referencedby refid="_minimale_8c_1a0255b1b3f70d1d35a858e9e512c8f988" compoundref="_minimale_8c" startline="1532" endline="1547">calcul_persos_IA</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a220380eaa4bfe0ffeab9859c6f3d2076" prot="public" static="no">
         <name>MaxTab</name>
@@ -116,10 +115,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="19" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="19" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="639" endline="643">init_char_table</referencedby>
-        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1276" endline="1297">players_life_check</referencedby>
-        <referencedby refid="_minimale_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_minimale_8c" startline="1733" endline="1837">main</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="19" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="606" endline="610">init_char_table</referencedby>
+        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1100" endline="1121">players_life_check</referencedby>
+        <referencedby refid="_minimale_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_minimale_8c" startline="1564" endline="1661">main</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ab154998a3a376095f3601bc35c5cf523" prot="public" static="no">
         <name>MaxString</name>
@@ -130,9 +129,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="20" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="20" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
-        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1561" endline="1586">creer_terrain_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="20" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1347" endline="1367">creer_perso_rapide</referencedby>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1374" endline="1399">creer_terrain_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1abcbf07dd09e51c934ff60872f465727a" prot="public" static="no">
         <name>bloc1</name>
@@ -143,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="22" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="22" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="22" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a6f35bce5de1d159bff01cc3d33c9c72c" prot="public" static="no">
         <name>bloc2</name>
@@ -154,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="23" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="23" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="23" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a54589dbd40ede83ce0d307134bed6999" prot="public" static="no">
         <name>bloc3</name>
@@ -165,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="24" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="24" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="24" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a293f382892dd9160685d3131e4881495" prot="public" static="no">
         <name>skill_attack</name>
@@ -176,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="26" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="26" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="26" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ae6f347a0b1e26425b82734df3904273d" prot="public" static="no">
         <name>skill_empty</name>
@@ -187,8 +186,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="27" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="27" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ae423278c3d83b22e7ba58f31c1d4722a" prot="public" static="no">
         <name>skill_skip</name>
@@ -199,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="28" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="28" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="28" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a6cbdba3415482afa3d3e831cd1a739a2" prot="public" static="no">
         <name>coord_default</name>
@@ -210,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="29" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="29" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="29" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a5c4cefe49779a0cc311243c1bb97b120" prot="public" static="no">
         <name>orientation_default</name>
@@ -221,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="30" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="30" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="30" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a7c38568d47211679c8483fc60e185651" prot="public" static="no">
         <name>status_default</name>
@@ -232,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="31" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="31" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="31" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ad92274bc74ce5fee209d6177f46b06e3" prot="public" static="no">
         <name>status__terrain_default</name>
@@ -243,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="32" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="32" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="32" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1af720a86d25a368a1484318d8a877961b" prot="public" static="no">
         <name>stats_default</name>
@@ -254,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="33" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="33" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="33" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a06744a7db35a5caffebfeef65fecff32" prot="public" static="no">
         <name>stats_terrain_default</name>
@@ -265,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="34" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="34" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="34" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1adad158d03b8077347b44c54b1c56ddaa" prot="public" static="no">
         <name>skill_trap</name>
@@ -276,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="35" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="35" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="35" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a38bad206ff07a3005b3766598eb74574" prot="public" static="no">
         <name>skill_soin</name>
@@ -287,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="36" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="36" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="36" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ac695aefca36396263b581917e2bf01a6" prot="public" static="no">
         <name>skill_bandage</name>
@@ -298,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="37" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="37" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="37" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a4a8c1b88a1b8565d97bd811951f1dbfc" prot="public" static="no">
         <name>skill_fireball</name>
@@ -309,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="38" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="38" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="38" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a661f2fa1a0f9707f5a19494debc26d68" prot="public" static="no">
         <name>skill_list_default</name>
@@ -320,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="39" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ae31f7588359442249a6f01914a7eb769" prot="public" static="no">
         <name>empty_skill_list</name>
@@ -331,7 +330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="40" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="40" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="40" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a6e8b24c0508661b7539c8b9e38975508" prot="public" static="no">
         <name>character_default</name>
@@ -342,9 +341,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="41" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="41" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="639" endline="643">init_char_table</referencedby>
-        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="41" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1ad7419c3036235a80b59bc983660be2ee" compoundref="_minimale_8c" startline="606" endline="610">init_char_table</referencedby>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1347" endline="1367">creer_perso_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ad8e55599d4e25ea791fd084a348e0967" prot="public" static="no">
         <name>default_targetOrientation</name>
@@ -355,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="42" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="42" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="42" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a05114c8c78053bf80235674b9d7440c4" prot="public" static="no">
         <name>default_trap</name>
@@ -366,8 +365,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="43" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="43" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1068" endline="1116">appliquer_action</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="43" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="929" endline="975">appliquer_action</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1aebd8635285525b252b1dc986a576c383" prot="public" static="no">
         <name>character_berseker</name>
@@ -378,8 +377,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="46" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="46" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="46" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1347" endline="1367">creer_perso_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a7fa5964157c37681813ea380f7fd09cf" prot="public" static="no">
         <name>skill_list_berseker</name>
@@ -390,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="47" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="47" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="47" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a92f9c78dcd344865fc670ed555346112" prot="public" static="no">
         <name>status_berseker</name>
@@ -401,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="48" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="48" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="48" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ac187fca43db8f9a38e8eb4675a55ec57" prot="public" static="no">
         <name>stats_berseker</name>
@@ -412,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="49" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="49" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="49" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a48c0cfb872d1e5e8db4e1bf65c5b4347" prot="public" static="no">
         <name>character_mage</name>
@@ -423,8 +422,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="51" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="51" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="51" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1347" endline="1367">creer_perso_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a7ee3d0b5bb7136671f0c2c52335daed4" prot="public" static="no">
         <name>skill_list_mage</name>
@@ -435,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="52" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="52" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="52" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1af6158aeb7f3a9608f9d84219cef447f2" prot="public" static="no">
         <name>status_mage</name>
@@ -446,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="53" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="53" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="53" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1abd37a804ee1df6324bc89304b763f957" prot="public" static="no">
         <name>stats_mage</name>
@@ -457,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="54" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="54" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="54" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a941f42dbea81b439a126da6bea0fe7a9" prot="public" static="no">
         <name>character_tank</name>
@@ -468,8 +467,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="57" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="57" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="57" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1347" endline="1367">creer_perso_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a0053c2ea576452b370c8a0b2d488bf0a" prot="public" static="no">
         <name>skill_list_tank</name>
@@ -480,7 +479,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="58" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="58" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="58" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a294092636ce2faeb5fdaf290c58bff9e" prot="public" static="no">
         <name>status_tank</name>
@@ -491,7 +490,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="59" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="59" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="59" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ac60eca7e6e6388f387848a6f8ee43770" prot="public" static="no">
         <name>stats_tank</name>
@@ -502,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="60" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="60" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="60" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a900c0c28c302b2963a6f83b539f3723a" prot="public" static="no">
         <name>character_soigneur</name>
@@ -513,8 +512,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="62" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="62" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1531" endline="1553">creer_perso_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="62" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a59cfde1d574adf960660220d74a3d3d4" compoundref="_minimale_8c" startline="1347" endline="1367">creer_perso_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1abb3519a55bae22ffcb9c2cad71ee8642" prot="public" static="no">
         <name>skill_list_soigneur</name>
@@ -525,7 +524,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="63" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="63" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="63" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a02a5e1a4a0d0a488f9230ec155e85cff" prot="public" static="no">
         <name>status_soigneur</name>
@@ -536,7 +535,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="64" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="64" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="64" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ab30faec022d8d8ef12f90aa26b424d75" prot="public" static="no">
         <name>stats_soigneur</name>
@@ -547,21 +546,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="65" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="65" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="65" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" prot="public" static="no">
         <name>curseur</name>
-        <initializer>(char)219</initializer>
+        <initializer>&apos; &apos;</initializer>
         <briefdescription>
 <para>***********************************************************************************/ </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="69" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="69" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
-        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="705" endline="762">choix_cible_humain</referencedby>
-        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="811" endline="898">selection_perso</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="69" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="298" endline="440">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="672" endline="729">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="737" endline="788">selection_perso</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a7dd5f83f4f2f4ea483fc49807ff9f43b" prot="public" static="no">
         <name>case_terrain</name>
@@ -572,13 +571,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="71" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="71" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7c39da4bb12212b65b8999022d45e592" compoundref="_minimale_8c" startline="188" endline="196">deplacer_perso</referencedby>
-        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="811" endline="898">selection_perso</referencedby>
-        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="915" endline="924">suicide</referencedby>
-        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="1068" endline="1116">appliquer_action</referencedby>
-        <referencedby refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" compoundref="_minimale_8c" startline="1328" endline="1437">tour</referencedby>
-        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1561" endline="1586">creer_terrain_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="71" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7c39da4bb12212b65b8999022d45e592" compoundref="_minimale_8c" startline="186" endline="194">deplacer_perso</referencedby>
+        <referencedby refid="_minimale_8c_1a51a4f431807e8c3c3059c27e8d755411" compoundref="_minimale_8c" startline="737" endline="788">selection_perso</referencedby>
+        <referencedby refid="_minimale_8c_1af96504b67683769d99d267ab8244cdc8" compoundref="_minimale_8c" startline="804" endline="813">suicide</referencedby>
+        <referencedby refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" compoundref="_minimale_8c" startline="929" endline="975">appliquer_action</referencedby>
+        <referencedby refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" compoundref="_minimale_8c" startline="1152" endline="1257">tour</referencedby>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1374" endline="1399">creer_terrain_rapide</referencedby>
       </memberdef>
       <memberdef kind="define" id="header_8h_1a8a976ee03aa89e3b22be5595252d3c04" prot="public" static="no">
         <name>case_obstacle</name>
@@ -589,8 +588,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="72" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="72" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1561" endline="1586">creer_terrain_rapide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="72" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a88cec99ca1b112fc0553d0f09c19fcd7" compoundref="_minimale_8c" startline="1374" endline="1399">creer_terrain_rapide</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -638,7 +637,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="74" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="74" bodyend="74"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="74" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a4bb25c9352f7bb2ea2eb663ccf579528" prot="public" static="no">
         <name>t_camp</name>
@@ -672,7 +671,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="75" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="75" bodyend="75"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="75" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a440f669d36bc2028077af38574051204" prot="public" static="no">
         <name>t_skilltype</name>
@@ -710,7 +709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="76" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="76" bodyend="76"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="76" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="76" bodyend="76"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a6dc6eccccaf78ef029cff998c0e654f4" prot="public" static="no">
         <name>t_orientation</name>
@@ -748,7 +747,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="77" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="77" bodyend="77"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="77" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1a05b909310980a637d41bd67fc4d5c389" prot="public" static="no">
         <name>t_targetOrientation</name>
@@ -779,7 +778,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="78" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="78" bodyend="78"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="78" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="enum" id="header_8h_1ac8020d257c824e4b188c04ee386ebfda" prot="public" static="no">
         <name>t_character_type</name>
@@ -817,7 +816,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="84" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="84" bodyend="84"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="84" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="84" bodyend="84"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -882,7 +881,7 @@ programme de jeu: Le Jeu 4 ( T-RPG) </para>    </detaileddescription>
 <codeline lineno="66"><highlight class="preprocessor"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="69" refid="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>curseur<sp/>(char)219</highlight></codeline>
+<codeline lineno="69" refid="header_8h_1ab61d48d4ed3100c6e826da441b31cdbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>curseur<sp/>&apos;<sp/>&apos;</highlight></codeline>
 <codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="71" refid="header_8h_1a7dd5f83f4f2f4ea483fc49807ff9f43b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>case_terrain<sp/>((t_character){&quot;&quot;,coord_default<sp/>,orientation_default<sp/>,status__terrain_default<sp/>,stats_terrain_default<sp/>,empty_skill_list,<sp/>0<sp/>,<sp/>0<sp/>})</highlight></codeline>
 <codeline lineno="72" refid="header_8h_1a8a976ee03aa89e3b22be5595252d3c04" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>case_obstacle<sp/>((t_character){&quot;&quot;,coord_default<sp/>,orientation_default<sp/>,status_default<sp/>,stats_default<sp/>,empty_skill_list,<sp/>-1<sp/>,<sp/>0<sp/>})</highlight></codeline>
@@ -908,6 +907,6 @@ programme de jeu: Le Jeu 4 ( T-RPG) </para>    </detaileddescription>
 <codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h"/>
   </compounddef>
 </doxygen>

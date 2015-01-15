@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="4" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="4" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="4" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="4" bodyend="-1"/>
         <referencedby refid="file_8h_1a9a4198b0c69187d42420b80f3e5b8d62" compoundref="file_8c" startline="16" endline="27">file_ajouter</referencedby>
         <referencedby refid="file_8h_1a59173755d515eb366fb01dba42a73e8e" compoundref="file_8c" startline="29" endline="40">file_retirer</referencedby>
         <referencedby refid="file_8h_1a96c6e33606180f008c28906ff16f873a" compoundref="file_8c" startline="53" endline="68">file_afficher_elt</referencedby>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="5" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="5" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="5" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="5" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="file_8c_1a7a7f6a8c2aff18cc12cd5a8784bb3608" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="6" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="6" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="6" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="6" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="file_8c_1a525fc4ed61baf4a2497c89a55210bf0b" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="6" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="6" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="6" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="6" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="file_8c_1ac833a9c07da6126827cecce54067af49" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="6" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="6" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="6" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="6" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -112,9 +112,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="9" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="8" bodyend="14"/>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="9" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="8" bodyend="14"/>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a9a4198b0c69187d42420b80f3e5b8d62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,12 +131,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="17" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="16" bodyend="27"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="17" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="16" bodyend="27"/>
         <references refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" compoundref="file_8c" startline="4">TMAX</references>
-        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="203" endline="250">cases_voisines_calcul</referencedby>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="527" endline="567">cases_voisines_ATK</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1ac07dd1dbd17abd8de085e601421c8103" compoundref="_minimale_8c" startline="201" endline="248">cases_voisines_calcul</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1ad6b417d8f6547affac1cc287a6762113" compoundref="_minimale_8c" startline="497" endline="537">cases_voisines_ATK</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a59173755d515eb366fb01dba42a73e8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,10 +153,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="30" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="29" bodyend="40"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="30" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="29" bodyend="40"/>
         <references refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" compoundref="file_8c" startline="4">TMAX</references>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a30c4f88a35783c4832434e9676ad98f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="43" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="42" bodyend="45"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="43" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="42" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a141d57004b90128d46274ba60f61249f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="48" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="47" bodyend="50"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="48" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="file_8c_1a96c6e33606180f008c28906ff16f873a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" line="54" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="53" bodyend="68"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" line="54" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c" bodystart="53" bodyend="68"/>
         <references refid="file_8c_1af7a16e2716eaac90fb331c55876cf511" compoundref="file_8c" startline="4">TMAX</references>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
         <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
@@ -279,6 +279,6 @@
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/file.c"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/file.c"/>
   </compounddef>
 </doxygen>

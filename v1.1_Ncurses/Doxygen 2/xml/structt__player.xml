@@ -15,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="87" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="87" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a704aac80f0e314dab07203a35f05aef2" compoundref="_minimale_8c" startline="1257" endline="1267">life_check</referencedby>
-        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1276" endline="1297">players_life_check</referencedby>
-        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1635" endline="1649">spawn_sauvage</referencedby>
-        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1651" endline="1663">spawn_character</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="87" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a704aac80f0e314dab07203a35f05aef2" compoundref="_minimale_8c" startline="1082" endline="1092">life_check</referencedby>
+        <referencedby refid="_minimale_8c_1a01e6e73a74f481fc32b060f3e52b8a5f" compoundref="_minimale_8c" startline="1100" endline="1121">players_life_check</referencedby>
+        <referencedby refid="_minimale_8c_1ae5778c7cb58f5d0dc868b2c3f632574e" compoundref="_minimale_8c" startline="1451" endline="1465">spawn_sauvage</referencedby>
+        <referencedby refid="_minimale_8c_1a670d6c4a5f077fec01afb7b253ddc320" compoundref="_minimale_8c" startline="1472" endline="1484">spawn_character</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__player_1ab27f28c5ead39031421706ddbbd1edea" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -32,14 +32,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="87" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="87" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="87" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="87" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="87" bodyend="87"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="87" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="87" bodyend="87"/>
     <listofallmembers>
       <member refid="structt__player_1afaea7716a081e71f804e80c2d5a92390" prot="public" virt="non-virtual"><scope>t_player</scope><name>alive</name></member>
       <member refid="structt__player_1ab27f28c5ead39031421706ddbbd1edea" prot="public" virt="non-virtual"><scope>t_player</scope><name>name</name></member>

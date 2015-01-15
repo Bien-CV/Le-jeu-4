@@ -51,8 +51,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.h" line="6" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="22" bodyend="24"/>
-        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.h" line="6" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="22" bodyend="24"/>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="298" endline="440">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8h_1a153b92d8383b4d328bcd9f20d77b8d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,11 +73,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.h" line="7" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="26" bodyend="33"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.h" line="7" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="26" bodyend="33"/>
         <references refid="pile_8c_1a52037c938e3c1b126c6277da5ca689d0" compoundref="pile_8c" startline="15">M</references>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
         <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
-        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="298" endline="440">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8h_1a243aa7fe5bd1ff307d4c7aa5f76739c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -98,10 +98,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.h" line="8" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="35" bodyend="41"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.h" line="8" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="35" bodyend="41"/>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
         <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
-        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="298" endline="440">choix_deplacement_humain</referencedby>
       </memberdef>
       <memberdef kind="function" id="pile_8h_1af155f0089e66cfa04a1239462b72b2df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.h" line="9" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="52" bodyend="54"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.h" line="9" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="52" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="pile_8h_1ae0e56a57ce8bf929fe621fa05304642c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -139,10 +139,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.h" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="43" bodyend="50"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.h" line="10" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.c" bodystart="43" bodyend="50"/>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
         <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
-        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="300" endline="471">choix_deplacement_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a2b0fb79b0717094d1023fea7baf48c98" compoundref="_minimale_8c" startline="298" endline="440">choix_deplacement_humain</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -161,6 +161,6 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pile_8c_1af155f0089e66cfa04a1239462b72b2df" kindref="member">pilevide</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPile);</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pile_8c_1ae0e56a57ce8bf929fe621fa05304642c" kindref="member">pile_sommet</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>*coord,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPile);</highlight></codeline>
     </programlisting>
-    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/pile.h"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/pile.h"/>
   </compounddef>
 </doxygen>

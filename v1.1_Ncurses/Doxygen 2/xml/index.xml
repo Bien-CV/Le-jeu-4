@@ -234,7 +234,6 @@
     <member refid="_minimale_8c_1a32d1e9030c1705ad183484acce8a4b2c" kind="function"><name>get_target_orientation</name></member>
     <member refid="_minimale_8c_1a28d9c8c6a5abddd6a89ddb258b5114bc" kind="function"><name>appliquer_action</name></member>
     <member refid="_minimale_8c_1a44e760d2c48ba5cdbf8466de23d78484" kind="function"><name>orienter_perso_fleches</name></member>
-    <member refid="_minimale_8c_1a0529503b2d07980eab95dcd282587007" kind="function"><name>perso_oriente_a_droite</name></member>
     <member refid="_minimale_8c_1a21af16606028cc5f140a51a2314c2668" kind="function"><name>character_hp_list</name></member>
     <member refid="_minimale_8c_1ae1c074b55c14adbcee8c67bed8995e94" kind="function"><name>tour</name></member>
     <member refid="_minimale_8c_1aa6bc2b819d20d08ea1c98f09c15f2c47" kind="function"><name>all_dead_but_one</name></member>

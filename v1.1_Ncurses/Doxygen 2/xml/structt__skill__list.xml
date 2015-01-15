@@ -15,10 +15,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="664" endline="671">afficher_skill_list</referencedby>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
-        <referencedby refid="_minimale_8c_1a7e9553a32f70742aa8787a781dd50cea" compoundref="_minimale_8c" startline="1665" endline="1699">tour_IA</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="631" endline="638">afficher_skill_list</referencedby>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
+        <referencedby refid="_minimale_8c_1a7e9553a32f70742aa8787a781dd50cea" compoundref="_minimale_8c" startline="1491" endline="1525">tour_IA</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__skill__list_1a85ae40dbaecefd131b936ec65e9f4809" prot="public" static="no" mutable="no">
         <type><ref refid="structt__skill" kindref="compound">t_skill</ref></type>
@@ -31,9 +31,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="664" endline="671">afficher_skill_list</referencedby>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="631" endline="638">afficher_skill_list</referencedby>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__skill__list_1ac9055dd2d5c45c223e3b0e1920c31493" prot="public" static="no" mutable="no">
         <type><ref refid="structt__skill" kindref="compound">t_skill</ref></type>
@@ -46,9 +46,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="664" endline="671">afficher_skill_list</referencedby>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="631" endline="638">afficher_skill_list</referencedby>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__skill__list_1a0bb2c4a26ff65aecd7a36ad7ee898cd8" prot="public" static="no" mutable="no">
         <type><ref refid="structt__skill" kindref="compound">t_skill</ref></type>
@@ -61,9 +61,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="664" endline="671">afficher_skill_list</referencedby>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="631" endline="638">afficher_skill_list</referencedby>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__skill__list_1aa756d3dbc91762775cff0f4b52526a70" prot="public" static="no" mutable="no">
         <type><ref refid="structt__skill" kindref="compound">t_skill</ref></type>
@@ -76,9 +76,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="664" endline="671">afficher_skill_list</referencedby>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="631" endline="638">afficher_skill_list</referencedby>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structt__skill__list_1a2a4af1a4acb8da6061990f9bd8d0a564" prot="public" static="no" mutable="no">
         <type><ref refid="structt__skill" kindref="compound">t_skill</ref></type>
@@ -91,9 +91,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
-        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="664" endline="671">afficher_skill_list</referencedby>
-        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="930" endline="1000">select_skill</referencedby>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="_minimale_8c_1a7015d7153fc65e628d81cdd3b68ab7ec" compoundref="_minimale_8c" startline="631" endline="638">afficher_skill_list</referencedby>
+        <referencedby refid="_minimale_8c_1a011c6275934a222e8ba74fae00af32e1" compoundref="_minimale_8c" startline="819" endline="861">select_skill</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -118,7 +118,7 @@
         <link refid="structt__skill"/>
       </node>
     </collaborationgraph>
-    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="83"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="83" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="83" bodyend="83"/>
     <listofallmembers>
       <member refid="structt__skill__list_1a39a494bb9ce01ba13ea4577fe2b1cc79" prot="public" virt="non-virtual"><scope>t_skill_list</scope><name>a</name></member>
       <member refid="structt__skill__list_1a85ae40dbaecefd131b936ec65e9f4809" prot="public" virt="non-virtual"><scope>t_skill_list</scope><name>b</name></member>

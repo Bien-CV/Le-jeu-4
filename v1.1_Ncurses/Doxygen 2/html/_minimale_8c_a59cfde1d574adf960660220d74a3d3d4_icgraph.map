@@ -1,5 +1,5 @@
 <map id="creer_perso_rapide" name="creer_perso_rapide">
-<area shape="rect" id="node3" href="$_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="spawn_sauvage" alt="" coords="190,5,306,32"/>
+<area shape="rect" id="node3" href="$_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e" title="Créé un personnage du camp neutre à une position aléatoire sur le terrain." alt="" coords="190,5,306,32"/>
 <area shape="rect" id="node5" href="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all." alt="" coords="357,31,408,57"/>
-<area shape="rect" id="node7" href="$_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="spawn_character" alt="" coords="187,107,309,133"/>
+<area shape="rect" id="node7" href="$_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320" title="Permet la création d&#39;un personnage joueur à la position entrée." alt="" coords="187,107,309,133"/>
 </map>

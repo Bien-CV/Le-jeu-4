@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="2" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="2" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="2" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="2" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="8" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="8" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="8" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="8" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="liste_8c_1a404442353660d7effc914ba8220ebf7f" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="10" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="10" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="10" bodyend="-1"/>
         <referencedby refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" compoundref="liste_8c" startline="12" endline="17">liste_init</referencedby>
         <referencedby refid="liste_8h_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</referencedby>
         <referencedby refid="liste_8h_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</referencedby>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="10" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="10" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="10" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="10" bodyend="-1"/>
         <referencedby refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" compoundref="liste_8c" startline="12" endline="17">liste_init</referencedby>
         <referencedby refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</referencedby>
         <referencedby refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" compoundref="liste_8c" startline="38" endline="43">liste_en_queue</referencedby>
@@ -117,11 +117,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="14" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="12" bodyend="17"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="14" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="12" bodyend="17"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="21" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="19" bodyend="23"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="21" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="19" bodyend="23"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <referencedby refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</referencedby>
         <referencedby refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" compoundref="liste_8c" startline="38" endline="43">liste_en_queue</referencedby>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="27" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="25" bodyend="29"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="27" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="25" bodyend="29"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <referencedby refid="liste_8h_1ae62f982aac8059018f004e3a7e2e7f21" compoundref="liste_8c" startline="45" endline="50">liste_precedent</referencedby>
         <referencedby refid="liste_8h_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</referencedby>
@@ -172,7 +172,7 @@
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="448" endline="472">choix_deplacement_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="33" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="31" bodyend="36"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="33" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="31" bodyend="36"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
@@ -196,8 +196,8 @@
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="611" endline="628">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="448" endline="472">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="581" endline="597">choix_cible_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1aaf16c3ff04ebc19da036b0332d82ccee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="40" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="38" bodyend="43"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="40" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="38" bodyend="43"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="47" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="45" bodyend="50"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="47" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="45" bodyend="50"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
       </memberdef>
@@ -250,15 +250,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="54" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="52" bodyend="57"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="54" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="52" bodyend="57"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1a78de7382315436cf196cf30aac14257c" compoundref="liste_8c" startline="167" endline="180">liste_calculer_nombre_elements</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="611" endline="628">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="448" endline="472">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="581" endline="597">choix_cible_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -275,15 +275,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="61" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="59" bodyend="64"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="61" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="59" bodyend="64"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
         <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
         <referencedby refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" compoundref="liste_8c" startline="143" endline="165">liste_suppr_doublon</referencedby>
         <referencedby refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" compoundref="liste_8c" startline="182" endline="197">liste_element_est_present</referencedby>
-        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="479" endline="503">choix_deplacement_IA</referencedby>
-        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="611" endline="628">choix_cible_IA</referencedby>
+        <referencedby refid="_minimale_8c_1aaa20acb53c08f4a15be29bb9d70cd9f1" compoundref="_minimale_8c" startline="448" endline="472">choix_deplacement_IA</referencedby>
+        <referencedby refid="_minimale_8c_1a29cde2a1505f65c5b2b190588516f6d6" compoundref="_minimale_8c" startline="581" endline="597">choix_cible_IA</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a0282305b4b91dc5376333ac820bdf995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -300,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="68" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="66" bodyend="71"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="68" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="66" bodyend="71"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
       </memberdef>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="75" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="73" bodyend="83"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="75" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="73" bodyend="83"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
@@ -339,13 +339,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="87" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="85" bodyend="101"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="87" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="85" bodyend="101"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1ac7289b3f288aec0c22e5272c4851e0ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="105" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="103" bodyend="118"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="105" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="103" bodyend="118"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="121" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="120" bodyend="133"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="121" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="120" bodyend="133"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
@@ -398,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="135" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="134" bodyend="141"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="135" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="134" bodyend="141"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
@@ -415,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="144" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="143" bodyend="165"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="144" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="143" bodyend="165"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
@@ -424,8 +424,8 @@
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
         <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
         <references refid="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" compoundref="liste_8c" startline="73" endline="83">liste_oter_elt</references>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1a78de7382315436cf196cf30aac14257c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -438,13 +438,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="168" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="167" bodyend="180"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="168" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="167" bodyend="180"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
-        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="258" endline="292">deplacements_valides</referencedby>
-        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="572" endline="605">viser_case_valide</referencedby>
+        <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
+        <referencedby refid="_minimale_8c_1a27d15a9ecfe1e4f2c30cecc92307a80f" compoundref="_minimale_8c" startline="542" endline="575">viser_case_valide</referencedby>
       </memberdef>
       <memberdef kind="function" id="liste_8c_1ae6bf3307184d2f80167abcb9c2ad5b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -465,14 +465,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" line="183" bodyfile="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="182" bodyend="197"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" line="183" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="182" bodyend="197"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
         <references refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" compoundref="header_8h" startline="81">t_coord::Y</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
-        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="705" endline="762">choix_cible_humain</referencedby>
+        <referencedby refid="_minimale_8c_1a69347b1b74ee79025e3c6ce20b5b49a4" compoundref="_minimale_8c" startline="672" endline="729">choix_cible_humain</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -678,6 +678,6 @@
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="197"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/info/etu/l2spi/spi2008/Le-jeu-4/v1.1_Ncurses/liste.c"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c"/>
   </compounddef>
 </doxygen>

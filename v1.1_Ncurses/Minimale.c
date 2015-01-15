@@ -598,7 +598,7 @@ t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 
 
 /**
- * \fn void init_char_table(t_char chars[])
+ * \fn void init_char_table(t_character chars[])
  * \brief Fonction d'initialisation d'un tableau de personnages.
  * Remplit le tableau de personnages entré en paramètre de cases de terrain.
  *
@@ -1054,8 +1054,8 @@ void joueur_liste_suivant(int nb_joueurs, int* joueur_courant)
 
 
 /**
-* \fn int are_my_mates_alive(joueur_courant)
-* \brief Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts
+* \fn int are_my_mates_alive(int joueur_courant)
+* \brief Prend en paramètre le joueur courant et vérifie si tous ses personnages ne sont pas morts.
 *
 */
 int are_my_mates_alive(int joueur_courant){
@@ -1076,8 +1076,8 @@ int are_my_mates_alive(int joueur_courant){
 /**
 * \fn int life_check(int joueur_courant)
 * \brief Fonction qui vérifie si un joueur a encore des personnages vivants sur le terrain.
-*    Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu.
-*    Renvoie 1 si le joueur a encore des personnages en vie, sinon 0.
+* Appelle are_my_mates_alive(int joueur_courant) pour déterminer le joueur est encore en jeu.
+* Renvoie 1 si le joueur a encore des personnages en vie, sinon 0.
 */
 int life_check(int joueur_courant){
           
@@ -1095,7 +1095,7 @@ int life_check(int joueur_courant){
 /**
 * \fn void players_life_check()
 * \brief Actualise le fait que les joueurs soient vivants ou non.
-*    
+* 
 */
 void players_life_check()
 {	
@@ -1465,8 +1465,8 @@ void spawn_sauvage()
 }
 
 /**
- * /fn void spawn_character(t_camp camp_nouveau_perso)
- * /brief Permet la création d'un personnage joueur à la position entrée
+ * \fn void spawn_character(t_camp camp_nouveau_perso)
+ * \brief Permet la création d'un personnage joueur à la position entrée
  * 
  */
 void spawn_character(t_camp camp_nouveau_perso)
@@ -1484,8 +1484,8 @@ void spawn_character(t_camp camp_nouveau_perso)
 }
 
 /**
- * /fn void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* selected_character)
- * /brief Fonction de déroulement d'un tour pour l'IA.
+ * \fn void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* selected_character)
+ * \brief Fonction de déroulement d'un tour pour l'IA.
  * 
  */
 void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* selected_character)
@@ -1525,8 +1525,8 @@ void tour_IA(int joueur_courant, int* nbAtkValid, int* nbDepValid,t_character* s
 }
 
 /**
- * /fn int calcul_persos_IA(int joueur_courant){
- * /brief Calcule le nombre de personnage controlé par l'IA
+ * \fn int calcul_persos_IA(int joueur_courant){
+ * \brief Calcule le nombre de personnage controlé par l'IA
  * 
  */
 int calcul_persos_IA(int joueur_courant){
