@@ -1,4 +1,0 @@
-<map id="init_plateau" name="init_plateau">
-<area shape="rect" id="node3" href="$_minimale_8c.html#a88cec99ca1b112fc0553d0f09c19fcd7" title="Création brève de terrain ou obstacle, possible implémentation de génération aléatoire en cas d&#39;obsta..." alt="" coords="141,5,277,32"/>
-<area shape="rect" id="node5" href="$_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire en 0 et &#39;max&#39;." alt="" coords="326,5,514,32"/>
-</map>

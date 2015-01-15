@@ -1,8 +1,0 @@
-<map id="choix_cible_IA" name="choix_cible_IA">
-<area shape="rect" id="node3" href="$liste_8c.html#a9cbc13cd82829b3541fae0c01209f963" title="liste_en_tete" alt="" coords="207,5,303,32"/>
-<area shape="rect" id="node7" href="$_minimale_8c.html#a693e68e5f8ca09f46ad6b746c07d0332" title="Fonction qui renvoi un nombre aléatoire entre 0 et &#39;max&#39;." alt="" coords="161,56,349,83"/>
-<area shape="rect" id="node9" href="$liste_8c.html#a801cf7ec08fb2c6b1dceb32af4a46111" title="liste_suivant" alt="" coords="207,107,302,133"/>
-<area shape="rect" id="node13" href="$liste_8c.html#a1ad09d74d2d4f3b298db6b834933d744" title="liste_valeur_elt" alt="" coords="200,157,309,184"/>
-<area shape="rect" id="node5" href="$liste_8c.html#a1e4d1c45ace210278d08fd886268a0e3" title="liste_est_vide" alt="" coords="414,5,517,32"/>
-<area shape="rect" id="node11" href="$liste_8c.html#ad4a1a49d8756b972708e0870f9420776" title="liste_est_hors_liste" alt="" coords="398,132,533,159"/>
-</map>
