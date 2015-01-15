@@ -35,7 +35,6 @@
 #define KWHT  "\x1B[37m"
 
 
-//Prototypes fonctions, à inclure dans un futur Minimale.h !
 int life_check(int joueur_courant);
 void joueur_liste_suivant(int nb_joueur,int* joueur_courant);
 void creer_terrain_rapide(t_camp camp,int x, int y);
@@ -83,7 +82,7 @@ int indiceTabDepValid;
 
 
 /**
- * \fn void Sauvegarder()
+ * \fn void Sauvegarder(int joueur_courant)
  * \brief Sauvegarde la partie en cours dans un fichier
  *
  */
@@ -129,7 +128,7 @@ void Sauvegarder(int joueur_courant){
 }
 
 /**
- * \fn void Charger()
+ * \fn int Charger(int joueur_courant)
  * \brief Permet de charger une partie depuis un fichier de sauvegarde
  *
  */
@@ -179,7 +178,7 @@ int generation_nombre_aleatoire(int max)
 }
 
 /**
- * \fn void deplacer_perso(t_coord case_perso)
+ * \fn void deplacer_perso(t_coord case_perso, t_character* selected_character)
  * \brief Déplace le personnage sur le terrain
  * Remplace la case où se trouvait le perso par une case terrain, et place le perso sur la 'case_perso'.
  * Si la 'case_perso' contenait un piège, le perso perd des HP.
@@ -187,10 +186,10 @@ int generation_nombre_aleatoire(int max)
 void deplacer_perso(t_coord case_perso, t_character* selected_character)
 {
     Plateau[selected_character->position.X][selected_character->position.Y]= case_terrain ;
-    if(Plateau[case_perso.X][case_perso.Y].type == TRAP_UNIT){selected_character->status.HP -= Plateau[case_perso.X][case_perso.Y].stats.ATK;}	//appliquation des dégâts du piège!!!	//par défaut, le piège enlève 20 HP!!!!
+    if(Plateau[case_perso.X][case_perso.Y].type == TRAP_UNIT){selected_character->status.HP -= Plateau[case_perso.X][case_perso.Y].stats.ATK;}	//appliquation des dégâts du piège! par défaut, le piège enlève 20 HP!
     selected_character->position.X=case_perso.X;
     selected_character->position.Y=case_perso.Y;
-    Plateau[case_perso.X][case_perso.Y]= *selected_character; //la case du terrain (case_perso) prend le personnage "selected_chaacter"!
+    Plateau[case_perso.X][case_perso.Y]= *selected_character; //la case du terrain (case_perso) prend le personnage "selected_character"!
 
 }
 
@@ -250,7 +249,7 @@ int cases_voisines_calcul(t_coord coordonnees){
 
 
 /**
- * \fn void deplacements_valides(int* nbDepValid)
+ * \fn void deplacements_valides(int* nbDepValid, t_character* selected_character)
  * \brief Calcule les positions de déplacement valide, les met dans la liste
  *
  */
@@ -291,9 +290,9 @@ void deplacements_valides(int* nbDepValid, t_character* selected_character){
 }
 
 /**
- * \fn t_coord choix_deplacement_humain(int joueur_courant)
+ * \fn t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character* selected_character)
  * \brief Permet au joueur de choisir la destination
- * \brief Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède.
+ * Le joueur déplace un curseur qui représente son joueur courant, il est limité aux limites du plateau et au nombre de déplacements qu'il possède.
  *
  */
 t_coord choix_deplacement_humain(int joueur_courant, int* nbDepValid,t_character* selected_character){
@@ -492,7 +491,8 @@ void init_plateau()
 
 /**
  * \fn int cases_voisines_ATK(t_coord coordonnees)
- * \brief Renvoi le nombre de case voisine ; met dans la file, la liste des coordonnées voisines
+ * \brief Renvoi le nombre de case voisine.
+ * Met dans la file la liste des coordonnées voisines.
  */
 int cases_voisines_ATK(t_coord coordonnees){
     int nbVois = 0;
@@ -536,8 +536,8 @@ int cases_voisines_ATK(t_coord coordonnees){
     return(nbVois);
 }
 /**
- * \fn void deplacements_valides(int* nbDepValid)
- * \brief Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée
+ * \fn void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_character)
+ * \brief Calcule les positions d'attaques valides, les met dans la liste. une case vide peut être attaquée.
  */
 void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_character)
 {
@@ -576,7 +576,7 @@ void viser_case_valide(t_skill skill, int* nbAtkValid,t_character* selected_char
 
 /**
  * \fn t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
- * \brief Choisi parmi la liste des cases à attaquer pour l'IA, une case
+ * \brief Choisi parmi la liste des cases à attaquer pour l'IA, une case vide peut être attaquée.
  */
 t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 {
@@ -599,7 +599,7 @@ t_coord choix_cible_IA(t_skill skill, int* nbAtkValid)
 
 /**
  * \fn void init_char_table(t_char chars[])
- * \brief Fonction d'initialisation d'un tableau de personnages
+ * \brief Fonction d'initialisation d'un tableau de personnages.
  * Remplit le tableau de personnages entré en paramètre de cases de terrain.
  *
  */
@@ -667,7 +667,7 @@ void afficher_infos_persos( t_character perso)
 
 /**
  * \fn t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
- * \brief Permet au joueur de choisir, grâce à un curseur, une case à attaquer
+ * \brief Permet au joueur de choisir, grâce à un curseur, une case à attaquer.
  */
 t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* selected_character)
 {
@@ -730,7 +730,7 @@ t_coord choix_cible_humain(t_skill skill, int joueur_courant,t_character* select
 
 
 /**
-* \fn void selection_perso(int joueur_courant)
+* \fn void selection_perso(int joueur_courant,t_character* selected_character)
 * \brief Cette fonction permet au joueur de choisir un de ses persos sur le plateau grâce à un curseur
 *
 */
@@ -1096,7 +1096,6 @@ int life_check(int joueur_courant){
 * \fn void players_life_check()
 * \brief Actualise le fait que les joueurs soient vivants ou non.
 *    
-*    
 */
 void players_life_check()
 {	
@@ -1145,7 +1144,7 @@ void character_hp_list()
 }
 
 /**
-* \fn void tour(int joueur_courant)
+* \fn void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selected_character)
 * \brief Fonction de déroulement d'un tour pour le joueur entré en paramètre.
 *
 *
@@ -1258,7 +1257,7 @@ void tour(int joueur_courant, int* nbAtkValid,int* nbDepValid,t_character* selec
 }
 
 /**
-* \fn int all_dead_but_one(void)
+* \fn int all_dead_but_one(int nb_joueurs)
 * \brief Fonction déterminant si un seul joueur est vivant.
 *    Appellé par la fonction principale pour déterminer si c'est la fin de la partie.
 *    Renvoie 0 si plus d'un joueur survit, sinon renvoie 1.
@@ -1341,7 +1340,7 @@ void afficher_plateau_orientation(int joueur_courant){
 }
 
 /**
-* \fn void creer_perso_rapide(char nom[MaxTab], t_camp camp,int x, int y)
+* \fn void creer_perso_rapide(t_camp camp,int x, int y,t_classe classe )
 * \brief Création brève de perso.
 * 
 */
