@@ -1,0 +1,16 @@
+digraph "creer_perso_rapide"
+{
+ // INTERACTIVE_SVG=YES
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="creer_perso_rapide",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="spawn_sauvage",height=0.2,width=0.4,color="black",URL="$_minimale_8c.html#ae5778c7cb58f5d0dc868b2c3f632574e",tooltip="Créé un personnage du camp neutre à une position aléatoire sur le terrain. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="main",height=0.2,width=0.4,color="black",URL="$_minimale_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip="Fonction principale Fonction principale qui permet de jouer en mode Kill&#39;em&#39;all. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="spawn_character",height=0.2,width=0.4,color="black",URL="$_minimale_8c.html#a670d6c4a5f077fec01afb7b253ddc320",tooltip="Permet la création d&#39;un personnage joueur à une position aléatoire. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="structt__coord" kind="struct" prot="public">
     <compoundname>t_coord</compoundname>
     <includes refid="header_8h" local="no">header.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="81" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="81" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="81" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="81" bodyend="-1"/>
         <referencedby refid="file_8h_1a96c6e33606180f008c28906ff16f873a" compoundref="file_8c" startline="53" endline="68">file_afficher_elt</referencedby>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
         <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="81" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="81" bodyend="-1"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="81" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="81" bodyend="-1"/>
         <referencedby refid="file_8h_1a96c6e33606180f008c28906ff16f873a" compoundref="file_8c" startline="53" endline="68">file_afficher_elt</referencedby>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
         <referencedby refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" compoundref="liste_8c" startline="134" endline="141">liste_afficher_queue</referencedby>
@@ -84,7 +84,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="81" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="81" bodyend="81"/>
+    <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" line="81" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/header.h" bodystart="81" bodyend="81"/>
     <listofallmembers>
       <member refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" prot="public" virt="non-virtual"><scope>t_coord</scope><name>X</name></member>
       <member refid="structt__coord_1aa482c4cc86a24474e4fb19b5b5978778" prot="public" virt="non-virtual"><scope>t_coord</scope><name>Y</name></member>

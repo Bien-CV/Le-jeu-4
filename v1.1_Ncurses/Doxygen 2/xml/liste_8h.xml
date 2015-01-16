@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.3.1">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
   <compounddef id="liste_8h" kind="file">
     <compoundname>liste.h</compoundname>
     <includes refid="header_8h" local="yes">header.h</includes>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="4" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="12" bodyend="17"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="4" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="12" bodyend="17"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="_minimale_8c_1a9f570d5aff57367c773e3e7d090e91e8" compoundref="_minimale_8c" startline="256" endline="290">deplacements_valides</referencedby>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="5" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="19" bodyend="23"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="5" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="19" bodyend="23"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <referencedby refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</referencedby>
         <referencedby refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" compoundref="liste_8c" startline="38" endline="43">liste_en_queue</referencedby>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="6" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="25" bodyend="29"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="6" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="25" bodyend="29"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <referencedby refid="liste_8h_1ae62f982aac8059018f004e3a7e2e7f21" compoundref="liste_8c" startline="45" endline="50">liste_precedent</referencedby>
         <referencedby refid="liste_8h_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</referencedby>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="7" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="31" bodyend="36"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="7" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="31" bodyend="36"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="8" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="38" bodyend="43"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="8" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="38" bodyend="43"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="9" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="45" bodyend="50"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="9" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="45" bodyend="50"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
       </memberdef>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="10" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="52" bodyend="57"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="10" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="52" bodyend="57"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="11" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="59" bodyend="64"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="11" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="59" bodyend="64"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <referencedby refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" compoundref="liste_8c" startline="120" endline="133">liste_afficher_contenu</referencedby>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="12" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="66" bodyend="71"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="12" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="66" bodyend="71"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
       </memberdef>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="13" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="73" bodyend="83"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="13" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="73" bodyend="83"/>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="14" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="85" bodyend="101"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="14" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="85" bodyend="101"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="15" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="103" bodyend="118"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="15" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="103" bodyend="118"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a59e5dec85b6fd6e9ce7498410e234982" compoundref="liste_8c" startline="10">ec</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
@@ -312,7 +312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="16" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="120" bodyend="133"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="16" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="120" bodyend="133"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="17" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="134" bodyend="141"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="17" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="134" bodyend="141"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
         <references refid="structt__coord_1a80c0944640e62d3ed6c5419c1bcc0c88" compoundref="header_8h" startline="81">t_coord::X</references>
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="18" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="143" bodyend="165"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="18" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="143" bodyend="165"/>
         <references refid="liste_8c_1a404442353660d7effc914ba8220ebf7f" compoundref="liste_8c" startline="10">queue</references>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" compoundref="liste_8c" startline="52" endline="57">liste_suivant</references>
@@ -371,7 +371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="19" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="167" bodyend="180"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="19" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="167" bodyend="180"/>
         <references refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" compoundref="liste_8c" startline="19" endline="23">liste_est_vide</references>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
@@ -398,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="20" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="182" bodyend="197"/>
+        <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h" line="20" column="1" bodyfile="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.c" bodystart="182" bodyend="197"/>
         <references refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" compoundref="liste_8c" startline="31" endline="36">liste_en_tete</references>
         <references refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" compoundref="liste_8c" startline="59" endline="64">liste_valeur_elt</references>
         <references refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" compoundref="liste_8c" startline="25" endline="29">liste_est_hors_liste</references>
@@ -414,25 +414,25 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound" tooltip="header">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="header_8h" kindref="compound">header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1aa325493a520928cd959f5cf829747b1c" kindref="member">liste_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1aaf16c3ff04ebc19da036b0332d82ccee" kindref="member">liste_en_queue</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ae62f982aac8059018f004e3a7e2e7f21" kindref="member">liste_precedent</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(<sp/><ref refid="structt__coord" kindref="compound">t_coord</ref>*<sp/>e);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a0282305b4b91dc5376333ac820bdf995" kindref="member">liste_modif_elt</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>v);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ac46b950926c8191e47c3822c624d2e1d" kindref="member">liste_oter_elt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ae9c711baf0f41d27a5002c3e249687d8" kindref="member">liste_ajout_droit</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ac7289b3f288aec0c22e5272c4851e0ee" kindref="member">liste_ajout_gauche</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a207cdf13008fdfbf84b897ca499e3b17" kindref="member">liste_afficher_contenu</ref>();</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1aeca8ab6b8935bc5fd81fa7a74e64879a" kindref="member">liste_afficher_queue</ref>();</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a48218f7c1bafab1e92490a0963ee7451" kindref="member">liste_suppr_doublon</ref>();</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1a78de7382315436cf196cf30aac14257c" kindref="member">liste_calculer_nombre_elements</ref>();</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8c_1ae6bf3307184d2f80167abcb9c2ad5b2b" kindref="member">liste_element_est_present</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPile);</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1aa325493a520928cd959f5cf829747b1c" kindref="member">liste_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a1e4d1c45ace210278d08fd886268a0e3" kindref="member">liste_est_vide</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1ad4a1a49d8756b972708e0870f9420776" kindref="member">liste_est_hors_liste</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a9cbc13cd82829b3541fae0c01209f963" kindref="member">liste_en_tete</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1aaf16c3ff04ebc19da036b0332d82ccee" kindref="member">liste_en_queue</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1ae62f982aac8059018f004e3a7e2e7f21" kindref="member">liste_precedent</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a801cf7ec08fb2c6b1dceb32af4a46111" kindref="member">liste_suivant</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a1ad09d74d2d4f3b298db6b834933d744" kindref="member">liste_valeur_elt</ref>(<sp/><ref refid="structt__coord" kindref="compound">t_coord</ref>*<sp/>e);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a0282305b4b91dc5376333ac820bdf995" kindref="member">liste_modif_elt</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>v);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1ac46b950926c8191e47c3822c624d2e1d" kindref="member">liste_oter_elt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1ae9c711baf0f41d27a5002c3e249687d8" kindref="member">liste_ajout_droit</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1ac7289b3f288aec0c22e5272c4851e0ee" kindref="member">liste_ajout_gauche</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a207cdf13008fdfbf84b897ca499e3b17" kindref="member">liste_afficher_contenu</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1aeca8ab6b8935bc5fd81fa7a74e64879a" kindref="member">liste_afficher_queue</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a48218f7c1bafab1e92490a0963ee7451" kindref="member">liste_suppr_doublon</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1a78de7382315436cf196cf30aac14257c" kindref="member">liste_calculer_nombre_elements</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liste_8h_1ae6bf3307184d2f80167abcb9c2ad5b2b" kindref="member">liste_element_est_present</ref>(<ref refid="structt__coord" kindref="compound">t_coord</ref><sp/>e,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numPile);</highlight></codeline>
     </programlisting>
     <location file="/info/etu/l2spi/spi2025/Git/Le-jeu-4/v1.1_Ncurses/liste.h"/>
   </compounddef>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.3.1"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Le jeu 4:  Fichier source de file.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -33,7 +33,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.3.1 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
@@ -88,13 +88,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 <a href="file_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="file_8h.html">file.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="header_8h.html" title="header">header.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="header_8h.html">header.h</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include&lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="file_8c.html#af7a16e2716eaac90fb331c55876cf511">    4</a></span>&#160;<span class="preprocessor">#define TMAX 100</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="keyword">static</span> <a class="code" href="structt__coord.html">t_coord</a> file[<a class="code" href="file_8c.html#af7a16e2716eaac90fb331c55876cf511">TMAX</a>];  <span class="comment">//tableau contenant les valeurs de la file</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="file_8c.html#af7a16e2716eaac90fb331c55876cf511">    4</a></span>&#160;<span class="preprocessor">#define TMAX 100</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">static</span> <a class="code" href="structt__coord.html">t_coord</a> file[<a class="code" href="file_8c.html#af7a16e2716eaac90fb331c55876cf511">TMAX</a>];  <span class="comment">//tableau contenant les valeurs de la file</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> tete, queueFile, nbVal;  <span class="comment">//indice de tete, queueFile et nombre de valeurs dans la file</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="file_8h.html#a004123a6f8cce9d4168b0ea8cfdf133a">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a">file_init</a>() <span class="comment">//initialisation la file à vide</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="file_8h.html#a004123a6f8cce9d4168b0ea8cfdf133a">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a">file_init</a>() <span class="comment">//initialisation la file à vide</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    nbVal = 0;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    tete = 0;</div>
@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">//queueFile = TMAX - 1;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="file_8h.html#a9a4198b0c69187d42420b80f3e5b8d62">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62">file_ajouter</a>(<a class="code" href="structt__coord.html">t_coord</a> a)    <span class="comment">//ajoute la valeur en queueFile de file</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="file_8h.html#a9a4198b0c69187d42420b80f3e5b8d62">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62">file_ajouter</a>(<a class="code" href="structt__coord.html">t_coord</a> a)    <span class="comment">//ajoute la valeur en queueFile de file</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(nbVal &lt; <a class="code" href="file_8c.html#af7a16e2716eaac90fb331c55876cf511">TMAX</a>)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
@@ -115,7 +115,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="file_8h.html#a59173755d515eb366fb01dba42a73e8e">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e">file_retirer</a>(<a class="code" href="structt__coord.html">t_coord</a> * val)    <span class="comment">//retire la valeur en tête de file et l&#39;affecte à val</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="file_8h.html#a59173755d515eb366fb01dba42a73e8e">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a59173755d515eb366fb01dba42a73e8e">file_retirer</a>(<a class="code" href="structt__coord.html">t_coord</a> * val)    <span class="comment">//retire la valeur en tête de file et l&#39;affecte à val</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(nbVal&gt;0)</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
@@ -128,18 +128,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="file_8h.html#a30c4f88a35783c4832434e9676ad98f5">   42</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="file_8c.html#a30c4f88a35783c4832434e9676ad98f5">file_vide</a>() <span class="comment">//délivre vrai si la file est vide, faux sinon</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="file_8h.html#a30c4f88a35783c4832434e9676ad98f5">   42</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="file_8c.html#a30c4f88a35783c4832434e9676ad98f5">file_vide</a>() <span class="comment">//délivre vrai si la file est vide, faux sinon</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">return</span>(nbVal==0);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="file_8h.html#a141d57004b90128d46274ba60f61249f">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a141d57004b90128d46274ba60f61249f">file_liste_afficher_queue</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="file_8h.html#a141d57004b90128d46274ba60f61249f">   47</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a141d57004b90128d46274ba60f61249f">file_liste_afficher_queue</a>()</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    printf(<span class="stringliteral">&quot;%i\n&quot;</span>, queueFile);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="file_8h.html#a96c6e33606180f008c28906ff16f873a">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a96c6e33606180f008c28906ff16f873a">file_afficher_elt</a>(<a class="code" href="structt__coord.html">t_coord</a> val)</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="file_8h.html#a96c6e33606180f008c28906ff16f873a">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="file_8c.html#a96c6e33606180f008c28906ff16f873a">file_afficher_elt</a>(<a class="code" href="structt__coord.html">t_coord</a> val)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> indice = tete;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span>(indice &lt; nbVal)</div>
@@ -155,12 +155,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        printf(<span class="stringliteral">&quot;X: %i, Y: %i\n&quot;</span>, val.<a class="code" href="structt__coord.html#a80c0944640e62d3ed6c5419c1bcc0c88">X</a>, val.<a class="code" href="structt__coord.html#aa482c4cc86a24474e4fb19b5b5978778">Y</a> );</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="ttc" id="file_8c_html_a141d57004b90128d46274ba60f61249f"><div class="ttname"><a href="file_8c.html#a141d57004b90128d46274ba60f61249f">file_liste_afficher_queue</a></div><div class="ttdeci">void file_liste_afficher_queue()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00047">file.c:47</a></div></div>
+<div class="ttc" id="structt__coord_html_a80c0944640e62d3ed6c5419c1bcc0c88"><div class="ttname"><a href="structt__coord.html#a80c0944640e62d3ed6c5419c1bcc0c88">t_coord::X</a></div><div class="ttdeci">int X</div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00081">header.h:81</a></div></div>
+<div class="ttc" id="header_8h_html"><div class="ttname"><a href="header_8h.html">header.h</a></div><div class="ttdoc">header </div></div>
+<div class="ttc" id="file_8c_html_af7a16e2716eaac90fb331c55876cf511"><div class="ttname"><a href="file_8c.html#af7a16e2716eaac90fb331c55876cf511">TMAX</a></div><div class="ttdeci">#define TMAX</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00004">file.c:4</a></div></div>
+<div class="ttc" id="file_8h_html"><div class="ttname"><a href="file_8h.html">file.h</a></div></div>
+<div class="ttc" id="structt__coord_html_aa482c4cc86a24474e4fb19b5b5978778"><div class="ttname"><a href="structt__coord.html#aa482c4cc86a24474e4fb19b5b5978778">t_coord::Y</a></div><div class="ttdeci">int Y</div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00081">header.h:81</a></div></div>
+<div class="ttc" id="file_8c_html_a59173755d515eb366fb01dba42a73e8e"><div class="ttname"><a href="file_8c.html#a59173755d515eb366fb01dba42a73e8e">file_retirer</a></div><div class="ttdeci">void file_retirer(t_coord *val)</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00029">file.c:29</a></div></div>
+<div class="ttc" id="structt__coord_html"><div class="ttname"><a href="structt__coord.html">t_coord</a></div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00081">header.h:81</a></div></div>
+<div class="ttc" id="file_8c_html_a96c6e33606180f008c28906ff16f873a"><div class="ttname"><a href="file_8c.html#a96c6e33606180f008c28906ff16f873a">file_afficher_elt</a></div><div class="ttdeci">void file_afficher_elt(t_coord val)</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00053">file.c:53</a></div></div>
+<div class="ttc" id="file_8c_html_a004123a6f8cce9d4168b0ea8cfdf133a"><div class="ttname"><a href="file_8c.html#a004123a6f8cce9d4168b0ea8cfdf133a">file_init</a></div><div class="ttdeci">void file_init()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00008">file.c:8</a></div></div>
+<div class="ttc" id="file_8c_html_a9a4198b0c69187d42420b80f3e5b8d62"><div class="ttname"><a href="file_8c.html#a9a4198b0c69187d42420b80f3e5b8d62">file_ajouter</a></div><div class="ttdeci">void file_ajouter(t_coord a)</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00016">file.c:16</a></div></div>
+<div class="ttc" id="file_8c_html_a30c4f88a35783c4832434e9676ad98f5"><div class="ttname"><a href="file_8c.html#a30c4f88a35783c4832434e9676ad98f5">file_vide</a></div><div class="ttdeci">int file_vide()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00042">file.c:42</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi Janvier 15 2015 15:22:30 pour Le jeu 4 par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 16 Janvier 2015 11:14:26 pour Le jeu 4 par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.3.1
+</a> 1.8.8
 </small></address>
 </body>
 </html>

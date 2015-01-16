@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.3.1">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.8">
   <compound refid="structt__character" kind="struct"><name>t_character</name>
     <member refid="structt__character_1ab27f28c5ead39031421706ddbbd1edea" kind="variable"><name>name</name></member>
     <member refid="structt__character_1a27c93348dcaa3ea78282fb5ef6ce371b" kind="variable"><name>position</name></member>

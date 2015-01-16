@@ -1,4 +1,4 @@
-.TH "Minimale.c" 3 "Jeudi Janvier 15 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
+.TH "Minimale.c" 3 "Vendredi 16 Janvier 2015" "Version v1.1 Ncurses" "Le jeu 4" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -221,7 +221,7 @@ Code principal\&.
 .ti -1c
 .RI "void \fBspawn_character\fP (\fBt_camp\fP camp_nouveau_perso)"
 .br
-.RI "\fIPermet la création d'un personnage joueur à la position entrée\&. \fP"
+.RI "\fIPermet la création d'un personnage joueur à une position aléatoire\&. \fP"
 .ti -1c
 .RI "void \fBtour_IA\fP (int joueur_courant, int *nbAtkValid, int *nbDepValid, \fBt_character\fP *selected_character)"
 .br
@@ -267,6 +267,8 @@ Code principal\&.
 .PP 
 Code principal\&. 
 
+
+.PP
 \fBAuteur:\fP
 .RS 4
 Arthur LEMEE, Yann GUENVER, Baptiste CANOVAS-VIRLY\&. 
@@ -540,7 +542,7 @@ Définition à la ligne 737 du fichier Minimale\&.c\&.
 .SS "void spawn_character (\fBt_camp\fPcamp_nouveau_perso)"
 
 .PP
-Permet la création d'un personnage joueur à la position entrée\&. 
+Permet la création d'un personnage joueur à une position aléatoire\&. 
 .PP
 Définition à la ligne 1472 du fichier Minimale\&.c\&.
 .SS "void spawn_sauvage ()"
@@ -599,23 +601,23 @@ Définition à la ligne 80 du fichier Minimale\&.c\&.
 .nf
 = 
     {
-        'ogre',
-        'etoileux',
-        'mur',
-        'elfe',
-        'borgne',
-        'attendrissant',
-        'enfant',
-        'planetaire',
-        'rayon',
-        'magique',
-        'terrible',
-        'sorcier',
-        'guerrier',
-        'sauvage',
-        'perverti',
-        'bienveillant',
-        'saint'
+        "ogre",
+        "etoileux",
+        "mur",
+        "elfe",
+        "borgne",
+        "attendrissant",
+        "enfant",
+        "planetaire",
+        "rayon",
+        "magique",
+        "terrible",
+        "sorcier",
+        "guerrier",
+        "sauvage",
+        "perverti",
+        "bienveillant",
+        "saint"
     }
 .fi
 .PP
