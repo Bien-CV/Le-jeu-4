@@ -71,13 +71,11 @@ char particule_generateur_nom[][20] =
 
 void players_life_check();
 t_character Plateau[TAILLE_MATRICE][TAILLE_MATRICE]; 	//matrice du plateau de jeu
-t_coord depValid[TAILLE_MATRICE*TAILLE_MATRICE][3];
 
 
 t_player player[MaxTab];	//la liste des joueurs
 
 
-int indiceTabDepValid;
 
 
 
