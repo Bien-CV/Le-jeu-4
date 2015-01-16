@@ -1466,7 +1466,7 @@ void spawn_sauvage()
 
 /**
  * \fn void spawn_character(t_camp camp_nouveau_perso)
- * \brief Permet la création d'un personnage joueur à la position entrée
+ * \brief Permet la création d'un personnage joueur à une position aléatoire
  * 
  */
 void spawn_character(t_camp camp_nouveau_perso)
